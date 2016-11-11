@@ -1,0 +1,53 @@
+{
+	"index.html": {
+		"resources": [
+			"home.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/logoworld.png",
+			"img/selectarrow.png"
+		],
+		"refer": [
+			"home.html",
+			"my.html",
+			"setting.html",
+			"chat.html",
+			"tel.html",
+			"citylist.html"
+		]
+	},
+	"my.html": {
+		"refer": [
+			"main/loginindex.html"
+		]
+	},
+	"main/loginindex.html": {
+		"resources": [
+			"js/feedback.js",
+			"js/mui.view.js"
+		]
+	},
+	"home.html": {
+		"resources": [
+			"img/urslistleft.png",
+			"img/homemarqueepic1.jpg",
+			"img/homemarqueepic.jpg",
+			"img/homemarqueepic2.jpg",
+			"img/hotshoopingpic2.jpg",
+			"img/hotactive2.png",
+			"img/hotshoopingpic1.jpg",
+			"img/hotactive1.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"citylist.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	}
+}
