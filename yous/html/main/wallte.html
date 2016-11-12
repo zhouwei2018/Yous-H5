@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			html{font-size:10px;}
+			.mui-bar-nav{background:#c8791d;color:#fff;}
+			.mui-title{font-size:2.3rem;color:#fff;letter-spacing:0.3rem;}
+			.mui-pull-left{color:#fff;}
+			.mui-pull-right{font-size:2rem!important;color:#fff;line-height:45px;}
+			/*header{height:30rem!important;}
+			.mui-content{margin-top:26rem;}*/
+			.mui-bar-nav{box-shadow:0 1px 6px #c8791d;}
+			.number{height:25rem;background:#c8791d;text-align:center;
+					line-height:25rem;color:#fff;font-size:6rem;}
+			.mui-table-view{margin-top:1rem;}
+			.mui-table-view li a{color:#3c3b40!important;}
+			.mui-table-view span{float:right;margin-right:2rem;font-size:1.3rem;color:#aaa;}
+		</style>
+	</head>
+
+	<body>		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">钱包</h1>
+		    <a class="mui-pull-right">消费明细</a>
+		</header>
+		<div class="mui-content">
+			<div class='number'>
+				
+				<div>¥&nbsp;<span>0.00</span></div>
+				
+				
+			</div>
+			
+			
+			
+		    <ul class="mui-table-view">
+		    	<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						充值
+					</a>
+				</li>
+			</ul>
+			 <ul class="mui-table-view">
+		    	<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						绑定会员卡
+					</a>
+				</li>
+			</ul>
+			 <ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						支付密码<span>未设置</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

@@ -6,139 +6,140 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href=""/>
 		<style>
-			.area {
-				margin: 20px auto 0px auto;
-			}
+			html{font-size:10px;background:#fff;}
+			.mui-content{position:absolute;height:100%;width:100%;background:#fff;}
+			.userpic{background:url(img/mainbg.jpg) no-repeat;height:62%;overflow: auto;background-size:cover;overflow: hidden;}
+			.iconpic{margin-top:0.5rem;}
+			.iconpic .mui-btn-link{font-size:2.8rem;color:#fff;}
 			
-			.mui-input-group {
-				margin-top: 10px;
-			}
+			.circlepic{text-align:center;color:#fff;font-size:2rem;}
+			.circlepic .getuserpic{height:8rem;width:8rem;background:#fff;clear:both;border-radius:50%;margin:20px auto;}
+			.circlepic a{color:#fff;font-size:2rem;}
+			.circlepic h4{font-size:1.5rem;margin:10px auto;color:#aaa;margin-top:2.1rem;margin-bottom:2rem;}
 			
-			.mui-input-group:first-child {
-				margin-top: 20px;
-			}
+			.userlist{text-align:center;}
+			.userlist li{display:inline-block;width:6rem;border-right:1px solid #919497;list-style-type:none;}
+			.userlist li:last-child{border-width:0;}
+			.userlist li:first-child{margin-left:-3rem;}
+			.userlist li a{color:#9a9592;}
+			.userlist li a span{color:#fff;}
 			
-			.mui-input-group label {
-				width: 22%;
-			}
+			.mui-table-view{margin-top:1px;}
+			.mui-table-view li a{color:#3c3b40!important;}
+			.mui-table-view span{float:right;margin-right:2rem;font-size:1.3rem;color:#aaa;}
 			
-			.mui-input-row label~input,
-			.mui-input-row label~select,
-			.mui-input-row label~textarea {
-				width: 78%;
-			}
+			.pingjia{background:#fff;margin-top:0;}
+			.pingjia ul{width:100%;overflow:hidden;padding:0;}
+			.pingjia li{list-style-type:none;width:20%;float:left;text-align:center;}
+			.pingjia li a{color:#aaa;}
 			
-			.mui-checkbox input[type=checkbox],
-			.mui-radio input[type=radio] {
-				top: 6px;
-			}
-			
-			.mui-content-padded {
-				margin-top: 25px;
-			}
-			
-			.mui-btn {
-				padding: 10px;
-			}
-			
-			.link-area {
-				display: block;
-				margin-top: 25px;
-				text-align: center;
-			}
-			
-			.spliter {
-				color: #bbb;
-				padding: 0px 8px;
-			}
-			
-			.oauth-area {
-				position: absolute;
-				bottom: 20px;
-				left: 0px;
-				text-align: center;
-				width: 100%;
-				padding: 0px;
-				margin: 0px;
-			}
-			
-			.oauth-area .oauth-btn {
-				display: inline-block;
-				width: 50px;
-				height: 50px;
-				background-size: 30px 30px;
-				background-position: center center;
-				background-repeat: no-repeat;
-				margin: 0px 20px;
-				/*-webkit-filter: grayscale(100%); */
-				border: solid 1px #ddd;
-				border-radius: 25px;
-			}
-			
-			.oauth-area .oauth-btn:active {
-				border: solid 1px #aaa;
-			}
-			
-			.oauth-area .oauth-btn.disabled {
-				background-color: #ddd;
-			}
+			.mui-table-view{margin-bottom:.6rem;}
 		</style>
-
 	</head>
 
 	<body>
 		<div class="mui-content">
-			<form id='login-form' class="mui-input-group">
-				<div class="mui-input-row">
-					<label>账号</label>
-					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
-				</div>
-				<div class="mui-input-row">
-					<label>密码</label>
-					<input id='password' type="password" class="mui-input-password" placeholder="请输入密码">
-				</div>
-			</form>
-			<form class="mui-input-group">
-				<ul class="mui-table-view mui-table-view-chevron">
-					<li class="mui-table-view-cell">
-						自动登录
-						<div id="autoLogin" class="mui-switch">
-							<div class="mui-switch-handle"></div>
-						</div>
-					</li>
-				</ul>
-			</form>
-			<div class="mui-content-padded">
-				<button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
-				<div class="link-area"><a id='reg'>注册账号</a> <span class="spliter">|</span> <a id='forgetPassword'>忘记密码</a>
-				</div>
+			<!--头部区域开始-->
+			<div class="userpic">
+					<div class="iconpic">
+						 <button class="mui-btn mui-btn-link mui-pull-left" id='shezhi'>
+						    <span class="mui-icon mui-icon-gear"></span>
+						  </button>
+						  <button class="mui-btn mui-btn-link mui-pull-right">
+						    <span class="mui-icon mui-icon-chatbubble"></span>
+						  </button>
+					</div>
+					<div class='circlepic'>
+						<div class='getuserpic'></div>
+						<a href="#">登录</a>/<a href="#">注册</a>
+						<h4>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright"></span></h4>
+					</div>
+					<div class='userlist'>
+						<ul>
+							<li><a href="#"><span>0</span><br>动态</a></li>
+							<li><a href="#"><span>0</span><br>关注</a></li>
+							<li><a href="#"><span>0</span><br>粉丝</a></li>							
+						</ul>
+					</div>
 			</div>
-			<div class="mui-content-padded oauth-area">
-
-			</div>
+			<!--头部区域结束-->
+			<!--我的管家开始-->
+			<ul class="mui-table-view" style='margin:0;'>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='guanli'>
+						我的管家<span>查看全部订单</span>
+					</a>
+				</li>
+			</ul>
+			<!--我的管家结束-->
+			<!--评价列表开始-->
+	   <div class='pingjia'>
+	   		<ul>
+	   			<li><a><span class="mui-icon mui-icon-refreshempty"></span>
+	   				<br>待接单	   				
+	   			</a></li>
+	   			<li><a><span class="mui-icon mui-icon-refreshempty"></span>
+	   				<br>带服务
+	   			</a></li>
+	   			<li><a><span class="mui-icon mui-icon-refreshempty"></span>
+	   				<br>待确认
+	   			</a></li>
+	   			<li><a><span class="mui-icon mui-icon-refreshempty"></span>
+	   				<br>带评价
+	   			</a></li>
+	   			<li><a><span class="mui-icon mui-icon-refreshempty"></span>
+	   				<br>售后
+	   			</a></li>
+	   		</ul>
+	   </div>
+			<!--评价列表结束-->
+			<!--钱包类别开始-->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='openservice'>
+						我的服务
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='openwallete'>
+						钱包
+					</a>
+				</li>
+			</ul>
+			<!--结尾钱包类-->
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
-			document.getElementById('forgetPassword').addEventListener('tap', function() {
-  //打开忘记密码
-			  mui.openWindow({
-			    url: 'main/forget-password.html', 
-			    id:'forget-password'
-			  });
-			});
-//打开注册页面		
-			document.getElementById('reg').addEventListener('tap', function() {
+			document.getElementById('shezhi').addEventListener('tap', function() {
+//打开设置页面
 			  mui.openWindow({
 			    url: 'main/reg.html', 
 			    id:'reg'
 			  });
 			});
-	//打开登录主页面		
-			document.getElementById('login').addEventListener('tap', function() {
+//打开我的管家	
+			document.getElementById('guanli').addEventListener('tap', function() {
 			  mui.openWindow({
-			    url: 'main/loginindex.html', 
-			    id:'loginindex'
+			    url: 'main/allorder.html', 
+			    id:'guanli'
+			  });
+			});
+	//打开服务主页面		
+			document.getElementById('openservice').addEventListener('tap', function() {
+			  mui.openWindow({
+			    url: 'main/service.html', 
+			    id:'service'
+			  });
+			});
+//打开钱包主页面
+document.getElementById('openwallete').addEventListener('tap', function() {
+			  mui.openWindow({
+			    url: 'main/wallte.html', 
+			    id:'wallete'
 			  });
 			});
 		</script>

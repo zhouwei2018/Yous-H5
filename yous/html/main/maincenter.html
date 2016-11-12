@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			html{font-size:10px;}
+			.mui-table-view{margin-top:1rem;}
+			.mui-table-view:first-child{height:8rem;line-height:6rem;}
+			.mui-table-view li a{color:#3c3b40!important;}
+			.mui-table-view span{float:right;margin-right:2rem;font-size:1.3rem;color:#aaa;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">个人资料</h1>
+		</header>
+		<div class="mui-content">
+		     <ul class="mui-table-view">
+		    	<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						头像
+					</a>
+				</li>
+			</ul>
+			 <ul class="mui-table-view">
+		    	<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						账号<span>space</span>
+					</a>
+				</li>
+			</ul>
+			 <ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='openaddress'>
+						所在地址
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//打开地址
+			document.getElementById('openaddress').addEventListener('tap', function() {
+			  mui.openWindow({
+			    url: 'address.html', 
+			    id:'address'
+			  });
+			});
+		</script>
+	</body>
+
+</html>

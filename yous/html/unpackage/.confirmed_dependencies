@@ -6,7 +6,15 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"img/logoworld.png",
-			"img/selectarrow.png"
+			"img/selectarrow.png",
+			"img/urslistleft.png",
+			"img/homemarqueepic1.jpg",
+			"img/homemarqueepic.jpg",
+			"img/homemarqueepic2.jpg",
+			"img/hotshoopingpic2.jpg",
+			"img/hotactive2.png",
+			"img/hotshoopingpic1.jpg",
+			"img/hotactive1.png"
 		],
 		"refer": [
 			"home.html",
@@ -19,7 +27,17 @@
 	},
 	"my.html": {
 		"refer": [
-			"main/loginindex.html"
+			"main/loginindex.html",
+			"main/reg.html",
+			"main/allorder.html",
+			"main/service.html",
+			"main/wallte.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/mainbg.jpg"
 		]
 	},
 	"main/loginindex.html": {
@@ -47,7 +65,113 @@
 		"resources": [
 			"js/mui.min.js",
 			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"citylist/city5.html",
+			"citylist/city4.html",
+			"citylist/city1.html",
+			"citylist/city3.html",
+			"citylist/city2.html"
+		],
+		"refer": [
+			"citylist/city5.html",
+			"citylist/city4.html",
+			"citylist/city1.html",
+			"citylist/city3.html",
+			"citylist/city2.html"
+		]
+	},
+	"citylist/city5.html": {
+		"resources": [
+			"citylist.html"
+		],
+		"refer": [
+			"citylist.html"
+		]
+	},
+	"citylist/city4.html": {
+		"resources": [
+			"citylist.html"
+		],
+		"refer": [
+			"citylist.html"
+		]
+	},
+	"citylist/city1.html": {
+		"resources": [
+			"citylist.html",
+			"js/mui.zoom.js",
+			"css/preview.css",
+			"js/mui.previewimage.js",
+			"img/homemarqueepic2.jpg",
+			"img/homemarqueepic1.jpg"
+		],
+		"refer": [
+			"citylist.html"
+		]
+	},
+	"citylist/city3.html": {
+		"resources": [
+			"citylist.html"
+		],
+		"refer": [
+			"citylist.html"
+		]
+	},
+	"main/maincenter.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
 			"css/mui.min.css"
+		],
+		"refer": [
+			"main/address.html"
+		]
+	},
+	"main/reg.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"main/maincenter.html",
+			"main/apply.html"
+		]
+	},
+	"main/apply.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"main/allorder.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"main/service.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"main/wallte.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"citylist/city2.html": {
+		"resources": [
+			"citylist.html"
+		],
+		"refer": [
+			"citylist.html"
 		]
 	}
 }
