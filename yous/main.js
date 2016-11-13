@@ -46,22 +46,27 @@ router.map(
         //    }
         //}
     },
+    //登录
     '/login': {
         name:'login',
         component:login
     },
+    //注册
     '/register': {
         name:'register',
         component:register
     },
+    //服务
     '/service': {
         name:'service',
         component:service
     },
+    //空间
     '/space': {
         name:'space',
         component:space
     },
+    //装修
     '/decorate': {
         name:'decorate',
         component:decorate
