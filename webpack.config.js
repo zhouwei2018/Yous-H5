@@ -2,9 +2,9 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-     docs : './docs/index.js',
-      mui : './src/index.js',
-      yous : './yous/index.js',
+     docs : './docs/main.js',
+      mui : './src/main.js',
+      yous : './yous/main.js',
   },
   output: {
     path: './dist',
