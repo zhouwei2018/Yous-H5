@@ -22,8 +22,8 @@ var App = Vue.extend({
 
 var router = new VueRouter(
     {
-        hashbang: false,
-        history: true
+        //hashbang: false,
+        //history: true
     }
 )
 // 每条路由规则应该映射到一个组件。这里的“组件”可以是一个使用 Vue.extend创建的组件构造函数，也可以是一个组件选项对象。

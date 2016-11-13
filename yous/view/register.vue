@@ -1,6 +1,6 @@
 <template>
     <header class="mui-bar mui-bar-nav">
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  v-link="{name: 'login', params: {userId: 1}"></a>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  onclick="window.history.go(-1)"></a>
         <h1 class="mui-title">注册</h1>
     </header>
     <div class="mui-content">

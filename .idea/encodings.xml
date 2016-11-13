@@ -5,5 +5,9 @@
     <file url="file://$PROJECT_DIR$/yous/view/componets/header.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yous/view/componets/nav.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yous/view/index.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yous/view/user/address.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yous/view/user/restpassword.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yous/view/user/setting.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yous/view/user/userinfo.vue" charset="UTF-8" />
   </component>
 </project>
