@@ -1,7 +1,9 @@
 <template>
     <header1></header1>
     <nav1></nav1>
-    装修模块
+    <div class="mui-content">
+         <span>装修模块</span>
+    </div>
 </template>
 <script>
     import header1 from '.././componets/header.vue'
