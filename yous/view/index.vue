@@ -186,7 +186,6 @@
 <script>
     import header1 from './componets/header.vue'
     import nav1 from './componets/nav.vue'
-
     export default {
         components : {
             header1,

@@ -9,7 +9,9 @@ var nav=require('./view/componets/nav.vue');
 var index = require('./view/index.vue')
 var login = require('./view/login.vue')
 var register=require('./view/register.vue');
-
+var service=require('./view/service/service.vue');
+var space=require('./view/space/space.vue');
+var decorate=require('./view/decorate/decorate.vue');
 
 //开启debug模式
 //Vue.config.debug = true;
@@ -52,6 +54,19 @@ router.map(
         name:'register',
         component:register
     },
+    '/service': {
+        name:'service',
+        component:service
+    },
+    '/space': {
+        name:'space',
+        component:space
+    },
+    '/decorate': {
+        name:'decorate',
+        component:decorate
+    },
+
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
     '*':"/index"//重定向任意未匹配路径到/index
