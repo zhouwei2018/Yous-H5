@@ -42,7 +42,7 @@
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="mui-navigate-right"  href='tel:400 800 12545'>
 						提问客服<span>400 800 12545</span>
 					</a>
 				</li>
@@ -63,14 +63,14 @@
 			</ul>
 			
 			<ul class="mui-table-view">
-				<li class="mui-table-view-cell">
+				<li class="mui-table-view-cell" id='clear'>
 					<a class="mui-navigate-right">
 						清除缓存<span>32.23M</span>
 					</a>
 				</li>
 			</ul>
 			<ul class="mui-table-view">
-				<li class="mui-table-view-cell" style="text-align: center;">
+				<li class="mui-table-view-cell" style="text-align: center;" id='leave'>
 					<a>退出登录</a>
 				</li>
 			</ul>
@@ -94,7 +94,23 @@
 			    id:'apply'
 			  });
 			});
-			
+	//退出登录对话框	
+	var old_back = mui.back;
+	document.getElementById("leave").addEventListener('tap', function() {
+				var btnArray = ['是', '否'];
+				mui.confirm('确定退出幼狮空间？', '幼狮空间提醒', btnArray, function(e) {
+					//这里是退出登录的密码
+					if (e.index == 0) {
+						old_back();
+					}
+				})
+			});
+document.getElementById("clear").addEventListener('tap', function() {
+				var btnArray = ['是', '否'];
+				mui.confirm('确定清空缓存？', '幼狮空间提醒', btnArray, function(e) {
+					//这里是清楚缓存的
+				})
+			});
 		</script>
 	</body>
 

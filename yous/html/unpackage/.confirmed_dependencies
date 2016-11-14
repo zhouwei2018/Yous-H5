@@ -22,7 +22,8 @@
 			"setting.html",
 			"chat.html",
 			"tel.html",
-			"citylist.html"
+			"citylist.html",
+			"login.html"
 		]
 	},
 	"my.html": {
@@ -172,6 +173,15 @@
 		],
 		"refer": [
 			"citylist.html"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"my.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
 		]
 	}
 }

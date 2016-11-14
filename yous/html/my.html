@@ -10,7 +10,7 @@
 		<style>
 			html{font-size:10px;background:#fff;}
 			.mui-content{position:absolute;height:100%;width:100%;background:#fff;}
-			.userpic{background:url(img/mainbg.jpg) no-repeat;height:62%;overflow: auto;background-size:cover;overflow: hidden;}
+			.userpic{background:url(img/mainbg.jpg) no-repeat;height:50%;overflow: auto;background-size:cover;overflow: hidden;}
 			.iconpic{margin-top:0.5rem;}
 			.iconpic .mui-btn-link{font-size:2.8rem;color:#fff;}
 			
@@ -47,14 +47,14 @@
 						 <button class="mui-btn mui-btn-link mui-pull-left" id='shezhi'>
 						    <span class="mui-icon mui-icon-gear"></span>
 						  </button>
-						  <button class="mui-btn mui-btn-link mui-pull-right">
+						  <button class="mui-btn mui-btn-link mui-pull-right" id='information'>
 						    <span class="mui-icon mui-icon-chatbubble"></span>
 						  </button>
 					</div>
 					<div class='circlepic'>
 						<div class='getuserpic'></div>
 						<a href="#">登录</a>/<a href="#">注册</a>
-						<h4>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright"></span></h4>
+						<h4 id='label'>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright"></span></h4>
 					</div>
 					<div class='userlist'>
 						<ul>
@@ -140,6 +140,21 @@ document.getElementById('openwallete').addEventListener('tap', function() {
 			  mui.openWindow({
 			    url: 'main/wallte.html', 
 			    id:'wallete'
+			  });
+			});
+			
+//打来标签页
+document.getElementById('label').addEventListener('tap', function() {
+			  mui.openWindow({
+			    url: 'main/label.html', 
+			    id:'label'
+			  });
+			});
+//打开消息页面
+document.getElementById('information').addEventListener('tap', function() {
+			  mui.openWindow({
+			    url: 'main/information.html', 
+			    id:'information'
 			  });
 			});
 		</script>

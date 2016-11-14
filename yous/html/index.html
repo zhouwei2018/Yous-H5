@@ -9,7 +9,7 @@
     <style>
     	header{position:relative;}
     	header a{margin-right:4%;}
-    	header h1{background: url(img/logoworld.png) no-repeat center center;height:100%;background-size: 40% 70%;}
+    	/*header h1{background: url(img/logoworld.png) no-repeat center center;height:100%;background-size: 40% 70%;}*/
     	/*select{background:url(img/selectarrow.png) no-repeat right center transparent;}*/
     	select{-webkit-appearance: listbox; -webkit-user-select: auto !important;}
     	#citylist{border-width:0;background:url(img/selectarrow.png) no-repeat center right #F7F7F7;padding-right:23px;position:absolute;z-index:20px;font-size:14px;background-position-y:33% ;}
@@ -17,9 +17,7 @@
 </head>
 <body>
 		<header class="mui-bar mui-bar-nav">
-			<button href="#" id="citylist" class="mui-btn mui-pull-left">北京</button>
-			<h1 id="title" class="mui-title"></h1>
-			<a class="mui-pull-right"><span class="mui-icon mui-icon-map"></span></a>
+			<h1 id="title" class="mui-title">幼狮空间</h1>
 		</header>
 		
 		
@@ -118,7 +116,7 @@
 				
 				if (targetTab == activeTab) {return;}
 				//更换标题
-//				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
 				//显示目标选项卡
 				if(mui.os.plus){
 					//若为iOS平台或非首次显示，则直接显示

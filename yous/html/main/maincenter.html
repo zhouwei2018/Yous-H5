@@ -35,6 +35,13 @@
 					</a>
 				</li>
 			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='modifypwd'>
+						修改密码
+					</a>
+				</li>
+			</ul>
 			 <ul class="mui-table-view">
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right" id='openaddress'>
@@ -46,13 +53,22 @@
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init();
-			//打开地址
+			//打开所在地址
 			document.getElementById('openaddress').addEventListener('tap', function() {
 			  mui.openWindow({
 			    url: 'address.html', 
 			    id:'address'
 			  });
 			});
+//打开修改密码面板
+			document.getElementById('modifypwd').addEventListener('tap', function() {
+			  mui.openWindow({
+			    url: 'modifypwd.html', 
+			    id:'modifypwd'
+			  });
+			});			
+			
+			
 		</script>
 	</body>
 

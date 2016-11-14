@@ -1,4 +1,4 @@
-{
+{"fullscreen":true,
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H55DADF2F",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "URS",/*应用名称，程序桌面图标名称*/
@@ -220,7 +220,8 @@
 					"setting.html",
 					"chat.html",
 					"tel.html",
-					"citylist.html"
+					"citylist.html",
+					"login.html"
 				],
 				"priority": 0
 			},
@@ -376,6 +377,16 @@
 					"citylist.html"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"my.html"
+				],
 				"priority": 0
 			}
 		},

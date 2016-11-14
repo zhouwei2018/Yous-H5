@@ -8,14 +8,11 @@
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<style>
 			.mui-input-row .mui-btn{width:auto;text-align:center;}
+			.spliter{color:#aaa;}
 		</style>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    <h1 class="mui-title">登录</h1>
-		</header>
 		<div class="mui-content" style='margin-top:10px;'>
 			<form id='login-form' class="mui-input-group">
 				<div class="mui-input-row">
@@ -28,7 +25,7 @@
 			</form>
 			<div class="mui-content-padded" style='text-align:center;'>
 					<button id='login' class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;'>登录</button>
-					<div class="link-area"><a id='zhuce'>注册账号</a> <span class="spliter">|</span> <a id='forgetPassword'>忘记密码</a>
+					<div class="link-area"><a id='zhuce'>注册账号</a> <span class="spliter">|</span> <a id='forgetPassword'>忘记密码?</a>
 			</div>
 		</div>
 		
@@ -62,7 +59,7 @@
 						
 
 
-
+//打开注册面板
 			document.getElementById("zhuce").addEventListener('tap',function(){
 				
 				 mui.openWindow({
@@ -71,11 +68,28 @@
 				  });
 				
 			})
+//打开忘记密码面板
+			document.getElementById("forgetPassword").addEventListener('tap',function(){
+				
+				 mui.openWindow({
+				    url: 'main/forgetpwd.html', 
+				    id:'forgetpwd'
+				  });
+				
+			})			
 			
+//模拟登录成功页面 进去主页面			
 			
-			
-			
-
+			document.getElementById("login").addEventListener('tap',function(){
+							var testnumber=document.getElementById("password").value;
+							if(testnumber=='1234'){
+								 mui.openWindow({
+							    url: 'my.html', 
+							    id:'mycenter'
+							  });
+								
+							}
+						})	
 		</script>
 	</body>
 
