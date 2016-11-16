@@ -2,7 +2,7 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-     docs : './docs/main.js',
+      docs : './docs/main.js',
       mui : './src/main.js',
       yous : './yous/main.js',
   },

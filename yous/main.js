@@ -12,7 +12,9 @@ var register=require('./view/register.vue');
 var service=require('./view/service/service.vue');
 var space=require('./view/space/space.vue');
 var decorate=require('./view/decorate/decorate.vue');
-
+var main=require('./view/user/main.vue');//用户中心主页面
+var setting=require('./view/user/setting.vue'); //设置
+var info=require('./view/user/info.vue'); //我的信息
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -24,7 +26,8 @@ var App = Vue.extend({
 
 var router = new VueRouter(
     {
-        //hashbang: false,
+        mode:"history",
+        hashbang: false,
         //history: true
     }
 )
@@ -70,6 +73,18 @@ router.map(
     '/decorate': {
         name:'decorate',
         component:decorate
+    },
+    '/user/main': {
+        name:'main',
+        component:main
+        },
+    '/user/setting':{
+        name:'setting',
+        component:setting
+    },
+    '/user/info':{
+        name:'info',
+        component:info
     },
 
 });
