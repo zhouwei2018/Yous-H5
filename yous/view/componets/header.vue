@@ -1,8 +1,6 @@
 <style>
     header{position:relative;}
     header a{margin-right:4%;}
-    select{-webkit-appearance: listbox; -webkit-user-select: auto !important;}
-    #citylist{border-width:0;background:url(../../../dist/img/selectarrow.png) no-repeat center right #F7F7F7;padding-right:23px;position:absolute;z-index:20px;font-size:14px;background-position-y:33% ;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav" >

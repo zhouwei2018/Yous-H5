@@ -22,4 +22,7 @@
         <span class="mui-tab-label">个人中心</span>
     </a>
 </nav>
+<alert :show.sync="show"
+       :title="title"
+       :content="content"></alert>
 </template>

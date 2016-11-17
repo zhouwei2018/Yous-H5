@@ -15,6 +15,10 @@ var decorate=require('./view/decorate/decorate.vue');
 var main=require('./view/user/main.vue');//用户中心主页面
 var setting=require('./view/user/setting.vue'); //设置
 var info=require('./view/user/info.vue'); //我的信息
+var maintenance_lists= require('./view/maintenance/lists.vue'); //社保维修
+var maintenance_order= require('./view/maintenance/order.vue'); //社保维修
+var transfer_lists= require('./view/transfer/lists.vue'); // 交接
+var transfer_order= require('./view/transfer/order.vue'); // 交接
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -85,6 +89,22 @@ router.map(
     '/user/info':{
         name:'info',
         component:info
+    },
+    '/maintenance/lists':{
+        name:'maintenance_lists',
+        component:maintenance_lists
+    },
+    '/maintenance/order':{
+        name:'maintenance_order',
+        component:maintenance_order
+    },
+    '/transfer/lists':{
+        name:'transfer_lists',
+        component:transfer_lists
+    },
+    '/transfer/order':{
+        name:'transfer_order',
+        component:transfer_order
     },
 
 });

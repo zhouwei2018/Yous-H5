@@ -1,12 +1,14 @@
 <style lang="less">
-@base-width:16rem;
+@base-width:100%;
+@base-height:19rem;
 @color-gray:#eee;
 @color-green:#4c9;
 
 .slide{
 	position: relative;
 	width: @base-width;
-	height: (@base-width * 6 / 16);
+	/*height: (@base-width * 7 / 12);*/
+	height:@base-height;
 	overflow: hidden;
 	&-detail{
 		height: 16rem;

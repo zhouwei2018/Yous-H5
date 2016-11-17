@@ -1,120 +1,137 @@
 <style>
-    body,.mui-content{background:#fff}
-    #urscommunity{width:96%;margin:10px auto;}
-    .homecontainer{width:96%;margin:30px auto;}
-    .homecontainer h4 span{color:#FF7F19;margin-right:1px;}
-    .homecontainer h4{margin:20px;margin-left:0;color:#2C3637;margin-bottom:10px;}
-    .homecontainer button{margin-right:30px;}
-    .homecontainer .mui-row{width:99%;margin:15px auto;text-align:left;padding-left:20px;}
-    .homecontainer .mui-row a.mui-btn{border-radius:20px;background: #F4F4F4;color:#929699;border-width:0;}
+
+    body, .mui-content {
+        background: #fff;
+    }
+    #urscommunity {
+        width: 96%;
+        margin: 10px auto;
+    }
+
+    .homecontainer {
+        width: 96%;
+        margin: 15px auto;
+    }
+
+    .homecontainer h4 span {
+        color: #FF7F19;
+        margin-right: 1px;
+    }
+
+    .homecontainer h4 {
+        margin: 20px;
+        margin-left: 0;
+        color: #2C3637;
+        margin-bottom: 10px;
+    }
+
+    .homecontainer button {
+        margin-right: 30px;
+    }
+
+    .homecontainer .mui-row {
+        width: 99%;
+        margin: 15px auto;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .homecontainer .mui-row a.mui-btn {
+        border-radius: 20px;
+        background: #F4F4F4;
+        color: #929699;
+        border-width: 0;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .flex-container {
+        /*display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: center;*/
+        text-align: center;
+    }
+
+    .flex-container > a {
+        /*display: none;*/
+        position: relative;
+        width: 25%;
+        float: left;
+        /*flex: 1;*/
+        /*border: 1px red solid;*/
+        padding: 10px 0;
+    }
+
+    .flex-container span {
+        /*border: 1px #ccc solid;*/
+        border-radius: 100%;
+        padding: 5px;
+    }
+
+    .flex-container h6 {
+        margin-top: 8px;
+
+    }
+    .flex-container img {
+        width: 50%;
+    }
 </style>
-<template>
+
+<template >
+    <!--头部区域-->
     <header1></header1>
-    <nav1></nav1>
-
+    <!--面板区域-->
     <div class="mui-content">
-        <div class="mui-slider" id='mainSlider'>
-            <div class="mui-slider-group mui-slider-loop">
-                <!--支持循环，需要重复图片节点-->
-                <div class="mui-slider-item mui-slider-item-duplicate">
-                    <a href="#"><img src="../../dist/img/homemarqueepic2.jpg" /></a>
-                    <p class="mui-slider-title">幼狮公告3</p>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#"><img src="../../dist/img/homemarqueepic.jpg" /></a>
+        <!--第一个轮播-->
+        <div class="mui-slider">
+            <slide :list="list" ></slide>
+        </div>
+        <!--空间服务-->
+        <div class="homecontainer">
+            <div class="flex-container">
+                <a  v-link="{ path: '/transfer/lists'}">
+                    <img src='../../dist/img/btn_kongjian@3x.png'/>
+                    <h6>物业对接</h6>
+                </a>
 
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#"><img src="../../dist/img/homemarqueepic1.jpg" />
-                    </a>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#"><img src="../../dist/img/homemarqueepic2.jpg" />
-                    </a>
-                </div>
-                <!--支持循环，需要重复图片节点-->
-                <div class="mui-slider-item mui-slider-item-duplicate">
-                    <a href="#"><img src="../../dist/img/homemarqueepic.jpg" /></a>
+                <a v-link="{ path: '/maintenance/lists'}">
+                    <img src='../../dist/img/btn_pengyouquan@3x.png'  />
+                    <h6>设备维修</h6>
+                </a>
 
-                </div>
-            </div><!--轮播图片结束-->
-            <div class="mui-slider-indicator" style="margin:0 auto;"> <!--轮播的按钮组件-->
-                <div class="mui-indicator mui-active"></div>
-                <div class="mui-indicator"></div>
-                <div class="mui-indicator"></div>
+                <a>
+                    <img src='../../dist/img/btn_qq@3x.png'/>
+                    <h6>缴费事项</h6>
+                </a>
+                <a>
+                    <img src='../../dist/img/btn_tengxunweibo@3x_67.png'/>
+                    <h6>更多</h6>
+                </a>
+                <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
             </div>
-        </div><!--轮播结束-->
-        <!--首页面图标链接开始-->
-        <ul class="mui-table-view mui-grid-view mui-grid-9">
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                <span class="mui-icon mui-icon-home"></span>
-                <div class="mui-media-body">Home</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-                <div class="mui-media-body">Email</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                <span class="mui-icon mui-icon-chatbubble"></span>
-                <div class="mui-media-body">Chat</div></a></li>
-        </ul> <!--主链接结束-->
+        </div>
 
-        <div class="homecontainer"> <!--幼狮社区开始-->
+        <!--幼狮社区-->
+        <div class="homecontainer" style='margin-top:120px;clear:both;'> <!--幼狮社区开始-->
             <h4><span>幼狮</span>社区</h4>
-            <div class="mui-slider" id='ursCommunity'>
-                <div class="mui-slider-group mui-slider-loop">
-                    <!--支持循环，需要重复图片最前节点-->
-                    <div class="mui-slider-item mui-slider-item-duplicate">
-                        <a href="#"><img src="../../dist/img/hotshoopingpic2.jpg" /></a>
+            <div class="mui-slider">
+                <slide :list="list2" ></slide>
+            </div>
+        </div>
 
-                    </div>
-                    <div class="mui-slider-item">
-                        <a href="#"><img src="../../dist/img/hotshoopingpic1.jpg" /></a>
-
-                    </div>
-                    <div class="mui-slider-item">
-                        <a href="#"><img src="../../dist/img/hotshoopingpic2.jpg" />
-                        </a>
-                    </div>
-                    <!--支持循环，需要重复图片最后节点-->
-                    <div class="mui-slider-item mui-slider-item-duplicate">
-                        <a href="#"><img src="../../dist/img/hotshoopingpic1.jpg" /></a>
-
-                    </div>
-                </div><!--轮播图片结束-->
-                <div class="mui-slider-indicator mui-text-right" style="margin:0 auto;"> <!--轮播的按钮组件-->
-                    <div class="mui-indicator mui-active"></div>
-                    <div class="mui-indicator"></div>
-                </div>
-            </div><!--轮播结束-->
-        </div> <!--幼狮社区结束-->
-
-        <div class="homecontainer"> <!--资源对接开始-->
+        <!--资源对接-->
+        <div class="homecontainer">
             <h4><span>资源</span>对接</h4>
-            <div class="mui-slider" id='resourceDocking'>
-                <div class="mui-slider-group mui-slider-loop">
-                    <!--支持循环，需要重复图片节点-->
-                    <div class="mui-slider-item mui-slider-item-duplicate">
-                        <a href="#"><img src="../../dist/img/hotactive2.png" /></a>
-                    </div>
-                    <div class="mui-slider-item">
-                        <a href="#"><img src="../../dist/img/hotactive1.png" /></a>
-                    </div>
-                    <div class="mui-slider-item">
-                        <a href="#"><img src="../../dist/img/hotactive2.png" />
-                        </a>
-                    </div>
-                    <!--支持循环，需要重复图片节点-->
-                    <div class="mui-slider-item mui-slider-item-duplicate">
-                        <a href="#"><img src="../../dist/img/hotactive1.png" /></a>
-                    </div>
-                </div><!--轮播图片结束-->
-                <div class="mui-slider-indicator mui-text-right" style="margin:0 auto;"> <!--轮播的按钮组件-->
-                    <div class="mui-indicator mui-active"></div>
-                    <div class="mui-indicator"></div>
-                </div>
-            </div><!--轮播结束-->
-        </div> <!--资源对接结束-->
+            <div class="mui-slider">
+                <slide :list="list2" ></slide>
+            </div>
+        </div>
 
-        <div class="homecontainer"> <!--资源对接开始-->
+        <!--幼狮支持-->
+        <div class="homecontainer">
             <h4><span>幼狮</span>支持</h4>
             <div class="mui-row">
                 <a class="mui-btn mui-btn-outlined" href='#'>
@@ -144,9 +161,9 @@
                     服务商
                 </a>
             </div>
-        </div> <!--资源对接结束-->
+        </div>
 
-
+        <!--精选服务商-->
         <div class="homecontainer"> <!--精选服务商开始-->
             <h4><span>精选</span>服务商</h4>
             <ul class="mui-table-view">
@@ -178,18 +195,49 @@
                     </a>
                 </li>
             </ul>
-        </div> <!--精选服务商结束-->
-    </div><!--内容区域结束-->
+        </div>
 
+
+    </div>
+    <!--导航区域-->
+    <nav1></nav1>
 
 </template>
+
+
 <script>
-    import header1 from './componets/header.vue'
-    import nav1 from './componets/nav.vue'
+    import header1 from './componets/header.vue';
+    import nav1 from './componets/nav.vue';
+    import slide from '../../src/components/slide.vue';
     export default {
-        components : {
+        data() {
+        return {
+                list : [{
+                    img : '../../dist/img/homemarqueepic.jpg',
+                    link : 'http://www.baidu.com'
+                },{
+                    img : '../../dist/img/hotshoopingpic1.jpg',
+                    link : 'http://www.baidu.com'
+                },{
+                    img : '../../dist/img/hotshoopingpic1.jpg',
+                    link : 'http://www.baidu.com'
+                }],
+                list2 : [{
+                    img : '../../dist/img/hotshoopingpic1.jpg',
+                    link : 'http://www.baidu.com'
+                },{
+                    img : '../../dist/img/hotshoopingpic1.jpg',
+                    link : 'http://www.baidu.com'
+                },{
+                    img : '../../dist/img/hotshoopingpic1.jpg',
+                    link : 'http://www.baidu.com'
+                }] //banner（list,list2）图数据源
+            }
+      },
+       components : {
             header1,
-            nav1
+            nav1,
+            slide
         }
     }
 </script>

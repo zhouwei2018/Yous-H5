@@ -1,8 +1,8 @@
-
 <style>
     html{font-size:10px;background:#fff;}
     .mui-content{position:absolute;height:100%;width:100%;background:#fff;}
-    .iconpic{margin-top:0.5rem;}
+    /*.userpic{background:url(img/mainbg.jpg) no-repeat;height:50%;overflow: auto;background-size:cover;overflow: hidden;}*/
+    /*.iconpic{margin-top:0.5rem;}*/
     .iconpic .mui-btn-link{font-size:2.8rem;color:#fff;}
 
     .circlepic{text-align:center;color:#fff;font-size:2rem;}
@@ -27,23 +27,47 @@
     .pingjia li a{color:#aaa;}
 
     .mui-table-view{margin-bottom:.6rem;}
+    .flex-container>a{
+        /*display: none;*/
+        position: relative;
+        width: 25%;
+        float: left;
+        /*flex: 1;*/
+        /*border: 1px red solid;*/
+        padding:10px 0;
+        text-align:center;
+    }
+    .flex-container span{
+
+        /*border: 1px #ccc solid;*/
+        border-radius: 100%;
+        padding: 5px;
+    }
+    .flex-container h6{
+        margin-top: 8px;
+
+    }
+
+    .flex-container img{
+        width: 50%;
+    }
 </style>
 <template>
     <div class="mui-content">
         <!--头部区域开始-->
         <div v-bind:style="styleObject">
             <div class="iconpic">
-                <button class="mui-btn mui-btn-link mui-pull-left" id='shezhi'>
-                    <span class="mui-icon mui-icon-gear"  v-link="{ path: '/user/setting'}"></span>
+                <button class="mui-btn mui-btn-link mui-pull-left" id='shezhi' v-link="{ path: '/user/setting'}">
+                    <span class="mui-icon mui-icon-gear"></span>
                 </button>
-                <button class="mui-btn mui-btn-link mui-pull-right" >
+                <button class="mui-btn mui-btn-link mui-pull-right" id='information'>
                     <span class="mui-icon mui-icon-chatbubble"></span>
                 </button>
             </div>
             <div class='circlepic'>
-                <div class='getuserpic' v-link="{ path:'/user/info'}"></div>
+                <div class='getuserpic'></div>
                 <a href="#">登录</a>/<a href="#">注册</a>
-                <h4>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright"></span></h4>
+                <h4 id='label'>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright"></span></h4>
             </div>
             <div class='userlist'>
                 <ul>
@@ -64,24 +88,34 @@
         </ul>
         <!--我的管家结束-->
         <!--评价列表开始-->
-        <div class='pingjia'>
-            <ul>
-                <li><a><span class="mui-icon mui-icon-refreshempty"></span>
-                    <br>待接单
-                </a></li>
-                <li><a><span class="mui-icon mui-icon-refreshempty"></span>
-                    <br>带服务
-                </a></li>
-                <li><a><span class="mui-icon mui-icon-refreshempty"></span>
-                    <br>待确认
-                </a></li>
-                <li><a><span class="mui-icon mui-icon-refreshempty"></span>
-                    <br>带评价
-                </a></li>
-                <li><a><span class="mui-icon mui-icon-refreshempty"></span>
-                    <br>售后
-                </a></li>
-            </ul>
+        <!--<div style="height: 35px;margin: 0 10px;">
+            <span style="line-height: 35px;">分享到：</span>
+            <button  type="button" style="height: 30px;margin-top: 5px;" class="mui-btn mui-btn-yellow mui-pull-right" id='exit'>取消</button>
+        </div>-->
+        <div class="flex-container" style='margin-top:10px;overflow:hidden'>
+
+            <a id="kefu">
+                <img src='../../../dist/img/btn_kongjian@3x.png'/>
+                <h6>待接单</h6>
+            </a>
+
+            <a>
+                <img src='../../../dist/img/btn_pengyouquan@3x.png'/>
+                <h6>待服务</h6>
+            </a>
+            <a>
+                <img src='../../../dist/img/btn_pengyouquan@3x.png'/>
+                <h6>待确认</h6>
+            </a>
+            <a id="feiyong">
+                <img src='../../../dist/img/btn_qq@3x.png'/>
+                <h6>待评价</h6>
+            </a>
+            <a id="more">
+                <img src='../../../dist/img/btn_tengxunweibo@3x_67.png'/>
+                <h6>售后</h6>
+            </a>
+            <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
         </div>
         <!--评价列表结束-->
         <!--钱包类别开始-->
