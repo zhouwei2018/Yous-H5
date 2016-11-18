@@ -3,6 +3,8 @@ var VueRouter = require('vue-router')
 var VueResource = require('vue-resource')
 Vue.use(VueResource)
 Vue.use(VueRouter)
+
+
 // 引入组件！直接使用es6的语法
 var header=require('./view/componets/header.vue');
 var nav=require('./view/componets/nav.vue');
@@ -19,6 +21,8 @@ var maintenance_lists= require('./view/maintenance/lists.vue'); //社保维修
 var maintenance_order= require('./view/maintenance/order.vue'); //社保维修
 var transfer_lists= require('./view/transfer/lists.vue'); // 交接
 var transfer_order= require('./view/transfer/order.vue'); // 交接
+
+
 //开启debug模式
 //Vue.config.debug = true;
 

@@ -1,30 +1,18 @@
 <style>
-
-    body, .mui-content {
-        background: #fff;
-    }
-    #urscommunity {
-        width: 96%;
-        margin: 10px auto;
-    }
-
     .homecontainer {
         width: 96%;
         margin: 15px auto;
     }
-
     .homecontainer h4 span {
         color: #FF7F19;
         margin-right: 1px;
     }
-
     .homecontainer h4 {
         margin: 20px;
         margin-left: 0;
         color: #2C3637;
         margin-bottom: 10px;
     }
-
     .homecontainer button {
         margin-right: 30px;
     }
@@ -35,45 +23,27 @@
         text-align: left;
         padding-left: 20px;
     }
-
     .homecontainer .mui-row a.mui-btn {
         border-radius: 20px;
         background: #F4F4F4;
         color: #929699;
         border-width: 0;
     }
-
-    body {
-        background-color: white;
-    }
-
     .flex-container {
-        /*display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
-        justify-content: center;*/
         text-align: center;
     }
-
     .flex-container > a {
-        /*display: none;*/
         position: relative;
         width: 25%;
         float: left;
-        /*flex: 1;*/
-        /*border: 1px red solid;*/
         padding: 10px 0;
     }
-
     .flex-container span {
-        /*border: 1px #ccc solid;*/
         border-radius: 100%;
         padding: 5px;
     }
-
     .flex-container h6 {
         margin-top: 8px;
-
     }
     .flex-container img {
         width: 50%;
@@ -89,6 +59,7 @@
         <div class="mui-slider">
             <slide :list="list" ></slide>
         </div>
+
         <!--空间服务-->
         <div class="homecontainer">
             <div class="flex-container">
@@ -196,14 +167,11 @@
                 </li>
             </ul>
         </div>
-
-
     </div>
     <!--导航区域-->
     <nav1></nav1>
 
 </template>
-
 
 <script>
     import header1 from './componets/header.vue';

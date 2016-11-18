@@ -1,7 +1,7 @@
 
 <template>
     <nav class="mui-bar mui-bar-tab">
-    <a id="defaultTab" class="mui-tab-item" v-link="{ path: '/index', activeClass:'mui-active'}">
+    <a  class="mui-tab-item" v-link="{ path: '/index', activeClass:'mui-active'}">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
     </a>

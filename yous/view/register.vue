@@ -4,24 +4,24 @@
         <h1 class="mui-title">注册</h1>
     </header>
     <div class="mui-content">
-        <form id='login-form' class="mui-input-group">
+        <form  class="mui-input-group">
             <div class="mui-input-row">
-                <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="mobile">
+                <input  type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="mobile">
             </div>
             <div class="mui-input-row">
-                <input id='pwd' v-model="pwd" type="password" class="mui-input-clear mui-input" placeholder="输入密码">
+                <input  v-model="pwd" type="password" class="mui-input-clear mui-input" placeholder="输入密码">
             </div>
             <div class="mui-input-row">
-                <input id='reppwd' type="password" class="mui-input-clear mui-input" placeholder="确认密码">
+                <input  type="password" class="mui-input-clear mui-input" placeholder="确认密码">
             </div>
             <div class="mui-input-row" style='position:relative;'>
-                <input id='password' type="number" class="mui-input-clear mui-input" placeholder="请输入验证码" v-model="inputCode">
+                <input type="number" class="mui-input-clear mui-input" placeholder="请输入验证码" v-model="inputCode">
                 <input v-model="strtimer" type="button" style='background-color: #929292; position:absolute;right:10px;top:2px; width: auto' class="mui-btn getnumber"   v-on:click="startTimer" >
                 <input v-model="timer" type="hidden">
             </div>
         </form>
         <div class="mui-content-padded">
-            <button id='zhuce' class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;' v-on:click="asyRegister">注册</button>
+            <button class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;' v-on:click="asyRegister">注册</button>
         </div>
     </div>
     <div class="mui-content-padded oauth-area">
@@ -106,9 +106,7 @@
 
                     }, function(response) {
                             alert("ajax请求错误！");
-
                     });
-
         }
     }
     }

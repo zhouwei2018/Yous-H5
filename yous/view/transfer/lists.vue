@@ -68,7 +68,7 @@
                     <img src='../../../dist/img/wuye3.png'/>
                     <h6>工商注册迁址</h6>
                 </a>
-                <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
+                <!--<a class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
             </div>
         </div>
     </div>

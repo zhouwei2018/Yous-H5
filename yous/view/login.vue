@@ -9,10 +9,10 @@
         </header>
         <form  class="mui-input-group">
             <div class="mui-input-row">
-                <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="phone">
+                <input type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="phone">
             </div>
             <div class="mui-input-row" style='position:relative;'>
-                <input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码" v-model="pwd">
+                <input type="password" class="mui-input-clear mui-input" placeholder="请输入密码" v-model="pwd">
             </div>
         </form>
         <div class="mui-content-padded" style='text-align:center;'>
@@ -32,7 +32,7 @@
     import header1 from './componets/header.vue'
     import nav1 from './componets/nav.vue'
     import alert from '../../src/components/alert.vue'
-    
+
     export default {
         components : {
             header1,

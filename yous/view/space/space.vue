@@ -8,6 +8,7 @@
     <!--导航区域-->
     <nav1></nav1>
 </template>
+
 <script>
     import header1 from '.././componets/header.vue'
     import nav1 from '.././componets/nav.vue'

@@ -20,14 +20,14 @@
         </ul>
         <ul class="mui-table-view">
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right" id='modifypwd'>
+                <a class="mui-navigate-right">
                     修改密码
                 </a>
             </li>
         </ul>
         <ul class="mui-table-view">
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right" id='openaddress'>
+                <a class="mui-navigate-right">
                     所在地址
                 </a>
             </li>
