@@ -18,12 +18,14 @@ var decorate=require('./view/decorate/decorate.vue');
 var main=require('./view/user/main.vue');//用户中心主页面
 var setting=require('./view/user/setting.vue'); //设置
 var info=require('./view/user/info.vue'); //我的信息
-var maintenance_lists= require('./view/maintenance/lists.vue'); //社保维修
-var maintenance_order= require('./view/maintenance/order.vue'); //社保维修
-var transfer_lists= require('./view/transfer/lists.vue'); // 交接
-var transfer_order= require('./view/transfer/order.vue'); // 交接
-
-
+var maintenance_lists= require('./view/home/maintenance/lists.vue'); //社保维修
+var maintenance_order= require('./view/home/maintenance/order.vue'); //社保维修
+var transfer_lists= require('./view/home/transfer/lists.vue'); // 交接
+var transfer_order= require('./view/home/transfer/order.vue'); // 交接
+var pay_lists= require('./view/home/pay/lists.vue'); // 费用
+var pay_order= require('./view/home/pay/order.vue'); // 费用
+var more_lists= require('./view/home/more/lists.vue'); // 全部
+var more_order= require('./view/home/more/order.vue'); // 全部
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -111,7 +113,22 @@ router.map(
         name:'transfer_order',
         component:transfer_order
     },
-
+	'/pay/lists':{
+        name:'pay_lists',
+        component:pay_lists
+    },
+    '/pay/order':{
+        name:'pay_order',
+        component:pay_order
+    },
+    '/more/lists':{
+        name:'more_lists',
+        component:more_lists
+    },
+    '/more/order':{
+        name:'more_order',
+        component:more_order
+    },
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
     '*':"/index"//重定向任意未匹配路径到/index

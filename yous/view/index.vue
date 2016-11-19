@@ -73,11 +73,11 @@
                     <h6>设备维修</h6>
                 </a>
 
-                <a>
+                <a v-link="{ path: '/pay/lists'}">
                     <img src='../../dist/img/btn_qq@3x.png'/>
                     <h6>缴费事项</h6>
                 </a>
-                <a>
+                <a v-link="{ path: '/more/lists'}">
                     <img src='../../dist/img/btn_tengxunweibo@3x_67.png'/>
                     <h6>更多</h6>
                 </a>
