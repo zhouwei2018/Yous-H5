@@ -43,6 +43,7 @@
         return {
             phone:"",
             pwd:"",
+
             show : false,
             title : '测试标题',
             content : '测试内容',

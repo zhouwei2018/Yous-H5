@@ -25,4 +25,6 @@
 <alert :show.sync="show"
        :title="title"
        :content="content"></alert>
+
+
 </template>

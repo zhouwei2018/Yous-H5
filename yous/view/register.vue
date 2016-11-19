@@ -6,13 +6,13 @@
     <div class="mui-content">
         <form  class="mui-input-group">
             <div class="mui-input-row">
-                <input  type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="mobile">
+                <input  type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="mobile" >
             </div>
             <div class="mui-input-row">
                 <input  v-model="pwd" type="password" class="mui-input-clear mui-input" placeholder="输入密码">
             </div>
             <div class="mui-input-row">
-                <input  type="password" class="mui-input-clear mui-input" placeholder="确认密码">
+                <input  type="password" class="mui-input-clear mui-input" placeholder="确认密码" >
             </div>
             <div class="mui-input-row" style='position:relative;'>
                 <input type="number" class="mui-input-clear mui-input" placeholder="请输入验证码" v-model="inputCode">
@@ -22,7 +22,9 @@
         </form>
         <div class="mui-content-padded">
             <button class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;' v-on:click="asyRegister">注册</button>
+            <span class="error" v-text="$parent.$vuerify.$errors[field]">1111</span>
         </div>
+
     </div>
     <div class="mui-content-padded oauth-area">
     </div>
@@ -40,6 +42,18 @@
                 pwd:"",
                 inputCode:""
             }
+    },
+    vuerify: {
+        mobile: {
+            test: /\w{4,}/,  // 自定义规则，可以是函数，正则或者全局注册的规则（填字符串）
+                    message: '至少 4 位字符'
+        },
+        pwd: 'required' // 使用全局注册的规则
+    },
+    computed:{
+        errors (){
+            return this.$vuerify.$errors
+        }
     },
     methods : {
         update(){
@@ -80,33 +94,35 @@
             this.stop = !this.stop;
         },
         asyRegister(){
-            this.$http.post(
-                    'http://106.14.27.89:8001/api/GetServiceApiResult',
-                    {
-                        parameters:{
-                            "CultureName":"",
-                            "Mobile":this.mobile,
-                            "VerifiationCCodeType":"1",
-                            "ImageNo":"",
-                            "InputCode":this.inputCode,
-                            "name":"kaka",
-                            "phone":this.mobile,
-                            "pwd":this.pwd,
-                        },
-                        foreEndType:"2",
-                        code:"10000004"
-                    }
-            ).then(function(response) {
-                        var  reslute=JSON.parse(response.data);
-                        if(reslute.success){
-                            this.$route.router.go({name:"main"})
-                        }else{
-                            alert(reslute.message);
+            if (this.$vuerify.check()) {
+                this.$http.post(
+                        'http://106.14.27.89:8001/api/GetServiceApiResult',
+                        {
+                            parameters: {
+                                "CultureName": "",
+                                "Mobile": this.mobile,
+                                "VerifiationCCodeType": "1",
+                                "ImageNo": "",
+                                "InputCode": this.inputCode,
+                                "name": "kaka",
+                                "phone": this.mobile,
+                                "pwd": this.pwd,
+                            },
+                            foreEndType: "2",
+                            code: "10000004"
                         }
+                ).then(function (response) {
+                            var reslute = JSON.parse(response.data);
+                            if (reslute.success) {
+                                this.$route.router.go({name: "main"})
+                            } else {
+                                alert(reslute.message);
+                            }
 
-                    }, function(response) {
+                        }, function (response) {
                             alert("ajax请求错误！");
-                    });
+                        });
+            }
         }
     }
     }
