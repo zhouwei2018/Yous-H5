@@ -1,4 +1,6 @@
 <style scoped>
+	.mui-media-body{font-size:15px;color:#333}
+	.mui-ellipsis{font-size:12px;}
     .homecontainer {
         width: 96%;
         margin: 0px auto;
@@ -63,7 +65,7 @@
         </div>
 
         <!--空间服务-->
-        <div class="homecontainer" style='margin-top: 10px;;'>
+        <div class="homecontainer" style='margin-top: 10px;'>
             <div class="flex-container">
                 <a  v-link="{ path: '/transfer/lists'}">
                     <img src='../../dist/img/btn_kongjian@3x.png'/>

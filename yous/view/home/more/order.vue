@@ -1,8 +1,8 @@
 <style scoped>
     .tel{float:right;}
-    .inform{margin-top:25px;}
     textarea{border:0;}
     .questionpic{margin-bottom:10px;}
+    #submit{width:96%;margin:10px auto;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">

@@ -1,7 +1,8 @@
 <style scoped>
-	.mui-content{margin-top:20px;}
 	.emindcontainer{position:relative}
 	.remind{position:absolute;top:6px;left:50px;width:10px;height:10px;border-radius:50%;background: orangered;}
+	.timeright{color:#aaa;font-size:12px;}
+	.mui-media-body{font-size:15px;color:#333}
 </style>
 <template>
     <!--头部区域-->
@@ -9,7 +10,7 @@
     <!--面板区域-->
     <div class="mui-content">
     	<!--第一个轮播开始-->
-        <ul class="mui-table-view" style='padding-top:20px;'>
+        <ul class="mui-table-view" style='margin-top:5px;'>
 			<li class="mui-table-view-cell mui-hidden">cared
 				<div id="M_Toggle" class="mui-switch mui-active">
 					<div class="mui-switch-handle"></div>

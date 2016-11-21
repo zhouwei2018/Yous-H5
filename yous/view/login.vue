@@ -2,7 +2,7 @@
     <header1></header1>
     <nav1></nav1>
 
-    <div class="mui-content">
+    <div class="mui-content" style='margin-top:10px;'>
         <header class="mui-bar mui-bar-nav">
             <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
             <h1 class="mui-title">登录</h1>

@@ -49,7 +49,7 @@
         </a>
     </nav>
     <div transter-lists class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 50px 0;">
-        <div class="mui-scroll" style="padding-top:30px">
+        <div class="mui-scroll">
             <div class="flex-container">
                 <a  v-link="{ path: '/transfer/order'}">
                     <img src='../../../../dist/img/wuye1.png'/>

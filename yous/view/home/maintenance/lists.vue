@@ -11,7 +11,7 @@
 
     </nav>
     <div class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;">
-        <div class="mui-scroll" style="padding-top:30px">
+        <div class="mui-scroll">
             <!--<div style="height: 35px;margin: 0 10px;">
                 <span style="line-height: 35px;">分享到：</span>
                 <button  type="button" style="height: 30px;margin-top: 5px;" class="mui-btn mui-btn-yellow mui-pull-right" id='exit'>取消</button>

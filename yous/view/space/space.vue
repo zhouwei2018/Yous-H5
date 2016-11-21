@@ -1,9 +1,11 @@
 <style>
 	body,.mui-content{background:#fff;}
+	.mui-media-body{font-size:15px;color:#333}
+	.mui-ellipsis{font-size:12px;}
 	#urscommunity{width:96%;margin:10px auto;}
 	.homecontainer{width:96%;}
 	.homecontainer h4 span{color:#FF7F19;margin-right:1px;}
-	.homecontainer h4{margin:20px;margin-left:0;color:#2C3637;margin-bottom:10px;}
+	.homecontainer h4{margin:20px;margin-left:8px;color:#2C3637;margin-bottom:10px;}
 	.homecontainer button{margin-right:30px;}
 	.homecontainer .mui-row{width:99%;margin:15px auto;text-align:left;padding-left:20px;}		
 	.homecontainer .mui-row a.mui-btn{border-radius:20px;background: #F4F4F4;color:#929699;border-width:0;}	
