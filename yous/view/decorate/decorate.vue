@@ -1,4 +1,4 @@
-<style>
+<style  scoped>
 	 h4 span{color:#FF7F19;margin-right:1px;}
 	 h4{margin:20px;margin-left:10px;;color:#2C3637;margin-bottom:10px;}
 	 .mui-content{padding-top:0px!important;}

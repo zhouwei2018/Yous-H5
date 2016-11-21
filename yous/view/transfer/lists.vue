@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 [transter-lists]{
     body {
         background-color: white;

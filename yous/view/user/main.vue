@@ -1,7 +1,7 @@
-<style>
+<style scoped>
     html{font-size:10px;background:#fff;}
     .mui-content{position:absolute;height:100%;width:100%;background:#fff;}
-    /*.userpic{background:url(img/mainbg.jpg) no-repeat;height:50%;overflow: auto;background-size:cover;overflow: hidden;}*/
+    .userpic{overflow: auto;background-size:cover;overflow: hidden;}
     /*.iconpic{margin-top:0.5rem;}*/
     .iconpic .mui-btn-link{font-size:2.8rem;color:#fff;}
     .compantname{font-size:18px;}
@@ -56,7 +56,7 @@
 <template>
     <div class="mui-content">
         <!--头部区域开始-->
-        <div v-bind:style="styleObject">
+        <div class="userpic" v-bind:style="styleObject">
             <div class="iconpic">
                 <button class="mui-btn mui-btn-link mui-pull-left">
                     <span class="mui-icon mui-icon-gear" v-link="{ path: '/user/setting'}"></span>

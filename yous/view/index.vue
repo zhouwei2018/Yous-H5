@@ -1,4 +1,4 @@
-<style>
+<style scoped>
     .homecontainer {
         width: 96%;
         margin: 0px auto;
