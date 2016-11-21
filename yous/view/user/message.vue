@@ -1,3 +1,7 @@
+<style scoped>
+	.mui-media-body{font-size:15px;color:#333}
+	.mui-ellipsis,.timeright{color:#aaa;}
+</style>
 <template>
   <header class="mui-bar mui-bar-nav">
       <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>

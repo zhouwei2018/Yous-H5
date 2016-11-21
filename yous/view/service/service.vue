@@ -1,6 +1,6 @@
 <style scoped>
 	.emindcontainer{position:relative}
-	.remind{position:absolute;top:6px;left:50px;width:10px;height:10px;border-radius:50%;background: orangered;}
+	.remind{position:absolute;top:10px;left:50px;width:6px;height:6px;border-radius:50%;background: orangered;}
 	.timeright{color:#aaa;font-size:12px;}
 	.mui-media-body{font-size:15px;color:#333}
 </style>
