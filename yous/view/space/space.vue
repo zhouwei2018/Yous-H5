@@ -1,7 +1,7 @@
 <style>
-	body,.mui-content{background:#fff}
+	body,.mui-content{background:#fff;}
 	#urscommunity{width:96%;margin:10px auto;}
-	.homecontainer{width:96%;margin:30px auto;}
+	.homecontainer{width:96%;}
 	.homecontainer h4 span{color:#FF7F19;margin-right:1px;}
 	.homecontainer h4{margin:20px;margin-left:0;color:#2C3637;margin-bottom:10px;}
 	.homecontainer button{margin-right:30px;}
@@ -88,7 +88,7 @@
 				</li>
 			</ul>
 			</div> <!--精选服务商结束-->
-		<div class="homecontainer"> <!--精选服务商开始-->
+		<div class="homecontainer" style='padding-bottom:50px;'> <!--精选服务商开始-->
 			<h4><span>热门</span>投资人</h4>
 			<ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media">

@@ -1,7 +1,7 @@
 <style>
     .homecontainer {
         width: 96%;
-        margin: 15px auto;
+        margin: 0px auto;
     }
     .homecontainer h4 span {
         color: #FF7F19;
@@ -28,9 +28,11 @@
         background: #F4F4F4;
         color: #929699;
         border-width: 0;
+        margin-bottom:15px;
     }
     .flex-container {
         text-align: center;
+        overflow: hidden;
     }
     .flex-container > a {
         position: relative;
@@ -56,7 +58,7 @@
     <!--面板区域-->
     <div class="mui-content">
         <!--第一个轮播-->
-        <div class="mui-slider">
+        <div class="mui-slider" style='margin-top:10px'>
             <slide :list="list" ></slide>
         </div>
 
@@ -86,7 +88,7 @@
         </div>
 
         <!--幼狮社区-->
-        <div class="homecontainer" style='margin-top:120px;clear:both;'> <!--幼狮社区开始-->
+        <div class="homecontainer" style='clear:both;'> <!--幼狮社区开始-->
             <h4><span>幼狮</span>社区</h4>
             <div class="mui-slider">
                 <slide :list="list2" ></slide>
@@ -116,9 +118,7 @@
                 </a>
                 <a class="mui-btn mui-btn-outlined" href='#'>
                     法律
-                </a>
-            </div>
-            <div class="mui-row">
+                </a>            
                 <a class="mui-btn mui-btn-outlined" href='#'>
                     人才资源
                 </a>
@@ -135,7 +135,7 @@
         </div>
 
         <!--精选服务商-->
-        <div class="homecontainer"> <!--精选服务商开始-->
+        <div class="homecontainer" style='padding-bottom:50px;'> <!--精选服务商开始-->
             <h4><span>精选</span>服务商</h4>
             <ul class="mui-table-view">
                 <li class="mui-table-view-cell mui-media">

@@ -3,7 +3,7 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  onclick="window.history.go(-1)"></a>
         <h1 class="mui-title">注册</h1>
     </header>
-    <div class="mui-content">
+    <div class="mui-content" style='margin-top:45px;'>
         <form  class="mui-input-group">
             <div class="mui-input-row">
                 <input  type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="mobile" >
@@ -16,7 +16,7 @@
             </div>
             <div class="mui-input-row" style='position:relative;'>
                 <input type="number" class="mui-input-clear mui-input" placeholder="请输入验证码" v-model="inputCode">
-                <input v-model="strtimer" type="button" style='background-color: #929292; position:absolute;right:10px;top:2px; width: auto' class="mui-btn getnumber"   v-on:click="startTimer" >
+                <input v-model="strtimer" type="button" style='background-color: #CCCCCC; position:absolute;right:10px;top:2px; width: auto' class="mui-btn getnumber"   v-on:click="startTimer" >
                 <input v-model="timer" type="hidden">
             </div>
         </form>
