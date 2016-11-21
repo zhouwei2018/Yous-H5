@@ -1,7 +1,7 @@
 <style>
 	.mui-content{margin-top:20px;}
 	.emindcontainer{position:relative}
-	.remind{position:absolute;top:-5px;left:35px;width:10px;height:10px;border-radius:50%;background: orangered;}
+	.remind{position:absolute;top:6px;left:50px;width:10px;height:10px;border-radius:50%;background: orangered;}
 </style>
 <template>
     <!--头部区域-->
@@ -31,7 +31,7 @@
 				<a href="#">
 					<div class='remindcontainer'>
 						<img class="mui-media-object mui-pull-left" src='../../../dist/img/informationchat.jpg'>
-						<span class='remind' style='position:absolute;top:-5px;left:35px;width:10px;height:10px;border-radius:50%;background: orangered;'></span>
+						<span class='remind'></span>
 					</div>
 					<div class="mui-media-body">
 						幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>

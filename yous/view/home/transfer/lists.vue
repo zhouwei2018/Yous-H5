@@ -3,7 +3,6 @@
     body {
         background-color: white;
     }
-
     .flex-container {
         /*display: -webkit-flex;
         display: flex;
@@ -11,7 +10,6 @@
         justify-content: center;*/
         text-align: center;
     }
-
     .flex-container > a {
         /*display: none;*/
         position: relative;
@@ -49,10 +47,9 @@
         <a href='tel:123-23123' style='color:#fff;'>
             在线客服:<span class="mui-icon mui-icon-phone"></span>12316615
         </a>
-
     </nav>
-    <div transter-lists class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;">
-        <div class="mui-scroll">
+    <div transter-lists class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 50px 0;">
+        <div class="mui-scroll" style="padding-top:30px">
             <div class="flex-container">
                 <a  v-link="{ path: '/transfer/order'}">
                     <img src='../../../../dist/img/wuye1.png'/>

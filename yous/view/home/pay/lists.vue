@@ -11,7 +11,7 @@
 
     </nav>
     <div class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;">
-       <div class="mui-scroll">
+       <div class="mui-scroll" style="padding-top:30px">
 				 
 			
 				<!--<div style="height: 35px;margin: 0 10px;">
@@ -20,31 +20,31 @@
 				</div>-->
 					<div class="flex-container">
 						
-						<a>
+						<a v-link="{ path: '/pay/order'}">
 							<img src='../../../../dist/img/feiyong1.png'/>
 							<h6>物业</h6>
 						</a>
 						
-						<a>
+						<a v-link="{ path: '/pay/order'}">
 							<img src='../../../../dist/img/feiyong2.png'/>
 							<h6>水电燃气</h6>
 						</a>
 						
-						<a>
+						<a v-link="{ path: '/pay/order'}">
 							<img src='../../../../dist/img/feiyong3.png'/>
 							<h6>取暖</h6>
 						</a>
 						
-						<a>
+						<a v-link="{ path: '/pay/order'}">
 							<img src='../../../../dist/img/feiyong4.png'/>
 							<h6>制冷</h6>
 						</a>
-						<a>
+						<a v-link="{ path: '/pay/order'}">
 							<img src='../../../../dist/img/feiyong5.png'/>
 							<h6>房租</h6>
 						</a>
 						
-						<a>
+						<a v-link="{ path: '/pay/order'}">
 							<img src='../../../../dist/img/feiyong6.png'/>
 							<h6>租赁发票</h6>
 						</a>
