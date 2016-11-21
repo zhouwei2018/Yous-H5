@@ -12,52 +12,49 @@
     </nav>
     <div class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;">
        <div class="mui-scroll">
-				 
-			
-				<!--<div style="height: 35px;margin: 0 10px;">
-					<span style="line-height: 35px;">分享到：</span>
-					<button  type="button" style="height: 30px;margin-top: 5px;" class="mui-btn mui-btn-yellow mui-pull-right" id='exit'>取消</button>
-				</div>-->
-					<div class="flex-container">
-						
-						<a v-link="{ path: '/pay/order'}">
-							<img src='../../../../dist/img/feiyong1.png'/>
-							<h6>物业</h6>
+
+					<div class="flex-container" v-for="(index,entry) in gridData">
+
+						<a v-link="{ path: '/maintenance/order'}">
+							<img src='{{ entry.fdsmallimagepath}}'>
+							<h6>{{ entry.fdname}}</h6>
 						</a>
-						
-						<a v-link="{ path: '/pay/order'}">
-							<img src='../../../../dist/img/feiyong2.png'/>
-							<h6>水电燃气</h6>
-						</a>
-						
-						<a v-link="{ path: '/pay/order'}">
-							<img src='../../../../dist/img/feiyong3.png'/>
-							<h6>取暖</h6>
-						</a>
-						
-						<a v-link="{ path: '/pay/order'}">
-							<img src='../../../../dist/img/feiyong4.png'/>
-							<h6>制冷</h6>
-						</a>
-						<a v-link="{ path: '/pay/order'}">
-							<img src='../../../../dist/img/feiyong5.png'/>
-							<h6>房租</h6>
-						</a>
-						
-						<a v-link="{ path: '/pay/order'}">
-							<img src='../../../../dist/img/feiyong6.png'/>
-							<h6>租赁发票</h6>
-						</a>
-												
-						
-						<!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
-						
-						
+
 					</div>
-					
-					
-					
+		   
 				</div>
 
     </div>
 </template>
+<script>
+	export default {
+		data() {
+		return {
+			gridData: []
+		}
+	},
+	ready: function() {
+		this.getCustomers()
+	},
+	methods: {
+		getCustomers: function (){
+			var vm = this
+			vm.$http.post(
+					'http://106.14.27.89:8001/api/GetServiceApiResult',
+					{
+						Parameters:{
+							"code":3
+						},
+						ForeEndType:"2",
+						Code:"20000001"
+					}
+			).then((response)=>{
+				var response=JSON.parse(response.data);
+			debugger;
+			vm.$set('gridData', response.data);
+			console.log(response.data);
+		})
+	}
+	}
+	}
+</script>

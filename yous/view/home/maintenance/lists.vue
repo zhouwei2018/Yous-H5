@@ -16,38 +16,44 @@
                 <span style="line-height: 35px;">分享到：</span>
                 <button  type="button" style="height: 30px;margin-top: 5px;" class="mui-btn mui-btn-yellow mui-pull-right" id='exit'>取消</button>
             </div>-->
-            <div class="flex-container">
-
+            <div class="flex-container" v-for="(index,entry) in gridData">
                 <a v-link="{ path: '/maintenance/order'}">
-                    <img src='../../../../dist/img/shebei1.png'>
-                    <h6>水路管件</h6>
-                </a>
-
-                <a v-link="{ path: '/maintenance/order'}">
-                    <img src='../../../../dist/img/shebei2.png'>
-                    <h6>灯具电路</h6>
-                </a>
-
-                <a v-link="{ path: '/maintenance/order'}">
-                    <img src='../../../../dist/img/shebei3.png'/>
-                    <h6>开锁换锁</h6>
-                </a>
-
-                <a v-link="{ path: '/maintenance/order'}">
-                    <img src='../../../../dist/img/shebei4.png'/>
-                    <h6>门窗维修</h6>
-                </a>
-
-                <a v-link="{ path: '/maintenance/order'}">
-                    <img src='../../../../dist/img/shebei5.png'/>
-                    <h6>弱电系统</h6>
-                </a>
-
-                <a v-link="{ path: '/transfer/order'}">
-                    <img src='../../../../dist/img/shebei6.png'/>
-                    <h6>空调制冷</h6>
+                    <img src='{{ entry.fdsmallimagepath}}'>
+                    <h6>{{ entry.fdname}}</h6>
                 </a>
             </div>
         </div>
     </div>
 </template>
+<script>
+    export default {
+        data() {
+        return {
+            gridData: []
+        }
+    },
+    ready: function() {
+        this.getCustomers()
+    },
+    methods: {
+        getCustomers: function (){
+            var vm = this
+            vm.$http.post(
+                    'http://106.14.27.89:8001/api/GetServiceApiResult',
+                    {
+                        Parameters:{
+                            "code":1
+                        },
+                        ForeEndType:"2",
+                        Code:"20000001"
+                    }
+            ).then((response)=>{
+                var response=JSON.parse(response.data);
+            debugger;
+                vm.$set('gridData', response.data);
+            console.log(response.data);
+        })
+    }
+    }
+    }
+</script>

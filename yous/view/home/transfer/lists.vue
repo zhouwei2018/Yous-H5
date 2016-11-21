@@ -50,23 +50,45 @@
     </nav>
     <div transter-lists class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 50px 0;">
         <div class="mui-scroll">
-            <div class="flex-container">
-                <a  v-link="{ path: '/transfer/order'}">
-                    <img src='../../../../dist/img/wuye1.png'/>
-                    <h6>入驻办公</h6>
-                </a>
-
+            <div class="flex-container" v-for="(index,entry) in gridData">
                 <a v-link="{ path: '/transfer/order'}">
-                    <img src='../../../../dist/img/wuye2.png'/>
-                    <h6>电话宽带</h6>
-                </a>
-
-                <a v-link="{ path: '/transfer/order'}">
-                    <img src='../../../../dist/img/wuye3.png'/>
-                    <h6>工商注册迁址</h6>
+                    <img src='{{ entry.fdsmallimagepath}}'>
+                    <h6>{{ entry.fdname}}</h6>
                 </a>
                 <!--<a class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
             </div>
         </div>
     </div>
 </template>
+<script>
+    export default {
+        data() {
+        return {
+            gridData: []
+        }
+    },
+    ready: function() {
+        this.getCustomers()
+    },
+    methods: {
+        getCustomers: function (){
+                var vm = this
+                vm.$http.post(
+                        'http://106.14.27.89:8001/api/GetServiceApiResult',
+                        {
+                            Parameters:{
+                                "code":2
+                            },
+                            ForeEndType:"2",
+                            Code:"20000001"
+                        }
+                ).then((response)=>{
+                    var response=JSON.parse(response.data);
+                debugger;
+                vm.$set('gridData', response.data);
+                console.log(response.data);
+            })
+        }
+    }
+    }
+</script>
