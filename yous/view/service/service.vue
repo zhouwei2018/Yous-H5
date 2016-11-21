@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 	.mui-content{margin-top:20px;}
 	.emindcontainer{position:relative}
 	.remind{position:absolute;top:6px;left:50px;width:10px;height:10px;border-radius:50%;background: orangered;}

@@ -26,6 +26,14 @@ var pay_lists= require('./view/home/pay/lists.vue'); // 费用
 var pay_order= require('./view/home/pay/order.vue'); // 费用
 var more_lists= require('./view/home/more/lists.vue'); // 全部
 var more_order= require('./view/home/more/order.vue'); // 全部
+var label= require('./view/user/label.vue'); // 标签
+var message= require('./view/user/message.vue'); //信息
+var order= require('./view/user/order.vue'); //订单
+var profile= require('./view/user/profile.vue'); //个人信息
+var suggestion= require('./view/user/suggestion.vue'); //投诉建议
+var user_order=require('./view/user/order.vue'); //订单
+
+
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -128,6 +136,26 @@ router.map(
     '/more/order':{
         name:'more_order',
         component:more_order
+    },
+    '/user/label':{
+        name:'label',
+        component:label
+    },
+    '/user/message':{
+        name:'message',
+        component:message
+    },
+    '/user/profile':{
+        name:'profile',
+        component:profile
+    },
+    '/user/suggestion':{
+        name:'suggestion',
+        component:suggestion
+    },
+    '/user/order':{
+        name:'order',
+        component:user_order
     },
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。

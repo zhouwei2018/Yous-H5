@@ -1,5 +1,4 @@
-<style>
-    @import'../../lib/css/feedback.css';
+<style scoped>
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">

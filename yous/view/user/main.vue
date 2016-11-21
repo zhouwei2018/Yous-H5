@@ -4,6 +4,7 @@
     /*.userpic{background:url(img/mainbg.jpg) no-repeat;height:50%;overflow: auto;background-size:cover;overflow: hidden;}*/
     /*.iconpic{margin-top:0.5rem;}*/
     .iconpic .mui-btn-link{font-size:2.8rem;color:#fff;}
+    .compantname{font-size:18px;}
 
     .circlepic{text-align:center;color:#fff;font-size:2rem;}
     .circlepic .getuserpic{height:8rem;width:8rem;background:#fff;clear:both;border-radius:50%;margin:20px auto;}
@@ -30,7 +31,7 @@
     .flex-container>a{
         /*display: none;*/
         position: relative;
-        width: 25%;
+        width: 20%;
         float: left;
         /*flex: 1;*/
         /*border: 1px red solid;*/
@@ -57,17 +58,20 @@
         <!--头部区域开始-->
         <div v-bind:style="styleObject">
             <div class="iconpic">
-                <button class="mui-btn mui-btn-link mui-pull-left" id='shezhi' v-link="{ path: '/user/setting'}">
-                    <span class="mui-icon mui-icon-gear"></span>
+                <button class="mui-btn mui-btn-link mui-pull-left">
+                    <span class="mui-icon mui-icon-gear" v-link="{ path: '/user/setting'}"></span>
                 </button>
-                <button class="mui-btn mui-btn-link mui-pull-right" id='information'>
+                <button class="mui-btn mui-btn-link" >
+                    <span class='compantname'>公司名称</span>
+                </button>
+                <button class="mui-btn mui-btn-link mui-pull-right" v-link="{ path: '/user/message'}" >
                     <span class="mui-icon mui-icon-chatbubble"></span>
                 </button>
             </div>
             <div class='circlepic'>
                 <div class='getuserpic'></div>
                 <a href="#">登录</a>/<a href="#">注册</a>
-                <h4 id='label'>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright"></span></h4>
+                <h4>在这里,找到属于你的不一样<span class="mui-icon mui-icon-arrowright" v-link="{ path:'/user/label'}"></span></h4>
             </div>
             <div class='userlist'>
                 <ul>
@@ -81,8 +85,8 @@
         <!--我的管家开始-->
         <ul class="mui-table-view" style='margin:0;'>
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right" id='guanli'>
-                    我的管家<span>查看全部订单</span>
+                <a class="mui-navigate-right">
+                    我的管家<span  v-link="{path:'/user/order'}">查看全部订单</span>
                 </a>
             </li>
         </ul>
@@ -94,7 +98,7 @@
         </div>-->
         <div class="flex-container" style='margin-top:10px;overflow:hidden'>
 
-            <a id="kefu">
+            <a>
                 <img src='../../../dist/img/btn_kongjian@3x.png'/>
                 <h6>待接单</h6>
             </a>
@@ -107,13 +111,13 @@
                 <img src='../../../dist/img/btn_pengyouquan@3x.png'/>
                 <h6>待确认</h6>
             </a>
-            <a id="feiyong">
+            <a>
                 <img src='../../../dist/img/btn_qq@3x.png'/>
                 <h6>待评价</h6>
             </a>
-            <a id="more">
+            <a>
                 <img src='../../../dist/img/btn_tengxunweibo@3x_67.png'/>
-                <h6>售后</h6>
+                <h6>投诉</h6>
             </a>
             <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
         </div>
