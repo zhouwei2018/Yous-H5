@@ -1,17 +1,17 @@
 <style scoped>
     html{font-size:10px;background:#fff;}
     .mui-content{position:absolute;height:100%;width:100%;background:#fff;}
-    .userpic{overflow: auto;background-size:cover;overflow: hidden;}
+    .userpic{ text-align:center;}
     /*.iconpic{margin-top:0.5rem;}*/
-    .iconpic .mui-btn-link{font-size:2.8rem;color:#fff;}
+    .iconpic .mui-btn-link{font-size:1.8rem;color:#fff;}
     .compantname{font-size:18px;}
 
-    .circlepic{text-align:center;color:#fff;font-size:2rem;}
+    .circlepic{text-align:center;color:#fff;font-size:1.2rem;}
     .circlepic .getuserpic{height:8rem;width:8rem;background:#fff;clear:both;border-radius:50%;margin:20px auto;}
-    .circlepic a{color:#fff;font-size:2rem;}
-    .circlepic h4{font-size:1.5rem;margin:10px auto;color:#aaa;margin-top:2.1rem;margin-bottom:2rem;}
+    .circlepic a{color:#fff;font-size:1.2rem;}
+    .circlepic h4{font-size:1rem;margin:10px auto;color:#aaa;margin-top:2.1rem;margin-bottom:2rem;}
 
-    .userlist{text-align:center;}
+    .userlist{text-align:center;padding-bottom: 8px;}
     .userlist li{display:inline-block;width:6rem;border-right:1px solid #919497;list-style-type:none;}
     .userlist li:last-child{border-width:0;}
     .userlist li:first-child{margin-left:-3rem;}
@@ -20,7 +20,7 @@
 
     .mui-table-view{margin-top:1px;}
     .mui-table-view li a{color:#3c3b40!important;}
-    .mui-table-view span{float:right;margin-right:2rem;font-size:1.3rem;color:#aaa;}
+    .mui-table-view span{float:right;margin-right:2rem;font-size:1rem;color:#aaa;}
 
     .pingjia{background:#fff;margin-top:0;}
     .pingjia ul{width:100%;overflow:hidden;padding:0;}
