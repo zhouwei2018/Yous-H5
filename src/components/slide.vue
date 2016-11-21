@@ -1,6 +1,6 @@
 <style lang="less">
 @base-width:100%;
-@base-height:19rem;
+@base-height:12rem;
 @color-gray:#eee;
 @color-green:#4c9;
 
