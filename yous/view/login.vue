@@ -7,7 +7,7 @@
             <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
             <h1 class="mui-title">登录</h1>
         </header>
-        <form  class="mui-input-group" style='margin-top:30px;'>
+        <form  class="mui-input-group">
             <div class="mui-input-row">
                 <input type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" v-model="phone">
             </div>

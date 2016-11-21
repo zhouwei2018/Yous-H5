@@ -58,7 +58,7 @@
     <!--面板区域-->
     <div class="mui-content">
         <!--第一个轮播-->
-        <div class="mui-slider" style='margin-top:10px'>
+        <div class="mui-slider">
             <slide :list="list" ></slide>
         </div>
 
