@@ -7,7 +7,7 @@
 <template>
     <header class="mui-bar mui-bar-nav">
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
-        <h1 class="mui-title">水路管件</h1>
+        <h1 class="mui-title">{{poptitle}}</h1>
     </header>
     <div class="mui-content">
         <!-- 普通面板 -->
@@ -34,9 +34,17 @@
 <script>
     import panel from '../../../../src/components/panel.vue'
     export default {
-        components : {
-            panel
-        }
+        data() {
+        return {
+            poptitle:""//title标题
+        }},
+    components : {
+        panel
+    },
+    ready: function(){
+        this.poptitle=this.$route.params.serviceName
+
+    }
     }
 </script>
 

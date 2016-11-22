@@ -137,7 +137,7 @@ router.map(
         name:'transfer_lists',
         component:transfer_lists
     },
-    '/transfer/order':{
+    '/transfer/order/:serviceId/:serviceName':{
         name:'transfer_order',
         component:transfer_order
     },
@@ -145,7 +145,7 @@ router.map(
         name:'pay_lists',
         component:pay_lists
     },
-    '/pay/order':{
+    '/pay/order/:serviceId/:serviceName':{
         name:'pay_order',
         component:pay_order
     },
@@ -153,7 +153,7 @@ router.map(
         name:'more_lists',
         component:more_lists
     },
-    '/more/order':{
+    '/more/order/:serviceId/:serviceName':{
         name:'more_order',
         component:more_order
     },

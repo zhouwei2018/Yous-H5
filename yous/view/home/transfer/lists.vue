@@ -47,7 +47,7 @@
     <div transter-lists class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 50px 0;">
         <div class="mui-scroll">
             <div class="flex-container" v-for="(index,entry) in gridData">
-                <a v-link="{ path: '/transfer/order'}">
+                <a v-link="{name:'transfer_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}">
                     <img src='{{ entry.fdsmallimagepath}}'>
                     <h6>{{ entry.fdname}}</h6>
                 </a>

@@ -27,7 +27,7 @@
        <div class="mui-scroll">
 
 			<div class="flex-container" v-for="(index,entry) in gridData">
-				<a v-link="{ path: '/maintenance/order'}">
+				<a v-link="{name:'more_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}">
 					<img src='{{ entry.fdsmallimagepath}}'>
 					<h6>{{ entry.fdname}}</h6>
 				</a>
