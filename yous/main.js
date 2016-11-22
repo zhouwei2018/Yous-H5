@@ -17,7 +17,11 @@ var space=require('./view/space/space.vue');
 var decorate=require('./view/decorate/decorate.vue');
 var main=require('./view/user/main.vue');//用户中心主页面
 var setting=require('./view/user/setting.vue'); //设置
+var myservice=require('./view/user/myservice.vue'); //我的服务
+var wallte=require('./view/user/wallte.vue'); //我的服务
 var info=require('./view/user/info.vue'); //我的信息
+var address=require('./view/user/address.vue'); //我的地址
+var restpassword=require('./view/user/restpassword.vue'); //修改密码
 var maintenance_lists= require('./view/home/maintenance/lists.vue'); //社保维修
 var maintenance_order= require('./view/home/maintenance/order.vue'); //社保维修
 var transfer_lists= require('./view/home/transfer/lists.vue'); // 交接
@@ -105,6 +109,22 @@ router.map(
         name:'info',
         component:info
     },
+     '/user/restpassword':{
+        name:'restpassword',
+        component:restpassword
+    },//修改密码
+    '/user/address':{
+        name:'address',
+        component:address
+    },//设置中个人信息我的地址
+    '/user/myservice':{
+        name:'myservice',
+        component:myservice
+    },//我的服务
+    '/user/wallte':{
+        name:'wallte',
+        component:wallte
+    },//我的钱包
     '/maintenance/lists':{
         name:'maintenance_lists',
         component:maintenance_lists
