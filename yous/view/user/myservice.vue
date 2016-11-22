@@ -5,9 +5,10 @@
 	.mui-media-body{font-size:15px;color:#333}
 </style>
 <template>
-    <!--头部区域-->
-    <header1></header1>
-    <!--面板区域-->
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
+	    <h1 class="mui-title">我的服务</h1>
+	</header>
     <div class="mui-content">
     	<!--第一个轮播开始-->
         <ul class="mui-table-view" style='margin-top:5px;'>
@@ -73,29 +74,4 @@
     <nav1></nav1>
 
 </template>
-<script>
-    import header1 from '.././componets/header.vue'
-    import nav1 from '.././componets/nav.vue'
-    import slide from '../../../src/components/slide.vue';
-    export default {
-        data() {
-        return {
-                list : [{
-                    img : '../../../dist/img/homemarqueepic.jpg',
-                    link : 'http://www.baidu.com'
-                },{
-                    img : '../../../dist/img/hotshoopingpic1.jpg',
-                    link : 'http://www.baidu.com'
-                },{
-                    img : '../../../dist/img/hotshoopingpic1.jpg',
-                    link : 'http://www.baidu.com'
-                }]//banner（list,list2）图数据源
-            }
-      },
-       components : {
-            header1,
-            nav1,
-            slide
-        }
-    }
-</script>
+
