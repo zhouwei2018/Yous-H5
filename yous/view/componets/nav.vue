@@ -1,6 +1,6 @@
 
 <template>
-    <nav class="mui-bar mui-bar-tab">
+    <nav class="mui-bar mui-bar-tab ">
     <a  class="mui-tab-item" v-link="{ path: '/index', activeClass:'mui-active'}">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>

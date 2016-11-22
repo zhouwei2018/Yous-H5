@@ -1,4 +1,17 @@
-
+<style scoped>
+    .flex-container {
+        text-align: center;
+    }
+    .flex-container>a {
+        position: relative;
+        width: 25%;
+        float: left;
+        padding: 10px 0;
+    }
+    .flex-container img {
+        width: 50%;
+    }
+</style>
 <template>
     <header class="mui-bar mui-bar-nav">
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
@@ -17,7 +30,7 @@
                 <button  type="button" style="height: 30px;margin-top: 5px;" class="mui-btn mui-btn-yellow mui-pull-right" id='exit'>取消</button>
             </div>-->
             <div class="flex-container" v-for="(index,entry) in gridData">
-                <a v-link="{ path: '/maintenance/order'}">
+                <a v-link="{name:'maintenance_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}">
                     <img src='{{ entry.fdsmallimagepath}}'>
                     <h6>{{ entry.fdname}}</h6>
                 </a>
@@ -49,7 +62,6 @@
                     }
             ).then((response)=>{
                 var response=JSON.parse(response.data);
-            debugger;
                 vm.$set('gridData', response.data);
             console.log(response.data);
         })

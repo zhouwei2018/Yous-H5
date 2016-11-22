@@ -129,7 +129,7 @@ router.map(
         name:'maintenance_lists',
         component:maintenance_lists
     },
-    '/maintenance/order':{
+    '/maintenance/order/:serviceId/:serviceName':{
         name:'maintenance_order',
         component:maintenance_order
     },

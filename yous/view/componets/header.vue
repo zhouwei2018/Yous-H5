@@ -1,6 +1,15 @@
 <style>
     header{position:relative;}
     header a{margin-right:4%;}
+    .logo {
+        display: inline-block;
+        line-height: 66px;;
+    }
+
+    .logo img{
+        height: 33px;
+        width: 120px;
+   }
   	.citybtn{border:0;background:url(../../../dist/img/btn_kongjian@3x.png) center center no-repeat;}
 </style>
 <template>
@@ -11,7 +20,7 @@
             <li @click="selectCity(2)">深圳</li>
             <li @click="selectCity(3)">广州</li>
         </actions>
-        <h1 class="mui-title"></h1>
+        <h1 class="mui-title logo"><img src="../../../dist/img/logoworld.png"></h1>
         <a class="mui-pull-right"><span class="mui-icon mui-icon-map"></span></a>
     </header>
 </template>

@@ -1,8 +1,5 @@
 <style>
-[transter-lists]{
-    body {
-        background-color: white;
-    }
+
     .flex-container {
         /*display: -webkit-flex;
         display: flex;
@@ -36,7 +33,6 @@
         width: 50%;
     }
 
- }
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">

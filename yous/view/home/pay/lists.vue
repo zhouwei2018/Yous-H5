@@ -1,4 +1,17 @@
-
+<style scoped>
+	.flex-container {
+		text-align: center;
+	}
+	.flex-container>a {
+		position: relative;
+		width: 25%;
+		float: left;
+		padding: 10px 0;
+	}
+	.flex-container img {
+		width: 50%;
+	}
+</style>
 <template>
     <header class="mui-bar mui-bar-nav">
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
@@ -21,7 +34,7 @@
 						</a>
 
 					</div>
-		   
+
 				</div>
 
     </div>

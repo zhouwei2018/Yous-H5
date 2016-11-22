@@ -45,8 +45,8 @@
             pwd:"",
 
             show : false,
-            title : '测试标题',
-            content : '测试内容',
+            title : '错误提示',
+            content : '',
         }
     },
     route:{
@@ -80,7 +80,8 @@
                         if(reslute.success){
                             this.$route.router.go({name:"main"})
                         }else{
-                            alert(reslute.message);
+                            this.content=reslute.message;
+                            this.show=true;
                         }
 
                         localStorage.setItem('userinfo', response);

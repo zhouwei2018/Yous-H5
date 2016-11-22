@@ -1,3 +1,8 @@
+<style scoped>
+	.mui-h3, h3 {
+		font-size: 18px;
+	}
+</style>
 <template>
 <div class="t-dimmer" v-show="show"></div>
 <div class="t-modal" v-show="show">
