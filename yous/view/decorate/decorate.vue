@@ -1,7 +1,7 @@
 <style  scoped>
 	 .lunbo{background:#fff;padding:10px;margin-top:10px;}	
 		h4{text-align:center;font-size:14px;color:#444;margin-top:10px;margin-bottom:10px;}
-	 .mui-content{padding-top:20px;padding-bottom:50px;}
+	 .mui-content{padding-top:40px;padding-bottom:50px;}
 	 
 	 .top{padding-top:20px;background:#fff;overflow:hidden;}
 	 .top .left{width:45%;border-right:1px solid #eee;float:left;}

@@ -17,6 +17,8 @@
      
      .allheader{font-size:14px;color:#aaa;margin-bottom:10px;}
      .allpic img{width:32%;margin-right:1%;text-align:center;}
+     
+     #segmentedControls a{font-size:14px;}
 </style>
 <template>
     <!--头部区域-->

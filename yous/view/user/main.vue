@@ -1,20 +1,20 @@
 <style scoped>
     html{font-size:10px;background:#fff;}
-    .mui-content{position:absolute;height:100%;width:100%;}
+    .mui-content{padding-bottom:60px;}
     .userpic{ text-align:center;}
-    .iconpic .mui-btn-link{font-size:1.5rem;color:#eee;}
+    .iconpic .mui-btn-link{font-size:20px;color:#eee;}
     .compantname{font-size:11px;}
 
 	.getuserpic{width:99%;margin:0px auto;margin-top:30px;margin-bottom:10px;}
     .getuserpic img{height:80px;width:80px;border-radius:50%;border:2px solid #b4b3af;}
-    .circlepic a{color:#ddd;font-size:16px;}
+    .circlepic a{color:#ddd;font-size:14px;}
      .circlepic h4{color:#ddd;font-size:14px;margin-bottom:10px;margin-top:20px;font-weight: normal;}
 
-    .userlist{text-align:center;padding:10px;padding-bottom:30px;font-size:14px;}
+    .userlist{text-align:center;padding:10px;padding-bottom:10px;font-size:14px;}
     .userlist li{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}
-     .userlist li:last-child{border:0;}
-     .userlist li a{color:#aaa;}
-      .userlist li span{color:#fff;}
+    .userlist li:last-child{border:0;}
+    .userlist li a{color:#aaa;}
+    .userlist li span{color:#fff;}
 
     .mui-table-view li a{color:#3c3b40!important;}
     .mui-table-view span{float:right;margin-right:1rem;font-size:12px;color:#aaa;}
@@ -143,7 +143,6 @@
     </div>
 </template>
 <script>
-import header1 from '.././componets/header.vue'
 import nav1 from '.././componets/nav.vue'
     export default {
         data ()
@@ -153,6 +152,9 @@ import nav1 from '.././componets/nav.vue'
                     background: 'url(./dist/img/mainbg.jpg)'
                 }
             }
+        },
+        components : {
+            nav1,
         }
     }
 </script>

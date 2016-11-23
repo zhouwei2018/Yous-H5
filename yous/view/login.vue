@@ -18,10 +18,7 @@
         <div class="mui-content-padded" style='text-align:center;'>
             <button  class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;' v-on:click="asyLogin" >登录</button>
 
-            <div class="link-area"><a v-link="{ path: '/register'}">注册账号</a> <span class="spliter">|</span> <a @click.prevent="show=true">忘记密码</a>
-                <alert :show.sync="show"
-                       :title="title"
-                       :content="content"></alert>
+            <div class="link-area"><a v-link="{ path: '/register'}">注册账号</a> <span class="spliter">|</span> <a v-link="{ path: '/forgetpwd'}">忘记密码</a>
             </div>
 
         </div>
@@ -32,6 +29,7 @@
     import header1 from './componets/header.vue'
     import nav1 from './componets/nav.vue'
     import alert from '../../src/components/alert.vue'
+
     export default {
         components : {
             header1,
