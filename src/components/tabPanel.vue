@@ -9,7 +9,7 @@
 		<a v-for="its in list" v-text="its.title" :class="{'current':index===$index}" @click.prevent="index=$index"></a>
 	</nav>
 	<div class="t-tab__bd" v-for="its in list" v-show="index===$index">
-		<p v-text="its.content"></p>
+		<p v-html="its.content"></p>
 	</div>
 </section>
 </template>

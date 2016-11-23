@@ -56,8 +56,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Vue = __webpack_require__(1)
 	var Docs = __webpack_require__(3)
-	var prismcss = __webpack_require__(109)
-	var prismjs = __webpack_require__(111) //语法高亮
+	var prismcss = __webpack_require__(111)
+	var prismjs = __webpack_require__(113) //语法高亮
 	
 	new Vue({
 		el : 'body',
@@ -10503,7 +10503,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var __vue_script__, __vue_template__
 	__webpack_require__(4)
 	__vue_script__ = __webpack_require__(8)
-	__vue_template__ = __webpack_require__(108)
+	__vue_template__ = __webpack_require__(110)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -10889,47 +10889,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _alertTest2 = _interopRequireDefault(_alertTest);
 	
-	var _confirmTest = __webpack_require__(24);
+	var _confirmTest = __webpack_require__(26);
 	
 	var _confirmTest2 = _interopRequireDefault(_confirmTest);
 	
-	var _promptTest = __webpack_require__(30);
+	var _promptTest = __webpack_require__(32);
 	
 	var _promptTest2 = _interopRequireDefault(_promptTest);
 	
-	var _actionsTest = __webpack_require__(38);
+	var _actionsTest = __webpack_require__(40);
 	
 	var _actionsTest2 = _interopRequireDefault(_actionsTest);
 	
-	var _panelTest = __webpack_require__(46);
+	var _panelTest = __webpack_require__(48);
 	
 	var _panelTest2 = _interopRequireDefault(_panelTest);
 	
-	var _accordionTest = __webpack_require__(56);
+	var _accordionTest = __webpack_require__(58);
 	
 	var _accordionTest2 = _interopRequireDefault(_accordionTest);
 	
-	var _tabPanelTest = __webpack_require__(64);
+	var _tabPanelTest = __webpack_require__(66);
 	
 	var _tabPanelTest2 = _interopRequireDefault(_tabPanelTest);
 	
-	var _btnTest = __webpack_require__(72);
+	var _btnTest = __webpack_require__(74);
 	
 	var _btnTest2 = _interopRequireDefault(_btnTest);
 	
-	var _switchTest = __webpack_require__(78);
+	var _switchTest = __webpack_require__(80);
 	
 	var _switchTest2 = _interopRequireDefault(_switchTest);
 	
-	var _progressTest = __webpack_require__(84);
+	var _progressTest = __webpack_require__(86);
 	
 	var _progressTest2 = _interopRequireDefault(_progressTest);
 	
-	var _slideTest = __webpack_require__(92);
+	var _slideTest = __webpack_require__(94);
 	
 	var _slideTest2 = _interopRequireDefault(_slideTest);
 	
-	var _menuTest = __webpack_require__(102);
+	var _menuTest = __webpack_require__(104);
 	
 	var _menuTest2 = _interopRequireDefault(_menuTest);
 	
@@ -11679,7 +11679,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var __vue_script__, __vue_template__
 	__vue_script__ = __webpack_require__(19)
-	__vue_template__ = __webpack_require__(23)
+	__vue_template__ = __webpack_require__(25)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -11802,8 +11802,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(21)
-	__vue_template__ = __webpack_require__(22)
+	__webpack_require__(21)
+	__vue_script__ = __webpack_require__(23)
+	__vue_template__ = __webpack_require__(24)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -11821,6 +11822,46 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(22);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-04a3cb38&file=alert.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./alert.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-04a3cb38&file=alert.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./alert.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-h3[_v-04a3cb38], h3[_v-04a3cb38] {\r\n\t\tfont-size: 18px;\r\n\t}\r\n", "", {"version":3,"sources":["/./src/components/alert.vue.style"],"names":[],"mappings":";CACA;EACA,gBAAA;EACA","file":"alert.vue","sourcesContent":["<style scoped>\r\n\t.mui-h3, h3 {\r\n\t\tfont-size: 18px;\r\n\t}\r\n</style>\r\n<template>\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-modal\" v-show=\"show\">\r\n\t<div class=\"t-modal__header\">\r\n\t\t<h3 class=\"t-modal__header--tt\" \r\n\t\t\tv-show=\"title!==''\" \r\n\t\t\tv-text=\"title\"></h3>\r\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\r\n\t</div>\r\n\t<div class=\"t-modal__footer\">\r\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\">确定</a>\r\n\t</div>\r\n</div>\r\n</template>\r\n<script>\r\nexport default {\r\n\tprops : {\r\n\t\tshow : {\r\n\t\t\ttype : Boolean,\r\n\t\t\tdefault : false,\r\n\t\t\ttwoWay : true\r\n\t\t},\r\n\t\ttitle : {\r\n\t\t\ttype : String\r\n\t\t},\r\n\t\tcontent : {\r\n\t\t\ttype : String\r\n\t\t}\r\n\t}\r\n}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 23 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11828,6 +11869,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	// <style scoped>
+	// 	.mui-h3, h3 {
+	// 		font-size: 18px;
+	// 	}
+	// </style>
 	// <template>
 	// <div class="t-dimmer" v-show="show"></div>
 	// <div class="t-modal" v-show="show">
@@ -11862,24 +11908,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-modal\" v-show=\"show\">\r\n\t<div class=\"t-modal__header\">\r\n\t\t<h3 class=\"t-modal__header--tt\" \r\n\t\t\tv-show=\"title!==''\" \r\n\t\t\tv-text=\"title\"></h3>\r\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\r\n\t</div>\r\n\t<div class=\"t-modal__footer\">\r\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\">确定</a>\r\n\t</div>\r\n</div>\r\n";
+	module.exports = "\n<div class=\"t-dimmer\" v-show=\"show\" _v-04a3cb38=\"\"></div>\n<div class=\"t-modal\" v-show=\"show\" _v-04a3cb38=\"\">\n\t<div class=\"t-modal__header\" _v-04a3cb38=\"\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title!==''\" v-text=\"title\" _v-04a3cb38=\"\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\" _v-04a3cb38=\"\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\" _v-04a3cb38=\"\">\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\" _v-04a3cb38=\"\">确定</a>\n\t</div>\n</div>\n";
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-modal-alert\">\r\n\t<a href=\"#m-modal-alert\" data-scroll><h2>Alert</h2></a>\r\n\t<p class=\"info__bd--hint\">A rendered 'alert' with title, content, and set of actions in the footer.</p>\r\n\t<div class=\"info__demo\">\r\n\t\t\r\n\t\t<a class=\"test-btn test-btn-blue\" data-color=\"blue\" @click.prevent=\"show=true\">alert</a>\r\n\t\t<alert :show.sync=\"show\"\r\n\t\t\t   :title=\"title\"\r\n\t\t\t   :content=\"content\"></alert>\r\n\t</div>\r\n\t<pre>\r\n\t\t<code class=\"language-markup\">\r\n\t\t\t<script type=\"language-mark-up\">\r\n<alert :show.sync=\"show\"\r\n\t   :title=\"title\"\r\n\t   :content=\"content\"></alert>\r\n\t\t\t</script>\r\n\t\t</code>\r\n\t</pre>\r\n\t<pre>\r\n\t\t<code class=\"language-javascript\">\r\nvar alert = require('vue-mui').alert;\r\n// or //\r\nimport { alert } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tshow : false,\r\n\t\t\ttitle : 'This is title (optional)',\r\n\t\t\tcontent : 'This is content'\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\talert\r\n\t}\r\n})\r\n\t\t</code>\r\n\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>show</td>\r\n\t\t\t<td>Boolean</td>\r\n\t\t\t<td><i>false</i></td>\r\n\t\t\t<td>Whether to show this component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>title</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td><i>(optional)</i>Title of component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>content</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>Content of component</td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>\r\n";
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(25)
-	__vue_template__ = __webpack_require__(29)
+	__vue_script__ = __webpack_require__(27)
+	__vue_template__ = __webpack_require__(31)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -11896,7 +11942,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11905,7 +11951,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _confirm = __webpack_require__(26);
+	var _confirm = __webpack_require__(28);
 	
 	var _confirm2 = _interopRequireDefault(_confirm);
 	
@@ -12026,12 +12072,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(27)
-	__vue_template__ = __webpack_require__(28)
+	__vue_script__ = __webpack_require__(29)
+	__vue_template__ = __webpack_require__(30)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12048,7 +12094,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12099,24 +12145,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-modal\" v-show=\"show\">\r\n\t<div class=\"t-modal__header\">\r\n\t\t<h3 class=\"t-modal__header--tt\" \r\n\t\t\tv-show=\"title!==''\" \r\n\t\t\tv-text=\"title\"></h3>\r\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\r\n\t</div>\r\n\t<div class=\"t-modal__footer\">\r\n\t\t<a class=\"t-modal__footer--btn\" \r\n\t\t   @click.prevent=\"notify('cancel')\">取消</a>\r\n\t\t<a class=\"t-modal__footer--btn\" \r\n\t\t   @click.prevent=\"notify('confirm')\">确定</a>\r\n\t</div>\r\n</div>\r\n";
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-modal-confirm\">\r\n\t<a href=\"#m-modal-confirm\" data-scroll><h2>Confirm</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t\r\n\t\t<a class=\"test-btn test-btn-blue\" data-color=\"blue\" @click.prevent=\"show=true\">confirm</a>\r\n\t\t<confirm :show.sync=\"show\"\r\n\t\t\t     :title=\"title\" \r\n\t\t\t     :content=\"content\"></confirm>\r\n\t</div>\r\n\t<pre>\r\n\t\t<code class=\"language-markup\">\r\n\t\t\t<script type=\"language-mark-up\">\r\n<confirm :show.sync=\"show\"\r\n\t     :title=\"title\" \r\n\t     :content=\"content\"></confirm>\r\n\t\t\t</script>\r\n\t\t</code>\r\n\t</pre>\r\n\t<pre>\r\n\t\t<code class=\"language-javascript\">\r\nvar confirm = require('vue-mui').confirm;\r\n// or //\r\nimport { confirm } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tshow : false,\r\n\t\t\ttitle : 'This is title (optional)',\r\n\t\t\tcontent : 'This is content'\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tconfirm\r\n\t},\r\n\tevents : {\r\n\t\tconfirm() {\r\n\t\t\t...code...\r\n\t\t},\r\n\t\tcancel() {\r\n\t\t\t...code...\r\n\t\t}\r\n\t}\r\n})\r\n\t\t</code>\r\n\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>show</td>\r\n\t\t\t<td>Boolean</td>\r\n\t\t\t<td><i>false</i></td>\r\n\t\t\t<td>Whether to show this component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>title</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td><i>(optional)</i>Title of component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>content</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>Content of component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>confirm</td>\r\n\t\t\t<td>Function</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>A callback Function when you click the modal confirm button</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>cancel</td>\r\n\t\t\t<td>Function</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>A callback Function when you click the modal cancel button</td>\r\n\t\t</tr>\r\n\r\n\t</table>\r\n</div>\r\n";
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(31)
-	__vue_template__ = __webpack_require__(37)
+	__vue_script__ = __webpack_require__(33)
+	__vue_template__ = __webpack_require__(39)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12133,7 +12179,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12142,7 +12188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _prompt = __webpack_require__(32);
+	var _prompt = __webpack_require__(34);
 	
 	var _prompt2 = _interopRequireDefault(_prompt);
 	
@@ -12263,13 +12309,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(33)
-	__vue_script__ = __webpack_require__(35)
-	__vue_template__ = __webpack_require__(36)
+	__webpack_require__(35)
+	__vue_script__ = __webpack_require__(37)
+	__vue_template__ = __webpack_require__(38)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12286,13 +12332,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(34);
+	var content = __webpack_require__(36);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -12312,7 +12358,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -12326,7 +12372,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12398,24 +12444,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-modal\" v-show=\"show\">\r\n\t<div class=\"t-modal__header\">\r\n\t\t<h3 class=\"t-modal__header--tt\" \r\n\t\t\tv-show=\"title !== ''\" \r\n\t\t\tv-text=\"title\"></h3>\r\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\r\n\t</div>\r\n\t<div class=\"t-prompt-ipt\">\r\n\t\t<input type=\"text\" v-model=\"key\">\r\n\t</div>\r\n\t<div class=\"t-modal__footer\">\r\n\t\t<a class=\"t-modal__footer--btn\" \r\n\t\t   @click.prevent=\"notify('cancel')\">取消</a>\r\n\t\t<a class=\"t-modal__footer--btn\" \r\n\t\t   @click.prevent=\"notify('confirm')\">确定</a>\r\n\t</div>\r\n</div>\r\n";
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-modal-prompt\">\r\n\t<a href=\"#m-modal-prompt\" data-scroll><h2>Prompt</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t\r\n\t\t<a class=\"test-btn test-btn-blue\" data-color=\"blue\" @click.prevent=\"show=true\">prompt</a>\r\n\t\t<prompt :show.sync=\"show\"\r\n\t\t\t     :title=\"title\" \r\n\t\t\t     :content=\"content\"></prompt>\r\n\t</div>\r\n\t<pre>\r\n\t\t<code class=\"language-markup\">\r\n\t\t\t<script type=\"language-mark-up\">\r\n<prompt :show.sync=\"show\"\r\n        :title=\"title\" \r\n        :content=\"content\"></prompt>\r\n\t\t\t</script>\r\n\t\t</code>\r\n\t</pre>\r\n\t<pre>\r\n\t\t<code class=\"language-javascript\">\r\nvar prompt = require('vue-mui').prompt;\r\n// or //\r\nimport { prompt } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tshow : false,\r\n\t\t\ttitle : 'This is title (optional)',\r\n\t\t\tcontent : 'This is content'\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tprompt\r\n\t},\r\n\tevents : {\r\n\t\tconfirm(val) {\r\n\t\t\talert('你输入了' + val)\r\n\t\t},\r\n\t\tcancel() {\r\n\t\t\talert('点击了取消')\r\n\t\t}\r\n\t}\r\n})\r\n\t\t</code>\r\n\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>show</td>\r\n\t\t\t<td>Boolean</td>\r\n\t\t\t<td><i>false</i></td>\r\n\t\t\t<td>Whether to show this component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>title</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td><i>(optional)</i>Title of component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>content</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>Content of component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>confirm</td>\r\n\t\t\t<td>Function</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>A callback Function when you click the modal confirm button</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>cancel</td>\r\n\t\t\t<td>Function</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>A callback Function when you click the modal cancel button</td>\r\n\t\t</tr>\r\n\r\n\t</table>\r\n</div>\r\n";
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(39)
-	__vue_template__ = __webpack_require__(45)
+	__vue_script__ = __webpack_require__(41)
+	__vue_template__ = __webpack_require__(47)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12432,7 +12478,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12441,7 +12487,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _actions = __webpack_require__(40);
+	var _actions = __webpack_require__(42);
 	
 	var _actions2 = _interopRequireDefault(_actions);
 	
@@ -12540,13 +12586,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(41)
-	__vue_script__ = __webpack_require__(43)
-	__vue_template__ = __webpack_require__(44)
+	__webpack_require__(43)
+	__vue_script__ = __webpack_require__(45)
+	__vue_template__ = __webpack_require__(46)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12563,13 +12609,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(42);
+	var content = __webpack_require__(44);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -12589,7 +12635,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -12603,7 +12649,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12651,25 +12697,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-actions\" v-show=\"show\" transition=\"actions\">\r\n\t<ul class=\"t-actions__list\">\r\n\t\t<li class=\"t-actions__list--tt\" v-if=\"title\" v-text=\"title\"></li>\r\n\t\t<slot></slot>\r\n\t</ul>\r\n\t<a class=\"t-actions__cancel\" @click.prevent=\"show=false\">取消</a>\r\n</div>\r\n";
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-modal-confirm\">\r\n\t<a href=\"#m-modal-confirm\" data-scroll><h2>Actions</h2></a>\r\n\t<p class=\"info__bd--hint\">simulate IOS action list</p>\r\n\t<div class=\"info__demo\">\r\n\t\t\r\n\t\t<a class=\"test-btn test-btn-blue\" data-color=\"blue\" @click.prevent=\"show=true\">actions</a>\r\n\t\t<actions :show.sync=\"show\" title=\"标题\">\r\n\t\t\t<li @click=\"test(1)\">alert 1</li>\r\n\t\t\t<li @click=\"test(2)\">alert 2</li>\r\n\t\t</actions>\r\n\t</div>\r\n\t<pre>\r\n\t\t<code class=\"language-markup\">\r\n\t\t\t<script type=\"language-mark-up\">\r\n<actions :show.sync=\"show\" \r\n\t\t title=\"标题\">\r\n\t<li @click=\"test(1)\">alert 1</li>\r\n\t<li @click=\"test(2)\">alert 2</li>\r\n</actions>\r\n\t\t\t</script>\r\n\t\t</code>\r\n\t</pre>\r\n\t<pre>\r\n\t\t<code class=\"language-javascript\">\r\nvar actions = require('vue-mui').actions;\r\n// or //\r\nimport { actions } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tshow : false\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tactions\r\n\t},\r\n\tmethods : {\r\n\t\ttest(data) {\r\n\t\t\talert(data)\r\n\t\t\tthis.show = false\r\n\t\t}\r\n\t}\r\n})\r\n\t\t</code>\r\n\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>show</td>\r\n\t\t\t<td>Boolean</td>\r\n\t\t\t<td><i>false</i></td>\r\n\t\t\t<td>Whether to show this component</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>title</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td><i>(optional)</i>Title of component</td>\r\n\t\t</tr>\r\n\r\n\t</table>\r\n</div>\r\n";
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(47)
-	__vue_script__ = __webpack_require__(49)
-	__vue_template__ = __webpack_require__(55)
+	__webpack_require__(49)
+	__vue_script__ = __webpack_require__(51)
+	__vue_template__ = __webpack_require__(57)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12686,13 +12732,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(50);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -12712,7 +12758,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -12726,7 +12772,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12735,7 +12781,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _panel = __webpack_require__(50);
+	var _panel = __webpack_require__(52);
 	
 	var _panel2 = _interopRequireDefault(_panel);
 	
@@ -12840,13 +12886,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(51)
-	__vue_script__ = __webpack_require__(53)
-	__vue_template__ = __webpack_require__(54)
+	__webpack_require__(53)
+	__vue_script__ = __webpack_require__(55)
+	__vue_template__ = __webpack_require__(56)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -12863,13 +12909,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(52);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -12889,7 +12935,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -12903,7 +12949,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12983,24 +13029,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-panel\">\r\n\t<header class=\"t-panel__hd\" @click=\"toggle\" v-text=\"title\"></header>\r\n\t<div class=\"t-panel__bd\" v-el:panel v-show=\"show\" transition=\"toggle\">\r\n\t\t<div class=\"t-panel__bd--ct\">\r\n\t\t\t<slot></slot>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n";
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-panel-panel\">\r\n\t<a href=\"#m-panel-panel\" data-scroll><h2>Panel</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t<div class=\"demo-pannel\">\r\n\t\t\t<!-- 演示 普通面板 -->\r\n\t\t\t<panel :show=\"false\" title=\"default panel\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<p>The most distant way in the world</p>\r\n\t\t\t\t\t<p>is not the way from birth to the end</p>\r\n\t\t\t\t</div>\r\n\t\t\t</panel>\r\n\t\t</div>\r\n\t\t<div class=\"demo-pannel\">\r\n\t\t\t<!-- 演示 折叠面板 -->\r\n\t\t\t<panel :show=\"false\" title=\"folding panel\" type=\"fold\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<p>The most distant way in the world</p>\r\n\t\t\t\t\t<p>is not the way from birth to the end</p>\r\n\t\t\t\t</div>\r\n\t\t\t</panel>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<!-- code -->\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<panel :show=\"false\" title=\"default panel\">\r\n\t<div>\r\n\t\t<p>The most distant way in the world</p>\r\n\t\t<p>is not the way from birth to the end</p>\r\n\t</div>\r\n</panel>\r\n\r\n<panel :show=\"false\" title=\"folding panel\" type=\"fold\">\r\n\t<div>\r\n\t\t<p>The most distant way in the world</p>\r\n\t\t<p>is not the way from birth to the end</p>\r\n\t</div>\r\n</panel>\t\t\t\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar panel = require('vue-mui').panel\r\n// or //\r\nimport { panel } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tcomponents : {\r\n\t\tpanel\r\n\t}\r\n})\t\t\t\t\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>type</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td>normal</td>\r\n\t\t\t<td>\r\n\t\t\t\t<p>type of panel <i>optional</i></p>\r\n\t\t\t\t<p>normal : normal panel</p>\r\n\t\t\t\t<p>flod : folding panel</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>title</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>Title of this component</td>\r\n\t\t</tr>\r\n\t</table>\r\n\r\n</div>\r\n";
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(57)
-	__vue_template__ = __webpack_require__(63)
+	__vue_script__ = __webpack_require__(59)
+	__vue_template__ = __webpack_require__(65)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13017,7 +13063,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13026,11 +13072,11 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _panel = __webpack_require__(50);
+	var _panel = __webpack_require__(52);
 	
 	var _panel2 = _interopRequireDefault(_panel);
 	
-	var _accordion = __webpack_require__(58);
+	var _accordion = __webpack_require__(60);
 	
 	var _accordion2 = _interopRequireDefault(_accordion);
 	
@@ -13110,13 +13156,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(59)
-	__vue_script__ = __webpack_require__(61)
-	__vue_template__ = __webpack_require__(62)
+	__webpack_require__(61)
+	__vue_script__ = __webpack_require__(63)
+	__vue_template__ = __webpack_require__(64)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13133,13 +13179,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(60);
+	var content = __webpack_require__(62);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -13159,7 +13205,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -13173,7 +13219,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13224,24 +13270,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-accordion\">\r\n\t<slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-panel-accordion\">\r\n\t<a href=\"#m-panel-accordion\" data-scroll><h2>accordion</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t<!-- accordion -->\r\n\t\t<accordion>\r\n\t\t\t<panel type=\"fold\" title=\"Title 1\">\r\n\t\t\t\t<div>Test Content 1</div>\r\n\t\t\t</panel>\r\n\t\t\t<panel type=\"fold\" title=\"Title 2\" :show=\"false\">\r\n\t\t\t\t<div>Test Content 2</div>\r\n\t\t\t</panel>\r\n\t\t\t<panel type=\"fold\" title=\"Title 3\" :show=\"false\">\r\n\t\t\t\t<div>Test Content 3</div>\r\n\t\t\t</panel>\r\n\t\t\t<panel type=\"fold\" title=\"Title 4\" :show=\"false\">\r\n\t\t\t\t<div>Test Content 4</div>\r\n\t\t\t</panel>\r\n\t\t</accordion>\r\n\t</div>\r\n\t\t<!-- code -->\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<accordion>\r\n\t<panel type=\"fold\" title=\"Title 1\">\r\n\t\t<div>Test Content 1</div>\r\n\t</panel>\r\n\t<panel type=\"fold\" title=\"Title 2\" :show=\"false\">\r\n\t\t<div>Test Content 2</div>\r\n\t</panel>\r\n\t<panel type=\"fold\" title=\"Title 3\" :show=\"false\">\r\n\t\t<div>Test Content 3</div>\r\n\t</panel>\r\n\t<panel type=\"fold\" title=\"Title 4\" :show=\"false\">\r\n\t\t<div>Test Content 4</div>\r\n\t</panel>\r\n</accordion>\t\t\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar panel = require('vue-mui').panel;\r\nvar accordion = require('vue-mui').accordion;\r\n// or //\r\nimport { panel } from 'vue-mui'\r\nimport { accordion } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tcomponents : {\r\n\t\tpanel,\r\n\t\taccordion\r\n\t}\r\n})\t\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\r\n\t<div class=\"hint\"><i>notice:</i>must import 'panel' component</div>\r\n\r\n</div>\r\n";
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(65)
-	__vue_template__ = __webpack_require__(71)
+	__vue_script__ = __webpack_require__(67)
+	__vue_template__ = __webpack_require__(73)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13258,7 +13304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13267,7 +13313,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _tabPanel = __webpack_require__(66);
+	var _tabPanel = __webpack_require__(68);
 	
 	var _tabPanel2 = _interopRequireDefault(_tabPanel);
 	
@@ -13358,13 +13404,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(67)
-	__vue_script__ = __webpack_require__(69)
-	__vue_template__ = __webpack_require__(70)
+	__webpack_require__(69)
+	__vue_script__ = __webpack_require__(71)
+	__vue_template__ = __webpack_require__(72)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13381,13 +13427,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(68);
+	var content = __webpack_require__(70);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -13407,7 +13453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -13415,13 +13461,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n.t-tab__bd{\r\n\tdisplay: block;\r\n}\r\n", "", {"version":3,"sources":["/./src/components/tabPanel.vue.style"],"names":[],"mappings":";AACA;CACA,eAAA;CACA","file":"tabPanel.vue","sourcesContent":["<style>\r\n.t-tab__bd{\r\n\tdisplay: block;\r\n}\r\n</style>\r\n<template>\r\n<section class=\"t-tab\">\r\n\t<nav>\r\n\t\t<a v-for=\"its in list\" v-text=\"its.title\" :class=\"{'current':index===$index}\" @click.prevent=\"index=$index\"></a>\r\n\t</nav>\r\n\t<div class=\"t-tab__bd\" v-for=\"its in list\" v-show=\"index===$index\">\r\n\t\t<p v-text=\"its.content\"></p>\r\n\t</div>\r\n</section>\r\n</template>\r\n<script>\r\nexport default {\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tindex : 0\r\n\t\t}\r\n\t},\r\n\tprops : {\r\n\t\tlist : {\r\n\t\t\ttype : Array\r\n\t\t}\r\n\t}\r\n}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n.t-tab__bd{\r\n\tdisplay: block;\r\n}\r\n", "", {"version":3,"sources":["/./src/components/tabPanel.vue.style"],"names":[],"mappings":";AACA;CACA,eAAA;CACA","file":"tabPanel.vue","sourcesContent":["<style>\r\n.t-tab__bd{\r\n\tdisplay: block;\r\n}\r\n</style>\r\n<template>\r\n<section class=\"t-tab\">\r\n\t<nav>\r\n\t\t<a v-for=\"its in list\" v-text=\"its.title\" :class=\"{'current':index===$index}\" @click.prevent=\"index=$index\"></a>\r\n\t</nav>\r\n\t<div class=\"t-tab__bd\" v-for=\"its in list\" v-show=\"index===$index\">\r\n\t\t<p v-html=\"its.content\"></p>\r\n\t</div>\r\n</section>\r\n</template>\r\n<script>\r\nexport default {\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tindex : 0\r\n\t\t}\r\n\t},\r\n\tprops : {\r\n\t\tlist : {\r\n\t\t\ttype : Array\r\n\t\t}\r\n\t}\r\n}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 69 */
+/* 71 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13440,7 +13486,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 		<a v-for="its in list" v-text="its.title" :class="{'current':index===$index}" @click.prevent="index=$index"></a>
 	// 	</nav>
 	// 	<div class="t-tab__bd" v-for="its in list" v-show="index===$index">
-	// 		<p v-text="its.content"></p>
+	// 		<p v-html="its.content"></p>
 	// 	</div>
 	// </section>
 	// </template>
@@ -13462,24 +13508,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 70 */
+/* 72 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<section class=\"t-tab\">\r\n\t<nav>\r\n\t\t<a v-for=\"its in list\" v-text=\"its.title\" :class=\"{'current':index===$index}\" @click.prevent=\"index=$index\"></a>\r\n\t</nav>\r\n\t<div class=\"t-tab__bd\" v-for=\"its in list\" v-show=\"index===$index\">\r\n\t\t<p v-text=\"its.content\"></p>\r\n\t</div>\r\n</section>\r\n";
+	module.exports = "\r\n<section class=\"t-tab\">\r\n\t<nav>\r\n\t\t<a v-for=\"its in list\" v-text=\"its.title\" :class=\"{'current':index===$index}\" @click.prevent=\"index=$index\"></a>\r\n\t</nav>\r\n\t<div class=\"t-tab__bd\" v-for=\"its in list\" v-show=\"index===$index\">\r\n\t\t<p v-html=\"its.content\"></p>\r\n\t</div>\r\n</section>\r\n";
 
 /***/ },
-/* 71 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-panel-tab-panel\">\r\n\t<a href=\"#m-panel-tab-panel\" data-scroll><h2>tab-panel</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t<div class=\"info__demo--show\">\r\n\t\t\t<div class=\"demo-pannel\">\r\n\t\t\t\t<tabpanel :list=\"list\"></tabpanel>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<!-- code -->\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<tabpanel :list=\"list\"></tabpanel>\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar tabpanel = require('vue-mui').tabpanel;\r\n// or //\r\nimport { tabpanel } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tlist : [{\r\n\t\t\t\ttitle : 'tab1',\r\n\t\t\t\tcontent : 'The most distant way in the world'\r\n\t\t\t},{\r\n\t\t\t\ttitle : 'tab2',\r\n\t\t\t\tcontent : 'is not the way from birth to the end'\r\n\t\t\t}]\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\ttabpanel\r\n\t}\r\n})\t\t\t\t\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>list</td>\r\n\t\t\t<td>Array</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>\r\n\t\t\t\t<p>To render the list</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</table>\r\n\r\n</div>\r\n";
 
 /***/ },
-/* 72 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(73)
-	__vue_template__ = __webpack_require__(77)
+	__vue_script__ = __webpack_require__(75)
+	__vue_template__ = __webpack_require__(79)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13496,7 +13542,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 73 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13505,7 +13551,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _btn = __webpack_require__(74);
+	var _btn = __webpack_require__(76);
 	
 	var _btn2 = _interopRequireDefault(_btn);
 	
@@ -13592,12 +13638,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 74 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(75)
-	__vue_template__ = __webpack_require__(76)
+	__vue_script__ = __webpack_require__(77)
+	__vue_template__ = __webpack_require__(78)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13614,7 +13660,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13651,24 +13697,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<a class=\"t-btn\" :class=\"['t-btn--'+type]\"\r\n\t\t\t\t @click.prevent=\"callback\"><slot></slot></a>\r\n";
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-btn-btn\">\r\n\t<a href=\"#m-btn-btn\" data-scroll><h2>botton</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t\r\n\t\t<div class=\"info__demo--show\">\t\t\r\n\t\t\t<btn type=\"normal\" :cb=\"test\">button 1</btn>\r\n\t\t</div>\r\n\t\t<div class=\"info__demo--show\">\r\n\t\t\t<btn type=\"warn\" :cb=\"test2\">button 2</btn>\r\n\t\t</div>\r\n\t\t<div class=\"info__demo--show\">\r\n\t\t\t<btn>button 3</btn>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<btn type=\"normal\" :cb=\"callback\">button 1</btn>\r\n<btn type=\"warn\" :cb=\"callback2\">button 2</btn>\r\n<btn>button 3</btn>\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar btn = require('vue-mui').btn;\r\n// or //\r\nimport { btn } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tcomponents : {\r\n\t\tbtn\r\n\t},\r\n\tmethods : {\r\n\t\tcallback : function(){\r\n\t\t\t....code....\r\n\t\t}\r\n\t}\r\n})\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th width=\"350\">description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>type</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td>Type of button <i>normal</i><i>warn</i><i>default</i></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>callback</td>\r\n\t\t\t<td>Function</td>\r\n\t\t\t<td><p>A callback Function when you click the button component</p></td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>\r\n";
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(79)
-	__vue_template__ = __webpack_require__(83)
+	__vue_script__ = __webpack_require__(81)
+	__vue_template__ = __webpack_require__(85)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13685,7 +13731,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13694,7 +13740,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _switch = __webpack_require__(80);
+	var _switch = __webpack_require__(82);
 	
 	var _switch2 = _interopRequireDefault(_switch);
 	
@@ -13779,12 +13825,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(81)
-	__vue_template__ = __webpack_require__(82)
+	__vue_script__ = __webpack_require__(83)
+	__vue_template__ = __webpack_require__(84)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13801,7 +13847,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13829,24 +13875,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-switch\" :class=\"{'open':status}\"\r\n\t\t\t\t\t  @click=\"status=!status\">\r\n\t<div class=\"t-switch__btn\"></div>\r\n</div>\r\n";
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-btn-switch\">\r\n\t<a href=\"#m-btn-switch\" data-scroll><h2>Switch <span style=\"color:#4c9;\" v-text=\"msg\"></span></h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t<div class=\"info__demo--show\">\r\n\t\t\t<switchbtn :status.sync=\"status\"></switchbtn>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<switchbtn :status.sync=\"status\"></switchbtn>\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar switchbtn = require('vue-mui').switchbtn;\r\n// or //\r\nimport { switchbtn } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tstatus : false\r\n\t\t}\r\n\t},\r\n\twatch : {\r\n\t\tstatus(val) {\r\n\t\t\t...\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tswitchbtn\r\n\t}\r\n})\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>status</td>\r\n\t\t\t<td>Boolean</td>\r\n\t\t\t<td><i>false</i></td>\r\n\t\t\t<td>is switch checked, true or false</td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>\r\n\r\n";
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(85)
-	__vue_template__ = __webpack_require__(91)
+	__vue_script__ = __webpack_require__(87)
+	__vue_template__ = __webpack_require__(93)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13863,7 +13909,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13872,7 +13918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _progress = __webpack_require__(86);
+	var _progress = __webpack_require__(88);
 	
 	var _progress2 = _interopRequireDefault(_progress);
 	
@@ -13960,13 +14006,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(87)
-	__vue_script__ = __webpack_require__(89)
-	__vue_template__ = __webpack_require__(90)
+	__webpack_require__(89)
+	__vue_script__ = __webpack_require__(91)
+	__vue_template__ = __webpack_require__(92)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -13983,13 +14029,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(88);
+	var content = __webpack_require__(90);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -14009,7 +14055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -14023,7 +14069,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14137,25 +14183,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"t-progress-bar\" :show=\"show\" :style=\"{backgroundColor:color,transform:'translate3d(-100%,0,0)'}\"></div>\r\n";
 
 /***/ },
-/* 91 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-progress-bar\">\r\n\t<a href=\"#m-progress-bar\" data-scroll><h2>Progress bar</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t\r\n\t\t<a class=\"test-btn test-btn-ilb test-btn-blue\" @click.prevent=\"status='start'\">Start</a>\r\n\t\t<a class=\"test-btn test-btn-ilb test-btn-green\" @click.prevent=\"status='done'\">Done</a>\r\n\t\t<a class=\"test-btn test-btn-ilb test-btn-black\" @click.prevent=\"setNum\">random</a>\r\n\t\t<progress :status=\"status\" :num=\"num\"></progress>\r\n\t</div>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<progress :status=\"status\" :num=\"num\"></progress>\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar progress = require('vue-mui').progress;\r\n// or //\r\nimport { progress } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tcomponents : {\r\n\t\t'progress' : Progress\r\n\t}\r\n})\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>status</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td>hide</td>\r\n\t\t\t<td>whether to show progress<i>hide</i><i>start</i><i>done</i></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>num</td>\r\n\t\t\t<td>Number</td>\r\n\t\t\t<td>0</td>\r\n\t\t\t<td><i>(optional)</i></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>color</td>\r\n\t\t\t<td>String</td>\r\n\t\t\t<td>#4c9cee</td>\r\n\t\t\t<td><i>(optional)</i></td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>\r\n";
 
 /***/ },
-/* 92 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(93)
-	__vue_script__ = __webpack_require__(95)
-	__vue_template__ = __webpack_require__(101)
+	__webpack_require__(95)
+	__vue_script__ = __webpack_require__(97)
+	__vue_template__ = __webpack_require__(103)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -14172,13 +14218,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 93 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(94);
+	var content = __webpack_require__(96);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -14198,7 +14244,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 94 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -14212,7 +14258,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 95 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14221,7 +14267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _slide = __webpack_require__(96);
+	var _slide = __webpack_require__(98);
 	
 	var _slide2 = _interopRequireDefault(_slide);
 	
@@ -14332,13 +14378,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 96 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(97)
-	__vue_script__ = __webpack_require__(99)
-	__vue_template__ = __webpack_require__(100)
+	__webpack_require__(99)
+	__vue_script__ = __webpack_require__(101)
+	__vue_template__ = __webpack_require__(102)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -14355,13 +14401,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 97 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(98);
+	var content = __webpack_require__(100);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -14381,7 +14427,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 98 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -14389,13 +14435,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".slide {\n  position: relative;\n  width: 100%;\n  /*height: (@base-width * 7 / 12);*/\n  height: 19rem;\n  overflow: hidden;\n}\n.slide-detail {\n  height: 16rem;\n}\n.slide__inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner--img {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner img {\n  width: 100%;\n}\n.slide__indicator {\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n}\n.slide__indicator span {\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin-right: 5px;\n  border-radius: 50%;\n  background-color: #eee;\n}\n.slide__indicator span.current {\n  background-color: #4c9;\n}\n.slide__inner {\n  -webkit-transition: -webkit-transform .5s linear;\n  transition: -webkit-transform .5s linear;\n  transition: transform .5s linear;\n  transition: transform .5s linear, -webkit-transform .5s linear;\n}\n", "", {"version":3,"sources":["/./src/components/slide.vue.style"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,YAAY;EACZ,mCAAmC;EACnC,cAAc;EACd,iBAAiB;CAClB;AACD;EACE,cAAc;CACf;AACD;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;CACd;AACD;EACE,mBAAmB;EACnB,OAAO;EACP,YAAY;EACZ,aAAa;CACd;AACD;EACE,YAAY;CACb;AACD;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;CACd;AACD;EACE,sBAAsB;EACtB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;EACnB,uBAAuB;CACxB;AACD;EACE,uBAAuB;CACxB;AACD;EACE,iDAAiC;EAAjC,yCAAiC;EAAjC,iCAAiC;EAAjC,+DAAiC;CAClC","file":"slide.vue","sourcesContent":[".slide {\n  position: relative;\n  width: 100%;\n  /*height: (@base-width * 7 / 12);*/\n  height: 19rem;\n  overflow: hidden;\n}\n.slide-detail {\n  height: 16rem;\n}\n.slide__inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner--img {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner img {\n  width: 100%;\n}\n.slide__indicator {\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n}\n.slide__indicator span {\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin-right: 5px;\n  border-radius: 50%;\n  background-color: #eee;\n}\n.slide__indicator span.current {\n  background-color: #4c9;\n}\n.slide__inner {\n  transition: transform .5s linear;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".slide {\n  position: relative;\n  width: 100%;\n  /*height: (@base-width * 7 / 12);*/\n  height: 12rem;\n  overflow: hidden;\n}\n.slide-detail {\n  height: 16rem;\n}\n.slide__inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner--img {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner img {\n  width: 100%;\n}\n.slide__indicator {\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n}\n.slide__indicator span {\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin-right: 5px;\n  border-radius: 50%;\n  background-color: #eee;\n}\n.slide__indicator span.current {\n  background-color: #4c9;\n}\n.slide__inner {\n  -webkit-transition: -webkit-transform .5s linear;\n  transition: -webkit-transform .5s linear;\n  transition: transform .5s linear;\n  transition: transform .5s linear, -webkit-transform .5s linear;\n}\n", "", {"version":3,"sources":["/./src/components/slide.vue.style"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,YAAY;EACZ,mCAAmC;EACnC,cAAc;EACd,iBAAiB;CAClB;AACD;EACE,cAAc;CACf;AACD;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;CACd;AACD;EACE,mBAAmB;EACnB,OAAO;EACP,YAAY;EACZ,aAAa;CACd;AACD;EACE,YAAY;CACb;AACD;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;CACd;AACD;EACE,sBAAsB;EACtB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;EACnB,uBAAuB;CACxB;AACD;EACE,uBAAuB;CACxB;AACD;EACE,iDAAiC;EAAjC,yCAAiC;EAAjC,iCAAiC;EAAjC,+DAAiC;CAClC","file":"slide.vue","sourcesContent":[".slide {\n  position: relative;\n  width: 100%;\n  /*height: (@base-width * 7 / 12);*/\n  height: 12rem;\n  overflow: hidden;\n}\n.slide-detail {\n  height: 16rem;\n}\n.slide__inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner--img {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n.slide__inner img {\n  width: 100%;\n}\n.slide__indicator {\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n}\n.slide__indicator span {\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin-right: 5px;\n  border-radius: 50%;\n  background-color: #eee;\n}\n.slide__indicator span.current {\n  background-color: #4c9;\n}\n.slide__inner {\n  transition: transform .5s linear;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 99 */
+/* 101 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -14405,7 +14451,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	// <style lang="less">
 	// @base-width:100%;
-	// @base-height:19rem;
+	// @base-height:12rem;
 	// @color-gray:#eee;
 	// @color-green:#4c9;
 	//
@@ -14524,24 +14570,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 100 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<section class=\"slide\" :class=\"{'slide-detail':detail}\">\r\n\t<ul class=\"slide__inner\" @touchstart.prevent=\"start\" @touchmove.prevent=\"move\" @touchend.prevent=\"end\" :style=\"{transform:'translate3d('+position+'px,0,0)'}\">\r\n\t\t<li v-for=\"its in list\" class=\"slide__inner--img\" :style=\"{left : $index * width + 'px'}\">\r\n\t\t\t<a :href=\"its.link\">\r\n\t\t\t\t<img :src=\"its.img\">\r\n\t\t\t</a>\r\n\t\t</li>\r\n\t</ul>\r\n\t<div class=\"slide__indicator\">\r\n\t\t<span v-for=\"its in list\" :class=\"{'current':$index===index}\"></span>\r\n\t</div>\r\n</section>\r\n";
 
 /***/ },
-/* 101 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-slide-slide\">\r\n\t<a href=\"#m-slide-slide\" data-scroll><h2>slide</h2></a>\r\n\t<p class=\"info__bd--hint\" id=\"demo-slide-warn\">Touch events only, you can be tested on the your mobile phone</p>\r\n\t<div class=\"info__demo\">\r\n\t\t<div class=\"info__demo--show\" id=\"demo-slide\">\r\n\t\t\t<slide :list=\"list\"></slide>\r\n\t\t</div>\r\n\t</div>\r\n\t\t<!-- code -->\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<slide :list=\"list\"></slide>\t\t\t\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar slide = require('vue-mui').slide;\r\n// or //\r\nimport { slide } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tlist : [{\r\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner5.png',\r\n\t\t\t\tlink : 'http://www.baidu.com'\r\n\t\t\t},{\r\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner6.jpg',\r\n\t\t\t\tlink : 'http://www.baidu.com'\r\n\t\t\t},{\r\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner1.jpg',\r\n\t\t\t\tlink : 'http://www.baidu.com'\r\n\t\t\t}]\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tslide\r\n\t}\r\n})\t\t\t\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\r\n\t<table class=\"info__opt\">\r\n\t\t<tr>\r\n\t\t\t<th>Name</th>\r\n\t\t\t<th>type</th>\r\n\t\t\t<th>default</th>\r\n\t\t\t<th>description</th>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>list</td>\r\n\t\t\t<td>array</td>\r\n\t\t\t<td></td>\r\n\t\t\t<td>\r\n\t\t\t\t<p>pictures url set</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</table>\r\n\r\n</div>\r\n";
 
 /***/ },
-/* 102 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(103)
-	__vue_template__ = __webpack_require__(107)
+	__vue_script__ = __webpack_require__(105)
+	__vue_template__ = __webpack_require__(109)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -14558,7 +14604,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 103 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14567,7 +14613,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _menu = __webpack_require__(104);
+	var _menu = __webpack_require__(106);
 	
 	var _menu2 = _interopRequireDefault(_menu);
 	
@@ -14657,12 +14703,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 104 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(105)
-	__vue_template__ = __webpack_require__(106)
+	__vue_script__ = __webpack_require__(107)
+	__vue_template__ = __webpack_require__(108)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -14679,7 +14725,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 105 */
+/* 107 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14720,31 +14766,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 106 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<ul class=\"t-menu\">\r\n\t<li v-for=\"its in list\">\r\n\t\t<a v-text=\"its.name\" @click.prevent=\"handle($event,its.link)\"></a>\r\n\t\t<ul class=\"t-menu__child\" v-if=\"its.child\">\r\n\t\t\t<li v-for=\"items in its.child\">\r\n\t\t\t\t<a :href=\"items.link\" v-text=\"items.name\"></a>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n\t</li>\r\n</ul>\r\n";
 
 /***/ },
-/* 107 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<div class=\"info__bd\" id=\"m-menu-menu\">\r\n\t<a href=\"#m-menu-menu\" data-scroll><h2>MenuList</h2></a>\r\n\t<div class=\"info__demo\">\r\n\t\t<menubar :list=\"list\"></menubar>\r\n\t</div>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-markup\">\r\n\t\t\t\t<script type=\"language-mark-up\">\r\n<menubar :list=\"list\"></menubar>\r\n\t\t\t\t</script>\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\t\t<pre>\r\n\t\t\t<code class=\"language-javascript\">\r\nvar menubar = require('vue-mui').menubar;\r\n// or //\r\nimport { menubar } from 'vue-mui'\r\n\r\nnew Vue({\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tlist : [{\r\n\t\t\t\tname : 'Hello',\r\n\t\t\t\tlink : 'http://mui.yaobieting.com'\r\n\t\t\t},{\r\n\t\t\t\tname : 'World',\r\n\t\t\t\tchild : [{\r\n\t\t\t\t\tname : 'test',\r\n\t\t\t\t\tlink : 'http://mui.yaobieting.com'\r\n\t\t\t\t},{\r\n\t\t\t\t\tname : 'test2',\r\n\t\t\t\t\tlink : 'http://mui.yaobieting.com'\r\n\t\t\t\t}]\r\n\t\t\t},{\r\n\t\t\t\tname : 'Test',\r\n\t\t\t\tlink : 'http://mui.yaobieting.com'\r\n\t\t\t}]\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tmenubar\r\n\t}\r\n\t\r\n})\r\n\t\t\t</code>\r\n\t\t</pre>\r\n\r\n</div>\r\n\r\n\r\n";
 
 /***/ },
-/* 108 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n<asidebox></asidebox>\r\n<menubox :act.sync=\"id\"></menubox>\r\n\r\n<div class=\"main\">\r\n\t<div class=\"info\">\r\n\t\t<div class=\"info__header\" id=\"m-modal\">\r\n\t\t\t<a href=\"#m-modal\" data-scroll><h1>Modal</h1></a>\r\n\t\t\t<p>A set of modal window appearance effects with IOS style. <i>alert</i><i>confirm</i><i>prompt</i></p>\r\n\t\t</div>\r\n\r\n\t\t<!-- alert start -->\r\n\t\t<alert></alert>\r\n\t\t<!-- alert end -->\r\n\r\n\t\t<!-- confirm start -->\r\n\t\t<confirm></confirm>\r\n\t\t<!-- confirm end -->\r\n\r\n\t\t<!-- prompt start -->\r\n\t\t<prompt></prompt>\r\n\t\t<!-- prompt end -->\r\n\r\n\t\t<!-- actions start -->\r\n\t\t<actions></actions>\r\n\t\t<!-- actions end -->\r\n\r\n\t</div>\r\n\r\n\t<div class=\"info\">\r\n\t\t<div class=\"info__header\" id=\"m-panel\">\r\n\t\t\t<a href=\"#m-panel\" data-scroll><h1>Panels</h1></a>\r\n\t\t\t<p>include<i>default panel</i><i>folding panel</i></p>\r\n\t\t</div>\r\n\t\t\r\n\t\t<!-- panel start -->\r\n\t\t<panel></panel>\r\n\t\t<!-- panel end -->\r\n\r\n\t\t<!-- accordion start -->\r\n\t\t<accordion></accordion>\r\n\t\t<!-- accordion end -->\r\n\t\r\n\t\t<!-- tabpanel start -->\r\n\t\t<tabpanel></tabpanel>\r\n\t\t<!-- tabpanel end -->\r\n\r\n\t</div>\r\n\r\n\t<div class=\"info\">\r\n\t\t<div class=\"info__header\" id=\"m-btn\">\r\n\t\t\t<a href=\"#m-btn\" data-scroll><h1>Buttons</h1></a>\r\n\t\t</div>\r\n\t\t\r\n\t\t<btn></btn>\r\n\r\n\t\t<sbtn></sbtn>\r\n\r\n\t</div>\r\n\r\n\t<div class=\"info\">\r\n\t\t<div class=\"info__header\" id=\"m-progress\">\r\n\t\t\t<a href=\"#m-progress\" data-scroll><h1>Progress</h1></a>\r\n\t\t</div>\r\n\t\t\r\n\t\t<progress></progress>\r\n\r\n\t</div>\r\n\r\n\t<div class=\"info\">\r\n\t\t<div class=\"info__header\" id=\"m-slide\">\r\n\t\t\t<a href=\"#m-slide\" data-scroll><h1>Slide</h1></a>\r\n\t\t</div>\r\n\t\t\r\n\t\t<slide></slide>\r\n\r\n\t</div>\r\n\r\n\t<div class=\"info\">\r\n\t\t<div class=\"info__header\" id=\"m-menu\">\r\n\t\t\t<a href=\"#m-menu\" data-scroll><h1>Menu</h1></a>\r\n\t\t</div>\r\n\t\t\r\n\t\t<menubar></menubar>\r\n\r\n\t</div>\r\n\r\n</div>\r\n<a href=\"#m-modal\" data-scroll id=\"back-top\" v-show=\"back\" transition=\"backtop\"></a>\r\n";
 
 /***/ },
-/* 109 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(110);
+	var content = __webpack_require__(112);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -14764,7 +14810,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 110 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -14778,7 +14824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 111 */
+/* 113 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+clike+javascript */

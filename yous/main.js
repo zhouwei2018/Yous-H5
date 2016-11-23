@@ -1,10 +1,12 @@
 var Vue = require('vue')
+
 var VueRouter = require('vue-router')
 var VueResource = require('vue-resource')
 var Vuerify=require("vuerify");
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(Vuerify)
+
 
 // 引入组件！直接使用es6的语法
 var header=require('./view/componets/header.vue');

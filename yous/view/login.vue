@@ -80,8 +80,9 @@
                             this.content=reslute.message;
                             this.show=true;
                         }
-
-                        localStorage.setItem('userinfo', response);
+                        debugger;
+                        localStorage.setItem('userinfo', JSON.stringify(reslute.data));
+                        console.info(JSON.parse(localStorage.getItem("userinfo")).fdname)
                     }, function(response) {
 
                     });

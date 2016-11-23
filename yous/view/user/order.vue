@@ -15,6 +15,7 @@
       max-width: 70px;
       height:70px;
   }
+
   .ending{border:0;color:orangered}
 </style>
 <template>
@@ -27,13 +28,14 @@
    </div>
 </template>
 <script>
+
 import tabpanel from '../../../src/components/tabPanel.vue';
 export default {
 	data() {
 		return {
 			list : [{
 				title : '全部',
-				content : '<a>1233</a>'
+				content : "<div>{{this.title}}}</div>"
 			},{
 				title : '待接单',
 				content : 'is not the way from birth to the end'
