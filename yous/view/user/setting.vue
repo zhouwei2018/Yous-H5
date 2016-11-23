@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right" id='openapply'>
+                <a class="mui-navigate-right" id='openapply' v-link="{path:'/user/apply'}">
                     申请认证<span>未认证</span>
                 </a>
             </li>

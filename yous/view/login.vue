@@ -32,7 +32,6 @@
     import header1 from './componets/header.vue'
     import nav1 from './componets/nav.vue'
     import alert from '../../src/components/alert.vue'
-
     export default {
         components : {
             header1,

@@ -12,15 +12,17 @@ var nav=require('./view/componets/nav.vue');
 var index = require('./view/index.vue')
 var login = require('./view/login.vue')
 var register=require('./view/register.vue');
+var forgetpwd=require('./view/forgetpwd.vue');//忘记密码
 var service=require('./view/service/service.vue');
 var space=require('./view/space/space.vue');
 var decorate=require('./view/decorate/decorate.vue');
 var main=require('./view/user/main.vue');//用户中心主页面
 var setting=require('./view/user/setting.vue'); //设置
 var myservice=require('./view/user/myservice.vue'); //我的服务
-var wallte=require('./view/user/wallte.vue'); //我的服务
+var wallte=require('./view/user/wallte.vue'); //我的钱包
 var info=require('./view/user/info.vue'); //我的信息
 var address=require('./view/user/address.vue'); //我的地址
+var apply=require('./view/user/apply.vue'); //修改密码
 var restpassword=require('./view/user/restpassword.vue'); //修改密码
 var maintenance_lists= require('./view/home/maintenance/lists.vue'); //社保维修
 var maintenance_order= require('./view/home/maintenance/order.vue'); //社保维修
@@ -82,6 +84,10 @@ router.map(
         name:'register',
         component:register
     },
+     '/forgetpwd': {
+        name:'forgetpwd',
+        component:forgetpwd
+    },
     //服务
     '/service': {
         name:'service',
@@ -116,6 +122,10 @@ router.map(
     '/user/address':{
         name:'address',
         component:address
+    },//设置中个人信息我的地址
+     '/user/apply':{
+        name:'apply',
+        component:apply
     },//设置中个人信息我的地址
     '/user/myservice':{
         name:'myservice',

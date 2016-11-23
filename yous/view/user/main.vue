@@ -3,7 +3,7 @@
     .mui-content{position:absolute;height:100%;width:100%;}
     .userpic{ text-align:center;}
     .iconpic .mui-btn-link{font-size:1.5rem;color:#eee;}
-    .compantname{font-size:1rem;}
+    .compantname{font-size:11px;}
 
 	.getuserpic{width:99%;margin:0px auto;margin-top:30px;margin-bottom:10px;}
     .getuserpic img{height:80px;width:80px;border-radius:50%;border:2px solid #b4b3af;}
@@ -51,6 +51,10 @@
     }
 </style>
 <template>
+	
+	<!--导航区域-->
+    <nav1></nav1>
+	
     <div class="mui-content">
         <!--头部区域开始-->
         <div class="userpic" v-bind:style="styleObject">
@@ -139,6 +143,8 @@
     </div>
 </template>
 <script>
+import header1 from '.././componets/header.vue'
+import nav1 from '.././componets/nav.vue'
     export default {
         data ()
         {

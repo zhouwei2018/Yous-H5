@@ -16,7 +16,7 @@
 </style>
 <template>
     <!--面板区域-->
-    <header1></header1>'
+    <header1></header1>
     <!--面板区域-->
     <div class="mui-content">
     	<div class="top">

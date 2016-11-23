@@ -17,7 +17,7 @@
 	<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
 		    <h1 class="mui-title">钱包</h1>
-		    <a class="mui-pull-right">消费明细</a>
+		    <a class="mui-pull-right">支付密码</a>
 		</header>
 		<div class="mui-content">
 			<div class='number'>			
@@ -40,7 +40,7 @@
 			 <ul class="mui-table-view">
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right">
-						支付密码<span>未设置</span>
+						消费明细
 					</a>
 				</li>
 			</ul>
