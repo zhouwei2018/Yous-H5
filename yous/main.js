@@ -36,12 +36,12 @@ var more_lists= require('./view/home/more/lists.vue'); // 全部
 var more_order= require('./view/home/more/order.vue'); // 全部
 var label= require('./view/user/label.vue'); // 标签
 var message= require('./view/user/message.vue'); //信息
-var order= require('./view/user/order.vue'); //订单
+var order= require('./view/user/order/order.vue'); //订单
 var profile= require('./view/user/profile.vue'); //个人信息
 var suggestion= require('./view/user/suggestion.vue'); //投诉建议
-var user_order=require('./view/user/order.vue'); //订单
-
-
+var user_order=require('./view/user/order/order.vue'); //订单
+var user_order_all=require('./view/user/order/all_order.vue'); //全部订单
+var user_order_untaking=require('./view/user/order/untaking_order.vue'); //待接单订单
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -187,7 +187,19 @@ router.map(
     },
     '/user/order':{
         name:'order',
-        component:user_order
+        component:user_order,
+        //// 定义子路由
+        subRoutes: {
+            'all': {
+                component: user_order_all
+            },
+            'untaking': {
+                component: user_order_untaking
+            },
+            'unservice': {
+                component: user_order_untaking
+            }
+        }
     },
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。

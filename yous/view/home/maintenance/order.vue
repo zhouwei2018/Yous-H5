@@ -62,7 +62,6 @@
     import upload from '../../../../src/components/upload.vue'
     export default {
         data() {
-        debugger;
         return {
             username: JSON.parse(localStorage.getItem("userinfo")).fdname,
             tel:JSON.parse(localStorage.getItem("userinfo")).fdphone,
@@ -94,7 +93,6 @@
         },
         ready: function(){
             this.poptitle=this.$route.params.serviceName
-
         }
     }
 </script>

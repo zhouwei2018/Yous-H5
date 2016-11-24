@@ -29,26 +29,25 @@
 </template>
 <script>
 
-import tabpanel from '../../../src/components/tabPanel.vue';
+import tabpanel from '../../../../src/components/tabRouterPanel.vue';
 export default {
 	data() {
 		return {
 			list : [{
 				title : '全部',
-				content : "<div>{{this.title}}}</div>"
+				path : "/user/order/all"
 			},{
 				title : '待接单',
-				content : 'is not the way from birth to the end'
+                path : "/user/order/untaking"
 			},{
 				title : '待服务',
-				content : 'is not the way from birth to the end'
+                path : "/user/order/untaking"
 			},{
 				title : '待确认',
-				content : 'is not the way from birth to the end'
-			}
-      ,{
+                path :"/user/order/untaking"
+			},{
 				title : '待评价',
-				content : 'is not the way from birth to the end'
+                    path : "/user/order/untaking"
 			}
 
     ]
