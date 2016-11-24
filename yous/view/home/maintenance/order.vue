@@ -32,7 +32,7 @@
     	</panel>
         <panel :show="false" title="问题和意见 快捷输入" class='question'>
             <div>
-                <textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
+                <textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..." v-model="content"></textarea>
             </div>
         </panel>
         <panel :show="false" title="请详细描述你的问题和意见" class='questionpic'>
@@ -53,7 +53,7 @@
             </div>
         </panel>
         <div id='image-list' class="row image-list"></div>
-        <button id="submit" class="mui-btn mui-btn-blue mui-btn-block">发送</button>
+        <button id="submit" class="mui-btn mui-btn-blue mui-btn-block" v-on:click="asy_send_order">发送</button>
     </div>
 </template>
 <script>
@@ -66,6 +66,7 @@
             username: JSON.parse(localStorage.getItem("userinfo")).fdname,
             tel:JSON.parse(localStorage.getItem("userinfo")).fdphone,
             address:JSON.parse(localStorage.getItem("userinfo")).address,
+            content:'',
             poptitle:"",//title标题
                 upload:{
                     server:"",
@@ -89,6 +90,31 @@
             panel,
             aoth,
             upload,
+
+        },
+        methods:{
+           asy_send_order:function(){
+                   var byte=document.getElementsByClassName('upload')[0].innerHTML;
+                   var images=new Array();
+                  images.push(byte);
+                   this.$http.post(
+                           'http://106.14.27.89:8001/api/GetServiceApiResult',
+                           {
+                               parameters:{
+                                   "phone":this.tel,
+                                   "serveiceid":this.$route.params.serviceId,
+                                   "address":this.address,
+                                   "content":this.content,
+                                   "images":images
+                               },
+                               foreEndType:"2",
+                               code:"10000005"
+                           }
+                           ).then(function(response) {
+                                       var  reslute=JSON.parse(response.data);
+                                       alert("上传成功");
+                                   });
+           }
 
         },
         ready: function(){
