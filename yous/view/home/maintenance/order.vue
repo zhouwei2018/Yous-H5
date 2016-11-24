@@ -57,8 +57,8 @@
     </div>
 </template>
 <script>
-    import panel from '../../../../src/components/panel.vue'
     import aoth from '../../componets/aoth.vue'
+    import panel from '../../../../src/components/panel.vue'
     import upload from '../../../../src/components/upload.vue'
     export default {
         data() {

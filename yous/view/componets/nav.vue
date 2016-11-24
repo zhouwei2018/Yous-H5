@@ -22,5 +22,4 @@
         <span class="mui-tab-label">个人中心</span>
     </a>
 </nav>
-
 </template>

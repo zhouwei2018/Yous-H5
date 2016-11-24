@@ -51,7 +51,7 @@
     }
 </style>
 <template>
-	
+    <aoth></aoth>
 	<!--导航区域-->
     <nav1></nav1>
 	
@@ -143,6 +143,7 @@
     </div>
 </template>
 <script>
+import aoth from '../componets/aoth.vue'
 import nav1 from '.././componets/nav.vue'
     export default {
         data ()
@@ -155,6 +156,7 @@ import nav1 from '.././componets/nav.vue'
         },
         components : {
             nav1,
+            aoth
         }
     }
 </script>
