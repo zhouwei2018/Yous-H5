@@ -87,7 +87,7 @@
         <ul class="mui-table-view" style='margin:0;'>
             <li class="mui-table-view-cell">
                 <a class="mui-navigate-right">
-                    我的管家<span  v-link="{path:'/user/order'}">查看全部订单</span>
+                    我的管家<span  v-link="{path:'/user/order/all'}">查看全部订单</span>
                 </a>
             </li>
         </ul>
@@ -99,24 +99,24 @@
         </div>-->
         <div class="flex-container" style='overflow:hidden;background: #fff;'>
 
-            <a>
+            <a v-link="{path: '/user/order/untaking'}">
                 <img src='../../../dist/img/mypic1.png'/>
                 <h6>待接单</h6>
             </a>
 
-            <a>
+            <a v-link="{path: '/user/order/unservice'}">
                 <img src='../../../dist/img/mypic2.png'/>
                 <h6>待服务</h6>
             </a>
-            <a>
+            <a v-link="{path: '/user/order/unconfirm'}">
                 <img src='../../../dist/img/mypic3.png'/>
                 <h6>待确认</h6>
             </a>
-            <a>
+            <a v-link="{path: '/user/order/unevaluate'}">
                 <img src='../../../dist/img/mypic4.png'/>
                 <h6>待评价</h6>
             </a>
-            <a>
+            <a v-link="{path: '/user/order/unservice'}">
                 <img src='../../../dist/img/mypic5.png'/>
                 <h6>投诉</h6>
             </a>
