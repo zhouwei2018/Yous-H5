@@ -35,7 +35,7 @@
                 <textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..." v-model="content"></textarea>
             </div>
         </panel>
-        <panel :show="false" title="请详细描述你的问题和意见" class='questionpic'>
+        <panel :show="false" title="图片(选填,提供问题截图,总大小10M以下)" class='questionpic'>
             <div class="demo image-item">
                 <upload
                         :server="upload.server"

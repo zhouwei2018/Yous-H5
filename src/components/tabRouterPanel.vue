@@ -2,12 +2,18 @@
     .t-tab__bd{
         display: block;margin-top:0px;background:#fff;padding:0px;
     }
-    section {padding:0;}
-			.t-tab nav a{padding-top:2px;padding-bottom:2px;display:inline-block;
-			width:19%;text-align:center;border-right:1px solid #ddd;font-size:14px;color:#333;
-			border-bottom:2px solid transparent;background:#fff;}
+    section {
+        padding:0;
+    }
+    .t-tab nav a{
+        padding-top:2px;padding-bottom:2px;display:inline-block;
+        width:19%;text-align:center;border-right:1px solid #ddd;font-size:14px;color:#333;
+        border-bottom:2px solid transparent;background:#fff;
+    }
     .t-tab nav a:last-child{border:0;}
     .t-tab nav a.active{border-bottom:2px solid orangered}
+
+    .v-link-active{color: red}
 </style>
 <template>
     <section class="t-tab">
