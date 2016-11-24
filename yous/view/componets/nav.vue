@@ -17,7 +17,12 @@
         <span class="mui-icon mui-icon-gear"></span>
         <span class="mui-tab-label">动态</span>
     </a>
-    <a class="mui-tab-item"  v-link="{ path: '/login', activeClass:'mui-active'}">
+
+    <a v-if="{{localStorage.getItem('userinfo')==undefined}}" class="mui-tab-item"  v-link="{ path: '/login', activeClass:'mui-active'}">
+        <span class="mui-icon mui-icon-email"><span class="mui-badge">13</span></span>
+        <span class="mui-tab-label">个人中心</span>
+    </a>
+    <a v-else="{{localStorage.getItem('userinfo')==undefined}}" class="mui-tab-item"  v-link="{ path: '/user/main', activeClass:'mui-active'}">
         <span class="mui-icon mui-icon-email"><span class="mui-badge">13</span></span>
         <span class="mui-tab-label">个人中心</span>
     </a>

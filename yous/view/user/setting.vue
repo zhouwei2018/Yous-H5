@@ -60,7 +60,7 @@
         </ul>
         <ul class="mui-table-view">
             <li class="mui-table-view-cell" style="text-align: center;">
-                <a v-link="{ path: '/login'}">退出登录</a>
+                <a v-link="{ path: '/loginout'}">退出登录</a>
             </li>
         </ul>
     </div>

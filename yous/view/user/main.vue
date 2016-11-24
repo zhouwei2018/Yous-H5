@@ -71,7 +71,8 @@
             </div>
             <div class='circlepic'>
                 <div class='getuserpic'><img src='../../../dist/img/decoration3.jpg'></div>
-                <a href="#">登录</a><a href="#">/注册</a>
+                <!--<a href="#">登录</a><a href="#">/注册</a>-->
+                 <a>{{ JSON.parse(localStorage.getItem("userinfo")).fdphone }}</a>
                 <h4 v-link="{ path:'/user/label'}">在这里,找到属于你的不一样 &gt;</h4>
             </div>
             <div class='userlist'>

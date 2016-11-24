@@ -45,6 +45,8 @@ var user_order_untaking=require('./view/user/order/untaking_order.vue'); //待�
 var user_order_unservice=require('./view/user/order/unservice_order.vue'); //待服务
 var user_order_unconfirm=require('./view/user/order/unconfirm_order.vue'); //待确认
 var user_order_unevaluate=require('./view/user/order/unevaluate_order.vue');
+
+var loginout = require('./view/loginout.vue')
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -83,6 +85,11 @@ router.map(
     '/login': {
         name:'login',
         component:login
+    },
+    //退出登录
+    '/loginout': {
+        name:'loginout',
+        component:loginout
     },
     //注册
     '/register': {
