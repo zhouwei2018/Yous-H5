@@ -62,10 +62,11 @@
     import upload from '../../../../src/components/upload.vue'
     export default {
         data() {
+        var userinfo=JSON.parse(localStorage.getItem("userinfo"));
         return {
-            username: JSON.parse(localStorage.getItem("userinfo")).fdname,
-            tel:JSON.parse(localStorage.getItem("userinfo")).fdphone,
-            address:JSON.parse(localStorage.getItem("userinfo")).address,
+            username: userinfo !=null?userinfo.fdname:"",
+            tel:userinfo!=null?userinfo.fdphone:"",
+            address:userinfo!=null?userinfo.address:"",
             content:'',
             poptitle:"",//title标题
                 upload:{
