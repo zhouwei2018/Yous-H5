@@ -9,7 +9,6 @@
       border-top: 1px solid #c8c7cc;
       border-bottom: 0px solid #c8c7cc;
   }
-  .mui-content{margin-top:10px;}
   .mui-table-view .mui-media-object {
       line-height: 70px;
       max-width: 70px;
@@ -41,13 +40,13 @@ export default {
                 path : "/user/order/untaking"
 			},{
 				title : '待服务',
-                path : "/user/order/untaking"
+                path : "/user/order/unservice"
 			},{
 				title : '待确认',
-                path :"/user/order/untaking"
+                path :"/user/order/unconfirm"
 			},{
 				title : '待评价',
-                    path : "/user/order/untaking"
+                    path : "/user/order/unevaluate"
 			}
 
     ]

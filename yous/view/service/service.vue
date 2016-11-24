@@ -27,15 +27,15 @@
     <div class="mui-content mui-row mui-fullscreen">
     	 <div class="mui-col-xs-3">
             <div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
-                <a class="mui-control-item mui-active" href="#content1" onclick=''>全部服务</a>
-                <a class="mui-control-item" href="#content2">获取服务</a>
-                <a class="mui-control-item" href="#content3">投融资</a>
-                <a class="mui-control-item" href="#content4">商学院</a>
-                <a class="mui-control-item" href="#content5">精选服务</a>
-                <a class="mui-control-item" href="#content6">热门项目</a>
-                <a class="mui-control-item" href="#content7">投资人</a>
-                <a class="mui-control-item" href="#content8">资产评估</a>
-                <a class="mui-control-item" href="#content9">小型办公</a>
+                <a class="mui-control-item mui-active" href="#content1">全部服务</a>
+                <a class="mui-control-item">获取服务</a>
+                <a class="mui-control-item">投融资</a>
+                <a class="mui-control-item">商学院</a>
+                <a class="mui-control-item">精选服务</a>
+                <a class="mui-control-item">热门项目</a>
+                <a class="mui-control-item">投资人</a>
+                <a class="mui-control-item">资产评估</a>
+                <a class="mui-control-item">小型办公</a>
             </div>
         </div>
         <div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
@@ -110,7 +110,6 @@
     </div>
     <!--导航区域-->
     <nav1></nav1>
-
 </template>
 <script>
     import header1 from '.././componets/header.vue'
@@ -137,4 +136,5 @@
             slide
         }
     }
+
 </script>

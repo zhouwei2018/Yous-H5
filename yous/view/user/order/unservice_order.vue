@@ -28,8 +28,8 @@
 						<li class="mui-table-view-cell mui-media">
 							<a href="javascript:;" id='jumpxiangqing'>
 								<div>
-									<button type="button" class="mui-btn mui-btn-outlined ending">待接单</button>								
-									<button type="button" class="mui-btn mui-btn-outlined" style='float:right;'>取消订单</button>
+									<button type="button" class="mui-btn mui-btn-outlined ending">待服务</button>		
+									<button type="button" class="mui-btn mui-btn-outlined" style='float:right;'>查看进程</button>
 								</div>
 								<div style='padding:20px 0px;'>
 									<img class="mui-media-object mui-pull-left" src='../../../../dist/btn_qq@3x.png'>
@@ -44,8 +44,8 @@
 						<li class="mui-table-view-cell mui-media">
 							<a href="javascript:;" id='jumpxiangqing'>
 								<div>
-									<button type="button" class="mui-btn mui-btn-outlined ending">待接单</button>								
-									<button type="button" class="mui-btn mui-btn-outlined" style='float:right;'>取消订单</button>
+									<button type="button" class="mui-btn mui-btn-outlined ending">待服务</button>								
+									<button type="button" class="mui-btn mui-btn-outlined" style='float:right;'>查看进程</button>
 								</div>
 								<div style='padding:20px 0px;'>
 									<img class="mui-media-object mui-pull-left" src='../../../../dist/btn_qq@3x.png'>
