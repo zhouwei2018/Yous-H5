@@ -1,3 +1,7 @@
+<style scoped>
+	.spliter{color:#aaa;font-size:12px;}
+	.link-area a{color:#333;font-size:14px;}
+</style>
 <template>
     <header1></header1>
     <nav1></nav1>
@@ -17,10 +21,8 @@
         </form>
         <div class="mui-content-padded" style='text-align:center;'>
             <button  class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;' v-on:click="asyLogin" >登录</button>
-
             <div class="link-area"><a v-link="{ path: '/register'}">注册账号</a> <span class="spliter">|</span> <a v-link="{ path: '/forgetpwd'}">忘记密码</a>
             </div>
-
         </div>
     </div>
 

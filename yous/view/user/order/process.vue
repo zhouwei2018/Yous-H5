@@ -1,6 +1,6 @@
 <style scoped>
+/*这里是订单进程页面*/
 /*进程页面 有个背景图片无法添加*/
-
 	ul li{list-style: none;font-size:13px;}
 	.track-rcol{border: 1px solid #eee;background:#fff;padding-bottom:30px;}
 	.track-list{position: relative;}
