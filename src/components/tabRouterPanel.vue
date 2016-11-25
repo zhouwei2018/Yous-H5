@@ -12,7 +12,6 @@
     }
     .t-tab nav a:last-child{border:0;}
     .t-tab nav a.active{border-bottom:2px solid orangered}
-
     .t-tab nav a.v-link-active{border-bottom:2px solid orangered;color:orangered}
     .t-tab nav{position:fixed;left:0;z-index:10;}
 	.t-tab__bd{padding-top:50px;}
