@@ -21,10 +21,9 @@
 <template>
     <div id="body" class='mui-content'>
             <div id="slider" class="mui-slider">
-                <div class="mui-slider-group">
-                    <div class="mui-slider-item mui-control-content">
-					<ul class="mui-table-view">
-						
+                <div class="mui-slider-group" >
+                    <div class="mui-slider-item mui-control-content" v-if="(gridData.length>0)">
+						<ul class="mui-table-view" v-for="(index,entry) in gridData" >
 						<li class="mui-table-view-cell mui-media">
 							<a href="javascript:;" id='jumpxiangqing'>
 								<div>
@@ -34,31 +33,18 @@
 								<div style='padding:20px 0px;'>
 									<img class="mui-media-object mui-pull-left" src='../../../../dist/btn_qq@3x.png'>
 									<div class="mui-media-body">
-										<p>订单号:<span>564854165486</span></p>
-										<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-										<p>订单时间:<span>3016-12-12 12:20:52</span></p>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;" id='jumpxiangqing'>
-								<div>
-									<button type="button" class="mui-btn mui-btn-outlined ending">待评价</button>								
-									<button type="button" class="mui-btn mui-btn-outlined" style='float:right;'>评价订单</button>
-								</div>
-								<div style='padding:20px 0px;'>
-									<img class="mui-media-object mui-pull-left" src='../../../../dist/btn_qq@3x.png'>
-									<div class="mui-media-body">
-										<p>订单号:<span>564854165486</span></p>
-										<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-										<p>订单时间:<span>3016-12-12 12:20:52</span></p>
+										<p>订单号:<span>{{entry.fdserviceid}}</span></p>
+										<p class='mui-ellipsis'>{{entry.fdcontent}}</p>
+										<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>
 									</div>
 								</div>
 							</a>
 						</li>
 					</ul>
-                   </div>                    
+                    </div>
+					<div class="mui-slider-item mui-control-content" v-else>
+
+					</div>
                 </div>
             </div>
 
@@ -74,3 +60,36 @@
         </div>
 
 </template>
+<script>
+	export default {
+		data() {
+		return {
+			gridData: []
+		}
+	},
+	ready: function() {
+		this.getCustomers()
+	},
+	methods: {
+		getCustomers: function (){
+			var vm = this
+			vm.$http.post(
+					'http://106.14.27.89:8001/api/GetServiceApiResult',
+					{
+						Parameters:{
+							"phone":"13426242626",
+							"servicetype":"",
+							state:"4"
+						},
+						ForeEndType:"2",
+						Code:"20000007"
+					}
+			).then((response)=>{
+				var response=JSON.parse(response.data);
+			vm.$set('gridData', response.data);
+			console.log(response.data);
+		})
+	}
+	}
+	}
+</script>

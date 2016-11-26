@@ -5,10 +5,11 @@
     .iconpic .mui-btn-link{font-size:20px;color:#eee;}
     .compantname{font-size:11px;}
 
-	.getuserpic{width:99%;margin:0px auto;margin-top:30px;margin-bottom:10px;}
-    .getuserpic img{height:80px;width:80px;border-radius:50%;border:2px solid #b4b3af;}
+	.getuserpic{width:99%;margin:0px auto;margin-top:30px;margin-bottom:10px;position:relative;}
+    .getuserpic .headpeople{height:80px;width:80px;border-radius:50%;border:2px solid #b4b3af;}
     .circlepic a{color:#ddd;font-size:14px;}
      .circlepic h4{color:#ddd;font-size:14px;margin-bottom:10px;margin-top:20px;font-weight: normal;}
+     .yanzhengpic{height:12px;border-radius:3px;position:absolute;top:0;margin-left:-2px;}
 
     .userlist{text-align:center;padding:10px;padding-bottom:10px;font-size:14px;}
     .userlist li{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}
@@ -49,6 +50,10 @@
     .flex-container img{
         width: 35%;
     }
+    
+    .munber{position:absolute;top:8px;height:14px;width:14px;
+    		text-align:left!important;border-radius:50%;background:transparent;left:60%;
+    		border:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}
 </style>
 <template>
     <aoth></aoth>
@@ -65,13 +70,15 @@
                 <button class="mui-btn mui-btn-link" >
                     <span class='compantname'>公司名称</span>
                 </button>
-                <button class="mui-btn mui-btn-link mui-pull-left" v-link="{ path: '/user/message'}" >
+                <button class="mui-btn mui-btn-link mui-pull-left">
                     <span class="mui-icon mui-icon-chatbubble"></span>
                 </button>
             </div>
             <div class='circlepic'>
-                <div class='getuserpic'><img src='../../../dist/img/decoration3.jpg'></div>
+                <div class='getuserpic'><img src='../../../dist/img/decoration3.jpg' class='headpeople'>              
+                					<!--认证之后显示图片--><img src="../../../dist/img/yanzhengpic.png" class='yanzhengpic'></div>
                 <!--<a href="#">登录</a><a href="#">/注册</a>-->
+                <!--登录进来需要显示用户名   --><a>用户名:A156456</a>
                  <a>{{ JSON.parse(localStorage.getItem("userinfo")).fdphone }}</a>
                 <h4 v-link="{ path:'/user/label'}">在这里,找到属于你的不一样 &gt;</h4>
             </div>
@@ -86,9 +93,9 @@
         <!--头部区域结束-->
         <!--我的管家开始-->
         <ul class="mui-table-view" style='margin:0;'>
-            <li class="mui-table-view-cell">
+            <li class="mui-table-view-cell" v-link="{path:'/user/order/all'}">
                 <a class="mui-navigate-right">
-                    我的管家<span  v-link="{path:'/user/order/all'}">查看全部订单</span>
+                    我的管家<span>查看全部订单</span>
                 </a>
             </li>
         </ul>
@@ -111,14 +118,17 @@
             </a>
             <a v-link="{path: '/user/order/unconfirm'}">
                 <img src='../../../dist/img/mypic3.png'/>
+                  <span class="munber">3</span>
                 <h6>待确认</h6>
-            </a>
+            </a>         
             <a v-link="{path: '/user/order/unevaluate'}">
                 <img src='../../../dist/img/mypic4.png'/>
+                  <span class="munber">3</span>
                 <h6>待评价</h6>
             </a>
-            <a v-link="{path: '/user/order/unservice'}">
+            <a v-link="{path:'/user/complaint'}">
                 <img src='../../../dist/img/mypic5.png'/>
+                 <span class="munber">3</span>
                 <h6>投诉</h6>
             </a>
             <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->

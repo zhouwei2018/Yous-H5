@@ -29,9 +29,9 @@
                 <p class='address'>{{address}}</p>
             </div>
         </panel>
-        <panel :show="false" title="问题和意见 快捷输入" class='question'>
+        <panel :show="false" title="地址信息" class='question'>
             <div>
-                <textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..." v-model="content"></textarea>
+                <textarea id='question' class="mui-input-clear question" placeholder="请输入详细地址信息" v-model="content"></textarea>
             </div>
         </panel>
         <panel :show="false" title="图片(选填,提供问题截图,总大小10M以下)" class='questionpic'>
