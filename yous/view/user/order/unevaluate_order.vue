@@ -43,24 +43,15 @@
 					</ul>
                     </div>
 					<div class="mui-slider-item mui-control-content" v-else>
-
+						<empty_data></empty_data>
 					</div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
         </div>
 
 </template>
 <script>
+	import empty_data from '../order/nothing.vue'
 	export default {
 		data() {
 		return {
@@ -69,6 +60,9 @@
 	},
 	ready: function() {
 		this.getCustomers()
+	},
+	components : {
+		empty_data
 	},
 	methods: {
 		getCustomers: function (){

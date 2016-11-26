@@ -22,7 +22,7 @@
     <div id="body" class='mui-content'>
             <div id="slider" class="mui-slider">
                 <div class="mui-slider-group">
-                    <div class="mui-slider-item mui-control-content" v-if="(gridData.length>0)">
+                    <div class="mui-slider-item mui-control-content" v-if="(this.gridData.length>0)">
 						<ul class="mui-table-view" v-for="(index,entry) in gridData">
 						<li class="mui-table-view-cell mui-media">
 							<a href="javascript:;" id='jumpxiangqing'>
@@ -43,7 +43,7 @@
 					</ul>
                    </div>
 					<div class="mui-slider-item mui-control-content" v-else>
-
+							<empty_data></empty_data>
 					</div>
                 </div>
             </div>
@@ -51,6 +51,7 @@
 
 </template>
 <script>
+	import empty_data from '../order/nothing.vue'
 	export default {
 		data() {
 		return {
@@ -60,8 +61,12 @@
 	ready: function() {
 		this.getCustomers()
 	},
+	components : {
+		empty_data
+	},
 	methods: {
 		getCustomers: function (){
+			debugger;
 			var vm = this
 			vm.$http.post(
 					'http://106.14.27.89:8001/api/GetServiceApiResult',

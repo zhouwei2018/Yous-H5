@@ -45,18 +45,22 @@
 						</ul>
                    </div>
 					<div class="mui-slider-item mui-control-content" v-else>
-						没数据
+						<empty_data></empty_data>
 					</div>
                 </div>
             </div>
         </div>
 </template>
 <script>
+	import empty_data from '../order/nothing.vue'
 	export default {
 		data() {
 		return {
 			gridData: []
 		}
+	},
+	components : {
+		empty_data
 	},
 	ready: function() {
 		this.getCustomers()
