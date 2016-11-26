@@ -42,12 +42,17 @@ var profile= require('./view/user/profile.vue'); //个人信息
 var suggestion= require('./view/user/suggestion.vue'); //投诉建议
 var user_order=require('./view/user/order/order.vue'); //订单
 var user_order_all=require('./view/user/order/all_order.vue'); //全部订单
+
+
 var user_order_untaking=require('./view/user/order/untaking_order.vue'); //待接单订单
 var user_order_unservice=require('./view/user/order/unservice_order.vue'); //待服务
 var user_order_unconfirm=require('./view/user/order/unconfirm_order.vue'); //待确认
 var user_order_unevaluate=require('./view/user/order/unevaluate_order.vue');//待评价
+
+
+
 var user_order_nothing=require('./view/user/order/nothing.vue');//待评价
-var loginout = require('./view/loginout.vue')
+var loginout = require('./view/loginout.vue')//退出登录
 //开启debug模式
 //Vue.config.debug = true;
 

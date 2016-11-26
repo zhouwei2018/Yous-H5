@@ -70,7 +70,7 @@
                 <button class="mui-btn mui-btn-link" >
                     <span class='compantname'>公司名称</span>
                 </button>
-                <button class="mui-btn mui-btn-link mui-pull-left" v-link="{ path: '/user/message'}" >
+                <button class="mui-btn mui-btn-link mui-pull-left">
                     <span class="mui-icon mui-icon-chatbubble"></span>
                 </button>
             </div>

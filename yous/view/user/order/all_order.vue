@@ -22,10 +22,10 @@
     <div id="body" class='mui-content'>
             <div id="slider" class="mui-slider">
                 <div class="mui-slider-group">
-                    <div class="mui-slider-item mui-control-content" v-if="(gridData.length>0)">
-						<ul class="mui-table-view"  v-for="(index,entry) in gridData">
+    <div class="mui-slider-item mui-control-content" v-if="(gridData.length>0)">
+						<ul class="mui-table-view"  v-for="(index,entry) in gridData" v-link="{ path: 'user/order/detail'}">
 							<li class="mui-table-view-cell mui-media">
-								<a href="javascript:;">
+								<a>
 									<div>
 										<button type="button" class="mui-btn mui-btn-outlined ending">{{entry.orderstateestr}}</button>
 										<button type="button" class="mui-btn mui-btn-outlined" style='float:right;'>去评价</button>
