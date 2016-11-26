@@ -23,7 +23,7 @@
             <div id="slider" class="mui-slider">
                 <div class="mui-slider-group">
     <div class="mui-slider-item mui-control-content" v-if="(gridData.length>0)">
-						<ul class="mui-table-view"  v-for="(index,entry) in gridData" v-link="{ path: 'user/order/detail'}">
+						<ul class="mui-table-view"  v-for="(index,entry) in gridData" v-link="{ path: '/user/order/detail'}">
 							<li class="mui-table-view-cell mui-media">
 								<a>
 									<div>

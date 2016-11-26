@@ -53,6 +53,8 @@ var user_order_unevaluate=require('./view/user/order/unevaluate_order.vue');//�
 
 var user_order_nothing=require('./view/user/order/nothing.vue');//待评价
 var loginout = require('./view/loginout.vue')//退出登录
+
+var user_order_detail = require('./view/user/order/detail.vue')//订单详情
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -230,6 +232,10 @@ router.map(
             }
         }
     },
+    '/user/order/detail':{
+        name:'user_order_detail',
+        component:user_order_detail
+    }
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
     '*':"/index"//重定向任意未匹配路径到/index
