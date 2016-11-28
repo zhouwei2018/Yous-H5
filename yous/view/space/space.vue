@@ -1,8 +1,9 @@
 <style scoped>
 	.emindcontainer{position:relative}
-	.remind{position:absolute;top:12px;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}
+	.remind{position:absolute;top:0.12rem;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}
 	.timeright{color:#aaa;font-size:12px;}
-	.mui-media-body{font-size:15px;color:#333}
+	.mui-media-body{font-size:0.15rem;color:#333}
+	.mui-content{padding:0;}
 </style>
 <template>
     <!--头部区域-->

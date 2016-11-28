@@ -454,6 +454,14 @@
      -webkit-transition: left .2s ease-in;
      transition: left .2s ease-in
  }
+ 
+ .mui-bar-tab .mui-tab-item.mui-active {
+    color: #6e5e9a;
+}
+ 
+ 
+ 
+ 
 *{font-family: "微软雅黑";}
 /*布局media*/
 @media only screen and (min-width: 240px) {

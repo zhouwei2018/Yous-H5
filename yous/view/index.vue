@@ -1,19 +1,20 @@
 <style scoped>
-	.mui-media-body{font-size:15px;color:#333}
-	.mui-ellipsis{font-size:12px;}
+	.mui-media-body{font-size:0.3rem;color:#333}
+	.mui-ellipsis{font-size:0.24rem;color:#b2b3b5}
     .homecontainer {
         width: 96%;
         margin: 0px auto;
     }
     .homecontainer h4 span {
-        color: #FF7F19;
+        color: #030303;
         margin-right: 1px;
     }
     .homecontainer h4 {
         margin: 20px;
         margin-left: 0;
-        color: #2C3637;
+        color: #030303;
         margin-bottom: 10px;
+        font-size:0.4rem;
     }
     .homecontainer button {
         margin-right: 30px;
@@ -23,14 +24,15 @@
         width: 99%;
         margin: 15px auto;
         text-align: left;
-        padding-left: 20px;
+        padding-left:0.2rem;
     }
     .homecontainer .mui-row a.mui-btn {
         border-radius: 20px;
         background: #F4F4F4;
         color: #929699;
         border-width: 0;
-        margin-bottom:15px;
+        margin-bottom:0.15rem;
+        font-size:0.28rem;
     }
     .flex-container {
         text-align: center;
@@ -44,14 +46,20 @@
     }
     .flex-container span {
         border-radius: 100%;
-        padding: 5px;
+        padding: 0.05px;
     }
     .flex-container h6 {
-        margin-top: 8px;
+        margin-top: 10px;
+        color:#101010;
+        font-size:0.23rem;
     }
     .flex-container img {
-        width: 50%;
+        width:0.96rem;
     }
+    .mui-content{padding:0;}
+    .mui-slider{height:3.5rem;width:100%;}
+    .mui-slider img{height:4.5rem;}
+    .mainmintitle{color:#b2b3b5!important;font-size:0.28rem;margin-left:0.2rem;}
 </style>
 
 <template >
@@ -65,24 +73,24 @@
         </div>
 
         <!--空间服务-->
-        <div class="homecontainer" style='margin-top: 10px;clear:both;'>
+        <div class="homecontainer" style='margin-top:0.1rem;clear:both;'>
             <div class="flex-container">
                 <a  v-link="{ path: '/transfer/lists'}">
-                    <img src='../../dist/img/homemainlink1.png'/>
+                    <img src="../html/img/homelink1.png">
                     <h6>物业对接</h6>
                 </a>
 
                 <a v-link="{ path: '/maintenance/lists'}">
-                    <img src='../../dist/img/homemainlink2.png'  />
+                   <img src="../html/img/homelink2.png">
                     <h6>设备维修</h6>
                 </a>
 
                 <a v-link="{ path: '/pay/lists'}">
-                    <img src='../../dist/img/homemainlink3.png'/>
+                    <img src="../html/img/homelink3.png">
                     <h6>缴费事项</h6>
                 </a>
                 <a v-link="{ path: '/more/lists'}">
-                    <img src='../../dist/img/homemainlink4.png'/>
+                    <img src="../html/img/homelink4.png">
                     <h6>更多</h6>
                 </a>
                 <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
@@ -91,7 +99,7 @@
 
         <!--幼狮社区-->
         <div class="homecontainer" style='clear:both;'> <!--幼狮社区开始-->
-            <h4><span>幼狮</span>社区</h4>
+            <h4>幼狮社区<span class='mainmintitle'>#商圈最火店铺推荐#</span></h4>
             <div class="mui-slider">
                 <slide :list="list2" ></slide>
             </div>
@@ -99,7 +107,7 @@
 
         <!--资源对接-->
         <div class="homecontainer">
-            <h4><span>资源</span>对接</h4>
+            <h4>资源对接<span class='mainmintitle'>#大型私董会议等#</span></h4>
             <div class="mui-slider">
                 <slide :list="list2" ></slide>
             </div>
@@ -107,7 +115,7 @@
 
         <!--幼狮支持-->
         <div class="homecontainer">
-            <h4><span>幼狮</span>支持</h4>
+            <h4>幼狮支持<span class='mainmintitle'>#财法税商#</span></h4>
             <div class="mui-row">
                 <a class="mui-btn mui-btn-outlined" href='#'>
                     融资
@@ -138,7 +146,7 @@
 
         <!--精选服务商-->
         <div class="homecontainer" style='padding-bottom:50px;'> <!--精选服务商开始-->
-            <h4><span>精选</span>服务商</h4>
+            <h4>精选服务商<span class='mainmintitle'>#服务商优选推广#</span></h4>
             <ul class="mui-table-view">
                 <li class="mui-table-view-cell mui-media">
                     <a href="javascript:;">

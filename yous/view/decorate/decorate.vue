@@ -13,6 +13,10 @@
 	 .right{float:right;width:54%;}
 	 .right p{text-indent:10px;}
 	 .righttop,.rightbottom{border-bottom:1px solid #eee;padding-bottom:5px;padding-top:5px;}
+	 
+	 .mui-content{padding-bottom:1rem;padding-top:0;}
+    .mui-slider{height:3.5rem;width:100%;}
+    .mui-slider img{height:4.5rem;}
 </style>
 <template>
     <!--面板区域-->

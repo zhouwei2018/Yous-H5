@@ -1,8 +1,8 @@
 <style scoped>
 	 .mui-row.mui-fullscreen > [class*="mui-col-"] { height: 100%; }
     .mui-col-xs-3,
-    .mui-control-content { overflow-y: auto; height: 100%; }
-    .mui-segmented-control .mui-control-item { line-height: 40px; width: 100%; }
+    .mui-control-content { overflow-y: auto;padding-top:.1rem;}
+    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; }
     .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {background-color: #fff;color:#fa7611}
     
     .mui-table-view{height:100%;}
@@ -18,7 +18,7 @@
      .allheader{font-size:14px;color:#4f4370;margin-bottom:10px;margin-top:10px;}
      .allpic img{width:40%;margin-right:1%;text-align:center;}   
      .tuijianpic img{width:50%;margin-right:1%;text-align:center;}    
-     #segmentedControls a{font-size:14px;}
+     #segmentedControls a{font-size:0.14rem;}
      ul{border:0;}
      .mui-table-view{background:transparent!important;}
      
@@ -27,6 +27,7 @@
      .servicecontent p{margin-top:10px;}
      li,ul,p{border:0!important;}
      .mui-pull-right{color:#aaa;margin-right:10px}
+     *{border:o;box-shadow: 0;}
 </style>
 <template>
     <!--头部区域-->
@@ -48,7 +49,12 @@
                 <ul class="mui-table-view">
                     <li class="mui-table-view-cell mui-media">
 						<a>
-							
+							<div class="mui-media-body allheader">
+								推荐服务
+							</div>
+							<div class="mui-media-body allpic">
+								<img src="../../../dist/img/decoration1.jpg" style='width:100%;'>
+							</div>
 							<div class="mui-media-body allheader">
 								精选服务
 							</div>
@@ -56,26 +62,40 @@
 								<img src="../../../dist/img/decoration1.jpg">
 								<img src="../../../dist/img/decoration1.jpg">
 								<img src="../../../dist/img/decoration1.jpg">
-							</div>
-							<div class="mui-media-body allheader">
-								推荐项目
-							</div>
-							<div class="mui-media-body tuijianpic">
-								<img src="../../../dist/img/decoration1.jpg">
-								<img src="../../../dist/img/decoration1.jpg">
-							</div>
-							<div class="mui-media-body allheader">
-								资本对接
-							</div>
-							<div class="mui-media-body userpic">
-								<ul>
-									<li><a href="#"><img src='../../../dist/img/decoration2.jpg'></a>幼狮空间</li>
-									<li><a href=""><img src="../../../dist/img/decoration2.jpg"></a>幼狮空间</li>
-									<li><a href=""><img src='../../../dist/img/decoration2.jpg'></a>幼狮空间</li>
-								</ul>
-							</div>
+							</div>							
 						</a>
 					</li>   
+					<li class="mui-table-view-cell mui-media">
+						<div class="mui-media-body allheader">
+								办公选址
+							</div>
+						<div class='servicetitle'>
+							按区域
+						</div>
+						<div class='servicecontent'>
+							<p><span>面积</span><span>单价span></p>
+							<p><span>地图</span><span>热门商圈</span></p>
+							<p><span>地铁沿线</span><span>楼盘</span></p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<div class="mui-media-body allheader">
+								装修装饰
+							</div>
+						<div class='servicetitle'>
+							空间装修
+						</div>
+						<div class='servicecontent'>
+							<p><span>装修升级</span><span>装修定制</span></p>
+							<p><span>安全监测</span></p>
+						</div>
+						<div class='servicetitle'>
+							免费报价
+						</div>
+						<div class='servicecontent'>
+							<p><span>免费设计</span><span>装修效果图</span></p>
+						</div>	
+					</li>
 					<li class="mui-table-view-cell mui-media">
 						<div class="mui-media-body allheader">
 								工商财务
@@ -91,7 +111,7 @@
 							<p><span>公司注销</span><span></span></p>
 						</div>
 						<div class='servicetitle'>
-							财务服务
+							财税服务
 						</div>
 						<div class='servicecontent'>
 							<p><span>代理记账</span><span>财务助手</span></p>
@@ -125,6 +145,25 @@
 					</li>
 					<li class="mui-table-view-cell mui-media">
 						<div class="mui-media-body allheader">
+								地产服务
+							</div>
+						<div class='servicetitle'>
+							委托房源
+							<span class="mui-pull-right">&gt;</span>
+						</div>
+						<div class='servicetitle'>
+							抵押贷款
+						</div>
+						<div class='servicecontent'>
+							<p><span>合同撰与审核</span><span>合同模板下载</span></p>
+						</div>
+						<div class='servicetitle'>
+							商业地产投资
+							<span class="mui-pull-right">&gt;</span>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<div class="mui-media-body allheader">
 								投融资
 							</div>
 						<div class='servicetitle'>
@@ -139,24 +178,7 @@
 							投资
 							<span class="mui-pull-right">&gt;</span>
 						</div>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<div class="mui-media-body allheader">
-								地产服务
-							</div>
-						<div class='servicetitle'>
-						抵押贷款
-						<span class="mui-pull-right">&gt;</span>
-						</div>
-						<div class='servicetitle'>
-							商业地产投资
-							<span class="mui-pull-right">&gt;</span>
-						</div>
-						<div class='servicetitle'>
-							委托房源
-							<span class="mui-pull-right">&gt;</span>
-						</div>
-					</li>
+					</li>					
 					<li class="mui-table-view-cell mui-media">
 						<div class="mui-media-body allheader">
 								商学院
