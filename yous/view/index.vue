@@ -65,7 +65,7 @@
         </div>
 
         <!--空间服务-->
-        <div class="homecontainer" style='margin-top: 10px;'>
+        <div class="homecontainer" style='margin-top: 10px;clear:both;'>
             <div class="flex-container">
                 <a  v-link="{ path: '/transfer/lists'}">
                     <img src='../../dist/img/homemainlink1.png'/>

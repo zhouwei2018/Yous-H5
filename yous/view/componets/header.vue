@@ -1,16 +1,9 @@
-<style>
+<style scoped>
     header{position:relative;}
     header a{margin-right:4%;}
-    .logo {
-        display: inline-block;
-        line-height: 55px;;
-    }
-
-    .logo img{
-        height: 20px;
-        width: 80px;
-   }
   	.citybtn{border:0;background-color: transparent;}/*这里需要书写背景图片下拉按按钮*/
+  	.mui-bar-nav{height:8rem;line-height:8rem!important;}
+  	.citybtn,.logo,.mui-pull-right{line-height:8rem;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav" >
