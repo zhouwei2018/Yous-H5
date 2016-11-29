@@ -109,12 +109,10 @@
             <button  type="button" style="height: 30px;margin-top: 5px;" class="mui-btn mui-btn-yellow mui-pull-right" id='exit'>取消</button>
         </div>-->
         <div class="flex-container" style='overflow:hidden;background: #fff;'>
-
             <a v-link="{path: '/user/order/untaking'}">
                 <img src='../../../dist/img/mypic1.png'/>
                 <h6>待接单</h6>
             </a>
-
             <a v-link="{path: '/user/order/unservice'}">
                 <img src='../../../dist/img/mypic2.png'/>
                 <h6>待服务</h6>
