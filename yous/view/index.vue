@@ -1,6 +1,6 @@
 <style scoped>
 	.mui-media-body{font-size:0.3rem;color:#333}
-	.mui-ellipsis{font-size:0.24rem;color:#b2b3b5}
+	.mui-ellipsis{font-size:0.24rem;color:#b2b3b5;margin-top:0.05rem;}
     .homecontainer {
         width: 96%;
         margin: 0px auto;
@@ -60,6 +60,7 @@
     .mui-slider{height:3.5rem;width:100%;}
     .mui-slider img{height:4.5rem;}
     .mainmintitle{color:#b2b3b5!important;font-size:0.28rem;margin-left:0.2rem;}
+    .mui-content{padding-bottom:1rem;}
 </style>
 
 <template >

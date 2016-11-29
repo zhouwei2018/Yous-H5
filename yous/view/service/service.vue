@@ -2,7 +2,7 @@
 	 .mui-row.mui-fullscreen > [class*="mui-col-"] { height: 100%; }
     .mui-col-xs-3,
     .mui-control-content { overflow-y: auto;padding-top:.1rem;}
-    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; font-size:0.28rem;}
+    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; font-size:0.4rem;}
     .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {background-color: #fff;color:#fa7611}
     
     .mui-table-view{height:100%;}
@@ -18,7 +18,7 @@
      .allheader{font-size:14px;color:#4f4370;margin-bottom:10px;margin-top:10px;}
      .allpic img{width:40%;margin-right:1%;text-align:center;}   
      .tuijianpic img{width:50%;margin-right:1%;text-align:center;}    
-     #segmentedControls a{font-size:0.14rem;}
+     #segmentedControls a{font-size:0.28rem;}
      ul{border:0;}
      .mui-table-view{background:transparent!important;}
      
@@ -53,7 +53,7 @@
 								推荐服务
 							</div>
 							<div class="mui-media-body allpic">
-								<img src="../../../dist/img/decoration1.jpg" style='width:100%;'>
+								<img src="../../../dist/img/decoration1.jpg" style='width:100%;height:2.2rem;'>
 							</div>
 							<div class="mui-media-body allheader">
 								精选服务
