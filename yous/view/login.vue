@@ -1,12 +1,13 @@
 <style scoped>
-	.spliter{color:#aaa;font-size:12px;}
-	.link-area a{color:#333;font-size:14px;}
+	.spliter{color:#aaa;font-size:0.24rem;}
+	.link-area a{color:#333;font-size:0.28rem;}
+	.mui-content{padding-top:0.1rem;}
 </style>
 <template>
     <header1></header1>
     <nav1></nav1>
 
-    <div class="mui-content" style='margin-top:10px;'>
+    <div class="mui-content">
         <header class="mui-bar mui-bar-nav">
             <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
             <h1 class="mui-title">登录</h1>

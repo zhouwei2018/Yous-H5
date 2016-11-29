@@ -1,6 +1,6 @@
 <style scoped>
-	.mui-inline{font-size:14px;color:#aaa;}
-	p{text-indent:10px;}
+	.mui-inline{font-size:0.28rem;color:#aaa;}
+	p{text-indent:0.1rem;}
 	.mui-input-row{width:96%;margin:10px auto;}
 </style>
 <template>

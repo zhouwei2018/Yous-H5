@@ -1,8 +1,8 @@
 <style scoped>
 	.emindcontainer{position:relative}
 	.remind{position:absolute;top:0.12rem;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}
-	.timeright{color:#aaa;font-size:12px;}
-	.mui-media-body{font-size:0.15rem;color:#333}
+	.timeright{color:#aaa;font-size:0.24rem;}
+	.mui-media-body{font-size:0.32rem;color:#333}
 	.mui-content{padding:0;}
 </style>
 <template>

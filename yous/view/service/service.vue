@@ -2,7 +2,7 @@
 	 .mui-row.mui-fullscreen > [class*="mui-col-"] { height: 100%; }
     .mui-col-xs-3,
     .mui-control-content { overflow-y: auto;padding-top:.1rem;}
-    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; }
+    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; font-size:0.28rem;}
     .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {background-color: #fff;color:#fa7611}
     
     .mui-table-view{height:100%;}
