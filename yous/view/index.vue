@@ -76,21 +76,21 @@
         <div class="homecontainer" style='margin-top:0.1rem;clear:both;'>
             <div class="flex-container">
                 <a  v-link="{ path: '/transfer/lists'}">
-                    <img src="../html/img/homelink1.png">
+                    <img src="../../dist/img/homelink1.png">
                     <h6>物业对接</h6>
                 </a>
 
                 <a v-link="{ path: '/maintenance/lists'}">
-                   <img src="../html/img/homelink2.png">
+                   <img src="../../dist/img/homelink2.png">
                     <h6>设备维修</h6>
                 </a>
 
                 <a v-link="{ path: '/pay/lists'}">
-                    <img src="../html/img/homelink3.png">
+                    <img src="../../dist/img/homelink3.png">
                     <h6>缴费事项</h6>
                 </a>
                 <a v-link="{ path: '/more/lists'}">
-                    <img src="../html/img/homelink4.png">
+                    <img src="../../dist/img/homelink4.png">
                     <h6>更多</h6>
                 </a>
                 <!--<a id="WXSceneFavorite" class="weixin bad-jianxian"><span class="mui-icon mui-icon-star" style="color: #E2D45F;"></span><h6>微信收藏</h6></a>-->
