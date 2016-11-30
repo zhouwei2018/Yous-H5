@@ -184,6 +184,7 @@
     },
     methods:{
         fileChange(e){
+            debugger;
             this.input=e.target
             // console.log(e)
             if(this.crop){
@@ -566,7 +567,7 @@
         left:50%;
         top:50%;
         transform: translate(-50%,-50%);
-        font-size:.8rem;
+        font-size:0.5rem;
         line-height: 100%;
         color:#fff;
     }
@@ -639,12 +640,12 @@
         float:left;
         width:50%;
         height:100%;
-        padding:1rem 0;
+        padding:0.2rem 0;
         font-weight:600;
         text-align:center;
         color:#5F7B88;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: 0.2rem;
         background-color: transparent;
     }
     .crop .dialog footer button:nth-child(1){

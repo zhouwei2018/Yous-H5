@@ -49,6 +49,8 @@ var user_order_unservice=require('./view/user/order/unservice_order.vue'); //待
 var user_order_unconfirm=require('./view/user/order/unconfirm_order.vue'); //待确认
 var user_order_unevaluate=require('./view/user/order/unevaluate_order.vue');//待评价
 
+var map=require('./view/home/map.vue');//地图
+
 
 
 var user_order_nothing=require('./view/user/order/nothing.vue');//待评价
@@ -235,7 +237,13 @@ router.map(
     '/user/order/detail':{
         name:'user_order_detail',
         component:user_order_detail
+    },
+    '/map':{
+        name:'map',
+        component:map
+
     }
+
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
     '*':"/index"//重定向任意未匹配路径到/index

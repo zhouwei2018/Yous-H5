@@ -6,6 +6,10 @@ module.exports = {
       mui : './src/main.js',
       yous : './yous/main.js',
   },
+  externals: {
+    "BMap": "BMap",
+     "BMapLib":"BMapLib"
+  },
   output: {
     path: './dist',
     publicPath: 'dist/',
