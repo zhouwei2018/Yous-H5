@@ -3,15 +3,15 @@
     .mui-content{padding-bottom:1.2rem;}
     .userpic{ text-align:center;}
     .iconpic .mui-btn-link{color:#eee;}
-    .compantname{font-size:0.25rem;}
+    .compantname{font-size:0.24rem;}
 
 	.getuserpic{width:99%;margin:0px auto;margin-top:0.3rem;margin-bottom:0.2rem;position:relative;}
-    .getuserpic .headpeople{height:1.6rem;width:1.6rem;border-radius:50%;border:2px solid #b4b3af;}
+    .getuserpic .headpeople{height:1.3rem;width:1.3rem;border-radius:50%;border:2px solid #b4b3af;}
     .circlepic a{color:#ddd;}
      .circlepic h4{color:#ddd;margin-bottom:0.1rem;margin-top:0.32rem;font-weight: normal;}
      .yanzhengpic{height:0.25rem;border-radius:3px;position:absolute;top:0;margin-left:-2px;width:0.9rem}
 
-    .userlist{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.28rem;}
+    .userlist{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.24rem;}
     .userlist li{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}
     .userlist li:last-child{border:0;}
     .userlist li a{color:#aaa;}
@@ -27,36 +27,27 @@
 
     .mui-table-view{font-size:0.28rem;margin-bottom:0.2rem;}
     .flex-container>a{
-        /*display: none;*/
         position: relative;
         width: 20%;
         float: left;
-        /*flex: 1;*/
-        /*border: 1px red solid;*/
         padding:10px 0;
         text-align:center;
     }
     .flex-container span{
-
-        /*border: 1px #ccc solid;*/
         border-radius: 100%;
         padding: 5px;
     }
     .flex-container h6{
         margin-top: 8px;
-
     }
-
     .flex-container img{
         width: 45%;
-    }
-    
+    }   
     .munber{position:absolute;top:8px;height:14px;width:14px;
     		text-align:left!important;border-radius:50%;background:transparent;left:60%;
-    		border:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}
-   
-   .mui-pull-right img{height:0.45rem;width:0.45rem;}
-   .mui-pull-left img{height:0.45rem;width:0.45rem;}
+    		border:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}  
+   .mui-pull-right img{height:0.5rem;width:0.5rem;}
+   .mui-pull-left img{height:0.5rem;width:0.5rem;}
 </style>
 <template>
     <aoth></aoth>
@@ -71,19 +62,19 @@
                     <img src='../../../dist/img/settingpng.png' v-link="{ path: '/user/setting'}">
                 </button>
                 <button class="mui-btn mui-btn-link" >
-                    <span class='compantname'>公司名称</span>
+                    <span class='compantname' style='font-size:0.24rem;color:#e5e5e5'>公司名称</span>
                 </button>
                 <button class="mui-btn mui-btn-link mui-pull-left">
                     <img src='../../../dist/img/myinformation.png'  v-link="{ path: '/user/message'}">                  
                 </button>
             </div>
             <div class='circlepic'>
-                <div class='getuserpic'><img src='../../../dist/img/decoration3.jpg' class='headpeople'>              
+                <div class='getuserpic'><img src="../../../dist/img/decoration3.jpg" class='headpeople'>              
                 					<!--认证之后显示图片--><img src="../../../dist/img/yanzhengpic.png" class='yanzhengpic'></div>
                 <!--<a href="#" style='font-size:0.32rem'>登录</a><a href="#" style='font-size:0.32rem'>/注册</a>-->
-                <!--登录进来需要显示用户名   --><a style='font-size:0.32rem;color:#ececec'>用户名:A156456</a>
+                <!--登录进来需要显示用户名   --><a style='font-size:0.28rem;color:#e5e5e5'>用户名:A156456</a>
                  <a>{{ JSON.parse(localStorage.getItem("userinfo")).fdphone }}</a>
-                <h4 v-link="{ path:'/user/label'}" style='font-size:0.28rem;color:#919497'>在这里,找到属于你的不一样 &gt;</h4>
+                <h4 v-link="{ path:'/user/label'}" style='font-size:0.24rem;color:#919497'>在这里,找到属于你的不一样 &gt;</h4>
             </div>
             <div class='userlist'>
                 <ul>
@@ -162,7 +153,7 @@ import nav1 from '.././componets/nav.vue'
         {
             return {
                 styleObject: {
-                    background: 'url(./dist/img/mainbg.jpg)'
+                    background: 'url(./dist/img/mainbg.jpg)' 
                 }
             }
         },

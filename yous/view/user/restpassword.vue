@@ -56,8 +56,8 @@ export default {
             ).then(function(response) {
                         var  reslute=JSON.parse(response.data);
                         if(reslute.success){
-                        	
                             this.$route.router.go({name:"login"})
+                            
                         }else{
                             this.content=reslute.message;
                             this.show=true;

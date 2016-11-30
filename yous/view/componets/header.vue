@@ -6,7 +6,7 @@
   	.logo img{height:0.32rem;}
   	.mui-pull-right img{height:0.42rem!important;}
   	.logo,.mui-pull-right{height:0.9rem;line-height:1rem;padding:0;margin:0;}
-  	.citybtn{font-size:0.28rem;color:#101010;line-height:.0.9rem;height:0.7rem;padding:0;}
+  	.citybtn{font-size:0.28rem;color:#101010;line-height:0.9rem;height:0.7rem;padding:0;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav" >
@@ -18,9 +18,10 @@
             <li>取消</li>
         </actions>
         <h1 class="mui-title logo"><img src="../../../dist/img/logoworld1.png"></h1>
-        <a class="mui-pull-right"><img src="../../../dist/img/mapnew.png" v-link="{path:'/map'}"></a>
+        <a class="mui-pull-right" v-link="{ path: '/map/map'}"><img src="../../../dist/img/mapnew.png"></a>
     </header>
 </template>
+
 <script>
     //    header h1{background: url(logoworld.png) no-repeat center center;height:100%;background-size: 40% 70%;}
     import actions from '../../../src/components/actions.vue';

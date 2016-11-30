@@ -67,51 +67,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 引入组件！直接使用es6的语法
 	var header=__webpack_require__(118);
 	var nav=__webpack_require__(125);
-	var map = __webpack_require__(134);
-	var index = __webpack_require__(136);
-	var login = __webpack_require__(146);
-	var register=__webpack_require__(154);
-	var forgetpwd=__webpack_require__(157);//忘记密码
-	var service=__webpack_require__(162);
-	var space=__webpack_require__(168);
-	var decorate=__webpack_require__(174);
-	var main=__webpack_require__(180);//用户中心主页面
-	var setting=__webpack_require__(196); //设置
-	var myservice=__webpack_require__(200); //我的服务
-	var wallte=__webpack_require__(204); //我的钱包
-	var complaint=__webpack_require__(208); //售后投诉
-	var info=__webpack_require__(212); //我的信息
-	var address=__webpack_require__(216); //我的地址
-	var apply=__webpack_require__(220); //修改密码
-	var restpassword=__webpack_require__(224); //修改密码
-	var maintenance_lists= __webpack_require__(227); //社保维修
-	var maintenance_order= __webpack_require__(232); //社保维修
-	var transfer_lists= __webpack_require__(309); // 交接
-	var transfer_order= __webpack_require__(314); // 交接
-	var pay_lists= __webpack_require__(319); // 费用
-	var pay_order= __webpack_require__(324); // 费用
-	var more_lists= __webpack_require__(329); // 全部
-	var more_order= __webpack_require__(334); // 全部
-	var label= __webpack_require__(339); // 标签
-	var message= __webpack_require__(343); //信息
-	var order= __webpack_require__(347); //订单
-	var profile= __webpack_require__(357); //个人信息
-	var suggestion= __webpack_require__(359); //投诉建议
-	var user_order=__webpack_require__(347); //订单
-	var user_order_all=__webpack_require__(363); //全部订单
-	
-	
-	var user_order_untaking=__webpack_require__(374); //待接单订单
-	var user_order_unservice=__webpack_require__(379); //待服务
-	var user_order_unconfirm=__webpack_require__(384); //待确认
-	var user_order_unevaluate=__webpack_require__(389);//待评价
+	var index = __webpack_require__(134);
+	var login = __webpack_require__(144);
+	var register=__webpack_require__(152);
+	var forgetpwd=__webpack_require__(155);//忘记密码
+	var service=__webpack_require__(160);
+	var space=__webpack_require__(166);
+	var decorate=__webpack_require__(172);
+	var main=__webpack_require__(178);//用户中心主页面
+	var setting=__webpack_require__(194); //设置
+	var myservice=__webpack_require__(198); //我的服务
+	var wallte=__webpack_require__(202); //我的钱包
+	var complaint=__webpack_require__(206); //售后投诉
+	var info=__webpack_require__(210); //我的信息
+	var address=__webpack_require__(214); //我的地址
+	var apply=__webpack_require__(218); //修改密码
+	var restpassword=__webpack_require__(222); //修改密码
+	var maintenance_lists= __webpack_require__(225); //社保维修
+	var maintenance_order= __webpack_require__(230); //社保维修
+	var transfer_lists= __webpack_require__(307); // 交接
+	var transfer_order= __webpack_require__(312); // 交接
+	var pay_lists= __webpack_require__(317); // 费用
+	var pay_order= __webpack_require__(322); // 费用
+	var more_lists= __webpack_require__(327); // 全部
+	var more_order= __webpack_require__(332); // 全部
+	var label= __webpack_require__(337); // 标签
+	var message= __webpack_require__(341); //信息
+	var order= __webpack_require__(345); //订单
+	var profile= __webpack_require__(355); //个人信息
+	var suggestion= __webpack_require__(357); //投诉建议
+	var user_order=__webpack_require__(345); //订单
+	var user_order_all=__webpack_require__(361); //全部订单
+	var user_order_untaking=__webpack_require__(372); //待接单订单
+	var user_order_unservice=__webpack_require__(377); //待服务
+	var user_order_unconfirm=__webpack_require__(382); //待确认
+	var user_order_unevaluate=__webpack_require__(387);//待评价
+	var map=__webpack_require__(392);//地图
 	
 	
 	
-	var user_order_nothing=__webpack_require__(367);//待评价
-	var loginout = __webpack_require__(394)//退出登录
+	var user_order_nothing=__webpack_require__(365);//待评价
+	var loginout = __webpack_require__(400)//退出登录
 	
-	var user_order_detail = __webpack_require__(396)//订单详情
+	var user_order_detail = __webpack_require__(402)//订单详情
 	//开启debug模式
 	//Vue.config.debug = true;
 	
@@ -296,7 +294,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    '/user/order/detail':{
 	        name:'user_order_detail',
 	        component:user_order_detail
+	    },
+	    '/map':{
+	        name:'map',
+	        component:map
+	
 	    }
+	
 	});
 	router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
 	    '*':"/index"//重定向任意未匹配路径到/index
@@ -11074,7 +11078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\src\\components\\alert.vue"
+	  var id = "d:\\Yous-H5\\src\\components\\alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11098,8 +11102,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22afece2&file=alert.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./alert.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22afece2&file=alert.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./alert.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-36d870cc&file=alert.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./alert.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-36d870cc&file=alert.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./alert.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11117,7 +11121,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.mui-h3[_v-22afece2], h3[_v-22afece2] {\r\n\t\tfont-size: 18px;\r\n\t}\r\n", "", {"version":3,"sources":["/./src/components/alert.vue.style"],"names":[],"mappings":";CACA;EACA,gBAAA;EACA","file":"alert.vue","sourcesContent":["<style scoped>\r\n\t.mui-h3, h3 {\r\n\t\tfont-size: 18px;\r\n\t}\r\n</style>\r\n<template>\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-modal\" v-show=\"show\">\r\n\t<div class=\"t-modal__header\">\r\n\t\t<h3 class=\"t-modal__header--tt\" \r\n\t\t\tv-show=\"title!==''\" \r\n\t\t\tv-text=\"title\"></h3>\r\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\r\n\t</div>\r\n\t<div class=\"t-modal__footer\">\r\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\">确定</a>\r\n\t</div>\r\n</div>\r\n</template>\r\n<script>\r\nexport default {\r\n\tprops : {\r\n\t\tshow : {\r\n\t\t\ttype : Boolean,\r\n\t\t\tdefault : false,\r\n\t\t\ttwoWay : true\r\n\t\t},\r\n\t\ttitle : {\r\n\t\t\ttype : String\r\n\t\t},\r\n\t\tcontent : {\r\n\t\t\ttype : String\r\n\t\t}\r\n\t}\r\n}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.mui-h3[_v-36d870cc], h3[_v-36d870cc] {\r\n\t\tfont-size: 18px;\r\n\t}\r\n", "", {"version":3,"sources":["/./src/components/alert.vue.style"],"names":[],"mappings":";CACA;EACA,gBAAA;EACA","file":"alert.vue","sourcesContent":["<style scoped>\r\n\t.mui-h3, h3 {\r\n\t\tfont-size: 18px;\r\n\t}\r\n</style>\r\n<template>\r\n<div class=\"t-dimmer\" v-show=\"show\"></div>\r\n<div class=\"t-modal\" v-show=\"show\">\r\n\t<div class=\"t-modal__header\">\r\n\t\t<h3 class=\"t-modal__header--tt\" \r\n\t\t\tv-show=\"title!==''\" \r\n\t\t\tv-text=\"title\"></h3>\r\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\r\n\t</div>\r\n\t<div class=\"t-modal__footer\">\r\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\">确定</a>\r\n\t</div>\r\n</div>\r\n</template>\r\n<script>\r\nexport default {\r\n\tprops : {\r\n\t\tshow : {\r\n\t\t\ttype : Boolean,\r\n\t\t\tdefault : false,\r\n\t\t\ttwoWay : true\r\n\t\t},\r\n\t\ttitle : {\r\n\t\t\ttype : String\r\n\t\t},\r\n\t\tcontent : {\r\n\t\t\ttype : String\r\n\t\t}\r\n\t}\r\n}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -11173,7 +11177,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"t-dimmer\" v-show=\"show\" _v-22afece2=\"\"></div>\n<div class=\"t-modal\" v-show=\"show\" _v-22afece2=\"\">\n\t<div class=\"t-modal__header\" _v-22afece2=\"\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title!==''\" v-text=\"title\" _v-22afece2=\"\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\" _v-22afece2=\"\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\" _v-22afece2=\"\">\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\" _v-22afece2=\"\">确定</a>\n\t</div>\n</div>\n";
+	module.exports = "\n<div class=\"t-dimmer\" v-show=\"show\" _v-36d870cc=\"\"></div>\n<div class=\"t-modal\" v-show=\"show\" _v-36d870cc=\"\">\n\t<div class=\"t-modal__header\" _v-36d870cc=\"\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title!==''\" v-text=\"title\" _v-36d870cc=\"\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\" _v-36d870cc=\"\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\" _v-36d870cc=\"\">\n\t\t<a class=\"t-modal__footer--btn\" @click.prevent=\"show=false\" _v-36d870cc=\"\">确定</a>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 25 */,
@@ -11207,7 +11211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\src\\components\\actions.vue"
+	  var id = "d:\\Yous-H5\\src\\components\\actions.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11231,8 +11235,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0d57f083&file=actions.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./actions.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0d57f083&file=actions.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./actions.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d21bc26&file=actions.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./actions.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d21bc26&file=actions.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./actions.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11329,7 +11333,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\src\\components\\panel.vue"
+	  var id = "d:\\Yous-H5\\src\\components\\panel.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11353,8 +11357,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-217dd98a&file=panel.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-217dd98a&file=panel.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-35a65d74&file=panel.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-35a65d74&file=panel.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11519,7 +11523,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\src\\components\\slide.vue"
+	  var id = "d:\\Yous-H5\\src\\components\\slide.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11543,8 +11547,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4a616eb7&file=slide.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./slide.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4a616eb7&file=slide.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./slide.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5e89f2a1&file=slide.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./slide.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5e89f2a1&file=slide.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./slide.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16197,7 +16201,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\componets\\header.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\componets\\header.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16221,8 +16225,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2d9edff6&file=header.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2d9edff6&file=header.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a2e96740&file=header.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a2e96740&file=header.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16240,7 +16244,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    header[_v-2d9edff6]{position:relative;}\r\n    header a[_v-2d9edff6]{margin-right:4%;}\r\n  \t.citybtn[_v-2d9edff6]{border:0;background-color: transparent;}/*这里需要书写背景图片下拉按按钮*/\r\n  \t.mui-bar-nav[_v-2d9edff6]{height:0.9rem;}\r\n  \t.logo img[_v-2d9edff6]{height:0.32rem;}\r\n  \t.mui-pull-right img[_v-2d9edff6]{height:0.42rem!important;}\r\n  \t.logo[_v-2d9edff6],.mui-pull-right[_v-2d9edff6]{height:0.9rem;line-height:1rem;padding:0;margin:0;}\r\n  \t.citybtn[_v-2d9edff6]{font-size:0.28rem;color:#101010;line-height:.0.9rem;height:0.7rem;padding:0;}\r\n", "", {"version":3,"sources":["/./yous/view/componets/header.vue.style"],"names":[],"mappings":";IACA,oBAAA,kBAAA,CAAA;IACA,sBAAA,gBAAA,CAAA;GACA,sBAAA,SAAA,8BAAA,CAAA,mBAAA;GACA,0BAAA,cAAA,CAAA;GACA,uBAAA,eAAA,CAAA;GACA,iCAAA,yBAAA,CAAA;GACA,gDAAA,cAAA,iBAAA,UAAA,SAAA,CAAA;GACA,sBAAA,kBAAA,cAAA,oBAAA,cAAA,UAAA,CAAA","file":"header.vue","sourcesContent":["<style scoped>\r\n    header{position:relative;}\r\n    header a{margin-right:4%;}\r\n  \t.citybtn{border:0;background-color: transparent;}/*这里需要书写背景图片下拉按按钮*/\r\n  \t.mui-bar-nav{height:0.9rem;}\r\n  \t.logo img{height:0.32rem;}\r\n  \t.mui-pull-right img{height:0.42rem!important;}\r\n  \t.logo,.mui-pull-right{height:0.9rem;line-height:1rem;padding:0;margin:0;}\r\n  \t.citybtn{font-size:0.28rem;color:#101010;line-height:.0.9rem;height:0.7rem;padding:0;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\" >\r\n        <button href=\"#\"  class=\"mui-btn mui-pull-left citybtn\"  @click.prevent=\"show=true\">北京</button>\r\n        <actions :show.sync=\"show\" title=\"请选择切换城市\">\r\n            <li @click=\"selectCity(1)\">上海</li>\r\n            <li @click=\"selectCity(2)\">深圳</li>\r\n            <li @click=\"selectCity(3)\">广州</li>\r\n            <li>取消</li>\r\n        </actions>\r\n        <h1 class=\"mui-title logo\"><img src=\"../../../dist/img/logoworld1.png\"></h1>\r\n        <a class=\"mui-pull-right\" v-link=\"{ path: '/map/map'}\"><img src=\"../../../dist/img/mapnew.png\"></a>\r\n    </header>\r\n</template>\r\n<script>\r\n    //    header h1{background: url(logoworld.png) no-repeat center center;height:100%;background-size: 40% 70%;}\r\n    import actions from '../../../src/components/actions.vue';\r\n    export default {\r\n        data ()\r\n        {\r\n            return {\r\n                styleObject: {\r\n                    background: 'url(./dist/img/logoworld.png) no-repeat center center',\r\n\r\n                },\r\n                show : false\r\n            }\r\n        },\r\n        components : {\r\n            actions\r\n        },\r\n        methods : {\r\n            selectCity(data) {\r\n                alert(data)\r\n                this.show = false\r\n            }\r\n        }\r\n    }\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    header[_v-a2e96740]{position:relative;}\r\n    header a[_v-a2e96740]{margin-right:4%;}\r\n  \t.citybtn[_v-a2e96740]{border:0;background-color: transparent;}/*这里需要书写背景图片下拉按按钮*/\r\n  \t.mui-bar-nav[_v-a2e96740]{height:0.9rem;}\r\n  \t.logo img[_v-a2e96740]{height:0.32rem;}\r\n  \t.mui-pull-right img[_v-a2e96740]{height:0.42rem!important;}\r\n  \t.logo[_v-a2e96740],.mui-pull-right[_v-a2e96740]{height:0.9rem;line-height:1rem;padding:0;margin:0;}\r\n  \t.citybtn[_v-a2e96740]{font-size:0.28rem;color:#101010;line-height:.0.9rem;height:0.7rem;padding:0;}\r\n", "", {"version":3,"sources":["/./yous/view/componets/header.vue.style"],"names":[],"mappings":";IACA,oBAAA,kBAAA,CAAA;IACA,sBAAA,gBAAA,CAAA;GACA,sBAAA,SAAA,8BAAA,CAAA,mBAAA;GACA,0BAAA,cAAA,CAAA;GACA,uBAAA,eAAA,CAAA;GACA,iCAAA,yBAAA,CAAA;GACA,gDAAA,cAAA,iBAAA,UAAA,SAAA,CAAA;GACA,sBAAA,kBAAA,cAAA,oBAAA,cAAA,UAAA,CAAA","file":"header.vue","sourcesContent":["<style scoped>\r\n    header{position:relative;}\r\n    header a{margin-right:4%;}\r\n  \t.citybtn{border:0;background-color: transparent;}/*这里需要书写背景图片下拉按按钮*/\r\n  \t.mui-bar-nav{height:0.9rem;}\r\n  \t.logo img{height:0.32rem;}\r\n  \t.mui-pull-right img{height:0.42rem!important;}\r\n  \t.logo,.mui-pull-right{height:0.9rem;line-height:1rem;padding:0;margin:0;}\r\n  \t.citybtn{font-size:0.28rem;color:#101010;line-height:.0.9rem;height:0.7rem;padding:0;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\" >\r\n        <button href=\"#\"  class=\"mui-btn mui-pull-left citybtn\"  @click.prevent=\"show=true\">北京</button>\r\n        <actions :show.sync=\"show\" title=\"请选择切换城市\">\r\n            <li @click=\"selectCity(1)\">上海</li>\r\n            <li @click=\"selectCity(2)\">深圳</li>\r\n            <li @click=\"selectCity(3)\">广州</li>\r\n            <li>取消</li>\r\n        </actions>\r\n        <h1 class=\"mui-title logo\"><img src=\"../../../dist/img/logoworld1.png\"></h1>\r\n        <a class=\"mui-pull-right\"><img src=\"../../../dist/img/mapnew.png\" v-link=\"{path:'/map'}\"></a>\r\n    </header>\r\n</template>\r\n<script>\r\n    //    header h1{background: url(logoworld.png) no-repeat center center;height:100%;background-size: 40% 70%;}\r\n    import actions from '../../../src/components/actions.vue';\r\n    export default {\r\n        data ()\r\n        {\r\n            return {\r\n                styleObject: {\r\n                    background: 'url(./dist/img/logoworld.png) no-repeat center center',\r\n\r\n                },\r\n                show : false\r\n            }\r\n        },\r\n        components : {\r\n            actions\r\n        },\r\n        methods : {\r\n            selectCity(data) {\r\n                alert(data)\r\n                this.show = false\r\n            }\r\n        }\r\n    }\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -16305,7 +16309,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//             <li>取消</li>
 	//         </actions>
 	//         <h1 class="mui-title logo"><img src="../../../dist/img/logoworld1.png"></h1>
-	//         <a class="mui-pull-right" v-link="{ path: '/map/map'}"><img src="../../../dist/img/mapnew.png"></a>
+	//         <a class="mui-pull-right"><img src="../../../dist/img/mapnew.png" v-link="{path:'/map'}"></a>
 	//     </header>
 	// </template>
 	// <script>
@@ -16315,7 +16319,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-2d9edff6=\"\">\n        <button href=\"#\" class=\"mui-btn mui-pull-left citybtn\" @click.prevent=\"show=true\" _v-2d9edff6=\"\">北京</button>\n        <actions :show.sync=\"show\" title=\"请选择切换城市\" _v-2d9edff6=\"\">\n            <li @click=\"selectCity(1)\" _v-2d9edff6=\"\">上海</li>\n            <li @click=\"selectCity(2)\" _v-2d9edff6=\"\">深圳</li>\n            <li @click=\"selectCity(3)\" _v-2d9edff6=\"\">广州</li>\n            <li _v-2d9edff6=\"\">取消</li>\n        </actions>\n        <h1 class=\"mui-title logo\" _v-2d9edff6=\"\"><img src=\"" + __webpack_require__(123) + "\" _v-2d9edff6=\"\"></h1>\n        <a class=\"mui-pull-right\" v-link=\"{ path: '/map/map'}\" _v-2d9edff6=\"\"><img src=\"" + __webpack_require__(124) + "\" _v-2d9edff6=\"\"></a>\n    </header>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-a2e96740=\"\">\n        <button href=\"#\" class=\"mui-btn mui-pull-left citybtn\" @click.prevent=\"show=true\" _v-a2e96740=\"\">北京</button>\n        <actions :show.sync=\"show\" title=\"请选择切换城市\" _v-a2e96740=\"\">\n            <li @click=\"selectCity(1)\" _v-a2e96740=\"\">上海</li>\n            <li @click=\"selectCity(2)\" _v-a2e96740=\"\">深圳</li>\n            <li @click=\"selectCity(3)\" _v-a2e96740=\"\">广州</li>\n            <li _v-a2e96740=\"\">取消</li>\n        </actions>\n        <h1 class=\"mui-title logo\" _v-a2e96740=\"\"><img src=\"" + __webpack_require__(123) + "\" _v-a2e96740=\"\"></h1>\n        <a class=\"mui-pull-right\" _v-a2e96740=\"\"><img src=\"" + __webpack_require__(124) + "\" v-link=\"{path:'/map'}\" _v-a2e96740=\"\"></a>\n    </header>\n";
 
 /***/ },
 /* 123 */
@@ -16343,7 +16347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\componets\\nav.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\componets\\nav.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16367,8 +16371,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5bd1a28a&file=nav.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nav.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5bd1a28a&file=nav.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nav.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-32a09e60&file=nav.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nav.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-32a09e60&file=nav.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nav.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16386,7 +16390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\r\n\t\t.mui-bar-tab[_v-5bd1a28a]{height:1rem;}\r\n\t\t.mui-icon img[_v-5bd1a28a]{height:0.4rem;width:0.4rem;}\r\n        /*@font-face {font-family: \"iconfont\";\r\n              src:url('../../../../dist/fonts/iconfont.ttf?t=1480324524141') format('truetype');\r\n            } 这里是添加的文字路径*/\r\n\t.iconfont[_v-5bd1a28a] {\r\n\t  font-family:\"iconfont\" !important;\r\n\t  font-size:16px;\r\n\t  font-style:normal;\r\n\t  -webkit-font-smoothing: antialiased;\r\n\t  -webkit-text-stroke-width: 0.2px;\r\n\t}\r\n\t.icon-shouye[_v-5bd1a28a]:before { content: \"\\E730\"; }\r\n\t\r\n\t.icon-hert[_v-5bd1a28a]:before { content: \"\\E616\"; }\r\n\t\r\n\t.icon-wode[_v-5bd1a28a]:before { content: \"\\E65F\"; }\r\n\t\r\n\t.icon-dongtai[_v-5bd1a28a]:before { content: \"\\E6AD\"; }\r\n\t\r\n\t.icon-tupian[_v-5bd1a28a]:before { content: \"\\E707\"; }\r\n", "", {"version":3,"sources":["/./yous/view/componets/nav.vue.style"],"names":[],"mappings":";;EAEA,0BAAA,YAAA,CAAA;EACA,2BAAA,cAAA,aAAA,CAAA;QACA;;0BAEA;CACA;GACA,kCAAA;GACA,eAAA;GACA,kBAAA;GACA,oCAAA;GACA,iCAAA;EACA;CACA,mCAAA,iBAAA,EAAA;;CAEA,iCAAA,iBAAA,EAAA;;CAEA,iCAAA,iBAAA,EAAA;;CAEA,oCAAA,iBAAA,EAAA;;CAEA,mCAAA,iBAAA,EAAA","file":"nav.vue","sourcesContent":["<style scoped>\r\n\r\n\t\t.mui-bar-tab{height:1rem;}\r\n\t\t.mui-icon img{height:0.4rem;width:0.4rem;}\r\n        /*@font-face {font-family: \"iconfont\";\r\n              src:url('../../../../dist/fonts/iconfont.ttf?t=1480324524141') format('truetype');\r\n            } 这里是添加的文字路径*/\r\n\t.iconfont {\r\n\t  font-family:\"iconfont\" !important;\r\n\t  font-size:16px;\r\n\t  font-style:normal;\r\n\t  -webkit-font-smoothing: antialiased;\r\n\t  -webkit-text-stroke-width: 0.2px;\r\n\t}\r\n\t.icon-shouye:before { content: \"\\e730\"; }\r\n\t\r\n\t.icon-hert:before { content: \"\\e616\"; }\r\n\t\r\n\t.icon-wode:before { content: \"\\e65f\"; }\r\n\t\r\n\t.icon-dongtai:before { content: \"\\e6ad\"; }\r\n\t\r\n\t.icon-tupian:before { content: \"\\e707\"; }\r\n</style>\r\n<template>\r\n    <nav class=\"mui-bar mui-bar-tab\">\r\n    <a  class=\"mui-tab-item\" v-link=\"{ path: '/index', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer1.png'></span>\r\n<!--        <span class=\"mui-icon iconfont icon-wode\"></span> 自定义图标-->\r\n        <span class=\"mui-tab-label\">首页</span>\r\n    </a>\r\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/service', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer3.png'></span>\r\n        <span class=\"mui-tab-label\">服务</span>\r\n    </a>\r\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/space', activeClass:'mui-active'}\">\r\n      <span class=\"mui-icon\"><img src='../../../dist/img/footer4.png'></span>\r\n        <span class=\"mui-tab-label\">动态</span>\r\n    </a>\r\n \t<a class=\"mui-tab-item\"  v-link=\"{ path: '/decorate', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer2.png'><!--<span class=\"mui-badge\">9</span>--></span>\r\n        <span class=\"mui-tab-label\">装修</span>\r\n    </a>\r\n    <a v-if=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\"  v-link=\"{ path: '/login', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer5.png'><!--<span class=\"mui-badge\">13</span>--></span>\r\n        <span class=\"mui-tab-label\">个人中心</span>\r\n    </a>\r\n    <a v-else=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\"  v-link=\"{ path: '/user/main', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer5.png'><!--<span class=\"mui-badge\">13</span>--></span>\r\n        <span class=\"mui-tab-label\">个人中心</span>\r\n    </a>\r\n</nav>\r\n</template>\r\n<!--<script>-->\r\n    <!--export default{-->\r\n        <!--data(){-->\r\n        <!--return {-->\r\n            <!--fontsrc: require('../dist/fonts/iconfont.ttf')-->\r\n        <!--}-->\r\n\r\n       <!--}-->\r\n\r\n    <!--}-->\r\n\r\n<!--</script>-->\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\r\n\t\t.mui-bar-tab[_v-32a09e60]{height:1rem;}\r\n\t\t.mui-icon img[_v-32a09e60]{height:0.4rem;width:0.4rem;}\r\n        /*@font-face {font-family: \"iconfont\";\r\n              src:url('../../../../dist/fonts/iconfont.ttf?t=1480324524141') format('truetype');\r\n            } 这里是添加的文字路径*/\r\n\t.iconfont[_v-32a09e60] {\r\n\t  font-family:\"iconfont\" !important;\r\n\t  font-size:16px;\r\n\t  font-style:normal;\r\n\t  -webkit-font-smoothing: antialiased;\r\n\t  -webkit-text-stroke-width: 0.2px;\r\n\t}\r\n\t.icon-shouye[_v-32a09e60]:before { content: \"\\E730\"; }\r\n\t\r\n\t.icon-hert[_v-32a09e60]:before { content: \"\\E616\"; }\r\n\t\r\n\t.icon-wode[_v-32a09e60]:before { content: \"\\E65F\"; }\r\n\t\r\n\t.icon-dongtai[_v-32a09e60]:before { content: \"\\E6AD\"; }\r\n\t\r\n\t.icon-tupian[_v-32a09e60]:before { content: \"\\E707\"; }\r\n", "", {"version":3,"sources":["/./yous/view/componets/nav.vue.style"],"names":[],"mappings":";;EAEA,0BAAA,YAAA,CAAA;EACA,2BAAA,cAAA,aAAA,CAAA;QACA;;0BAEA;CACA;GACA,kCAAA;GACA,eAAA;GACA,kBAAA;GACA,oCAAA;GACA,iCAAA;EACA;CACA,mCAAA,iBAAA,EAAA;;CAEA,iCAAA,iBAAA,EAAA;;CAEA,iCAAA,iBAAA,EAAA;;CAEA,oCAAA,iBAAA,EAAA;;CAEA,mCAAA,iBAAA,EAAA","file":"nav.vue","sourcesContent":["<style scoped>\r\n\r\n\t\t.mui-bar-tab{height:1rem;}\r\n\t\t.mui-icon img{height:0.4rem;width:0.4rem;}\r\n        /*@font-face {font-family: \"iconfont\";\r\n              src:url('../../../../dist/fonts/iconfont.ttf?t=1480324524141') format('truetype');\r\n            } 这里是添加的文字路径*/\r\n\t.iconfont {\r\n\t  font-family:\"iconfont\" !important;\r\n\t  font-size:16px;\r\n\t  font-style:normal;\r\n\t  -webkit-font-smoothing: antialiased;\r\n\t  -webkit-text-stroke-width: 0.2px;\r\n\t}\r\n\t.icon-shouye:before { content: \"\\e730\"; }\r\n\t\r\n\t.icon-hert:before { content: \"\\e616\"; }\r\n\t\r\n\t.icon-wode:before { content: \"\\e65f\"; }\r\n\t\r\n\t.icon-dongtai:before { content: \"\\e6ad\"; }\r\n\t\r\n\t.icon-tupian:before { content: \"\\e707\"; }\r\n</style>\r\n<template>\r\n    <nav class=\"mui-bar mui-bar-tab\">\r\n    <a  class=\"mui-tab-item\" v-link=\"{ path: '/index', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer1.png'></span>\r\n<!--        <span class=\"mui-icon iconfont icon-wode\"></span> 自定义图标-->\r\n        <span class=\"mui-tab-label\">首页</span>\r\n    </a>\r\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/service', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer3.png'></span>\r\n        <span class=\"mui-tab-label\">服务</span>\r\n    </a>\r\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/space', activeClass:'mui-active'}\">\r\n      <span class=\"mui-icon\"><img src='../../../dist/img/footer4.png'></span>\r\n        <span class=\"mui-tab-label\">动态</span>\r\n    </a>\r\n \t<a class=\"mui-tab-item\"  v-link=\"{ path: '/decorate', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer2.png'><!--<span class=\"mui-badge\">9</span>--></span>\r\n        <span class=\"mui-tab-label\">装修</span>\r\n    </a>\r\n    <a v-if=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\"  v-link=\"{ path: '/login', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer5.png'><!--<span class=\"mui-badge\">13</span>--></span>\r\n        <span class=\"mui-tab-label\">个人中心</span>\r\n    </a>\r\n    <a v-else=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\"  v-link=\"{ path: '/user/main', activeClass:'mui-active'}\">\r\n        <span class=\"mui-icon\"><img src='../../../dist/img/footer5.png'><!--<span class=\"mui-badge\">13</span>--></span>\r\n        <span class=\"mui-tab-label\">个人中心</span>\r\n    </a>\r\n</nav>\r\n</template>\r\n<!--<script>-->\r\n    <!--export default{-->\r\n        <!--data(){-->\r\n        <!--return {-->\r\n            <!--fontsrc: require('../dist/fonts/iconfont.ttf')-->\r\n        <!--}-->\r\n\r\n       <!--}-->\r\n\r\n    <!--}-->\r\n\r\n<!--</script>-->\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -16395,7 +16399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <nav class=\"mui-bar mui-bar-tab\" _v-5bd1a28a=\"\">\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/index', activeClass:'mui-active'}\" _v-5bd1a28a=\"\">\n        <span class=\"mui-icon\" _v-5bd1a28a=\"\"><img src=\"" + __webpack_require__(129) + "\" _v-5bd1a28a=\"\"></span>\n<!--        <span class=\"mui-icon iconfont icon-wode\"></span> 自定义图标-->\n        <span class=\"mui-tab-label\" _v-5bd1a28a=\"\">首页</span>\n    </a>\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/service', activeClass:'mui-active'}\" _v-5bd1a28a=\"\">\n        <span class=\"mui-icon\" _v-5bd1a28a=\"\"><img src=\"" + __webpack_require__(130) + "\" _v-5bd1a28a=\"\"></span>\n        <span class=\"mui-tab-label\" _v-5bd1a28a=\"\">服务</span>\n    </a>\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/space', activeClass:'mui-active'}\" _v-5bd1a28a=\"\">\n      <span class=\"mui-icon\" _v-5bd1a28a=\"\"><img src=\"" + __webpack_require__(131) + "\" _v-5bd1a28a=\"\"></span>\n        <span class=\"mui-tab-label\" _v-5bd1a28a=\"\">动态</span>\n    </a>\n \t<a class=\"mui-tab-item\" v-link=\"{ path: '/decorate', activeClass:'mui-active'}\" _v-5bd1a28a=\"\">\n        <span class=\"mui-icon\" _v-5bd1a28a=\"\"><img src=\"" + __webpack_require__(132) + "\" _v-5bd1a28a=\"\"><!--<span class=\"mui-badge\">9</span>--></span>\n        <span class=\"mui-tab-label\" _v-5bd1a28a=\"\">装修</span>\n    </a>\n    <a v-if=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\" v-link=\"{ path: '/login', activeClass:'mui-active'}\" _v-5bd1a28a=\"\">\n        <span class=\"mui-icon\" _v-5bd1a28a=\"\"><img src=\"" + __webpack_require__(133) + "\" _v-5bd1a28a=\"\"><!--<span class=\"mui-badge\">13</span>--></span>\n        <span class=\"mui-tab-label\" _v-5bd1a28a=\"\">个人中心</span>\n    </a>\n    <a v-else=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\" v-link=\"{ path: '/user/main', activeClass:'mui-active'}\" _v-5bd1a28a=\"\">\n        <span class=\"mui-icon\" _v-5bd1a28a=\"\"><img src=\"" + __webpack_require__(133) + "\" _v-5bd1a28a=\"\"><!--<span class=\"mui-badge\">13</span>--></span>\n        <span class=\"mui-tab-label\" _v-5bd1a28a=\"\">个人中心</span>\n    </a>\n</nav>\n";
+	module.exports = "\n    <nav class=\"mui-bar mui-bar-tab\" _v-32a09e60=\"\">\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/index', activeClass:'mui-active'}\" _v-32a09e60=\"\">\n        <span class=\"mui-icon\" _v-32a09e60=\"\"><img src=\"" + __webpack_require__(129) + "\" _v-32a09e60=\"\"></span>\n<!--        <span class=\"mui-icon iconfont icon-wode\"></span> 自定义图标-->\n        <span class=\"mui-tab-label\" _v-32a09e60=\"\">首页</span>\n    </a>\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/service', activeClass:'mui-active'}\" _v-32a09e60=\"\">\n        <span class=\"mui-icon\" _v-32a09e60=\"\"><img src=\"" + __webpack_require__(130) + "\" _v-32a09e60=\"\"></span>\n        <span class=\"mui-tab-label\" _v-32a09e60=\"\">服务</span>\n    </a>\n    <a class=\"mui-tab-item\" v-link=\"{ path: '/space', activeClass:'mui-active'}\" _v-32a09e60=\"\">\n      <span class=\"mui-icon\" _v-32a09e60=\"\"><img src=\"" + __webpack_require__(131) + "\" _v-32a09e60=\"\"></span>\n        <span class=\"mui-tab-label\" _v-32a09e60=\"\">动态</span>\n    </a>\n \t<a class=\"mui-tab-item\" v-link=\"{ path: '/decorate', activeClass:'mui-active'}\" _v-32a09e60=\"\">\n        <span class=\"mui-icon\" _v-32a09e60=\"\"><img src=\"" + __webpack_require__(132) + "\" _v-32a09e60=\"\"><!--<span class=\"mui-badge\">9</span>--></span>\n        <span class=\"mui-tab-label\" _v-32a09e60=\"\">装修</span>\n    </a>\n    <a v-if=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\" v-link=\"{ path: '/login', activeClass:'mui-active'}\" _v-32a09e60=\"\">\n        <span class=\"mui-icon\" _v-32a09e60=\"\"><img src=\"" + __webpack_require__(133) + "\" _v-32a09e60=\"\"><!--<span class=\"mui-badge\">13</span>--></span>\n        <span class=\"mui-tab-label\" _v-32a09e60=\"\">个人中心</span>\n    </a>\n    <a v-else=\"{{localStorage.getItem('userinfo')==undefined}}\" class=\"mui-tab-item\" v-link=\"{ path: '/user/main', activeClass:'mui-active'}\" _v-32a09e60=\"\">\n        <span class=\"mui-icon\" _v-32a09e60=\"\"><img src=\"" + __webpack_require__(133) + "\" _v-32a09e60=\"\"><!--<span class=\"mui-badge\">13</span>--></span>\n        <span class=\"mui-tab-label\" _v-32a09e60=\"\">个人中心</span>\n    </a>\n</nav>\n";
 
 /***/ },
 /* 129 */
@@ -16432,7 +16436,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_template__ = __webpack_require__(135)
+	__webpack_require__(135)
+	__vue_script__ = __webpack_require__(137)
+	__vue_template__ = __webpack_require__(138)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -16440,7 +16446,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\map\\map.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16450,41 +16456,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 135 */
-/***/ function(module, exports) {
-
-	module.exports = "\r\n\t<header class=\"mui-bar mui-bar-nav\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\n\t    <h1 class=\"mui-title\">地图</h1>\n\t</header>\r\n\t<div class=\"mui-content\">\n\t    这里是地图部分\n\t</div>\r\n";
-
-/***/ },
-/* 136 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(137)
-	__vue_script__ = __webpack_require__(139)
-	__vue_template__ = __webpack_require__(140)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\index.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(138);
+	var content = __webpack_require__(136);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -16493,8 +16470,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f96cfdf&file=index.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f96cfdf&file=index.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-721bfc96&file=index.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-721bfc96&file=index.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16504,7 +16481,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 138 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -16512,13 +16489,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.mui-media-body[_v-6f96cfdf]{font-size:0.3rem;color:#333}\r\n\t.mui-ellipsis[_v-6f96cfdf]{font-size:0.24rem;color:#b2b3b5;margin-top:0.05rem;}\r\n    .homecontainer[_v-6f96cfdf] {\r\n        width: 96%;\r\n        margin: 0px auto;\r\n    }\r\n    .homecontainer h4 span[_v-6f96cfdf] {\r\n        color: #030303;\r\n        margin-right: 1px;\r\n    }\r\n    .homecontainer h4[_v-6f96cfdf] {\r\n        margin: 20px;\r\n        margin-left: 0;\r\n        color: #030303;\r\n        margin-bottom: 10px;\r\n        font-size:0.4rem;\r\n    }\r\n    .homecontainer button[_v-6f96cfdf] {\r\n        margin-right: 30px;\r\n    }\r\n\r\n    .homecontainer .mui-row[_v-6f96cfdf] {\r\n        width: 99%;\r\n        margin: 15px auto;\r\n        text-align: left;\r\n        padding-left:0.2rem;\r\n    }\r\n    .homecontainer .mui-row a.mui-btn[_v-6f96cfdf] {\r\n        border-radius: 20px;\r\n        background: #F4F4F4;\r\n        color: #929699;\r\n        border-width: 0;\r\n        margin-bottom:0.15rem;\r\n        font-size:0.28rem;\r\n    }\r\n    .flex-container[_v-6f96cfdf] {\r\n        text-align: center;\r\n        overflow: hidden;\r\n    }\r\n    .flex-container > a[_v-6f96cfdf] {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container span[_v-6f96cfdf] {\r\n        border-radius: 100%;\r\n        padding: 0.05px;\r\n    }\r\n    .flex-container h6[_v-6f96cfdf] {\r\n        margin-top: 10px;\r\n        color:#101010;\r\n        font-size:0.23rem;\r\n    }\r\n    .flex-container img[_v-6f96cfdf] {\r\n        width:0.96rem;\r\n    }\r\n    .mui-content[_v-6f96cfdf]{padding:0;}\r\n    .mui-slider[_v-6f96cfdf]{height:3.5rem;width:100%;}\r\n    .mui-slider img[_v-6f96cfdf]{height:4.5rem;}\r\n    .mainmintitle[_v-6f96cfdf]{color:#b2b3b5!important;font-size:0.28rem;margin-left:0.2rem;}\r\n    .mui-content[_v-6f96cfdf]{padding-bottom:1rem;}\r\n", "", {"version":3,"sources":["/./yous/view/index.vue.style"],"names":[],"mappings":";CACA,6BAAA,iBAAA,UAAA,CAAA;CACA,2BAAA,kBAAA,cAAA,mBAAA,CAAA;IACA;QACA,WAAA;QACA,iBAAA;KACA;IACA;QACA,eAAA;QACA,kBAAA;KACA;IACA;QACA,aAAA;QACA,eAAA;QACA,eAAA;QACA,oBAAA;QACA,iBAAA;KACA;IACA;QACA,mBAAA;KACA;;IAEA;QACA,WAAA;QACA,kBAAA;QACA,iBAAA;QACA,oBAAA;KACA;IACA;QACA,oBAAA;QACA,oBAAA;QACA,eAAA;QACA,gBAAA;QACA,sBAAA;QACA,kBAAA;KACA;IACA;QACA,mBAAA;QACA,iBAAA;KACA;IACA;QACA,mBAAA;QACA,WAAA;QACA,YAAA;QACA,gBAAA;KACA;IACA;QACA,oBAAA;QACA,gBAAA;KACA;IACA;QACA,iBAAA;QACA,cAAA;QACA,kBAAA;KACA;IACA;QACA,cAAA;KACA;IACA,0BAAA,UAAA,CAAA;IACA,yBAAA,cAAA,WAAA,CAAA;IACA,6BAAA,cAAA,CAAA;IACA,2BAAA,wBAAA,kBAAA,mBAAA,CAAA;IACA,0BAAA,oBAAA,CAAA","file":"index.vue","sourcesContent":["<style scoped>\r\n\t.mui-media-body{font-size:0.3rem;color:#333}\r\n\t.mui-ellipsis{font-size:0.24rem;color:#b2b3b5;margin-top:0.05rem;}\r\n    .homecontainer {\r\n        width: 96%;\r\n        margin: 0px auto;\r\n    }\r\n    .homecontainer h4 span {\r\n        color: #030303;\r\n        margin-right: 1px;\r\n    }\r\n    .homecontainer h4 {\r\n        margin: 20px;\r\n        margin-left: 0;\r\n        color: #030303;\r\n        margin-bottom: 10px;\r\n        font-size:0.4rem;\r\n    }\r\n    .homecontainer button {\r\n        margin-right: 30px;\r\n    }\r\n\r\n    .homecontainer .mui-row {\r\n        width: 99%;\r\n        margin: 15px auto;\r\n        text-align: left;\r\n        padding-left:0.2rem;\r\n    }\r\n    .homecontainer .mui-row a.mui-btn {\r\n        border-radius: 20px;\r\n        background: #F4F4F4;\r\n        color: #929699;\r\n        border-width: 0;\r\n        margin-bottom:0.15rem;\r\n        font-size:0.28rem;\r\n    }\r\n    .flex-container {\r\n        text-align: center;\r\n        overflow: hidden;\r\n    }\r\n    .flex-container > a {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container span {\r\n        border-radius: 100%;\r\n        padding: 0.05px;\r\n    }\r\n    .flex-container h6 {\r\n        margin-top: 10px;\r\n        color:#101010;\r\n        font-size:0.23rem;\r\n    }\r\n    .flex-container img {\r\n        width:0.96rem;\r\n    }\r\n    .mui-content{padding:0;}\r\n    .mui-slider{height:3.5rem;width:100%;}\r\n    .mui-slider img{height:4.5rem;}\r\n    .mainmintitle{color:#b2b3b5!important;font-size:0.28rem;margin-left:0.2rem;}\r\n    .mui-content{padding-bottom:1rem;}\r\n</style>\r\n\r\n<template >\r\n    <!--头部区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content\">\r\n        <!--第一个轮播-->\r\n        <div class=\"mui-slider\">\r\n            <slide :list=\"list\" ></slide>\r\n        </div>\r\n\r\n        <!--空间服务-->\r\n        <div class=\"homecontainer\" style='margin-top:0.1rem;clear:both;'>\r\n            <div class=\"flex-container\">\r\n                <a  v-link=\"{ path: '/transfer/lists'}\">\r\n                    <img src=\"../../dist/img/homelink1.png\">\r\n                    <h6>物业对接</h6>\r\n                </a>\r\n\r\n                <a v-link=\"{ path: '/maintenance/lists'}\">\r\n                   <img src=\"../../dist/img/homelink2.png\">\r\n                    <h6>设备维修</h6>\r\n                </a>\r\n\r\n                <a v-link=\"{ path: '/pay/lists'}\">\r\n                    <img src=\"../../dist/img/homelink3.png\">\r\n                    <h6>缴费事项</h6>\r\n                </a>\r\n                <a v-link=\"{ path: '/more/lists'}\">\r\n                    <img src=\"../../dist/img/homelink4.png\">\r\n                    <h6>更多</h6>\r\n                </a>\r\n                <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\r\n            </div>\r\n        </div>\r\n\r\n        <!--幼狮社区-->\r\n        <div class=\"homecontainer\" style='clear:both;'> <!--幼狮社区开始-->\r\n            <h4>幼狮社区<span class='mainmintitle'>#商圈最火店铺推荐#</span></h4>\r\n            <div class=\"mui-slider\">\r\n                <slide :list=\"list2\" ></slide>\r\n            </div>\r\n        </div>\r\n\r\n        <!--资源对接-->\r\n        <div class=\"homecontainer\">\r\n            <h4>资源对接<span class='mainmintitle'>#大型私董会议等#</span></h4>\r\n            <div class=\"mui-slider\">\r\n                <slide :list=\"list2\" ></slide>\r\n            </div>\r\n        </div>\r\n\r\n        <!--幼狮支持-->\r\n        <div class=\"homecontainer\">\r\n            <h4>幼狮支持<span class='mainmintitle'>#财法税商#</span></h4>\r\n            <div class=\"mui-row\">\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    融资\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    财税\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    营销推广\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    法律\r\n                </a>            \r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    人才资源\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    IT服务\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    投融资\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    服务商\r\n                </a>\r\n            </div>\r\n        </div>\r\n\r\n        <!--精选服务商-->\r\n        <div class=\"homecontainer\" style='padding-bottom:50px;'> <!--精选服务商开始-->\r\n            <h4>精选服务商<span class='mainmintitle'>#服务商优选推广#</span></h4>\r\n            <ul class=\"mui-table-view\">\r\n                <li class=\"mui-table-view-cell mui-media\">\r\n                    <a href=\"javascript:;\">\r\n                        <img class=\"mui-media-object mui-pull-left\" src=\"../../dist/img/urslistleft.png\">\r\n                        <div class=\"mui-media-body\">\r\n                            北京幼狮空间\r\n                            <p class='mui-ellipsis'>为梦想,造支点</p>\r\n                        </div>\r\n                    </a>\r\n                </li>\r\n                <li class=\"mui-table-view-cell mui-media\">\r\n                    <a href=\"javascript:;\">\r\n                        <img class=\"mui-media-object mui-pull-left\" src=\"../../dist/img/urslistleft.png\">\r\n                        <div class=\"mui-media-body\">\r\n                            北京幼狮空间\r\n                            <p class='mui-ellipsis'>专注中小型企业的发展</p>\r\n                        </div>\r\n                    </a>\r\n                </li>\r\n                <li class=\"mui-table-view-cell mui-media\">\r\n                    <a href=\"javascript:;\">\r\n                        <img class=\"mui-media-object mui-pull-left\" src=\"../../dist/img/urslistleft.png\">\r\n                        <div class=\"mui-media-body\">\r\n                            北京幼狮空间\r\n                            <p class='mui-ellipsis'>平台建设</p>\r\n                        </div>\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n\r\n<script>\r\n    import header1 from './componets/header.vue';\r\n    import nav1 from './componets/nav.vue';\r\n    import slide from '../../src/components/slide.vue';\r\n    export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }],\r\n                list2 : [{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }] //banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.mui-media-body[_v-721bfc96]{font-size:0.3rem;color:#333}\r\n\t.mui-ellipsis[_v-721bfc96]{font-size:0.24rem;color:#b2b3b5;margin-top:0.05rem;}\r\n    .homecontainer[_v-721bfc96] {\r\n        width: 96%;\r\n        margin: 0px auto;\r\n    }\r\n    .homecontainer h4 span[_v-721bfc96] {\r\n        color: #030303;\r\n        margin-right: 1px;\r\n    }\r\n    .homecontainer h4[_v-721bfc96] {\r\n        margin: 20px;\r\n        margin-left: 0;\r\n        color: #030303;\r\n        margin-bottom: 10px;\r\n        font-size:0.4rem;\r\n    }\r\n    .homecontainer button[_v-721bfc96] {\r\n        margin-right: 30px;\r\n    }\r\n\r\n    .homecontainer .mui-row[_v-721bfc96] {\r\n        width: 99%;\r\n        margin: 15px auto;\r\n        text-align: left;\r\n        padding-left:0.2rem;\r\n    }\r\n    .homecontainer .mui-row a.mui-btn[_v-721bfc96] {\r\n        border-radius: 20px;\r\n        background: #F4F4F4;\r\n        color: #929699;\r\n        border-width: 0;\r\n        margin-bottom:0.15rem;\r\n        font-size:0.28rem;\r\n    }\r\n    .flex-container[_v-721bfc96] {\r\n        text-align: center;\r\n        overflow: hidden;\r\n    }\r\n    .flex-container > a[_v-721bfc96] {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container span[_v-721bfc96] {\r\n        border-radius: 100%;\r\n        padding: 0.05px;\r\n    }\r\n    .flex-container h6[_v-721bfc96] {\r\n        margin-top: 10px;\r\n        color:#101010;\r\n        font-size:0.23rem;\r\n    }\r\n    .flex-container img[_v-721bfc96] {\r\n        width:0.96rem;\r\n    }\r\n    .mui-content[_v-721bfc96]{padding:0;}\r\n    .mui-slider[_v-721bfc96]{height:3.5rem;width:100%;}\r\n    .mui-slider img[_v-721bfc96]{height:4.5rem;}\r\n    .mainmintitle[_v-721bfc96]{color:#b2b3b5!important;font-size:0.28rem;margin-left:0.2rem;}\r\n    .mui-content[_v-721bfc96]{padding-bottom:1rem;}\r\n", "", {"version":3,"sources":["/./yous/view/index.vue.style"],"names":[],"mappings":";CACA,6BAAA,iBAAA,UAAA,CAAA;CACA,2BAAA,kBAAA,cAAA,mBAAA,CAAA;IACA;QACA,WAAA;QACA,iBAAA;KACA;IACA;QACA,eAAA;QACA,kBAAA;KACA;IACA;QACA,aAAA;QACA,eAAA;QACA,eAAA;QACA,oBAAA;QACA,iBAAA;KACA;IACA;QACA,mBAAA;KACA;;IAEA;QACA,WAAA;QACA,kBAAA;QACA,iBAAA;QACA,oBAAA;KACA;IACA;QACA,oBAAA;QACA,oBAAA;QACA,eAAA;QACA,gBAAA;QACA,sBAAA;QACA,kBAAA;KACA;IACA;QACA,mBAAA;QACA,iBAAA;KACA;IACA;QACA,mBAAA;QACA,WAAA;QACA,YAAA;QACA,gBAAA;KACA;IACA;QACA,oBAAA;QACA,gBAAA;KACA;IACA;QACA,iBAAA;QACA,cAAA;QACA,kBAAA;KACA;IACA;QACA,cAAA;KACA;IACA,0BAAA,UAAA,CAAA;IACA,yBAAA,cAAA,WAAA,CAAA;IACA,6BAAA,cAAA,CAAA;IACA,2BAAA,wBAAA,kBAAA,mBAAA,CAAA;IACA,0BAAA,oBAAA,CAAA","file":"index.vue","sourcesContent":["<style scoped>\r\n\t.mui-media-body{font-size:0.3rem;color:#333}\r\n\t.mui-ellipsis{font-size:0.24rem;color:#b2b3b5;margin-top:0.05rem;}\r\n    .homecontainer {\r\n        width: 96%;\r\n        margin: 0px auto;\r\n    }\r\n    .homecontainer h4 span {\r\n        color: #030303;\r\n        margin-right: 1px;\r\n    }\r\n    .homecontainer h4 {\r\n        margin: 20px;\r\n        margin-left: 0;\r\n        color: #030303;\r\n        margin-bottom: 10px;\r\n        font-size:0.4rem;\r\n    }\r\n    .homecontainer button {\r\n        margin-right: 30px;\r\n    }\r\n\r\n    .homecontainer .mui-row {\r\n        width: 99%;\r\n        margin: 15px auto;\r\n        text-align: left;\r\n        padding-left:0.2rem;\r\n    }\r\n    .homecontainer .mui-row a.mui-btn {\r\n        border-radius: 20px;\r\n        background: #F4F4F4;\r\n        color: #929699;\r\n        border-width: 0;\r\n        margin-bottom:0.15rem;\r\n        font-size:0.28rem;\r\n    }\r\n    .flex-container {\r\n        text-align: center;\r\n        overflow: hidden;\r\n    }\r\n    .flex-container > a {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container span {\r\n        border-radius: 100%;\r\n        padding: 0.05px;\r\n    }\r\n    .flex-container h6 {\r\n        margin-top: 10px;\r\n        color:#101010;\r\n        font-size:0.23rem;\r\n    }\r\n    .flex-container img {\r\n        width:0.96rem;\r\n    }\r\n    .mui-content{padding:0;}\r\n    .mui-slider{height:3.5rem;width:100%;}\r\n    .mui-slider img{height:4.5rem;}\r\n    .mainmintitle{color:#b2b3b5!important;font-size:0.28rem;margin-left:0.2rem;}\r\n    .mui-content{padding-bottom:1rem;}\r\n</style>\r\n\r\n<template >\r\n    <!--头部区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content\">\r\n        <!--第一个轮播-->\r\n        <div class=\"mui-slider\">\r\n            <slide :list=\"list\" ></slide>\r\n        </div>\r\n\r\n        <!--空间服务-->\r\n        <div class=\"homecontainer\" style='margin-top:0.1rem;clear:both;'>\r\n            <div class=\"flex-container\">\r\n                <a  v-link=\"{ path: '/transfer/lists'}\">\r\n                    <img src=\"../../dist/img/homelink1.png\">\r\n                    <h6>物业对接</h6>\r\n                </a>\r\n\r\n                <a v-link=\"{ path: '/maintenance/lists'}\">\r\n                   <img src=\"../../dist/img/homelink2.png\">\r\n                    <h6>设备维修</h6>\r\n                </a>\r\n\r\n                <a v-link=\"{ path: '/pay/lists'}\">\r\n                    <img src=\"../../dist/img/homelink3.png\">\r\n                    <h6>缴费事项</h6>\r\n                </a>\r\n                <a v-link=\"{ path: '/more/lists'}\">\r\n                    <img src=\"../../dist/img/homelink4.png\">\r\n                    <h6>更多</h6>\r\n                </a>\r\n                <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\r\n            </div>\r\n        </div>\r\n\r\n        <!--幼狮社区-->\r\n        <div class=\"homecontainer\" style='clear:both;'> <!--幼狮社区开始-->\r\n            <h4>幼狮社区<span class='mainmintitle'>#商圈最火店铺推荐#</span></h4>\r\n            <div class=\"mui-slider\">\r\n                <slide :list=\"list2\" ></slide>\r\n            </div>\r\n        </div>\r\n\r\n        <!--资源对接-->\r\n        <div class=\"homecontainer\">\r\n            <h4>资源对接<span class='mainmintitle'>#大型私董会议等#</span></h4>\r\n            <div class=\"mui-slider\">\r\n                <slide :list=\"list2\" ></slide>\r\n            </div>\r\n        </div>\r\n\r\n        <!--幼狮支持-->\r\n        <div class=\"homecontainer\">\r\n            <h4>幼狮支持<span class='mainmintitle'>#财法税商#</span></h4>\r\n            <div class=\"mui-row\">\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    融资\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    财税\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    营销推广\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    法律\r\n                </a>            \r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    人才资源\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    IT服务\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    投融资\r\n                </a>\r\n                <a class=\"mui-btn mui-btn-outlined\" href='#'>\r\n                    服务商\r\n                </a>\r\n            </div>\r\n        </div>\r\n\r\n        <!--精选服务商-->\r\n        <div class=\"homecontainer\" style='padding-bottom:50px;'> <!--精选服务商开始-->\r\n            <h4>精选服务商<span class='mainmintitle'>#服务商优选推广#</span></h4>\r\n            <ul class=\"mui-table-view\">\r\n                <li class=\"mui-table-view-cell mui-media\">\r\n                    <a href=\"javascript:;\">\r\n                        <img class=\"mui-media-object mui-pull-left\" src=\"../../dist/img/urslistleft.png\">\r\n                        <div class=\"mui-media-body\">\r\n                            北京幼狮空间\r\n                            <p class='mui-ellipsis'>为梦想,造支点</p>\r\n                        </div>\r\n                    </a>\r\n                </li>\r\n                <li class=\"mui-table-view-cell mui-media\">\r\n                    <a href=\"javascript:;\">\r\n                        <img class=\"mui-media-object mui-pull-left\" src=\"../../dist/img/urslistleft.png\">\r\n                        <div class=\"mui-media-body\">\r\n                            北京幼狮空间\r\n                            <p class='mui-ellipsis'>专注中小型企业的发展</p>\r\n                        </div>\r\n                    </a>\r\n                </li>\r\n                <li class=\"mui-table-view-cell mui-media\">\r\n                    <a href=\"javascript:;\">\r\n                        <img class=\"mui-media-object mui-pull-left\" src=\"../../dist/img/urslistleft.png\">\r\n                        <div class=\"mui-media-body\">\r\n                            北京幼狮空间\r\n                            <p class='mui-ellipsis'>平台建设</p>\r\n                        </div>\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n\r\n<script>\r\n    import header1 from './componets/header.vue';\r\n    import nav1 from './componets/nav.vue';\r\n    import slide from '../../src/components/slide.vue';\r\n    export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }],\r\n                list2 : [{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }] //banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 139 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16765,49 +16742,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 140 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <!--头部区域-->\n    <header1 _v-6f96cfdf=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content\" _v-6f96cfdf=\"\">\n        <!--第一个轮播-->\n        <div class=\"mui-slider\" _v-6f96cfdf=\"\">\n            <slide :list=\"list\" _v-6f96cfdf=\"\"></slide>\n        </div>\n\n        <!--空间服务-->\n        <div class=\"homecontainer\" style=\"margin-top:0.1rem;clear:both;\" _v-6f96cfdf=\"\">\n            <div class=\"flex-container\" _v-6f96cfdf=\"\">\n                <a v-link=\"{ path: '/transfer/lists'}\" _v-6f96cfdf=\"\">\n                    <img src=\"" + __webpack_require__(141) + "\" _v-6f96cfdf=\"\">\n                    <h6 _v-6f96cfdf=\"\">物业对接</h6>\n                </a>\n\n                <a v-link=\"{ path: '/maintenance/lists'}\" _v-6f96cfdf=\"\">\n                   <img src=\"" + __webpack_require__(142) + "\" _v-6f96cfdf=\"\">\n                    <h6 _v-6f96cfdf=\"\">设备维修</h6>\n                </a>\n\n                <a v-link=\"{ path: '/pay/lists'}\" _v-6f96cfdf=\"\">\n                    <img src=\"" + __webpack_require__(143) + "\" _v-6f96cfdf=\"\">\n                    <h6 _v-6f96cfdf=\"\">缴费事项</h6>\n                </a>\n                <a v-link=\"{ path: '/more/lists'}\" _v-6f96cfdf=\"\">\n                    <img src=\"" + __webpack_require__(144) + "\" _v-6f96cfdf=\"\">\n                    <h6 _v-6f96cfdf=\"\">更多</h6>\n                </a>\n                <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\n            </div>\n        </div>\n\n        <!--幼狮社区-->\n        <div class=\"homecontainer\" style=\"clear:both;\" _v-6f96cfdf=\"\"> <!--幼狮社区开始-->\n            <h4 _v-6f96cfdf=\"\">幼狮社区<span class=\"mainmintitle\" _v-6f96cfdf=\"\">#商圈最火店铺推荐#</span></h4>\n            <div class=\"mui-slider\" _v-6f96cfdf=\"\">\n                <slide :list=\"list2\" _v-6f96cfdf=\"\"></slide>\n            </div>\n        </div>\n\n        <!--资源对接-->\n        <div class=\"homecontainer\" _v-6f96cfdf=\"\">\n            <h4 _v-6f96cfdf=\"\">资源对接<span class=\"mainmintitle\" _v-6f96cfdf=\"\">#大型私董会议等#</span></h4>\n            <div class=\"mui-slider\" _v-6f96cfdf=\"\">\n                <slide :list=\"list2\" _v-6f96cfdf=\"\"></slide>\n            </div>\n        </div>\n\n        <!--幼狮支持-->\n        <div class=\"homecontainer\" _v-6f96cfdf=\"\">\n            <h4 _v-6f96cfdf=\"\">幼狮支持<span class=\"mainmintitle\" _v-6f96cfdf=\"\">#财法税商#</span></h4>\n            <div class=\"mui-row\" _v-6f96cfdf=\"\">\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    融资\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    财税\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    营销推广\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    法律\n                </a>            \n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    人才资源\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    IT服务\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    投融资\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-6f96cfdf=\"\">\n                    服务商\n                </a>\n            </div>\n        </div>\n\n        <!--精选服务商-->\n        <div class=\"homecontainer\" style=\"padding-bottom:50px;\" _v-6f96cfdf=\"\"> <!--精选服务商开始-->\n            <h4 _v-6f96cfdf=\"\">精选服务商<span class=\"mainmintitle\" _v-6f96cfdf=\"\">#服务商优选推广#</span></h4>\n            <ul class=\"mui-table-view\" _v-6f96cfdf=\"\">\n                <li class=\"mui-table-view-cell mui-media\" _v-6f96cfdf=\"\">\n                    <a href=\"javascript:;\" _v-6f96cfdf=\"\">\n                        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-6f96cfdf=\"\">\n                        <div class=\"mui-media-body\" _v-6f96cfdf=\"\">\n                            北京幼狮空间\n                            <p class=\"mui-ellipsis\" _v-6f96cfdf=\"\">为梦想,造支点</p>\n                        </div>\n                    </a>\n                </li>\n                <li class=\"mui-table-view-cell mui-media\" _v-6f96cfdf=\"\">\n                    <a href=\"javascript:;\" _v-6f96cfdf=\"\">\n                        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-6f96cfdf=\"\">\n                        <div class=\"mui-media-body\" _v-6f96cfdf=\"\">\n                            北京幼狮空间\n                            <p class=\"mui-ellipsis\" _v-6f96cfdf=\"\">专注中小型企业的发展</p>\n                        </div>\n                    </a>\n                </li>\n                <li class=\"mui-table-view-cell mui-media\" _v-6f96cfdf=\"\">\n                    <a href=\"javascript:;\" _v-6f96cfdf=\"\">\n                        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-6f96cfdf=\"\">\n                        <div class=\"mui-media-body\" _v-6f96cfdf=\"\">\n                            北京幼狮空间\n                            <p class=\"mui-ellipsis\" _v-6f96cfdf=\"\">平台建设</p>\n                        </div>\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-6f96cfdf=\"\"></nav1>\n\n";
+	module.exports = "\n    <!--头部区域-->\n    <header1 _v-721bfc96=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content\" _v-721bfc96=\"\">\n        <!--第一个轮播-->\n        <div class=\"mui-slider\" _v-721bfc96=\"\">\n            <slide :list=\"list\" _v-721bfc96=\"\"></slide>\n        </div>\n\n        <!--空间服务-->\n        <div class=\"homecontainer\" style=\"margin-top:0.1rem;clear:both;\" _v-721bfc96=\"\">\n            <div class=\"flex-container\" _v-721bfc96=\"\">\n                <a v-link=\"{ path: '/transfer/lists'}\" _v-721bfc96=\"\">\n                    <img src=\"" + __webpack_require__(139) + "\" _v-721bfc96=\"\">\n                    <h6 _v-721bfc96=\"\">物业对接</h6>\n                </a>\n\n                <a v-link=\"{ path: '/maintenance/lists'}\" _v-721bfc96=\"\">\n                   <img src=\"" + __webpack_require__(140) + "\" _v-721bfc96=\"\">\n                    <h6 _v-721bfc96=\"\">设备维修</h6>\n                </a>\n\n                <a v-link=\"{ path: '/pay/lists'}\" _v-721bfc96=\"\">\n                    <img src=\"" + __webpack_require__(141) + "\" _v-721bfc96=\"\">\n                    <h6 _v-721bfc96=\"\">缴费事项</h6>\n                </a>\n                <a v-link=\"{ path: '/more/lists'}\" _v-721bfc96=\"\">\n                    <img src=\"" + __webpack_require__(142) + "\" _v-721bfc96=\"\">\n                    <h6 _v-721bfc96=\"\">更多</h6>\n                </a>\n                <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\n            </div>\n        </div>\n\n        <!--幼狮社区-->\n        <div class=\"homecontainer\" style=\"clear:both;\" _v-721bfc96=\"\"> <!--幼狮社区开始-->\n            <h4 _v-721bfc96=\"\">幼狮社区<span class=\"mainmintitle\" _v-721bfc96=\"\">#商圈最火店铺推荐#</span></h4>\n            <div class=\"mui-slider\" _v-721bfc96=\"\">\n                <slide :list=\"list2\" _v-721bfc96=\"\"></slide>\n            </div>\n        </div>\n\n        <!--资源对接-->\n        <div class=\"homecontainer\" _v-721bfc96=\"\">\n            <h4 _v-721bfc96=\"\">资源对接<span class=\"mainmintitle\" _v-721bfc96=\"\">#大型私董会议等#</span></h4>\n            <div class=\"mui-slider\" _v-721bfc96=\"\">\n                <slide :list=\"list2\" _v-721bfc96=\"\"></slide>\n            </div>\n        </div>\n\n        <!--幼狮支持-->\n        <div class=\"homecontainer\" _v-721bfc96=\"\">\n            <h4 _v-721bfc96=\"\">幼狮支持<span class=\"mainmintitle\" _v-721bfc96=\"\">#财法税商#</span></h4>\n            <div class=\"mui-row\" _v-721bfc96=\"\">\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    融资\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    财税\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    营销推广\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    法律\n                </a>            \n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    人才资源\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    IT服务\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    投融资\n                </a>\n                <a class=\"mui-btn mui-btn-outlined\" href=\"#\" _v-721bfc96=\"\">\n                    服务商\n                </a>\n            </div>\n        </div>\n\n        <!--精选服务商-->\n        <div class=\"homecontainer\" style=\"padding-bottom:50px;\" _v-721bfc96=\"\"> <!--精选服务商开始-->\n            <h4 _v-721bfc96=\"\">精选服务商<span class=\"mainmintitle\" _v-721bfc96=\"\">#服务商优选推广#</span></h4>\n            <ul class=\"mui-table-view\" _v-721bfc96=\"\">\n                <li class=\"mui-table-view-cell mui-media\" _v-721bfc96=\"\">\n                    <a href=\"javascript:;\" _v-721bfc96=\"\">\n                        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-721bfc96=\"\">\n                        <div class=\"mui-media-body\" _v-721bfc96=\"\">\n                            北京幼狮空间\n                            <p class=\"mui-ellipsis\" _v-721bfc96=\"\">为梦想,造支点</p>\n                        </div>\n                    </a>\n                </li>\n                <li class=\"mui-table-view-cell mui-media\" _v-721bfc96=\"\">\n                    <a href=\"javascript:;\" _v-721bfc96=\"\">\n                        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-721bfc96=\"\">\n                        <div class=\"mui-media-body\" _v-721bfc96=\"\">\n                            北京幼狮空间\n                            <p class=\"mui-ellipsis\" _v-721bfc96=\"\">专注中小型企业的发展</p>\n                        </div>\n                    </a>\n                </li>\n                <li class=\"mui-table-view-cell mui-media\" _v-721bfc96=\"\">\n                    <a href=\"javascript:;\" _v-721bfc96=\"\">\n                        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-721bfc96=\"\">\n                        <div class=\"mui-media-body\" _v-721bfc96=\"\">\n                            北京幼狮空间\n                            <p class=\"mui-ellipsis\" _v-721bfc96=\"\">平台建设</p>\n                        </div>\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-721bfc96=\"\"></nav1>\n\n";
 
 /***/ },
-/* 141 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "homelink1.png?961a7302596a8b1db8b878c4fd9a28e3";
 
 /***/ },
-/* 142 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "homelink2.png?b314cccfc896901427eb8bba8374c122";
 
 /***/ },
-/* 143 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "homelink3.png?a0a0f187eaf1b5e3f6a7bc5a91113e20";
 
 /***/ },
-/* 144 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "homelink4.png?b33180aabe4917458a1493e800c7fb0b";
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "urslistleft.png?4cc30ea18349020cde3c46a3418509ba";
 
 /***/ },
-/* 146 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(147)
-	__vue_script__ = __webpack_require__(149)
-	__vue_template__ = __webpack_require__(153)
+	__webpack_require__(145)
+	__vue_script__ = __webpack_require__(147)
+	__vue_template__ = __webpack_require__(151)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -16815,7 +16792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\login.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\login.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16824,13 +16801,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 147 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(148);
+	var content = __webpack_require__(146);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -16839,8 +16816,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-393e72f6&file=login.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-393e72f6&file=login.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-deccb668&file=login.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-deccb668&file=login.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16850,7 +16827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 148 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -16858,13 +16835,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t/*.spliter{color:#aaa;font-size:0.24rem;}\r\n\t.link-area a{color:#333;font-size:0.28rem;}\r\n\t.mui-content{padding-top:0.1rem;}*/\t\r\n\t.mui-content[_v-393e72f6]{width: 100%;height:100%;overflow: hidden;color: #ffffff; background-size: cover;padding-bottom:3rem;}\r\n\t.mui-bar-nav[_v-393e72f6] {top: 0; box-shadow: 0 0px 0px #ccc; }\r\n\tinput[_v-393e72f6]::-webkit-input-placeholder,textarea[_v-393e72f6]::-webkit-input-placeholder {color: #fff;font-size: .22rem;}\r\n\t\t\t.backnone[_v-393e72f6]{background-color:transparent;}\r\n\t\t\t.mui-input-row label[_v-393e72f6]{padding: 0px;margin-top: .4rem;}\r\n\t\t\t.mui-input[_v-393e72f6]{width: 90%;margin:0 auto;background: none;margin-top: 2rem;}\r\n\t\t\t.mui-input[_v-393e72f6]{border: none;}\r\n\t\t\t.mui-input label[_v-393e72f6]{width: 100%;text-align: center;font-size: .33rem;}\r\n\t\t\t.mui-input .mui-input-row[_v-393e72f6]{width: 100%;height:1.6rem;text-align: center;}\r\n\t\t\t.mui-btn[_v-393e72f6]{width: 100%;height:1rem;border-radius:.7rem;margin-top: 0.6rem;font-size: .33rem;}\r\n\t\t\t.mui-content-padded[_v-393e72f6]{text-align: center;font-size: .22rem;}\r\n\t\t\t.mui-input-row input[_v-393e72f6]{width: 100%;text-align: center;color: #ffffff;}\r\n\t\t\t.mui-input-row label ~ input[_v-393e72f6], .mui-input-row label ~ select[_v-393e72f6], .mui-input-row label ~ textarea[_v-393e72f6]{width: 100%;padding-right: 0;}\r\n\t\t\t.xian[_v-393e72f6]{float:none;height:1px;background: #fff;opacity: 0.5;clear: both;}\r\n", "", {"version":3,"sources":["/./yous/view/login.vue.style"],"names":[],"mappings":";CACA;;oCAEA;CACA,0BAAA,YAAA,YAAA,iBAAA,eAAA,CAAA,uBAAA,oBAAA,CAAA;CACA,2BAAA,OAAA,CAAA,2BAAA,EAAA;CACA,gGAAA,YAAA,kBAAA,CAAA;GACA,uBAAA,6BAAA,CAAA;GACA,kCAAA,aAAA,kBAAA,CAAA;GACA,wBAAA,WAAA,cAAA,iBAAA,iBAAA,CAAA;GACA,wBAAA,aAAA,CAAA;GACA,8BAAA,YAAA,mBAAA,kBAAA,CAAA;GACA,uCAAA,YAAA,cAAA,mBAAA,CAAA;GACA,sBAAA,YAAA,YAAA,oBAAA,mBAAA,kBAAA,CAAA;GACA,iCAAA,mBAAA,kBAAA,CAAA;GACA,kCAAA,YAAA,mBAAA,eAAA,CAAA;GACA,oIAAA,YAAA,iBAAA,CAAA;GACA,mBAAA,WAAA,WAAA,iBAAA,aAAA,YAAA,CAAA","file":"login.vue","sourcesContent":["<style scoped>\r\n\t/*.spliter{color:#aaa;font-size:0.24rem;}\r\n\t.link-area a{color:#333;font-size:0.28rem;}\r\n\t.mui-content{padding-top:0.1rem;}*/\t\r\n\t.mui-content{width: 100%;height:100%;overflow: hidden;color: #ffffff; background-size: cover;padding-bottom:3rem;}\r\n\t.mui-bar-nav {top: 0; -webkit-box-shadow: 0 0px 0px #ccc; box-shadow: 0 0px 0px #ccc; }\r\n\tinput::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #fff;font-size: .22rem;}\r\n\t\t\t.backnone{background-color:transparent;}\r\n\t\t\t.mui-input-row label{padding: 0px;margin-top: .4rem;}\r\n\t\t\t.mui-input{width: 90%;margin:0 auto;background: none;margin-top: 2rem;}\r\n\t\t\t.mui-input{border: none;}\r\n\t\t\t.mui-input label{width: 100%;text-align: center;font-size: .33rem;}\r\n\t\t\t.mui-input .mui-input-row{width: 100%;height:1.6rem;text-align: center;}\r\n\t\t\t.mui-btn{width: 100%;height:1rem;border-radius:.7rem;margin-top: 0.6rem;font-size: .33rem;}\r\n\t\t\t.mui-content-padded{text-align: center;font-size: .22rem;}\r\n\t\t\t.mui-input-row input{width: 100%;text-align: center;color: #ffffff;}\r\n\t\t\t.mui-input-row label ~ input, .mui-input-row label ~ select, .mui-input-row label ~ textarea{width: 100%;padding-right: 0;}\r\n\t\t\t.xian{float:none;height:1px;background: #fff;opacity: 0.5;clear: both;}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\" style='background:transparent;color:#fff;'>\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" style='color:#fff;'></a>\n\t    <h1 class=\"mui-title\" style='color:#fff;'>登&nbsp;录</h1>\n\t</header>\r\n\t<div class=\"mui-content backnone\" style='background:url(../../dist/img/loginbg.jpg) no-repeat'>\r\n\t\t<form class=\"mui-input\">\r\n\t\t    <div class=\"mui-input-row\">\r\n\t\t        <label>手机号</label>\r\n\t\t    \t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入手机号\" v-model=\"phone\">\r\n\t\t    \t<div class=\"mui-pager xian\"></div>\r\n\t\t    </div>\r\n\t\t    <div class=\"mui-input-row\">\r\n\t\t        <label>密码</label>\r\n\t\t        <input type=\"password\" class=\"mui-input-password\" placeholder=\"请输入密码\" v-model=\"pwd\">\r\n\t\t        <div class=\"mui-pager xian\"></div>\r\n\t\t    </div>\r\n\t\t        <button type=\"button\" class=\"mui-btn mui-btn-primary\" v-on:click=\"asyLogin\">登录</button>\r\n\t\t     <div class=\"mui-content-padded\">\r\n\t\t       <span style='margin-right:0.5rem;' v-link=\"{ path: '/register'}\">注册账号</span><span v-link=\"{ path: '/forgetpwd'}\">忘记密码 ？</span>\r\n\t\t    </div>\r\n\t\t</form>\r\n\t</div>\r\n    <!--<div class=\"mui-content\">\r\n        <header class=\"mui-bar mui-bar-nav\">\r\n            <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n            <h1 class=\"mui-title\">登录</h1>\r\n        </header>\r\n        <form  class=\"mui-input-group\">\r\n            <div class=\"mui-input-row\">\r\n                <input type=\"text\" class=\"mui-input-clear mui-input\" placeholder=\"请输入手机号\" v-model=\"phone\">\r\n            </div>\r\n            <div class=\"mui-input-row\" style='position:relative;'>\r\n                <input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"请输入密码\" v-model=\"pwd\">\r\n            </div>\r\n        </form>\r\n        <div class=\"mui-content-padded\" style='text-align:center;'>\r\n            <button  class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click=\"asyLogin\" >登录</button>\r\n            <div class=\"link-area\"><a v-link=\"{ path: '/register'}\">注册账号</a> <span class=\"spliter\">|</span> <a v-link=\"{ path: '/forgetpwd'}\">忘记密码</a>\r\n            </div>\r\n        </div>\r\n    </div>-->\r\n\r\n</template>\r\n<script>\r\n    import alert from '../../src/components/alert.vue'\r\n\r\n    export default {\r\n        components : {\r\n            alert,\r\n        },\r\n        data () {\r\n        return {\r\n            phone:\"\",\r\n            pwd:\"\",\r\n\r\n            show : false,\r\n            title : '错误提示',\r\n            content : '',\r\n        }\r\n    },\r\n    route:{\r\n//            $.ajax(....,function(data){\r\n//                 this.data = {\"name\":\"1233\"};\r\n//            });\r\n    },\r\n    created: function () {\r\n        //在实例创建之后同步调用。此时实例已经结束解析选项，这意味着已建立：数据绑定，计算属性，方法，watcher/事件回调。\r\n        //但是还没有开始 DOM 编译，$el 还不存在,但是实例存在,即this.a存在,可打印出来 。\r\n        console.log(\"建立\");\r\n    },\r\n    ready: function () {\r\n        //在编译结束和 $el 第一次插入文档之后调用，如在第一次 attached 钩子之后调用。注意必须是由 Vue 插入（如 vm.$appendTo() 等方法或指令更新）才触发 ready 钩子。\r\n        console.log(\"一切准备好了\");\r\n    },\r\n    methods:{\r\n        asyLogin:function(){\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.phone,\r\n                            \"pwd\":this.pwd\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        if(reslute.success){\r\n                            this.$route.router.go({name:\"main\"})\r\n                        }else{\r\n                            this.content=reslute.message;\r\n                            this.show=true;\r\n                        }\r\n                        debugger;\r\n                        localStorage.setItem('userinfo', JSON.stringify(reslute.data));\r\n                        console.info(JSON.parse(localStorage.getItem(\"userinfo\")).fdname)\r\n                    }, function(response) {\r\n\r\n                    });\r\n        }\r\n    }\r\n    }\r\n    \r\n   \r\n\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t/*.spliter{color:#aaa;font-size:0.24rem;}\r\n\t.link-area a{color:#333;font-size:0.28rem;}\r\n\t.mui-content{padding-top:0.1rem;}*/\t\r\n\t.mui-content[_v-deccb668]{width: 100%;height:100%;overflow: hidden;color: #ffffff; background-size: cover;padding-bottom:3rem;}\r\n\t.mui-bar-nav[_v-deccb668] {top: 0; box-shadow: 0 0px 0px #ccc; }\r\n\t\t\tinput[_v-deccb668]::-webkit-input-placeholder,textarea[_v-deccb668]::-webkit-input-placeholder {color: #aaa;font-size: .22rem;}\r\n\t\t\t.backnone[_v-deccb668]{background-color:transparent;}\r\n\t\t\t.mui-input-row label[_v-deccb668]{padding: 0px;margin-top: .32rem;}\r\n\t\t\t.mui-input[_v-deccb668]{width: 90%;margin:0 auto;background: none;margin-top: 2rem;}\r\n\t\t\t.mui-input[_v-deccb668]{border: none;}\r\n\t\t\t.mui-input label[_v-deccb668]{width: 100%;text-align: center;font-size: .4rem;}\r\n\t\t\t.mui-input .mui-input-row[_v-deccb668]{width: 100%;height:1.6rem;text-align: center;}\r\n\t\t\t.mui-btn[_v-deccb668]{width: 100%;height:1rem;border-radius:.3rem;margin-top: 0.6rem;font-size: .33rem;}\r\n\t\t\t.mui-content-padded[_v-deccb668]{text-align: center;font-size: .22rem;}\r\n\t\t\t.mui-input-row input[_v-deccb668]{width: 100%;text-align: center;color: #ffffff;}\r\n\t\t\t.mui-input-row label ~ input[_v-deccb668], .mui-input-row label ~ select[_v-deccb668], .mui-input-row label ~ textarea[_v-deccb668]{width: 100%;padding-right: 0;}\r\n\t\t\t.xian[_v-deccb668]{float:none;height:1px;background: #fff;opacity: 0.5;clear: both;}\r\n", "", {"version":3,"sources":["/./yous/view/login.vue.style"],"names":[],"mappings":";CACA;;oCAEA;CACA,0BAAA,YAAA,YAAA,iBAAA,eAAA,CAAA,uBAAA,oBAAA,CAAA;CACA,2BAAA,OAAA,CAAA,2BAAA,EAAA;GACA,gGAAA,YAAA,kBAAA,CAAA;GACA,uBAAA,6BAAA,CAAA;GACA,kCAAA,aAAA,mBAAA,CAAA;GACA,wBAAA,WAAA,cAAA,iBAAA,iBAAA,CAAA;GACA,wBAAA,aAAA,CAAA;GACA,8BAAA,YAAA,mBAAA,iBAAA,CAAA;GACA,uCAAA,YAAA,cAAA,mBAAA,CAAA;GACA,sBAAA,YAAA,YAAA,oBAAA,mBAAA,kBAAA,CAAA;GACA,iCAAA,mBAAA,kBAAA,CAAA;GACA,kCAAA,YAAA,mBAAA,eAAA,CAAA;GACA,oIAAA,YAAA,iBAAA,CAAA;GACA,mBAAA,WAAA,WAAA,iBAAA,aAAA,YAAA,CAAA","file":"login.vue","sourcesContent":["<style scoped>\r\n\t/*.spliter{color:#aaa;font-size:0.24rem;}\r\n\t.link-area a{color:#333;font-size:0.28rem;}\r\n\t.mui-content{padding-top:0.1rem;}*/\t\r\n\t.mui-content{width: 100%;height:100%;overflow: hidden;color: #ffffff; background-size: cover;padding-bottom:3rem;}\r\n\t.mui-bar-nav {top: 0; -webkit-box-shadow: 0 0px 0px #ccc; box-shadow: 0 0px 0px #ccc; }\r\n\t\t\tinput::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #aaa;font-size: .22rem;}\r\n\t\t\t.backnone{background-color:transparent;}\r\n\t\t\t.mui-input-row label{padding: 0px;margin-top: .32rem;}\r\n\t\t\t.mui-input{width: 90%;margin:0 auto;background: none;margin-top: 2rem;}\r\n\t\t\t.mui-input{border: none;}\r\n\t\t\t.mui-input label{width: 100%;text-align: center;font-size: .4rem;}\r\n\t\t\t.mui-input .mui-input-row{width: 100%;height:1.6rem;text-align: center;}\r\n\t\t\t.mui-btn{width: 100%;height:1rem;border-radius:.3rem;margin-top: 0.6rem;font-size: .33rem;}\r\n\t\t\t.mui-content-padded{text-align: center;font-size: .22rem;}\r\n\t\t\t.mui-input-row input{width: 100%;text-align: center;color: #ffffff;}\r\n\t\t\t.mui-input-row label ~ input, .mui-input-row label ~ select, .mui-input-row label ~ textarea{width: 100%;padding-right: 0;}\r\n\t\t\t.xian{float:none;height:1px;background: #fff;opacity: 0.5;clear: both;}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\" style='background:transparent;color:#fff;'>\r\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" style='color:#fff;'></a>\r\n\t    <h1 class=\"mui-title\" style='color:#fff;'>登&nbsp;录</h1>\r\n\t</header>\r\n\t<div class=\"mui-content backnone\" style='background:url(../../dist/img/loginbg.jpg) no-repeat;background-size: cover;'>\r\n\t\t<form class=\"mui-input\">\r\n\t\t    <div class=\"mui-input-row\">\r\n\t\t        <label>手机号</label>\r\n\t\t    \t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入手机号\" v-model=\"phone\">\r\n\t\t    \t<div class=\"mui-pager xian\"></div>\r\n\t\t    </div>\r\n\t\t    <div class=\"mui-input-row\">\r\n\t\t        <label>密码</label>\r\n\t\t        <input type=\"password\" class=\"mui-input-password\" placeholder=\"请输入密码\" v-model=\"pwd\">\r\n\t\t        <div class=\"mui-pager xian\"></div>\r\n\t\t    </div>\r\n\t\t        <button type=\"button\" class=\"mui-btn mui-btn-primary\" v-on:click=\"asyLogin\" style='background:#0f6fac'>登录</button>\r\n\t\t     <div class=\"mui-content-padded\">\r\n\t\t       <span style='margin-right:0.5rem;' v-link=\"{ path: '/register'}\">注册账号</span><span v-link=\"{ path: '/forgetpwd'}\">忘记密码 ？</span>\r\n\t\t    </div>\r\n\t\t</form>\r\n\t</div>\r\n    <!--<div class=\"mui-content\">\r\n        <header class=\"mui-bar mui-bar-nav\">\r\n            <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n            <h1 class=\"mui-title\">登录</h1>\r\n        </header>\r\n        <form  class=\"mui-input-group\">\r\n            <div class=\"mui-input-row\">\r\n                <input type=\"text\" class=\"mui-input-clear mui-input\" placeholder=\"请输入手机号\" v-model=\"phone\">\r\n            </div>\r\n            <div class=\"mui-input-row\" style='position:relative;'>\r\n                <input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"请输入密码\" v-model=\"pwd\">\r\n            </div>\r\n        </form>\r\n        <div class=\"mui-content-padded\" style='text-align:center;'>\r\n            <button  class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click=\"asyLogin\" >登录</button>\r\n            <div class=\"link-area\"><a v-link=\"{ path: '/register'}\">注册账号</a> <span class=\"spliter\">|</span> <a v-link=\"{ path: '/forgetpwd'}\">忘记密码</a>\r\n            </div>\r\n        </div>\r\n    </div>-->\r\n\r\n</template>\r\n<script>\r\n    import alert from '../../src/components/alert.vue'\r\n    export default {\r\n        components : {\r\n            alert,\r\n        },\r\n        data () {\r\n        return {\r\n            phone:\"\",\r\n            pwd:\"\",\r\n\r\n            show : false,\r\n            title : '错误提示',\r\n            content : '',\r\n        }\r\n    },\r\n    route:{\r\n//            $.ajax(....,function(data){\r\n//                 this.data = {\"name\":\"1233\"};\r\n//            });\r\n    },\r\n    created: function () {\r\n        //在实例创建之后同步调用。此时实例已经结束解析选项，这意味着已建立：数据绑定，计算属性，方法，watcher/事件回调。\r\n        //但是还没有开始 DOM 编译，$el 还不存在,但是实例存在,即this.a存在,可打印出来 。\r\n        console.log(\"建立\");\r\n    },\r\n    ready: function () {\r\n        //在编译结束和 $el 第一次插入文档之后调用，如在第一次 attached 钩子之后调用。注意必须是由 Vue 插入（如 vm.$appendTo() 等方法或指令更新）才触发 ready 钩子。\r\n        console.log(\"一切准备好了\");\r\n    },\r\n    methods:{\r\n        asyLogin:function(){\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.phone,\r\n                            \"pwd\":this.pwd\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        if(reslute.success){\r\n                            this.$route.router.go({name:\"main\"})\r\n                        }else{\r\n                            this.content=reslute.message;\r\n                            this.show=true;\r\n                        }\r\n                        debugger;\r\n                        localStorage.setItem('userinfo', JSON.stringify(reslute.data));\r\n                        console.info(JSON.parse(localStorage.getItem(\"userinfo\")).fdname)\r\n                    }, function(response) {\r\n\r\n                    });\r\n        }\r\n    }\r\n    }\r\n    \r\n   \r\n\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 149 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -16873,7 +16850,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _stringify = __webpack_require__(150);
+	var _stringify = __webpack_require__(148);
 	
 	var _stringify2 = _interopRequireDefault(_stringify);
 	
@@ -16946,14 +16923,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 	.mui-content{padding-top:0.1rem;}*/	
 	// 	.mui-content{width: 100%;height:100%;overflow: hidden;color: #ffffff; background-size: cover;padding-bottom:3rem;}
 	// 	.mui-bar-nav {top: 0; -webkit-box-shadow: 0 0px 0px #ccc; box-shadow: 0 0px 0px #ccc; }
-	// 	input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #fff;font-size: .22rem;}
+	// 			input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #aaa;font-size: .22rem;}
 	// 			.backnone{background-color:transparent;}
-	// 			.mui-input-row label{padding: 0px;margin-top: .4rem;}
+	// 			.mui-input-row label{padding: 0px;margin-top: .32rem;}
 	// 			.mui-input{width: 90%;margin:0 auto;background: none;margin-top: 2rem;}
 	// 			.mui-input{border: none;}
-	// 			.mui-input label{width: 100%;text-align: center;font-size: .33rem;}
+	// 			.mui-input label{width: 100%;text-align: center;font-size: .4rem;}
 	// 			.mui-input .mui-input-row{width: 100%;height:1.6rem;text-align: center;}
-	// 			.mui-btn{width: 100%;height:1rem;border-radius:.7rem;margin-top: 0.6rem;font-size: .33rem;}
+	// 			.mui-btn{width: 100%;height:1rem;border-radius:.3rem;margin-top: 0.6rem;font-size: .33rem;}
 	// 			.mui-content-padded{text-align: center;font-size: .22rem;}
 	// 			.mui-input-row input{width: 100%;text-align: center;color: #ffffff;}
 	// 			.mui-input-row label ~ input, .mui-input-row label ~ select, .mui-input-row label ~ textarea{width: 100%;padding-right: 0;}
@@ -16964,7 +16941,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)" style='color:#fff;'></a>
 	// 	    <h1 class="mui-title" style='color:#fff;'>登&nbsp;录</h1>
 	// 	</header>
-	// 	<div class="mui-content backnone" style='background:url(../../dist/img/loginbg.jpg) no-repeat'>
+	// 	<div class="mui-content backnone" style='background:url(../../dist/img/loginbg.jpg) no-repeat;background-size: cover;'>
 	// 		<form class="mui-input">
 	// 		    <div class="mui-input-row">
 	// 		        <label>手机号</label>
@@ -16976,7 +16953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 		        <input type="password" class="mui-input-password" placeholder="请输入密码" v-model="pwd">
 	// 		        <div class="mui-pager xian"></div>
 	// 		    </div>
-	// 		        <button type="button" class="mui-btn mui-btn-primary" v-on:click="asyLogin">登录</button>
+	// 		        <button type="button" class="mui-btn mui-btn-primary" v-on:click="asyLogin" style='background:#0f6fac'>登录</button>
 	// 		     <div class="mui-content-padded">
 	// 		       <span style='margin-right:0.5rem;' v-link="{ path: '/register'}">注册账号</span><span v-link="{ path: '/forgetpwd'}">忘记密码 ？</span>
 	// 		    </div>
@@ -17006,41 +16983,41 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 150 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(151), __esModule: true };
+	module.exports = { "default": __webpack_require__(149), __esModule: true };
 
 /***/ },
-/* 151 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var core  = __webpack_require__(152)
+	var core  = __webpack_require__(150)
 	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
 	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 	  return $JSON.stringify.apply($JSON, arguments);
 	};
 
 /***/ },
-/* 152 */
+/* 150 */
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
-/* 153 */
+/* 151 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" style=\"background:transparent;color:#fff;\" _v-393e72f6=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" style=\"color:#fff;\" _v-393e72f6=\"\"></a>\n\t    <h1 class=\"mui-title\" style=\"color:#fff;\" _v-393e72f6=\"\">登&nbsp;录</h1>\n\t</header>\n\t<div class=\"mui-content backnone\" style=\"background:url(../../dist/img/loginbg.jpg) no-repeat\" _v-393e72f6=\"\">\n\t\t<form class=\"mui-input\" _v-393e72f6=\"\">\n\t\t    <div class=\"mui-input-row\" _v-393e72f6=\"\">\n\t\t        <label _v-393e72f6=\"\">手机号</label>\n\t\t    \t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入手机号\" v-model=\"phone\" _v-393e72f6=\"\">\n\t\t    \t<div class=\"mui-pager xian\" _v-393e72f6=\"\"></div>\n\t\t    </div>\n\t\t    <div class=\"mui-input-row\" _v-393e72f6=\"\">\n\t\t        <label _v-393e72f6=\"\">密码</label>\n\t\t        <input type=\"password\" class=\"mui-input-password\" placeholder=\"请输入密码\" v-model=\"pwd\" _v-393e72f6=\"\">\n\t\t        <div class=\"mui-pager xian\" _v-393e72f6=\"\"></div>\n\t\t    </div>\n\t\t        <button type=\"button\" class=\"mui-btn mui-btn-primary\" v-on:click=\"asyLogin\" _v-393e72f6=\"\">登录</button>\n\t\t     <div class=\"mui-content-padded\" _v-393e72f6=\"\">\n\t\t       <span style=\"margin-right:0.5rem;\" v-link=\"{ path: '/register'}\" _v-393e72f6=\"\">注册账号</span><span v-link=\"{ path: '/forgetpwd'}\" _v-393e72f6=\"\">忘记密码 ？</span>\n\t\t    </div>\n\t\t</form>\n\t</div>\n    <!--<div class=\"mui-content\">\n        <header class=\"mui-bar mui-bar-nav\">\n            <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\n            <h1 class=\"mui-title\">登录</h1>\n        </header>\n        <form  class=\"mui-input-group\">\n            <div class=\"mui-input-row\">\n                <input type=\"text\" class=\"mui-input-clear mui-input\" placeholder=\"请输入手机号\" v-model=\"phone\">\n            </div>\n            <div class=\"mui-input-row\" style='position:relative;'>\n                <input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"请输入密码\" v-model=\"pwd\">\n            </div>\n        </form>\n        <div class=\"mui-content-padded\" style='text-align:center;'>\n            <button  class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click=\"asyLogin\" >登录</button>\n            <div class=\"link-area\"><a v-link=\"{ path: '/register'}\">注册账号</a> <span class=\"spliter\">|</span> <a v-link=\"{ path: '/forgetpwd'}\">忘记密码</a>\n            </div>\n        </div>\n    </div>-->\n\n";
+	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" style=\"background:transparent;color:#fff;\" _v-deccb668=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" style=\"color:#fff;\" _v-deccb668=\"\"></a>\n\t    <h1 class=\"mui-title\" style=\"color:#fff;\" _v-deccb668=\"\">登&nbsp;录</h1>\n\t</header>\n\t<div class=\"mui-content backnone\" style=\"background:url(../../dist/img/loginbg.jpg) no-repeat;background-size: cover;\" _v-deccb668=\"\">\n\t\t<form class=\"mui-input\" _v-deccb668=\"\">\n\t\t    <div class=\"mui-input-row\" _v-deccb668=\"\">\n\t\t        <label _v-deccb668=\"\">手机号</label>\n\t\t    \t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入手机号\" v-model=\"phone\" _v-deccb668=\"\">\n\t\t    \t<div class=\"mui-pager xian\" _v-deccb668=\"\"></div>\n\t\t    </div>\n\t\t    <div class=\"mui-input-row\" _v-deccb668=\"\">\n\t\t        <label _v-deccb668=\"\">密码</label>\n\t\t        <input type=\"password\" class=\"mui-input-password\" placeholder=\"请输入密码\" v-model=\"pwd\" _v-deccb668=\"\">\n\t\t        <div class=\"mui-pager xian\" _v-deccb668=\"\"></div>\n\t\t    </div>\n\t\t        <button type=\"button\" class=\"mui-btn mui-btn-primary\" v-on:click=\"asyLogin\" style=\"background:#0f6fac\" _v-deccb668=\"\">登录</button>\n\t\t     <div class=\"mui-content-padded\" _v-deccb668=\"\">\n\t\t       <span style=\"margin-right:0.5rem;\" v-link=\"{ path: '/register'}\" _v-deccb668=\"\">注册账号</span><span v-link=\"{ path: '/forgetpwd'}\" _v-deccb668=\"\">忘记密码 ？</span>\n\t\t    </div>\n\t\t</form>\n\t</div>\n    <!--<div class=\"mui-content\">\n        <header class=\"mui-bar mui-bar-nav\">\n            <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\n            <h1 class=\"mui-title\">登录</h1>\n        </header>\n        <form  class=\"mui-input-group\">\n            <div class=\"mui-input-row\">\n                <input type=\"text\" class=\"mui-input-clear mui-input\" placeholder=\"请输入手机号\" v-model=\"phone\">\n            </div>\n            <div class=\"mui-input-row\" style='position:relative;'>\n                <input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"请输入密码\" v-model=\"pwd\">\n            </div>\n        </form>\n        <div class=\"mui-content-padded\" style='text-align:center;'>\n            <button  class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click=\"asyLogin\" >登录</button>\n            <div class=\"link-area\"><a v-link=\"{ path: '/register'}\">注册账号</a> <span class=\"spliter\">|</span> <a v-link=\"{ path: '/forgetpwd'}\">忘记密码</a>\n            </div>\n        </div>\n    </div>-->\n\n";
 
 /***/ },
-/* 154 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(155)
-	__vue_template__ = __webpack_require__(156)
+	__vue_script__ = __webpack_require__(153)
+	__vue_template__ = __webpack_require__(154)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -17048,7 +17025,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\register.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\register.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17057,7 +17034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 155 */
+/* 153 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -17190,19 +17167,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 156 */
+/* 154 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"  onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">注册</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <form  class=\"mui-input-group\">\r\n            <div class=\"mui-input-row\">\r\n                <input  type=\"text\" class=\"mui-input-clear mui-input\" placeholder=\"请输入手机号\" v-model=\"mobile\" >\r\n            </div>\r\n            <div class=\"mui-input-row\">\r\n                <input  v-model=\"pwd\" type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"输入密码\">\r\n            </div>\r\n            <div class=\"mui-input-row\">\r\n                <input  type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"确认密码\" >\r\n            </div>\r\n            <div class=\"mui-input-row\" style='position:relative;'>\r\n                <input type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"请输入验证码\" v-model=\"inputCode\">\r\n                <input v-model=\"strtimer\" type=\"button\" style='background-color: #CCCCCC; position:absolute;right:10px;top:2px; width: auto' class=\"mui-btn getnumber\"   v-on:click=\"startTimer\" >\r\n                <input v-model=\"timer\" type=\"hidden\">\r\n            </div>\r\n        </form>\r\n        <div class=\"mui-content-padded\">\r\n            <button class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click=\"asyRegister\">注册</button>\r\n            <span class=\"error\" v-text=\"$parent.$vuerify.$errors[field]\">1111</span>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"mui-content-padded oauth-area\">\r\n    </div>\r\n    </div>\r\n";
 
 /***/ },
-/* 157 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(158)
-	__vue_script__ = __webpack_require__(160)
-	__vue_template__ = __webpack_require__(161)
+	__webpack_require__(156)
+	__vue_script__ = __webpack_require__(158)
+	__vue_template__ = __webpack_require__(159)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -17210,7 +17187,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\forgetpwd.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\forgetpwd.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17219,13 +17196,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 158 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(159);
+	var content = __webpack_require__(157);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -17234,8 +17211,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c8b41886&file=forgetpwd.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgetpwd.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c8b41886&file=forgetpwd.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgetpwd.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e86f6ada&file=forgetpwd.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgetpwd.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e86f6ada&file=forgetpwd.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgetpwd.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17245,7 +17222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 159 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -17253,13 +17230,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.mui-input-row .mui-btn[_v-c8b41886]{width:auto;text-align:center;}\r\n\t.mui-content[_v-c8b41886]{margin-top:10px;}\r\n", "", {"version":3,"sources":["/./yous/view/forgetpwd.vue.style"],"names":[],"mappings":";CACA,qCAAA,WAAA,kBAAA,CAAA;CACA,0BAAA,gBAAA,CAAA","file":"forgetpwd.vue","sourcesContent":["<style scoped>\r\n\t.mui-input-row .mui-btn{width:auto;text-align:center;}\r\n\t.mui-content{margin-top:10px;}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">忘记密码</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<form class=\"mui-input-group\">\r\n\t\t\t\t<div class=\"mui-input-row\">\r\n\t\t\t\t\t<input id='telphone' type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入手机号\" v-model=\"phone\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"mui-input-row\" style='position:relative;'>\r\n\t\t\t\t\t<input id='verificationCode' type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入验证码\" v-model=\"InputCode\">\t\r\n\t\t\t\t\t<input type=\"button\" value=\"获取验证码\" v-on:click=\"asygetSmsCode\" style='background-color: #CCCCCC; position:absolute;right:10px;top:2px; width: auto' class=\"mui-btn getnumber\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"mui-input-row\">\t\t\r\n\t\t\t\t\t<input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"新密码\" v-model=\"pwd\">\t\t\t\t\t\r\n\t\t\t\t</div>\r\n\t\t\t</form>\r\n\t\t\t<div class=\"mui-content-padded\">\r\n\t\t\t\t<button id='sendMail' class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click='asyModify'>确认修改</button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n</template>\r\n<script>\r\nexport default {\r\n        components : {\r\n            alert,\r\n        },\r\n        data () {\r\n\t        return {\r\n\t            phone:\"\",\r\n\t            pwd:\"\",\r\n\t            InputCode:\"\",\r\n\t            show : false,\r\n\t            title : '错误提示',\r\n\t            content : '',\r\n\t        }\r\n\t    },\r\n\r\n\t    ready: function () {\r\n\t        //在编译结束和 $el 第一次插入文档之后调用，如在第一次 attached 钩子之后调用。注意必须是由 Vue 插入（如 vm.$appendTo() 等方法或指令更新）才触发 ready 钩子。\r\n\t        console.log(\"一切准备好了\");\r\n\t    },\r\n\t    methods:{\r\n\t        asygetSmsCode:function(){\r\n\t            this.$http.post(\r\n\t                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t                    { \r\n\t                        parameters:{\r\n\t                        \t\"CultureName\":'',\r\n                        \t\"Mobile\":this.phone,\r\n                            \"VerifiationCCodeType\":2,\r\n                            \"ImageNo\":\"\",\r\n                            \"InputCode\":''\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000002\"\r\n             }).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        if(reslute.success){\r\n                        \t\r\n                            //this.$route.router.go({name:\"login\"})\r\n                        }else{\r\n                            this.content=reslute.message;\r\n                            this.show=true;\r\n                        }\r\n\r\n                    }, function(response) {\r\n\r\n                    });\r\n         },\r\n        \r\n         asyModify:function(){\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    { \r\n                        parameters:{\r\n                        \t\"CultureName\":'',\r\n                        \t\"Mobile\":this.phone,\r\n                            \"VerifiationCCodeType\":2,\r\n                            \"ImageNo\":\"\",\r\n                            \"InputCode\":this.InputCode,\r\n                            \"pwd\":this.pwd\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000010\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        if(reslute.success){\r\n                        \t\r\n                            this.$route.router.go({name:\"login\"})\r\n                        }else{\r\n                            this.content=reslute.message;\r\n                            this.show=true;\r\n                        }\r\n\t\t\t\r\n                    }, function(response) {\r\n\r\n                    });\r\n        }\r\n        \r\n    }\r\n    }\r\n\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.mui-input-row .mui-btn[_v-e86f6ada]{width:auto;text-align:center;}\r\n\t.mui-content[_v-e86f6ada]{margin-top:10px;}\r\n", "", {"version":3,"sources":["/./yous/view/forgetpwd.vue.style"],"names":[],"mappings":";CACA,qCAAA,WAAA,kBAAA,CAAA;CACA,0BAAA,gBAAA,CAAA","file":"forgetpwd.vue","sourcesContent":["<style scoped>\r\n\t.mui-input-row .mui-btn{width:auto;text-align:center;}\r\n\t.mui-content{margin-top:10px;}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">忘记密码</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<form class=\"mui-input-group\">\r\n\t\t\t\t<div class=\"mui-input-row\">\r\n\t\t\t\t\t<input id='telphone' type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入手机号\" v-model=\"phone\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"mui-input-row\" style='position:relative;'>\r\n\t\t\t\t\t<input id='verificationCode' type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入验证码\" v-model=\"InputCode\">\t\r\n\t\t\t\t\t<input type=\"button\" value=\"获取验证码\" v-on:click=\"asygetSmsCode\" style='background-color: #CCCCCC; position:absolute;right:10px;top:2px; width: auto' class=\"mui-btn getnumber\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"mui-input-row\">\t\t\r\n\t\t\t\t\t<input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"新密码\" v-model=\"pwd\">\t\t\t\t\t\r\n\t\t\t\t</div>\r\n\t\t\t</form>\r\n\t\t\t<div class=\"mui-content-padded\">\r\n\t\t\t\t<button id='sendMail' class=\"mui-btn mui-btn-block\" style='background:#ff8112;color:#fff;' v-on:click='asyModify'>确认修改</button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n</template>\r\n<script>\r\nexport default {\r\n        components : {\r\n            alert,\r\n        },\r\n        data () {\r\n\t        return {\r\n\t            phone:\"\",\r\n\t            pwd:\"\",\r\n\t            InputCode:\"\",\r\n\t            show : false,\r\n\t            title : '错误提示',\r\n\t            content : '',\r\n\t        }\r\n\t    },\r\n\r\n\t    ready: function () {\r\n\t        //在编译结束和 $el 第一次插入文档之后调用，如在第一次 attached 钩子之后调用。注意必须是由 Vue 插入（如 vm.$appendTo() 等方法或指令更新）才触发 ready 钩子。\r\n\t        console.log(\"一切准备好了\");\r\n\t    },\r\n\t    methods:{\r\n\t        asygetSmsCode:function(){\r\n\t            this.$http.post(\r\n\t                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t                    { \r\n\t                        parameters:{\r\n\t                        \t\"CultureName\":'',\r\n                        \t\"Mobile\":this.phone,\r\n                            \"VerifiationCCodeType\":2,\r\n                            \"ImageNo\":\"\",\r\n                            \"InputCode\":''\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000002\"\r\n             }).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        if(reslute.success){\r\n                        \t\r\n                            //this.$route.router.go({name:\"login\"})\r\n                        }else{\r\n                            this.content=reslute.message;\r\n                            this.show=true;\r\n                        }\r\n\r\n                    }, function(response) {\r\n\r\n                    });\r\n         },\r\n        \r\n         asyModify:function(){\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    { \r\n                        parameters:{\r\n                        \t\"CultureName\":'',\r\n                        \t\"Mobile\":this.phone,\r\n                            \"VerifiationCCodeType\":2,\r\n                            \"ImageNo\":\"\",\r\n                            \"InputCode\":this.InputCode,\r\n                            \"pwd\":this.pwd\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000010\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        if(reslute.success){\r\n                        \t\r\n                            this.$route.router.go({name:\"login\"})\r\n                        }else{\r\n                            this.content=reslute.message;\r\n                            this.show=true;\r\n                        }\r\n\t\t\t\r\n                    }, function(response) {\r\n\r\n                    });\r\n        }\r\n        \r\n    }\r\n    }\r\n\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 160 */
+/* 158 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -17370,19 +17347,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 161 */
+/* 159 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-c8b41886=\"\">\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-c8b41886=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-c8b41886=\"\">忘记密码</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-c8b41886=\"\">\n\t\t\t<form class=\"mui-input-group\" _v-c8b41886=\"\">\n\t\t\t\t<div class=\"mui-input-row\" _v-c8b41886=\"\">\n\t\t\t\t\t<input id=\"telphone\" type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入手机号\" v-model=\"phone\" _v-c8b41886=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mui-input-row\" style=\"position:relative;\" _v-c8b41886=\"\">\n\t\t\t\t\t<input id=\"verificationCode\" type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入验证码\" v-model=\"InputCode\" _v-c8b41886=\"\">\t\n\t\t\t\t\t<input type=\"button\" value=\"获取验证码\" v-on:click=\"asygetSmsCode\" style=\"background-color: #CCCCCC; position:absolute;right:10px;top:2px; width: auto\" class=\"mui-btn getnumber\" _v-c8b41886=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mui-input-row\" _v-c8b41886=\"\">\t\t\n\t\t\t\t\t<input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"新密码\" v-model=\"pwd\" _v-c8b41886=\"\">\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t\t<div class=\"mui-content-padded\" _v-c8b41886=\"\">\n\t\t\t\t<button id=\"sendMail\" class=\"mui-btn mui-btn-block\" style=\"background:#ff8112;color:#fff;\" v-on:click=\"asyModify\" _v-c8b41886=\"\">确认修改</button>\n\t\t\t</div>\n\t\t</div>\n";
+	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-e86f6ada=\"\">\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-e86f6ada=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-e86f6ada=\"\">忘记密码</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-e86f6ada=\"\">\n\t\t\t<form class=\"mui-input-group\" _v-e86f6ada=\"\">\n\t\t\t\t<div class=\"mui-input-row\" _v-e86f6ada=\"\">\n\t\t\t\t\t<input id=\"telphone\" type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入手机号\" v-model=\"phone\" _v-e86f6ada=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mui-input-row\" style=\"position:relative;\" _v-e86f6ada=\"\">\n\t\t\t\t\t<input id=\"verificationCode\" type=\"number\" class=\"mui-input-clear mui-input\" placeholder=\"输入验证码\" v-model=\"InputCode\" _v-e86f6ada=\"\">\t\n\t\t\t\t\t<input type=\"button\" value=\"获取验证码\" v-on:click=\"asygetSmsCode\" style=\"background-color: #CCCCCC; position:absolute;right:10px;top:2px; width: auto\" class=\"mui-btn getnumber\" _v-e86f6ada=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mui-input-row\" _v-e86f6ada=\"\">\t\t\n\t\t\t\t\t<input type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"新密码\" v-model=\"pwd\" _v-e86f6ada=\"\">\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t\t<div class=\"mui-content-padded\" _v-e86f6ada=\"\">\n\t\t\t\t<button id=\"sendMail\" class=\"mui-btn mui-btn-block\" style=\"background:#ff8112;color:#fff;\" v-on:click=\"asyModify\" _v-e86f6ada=\"\">确认修改</button>\n\t\t\t</div>\n\t\t</div>\n";
 
 /***/ },
-/* 162 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(163)
-	__vue_script__ = __webpack_require__(165)
-	__vue_template__ = __webpack_require__(166)
+	__webpack_require__(161)
+	__vue_script__ = __webpack_require__(163)
+	__vue_template__ = __webpack_require__(164)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -17390,7 +17367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\service\\service.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\service\\service.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17399,13 +17376,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 163 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(164);
+	var content = __webpack_require__(162);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -17414,8 +17391,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-461f035b&file=service.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./service.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-461f035b&file=service.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./service.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b5c33c9e&file=service.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./service.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b5c33c9e&file=service.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./service.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17425,7 +17402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 164 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -17433,13 +17410,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t .mui-row.mui-fullscreen > [class*=\"mui-col-\"][_v-461f035b] { height: 100%; }\r\n    .mui-col-xs-3[_v-461f035b],\r\n    .mui-control-content[_v-461f035b] { overflow-y: auto;padding-top:.1rem;}\r\n    .mui-segmented-control .mui-control-item[_v-461f035b] { line-height:0.8rem; width: 100%; font-size:0.4rem;}\r\n    .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active[_v-461f035b] {background-color: #fff;color:#fa7611}\r\n    \r\n    .mui-table-view[_v-461f035b]{height:100%;}\r\n    .mui-table-view .mui-table-view-cell[_v-461f035b]{padding-left:10px}\r\n    .mui-table-view .mui-table-view-cell .curprice[_v-461f035b]{color: #EC971F;}\r\n    .mui-table-view .mui-table-view-cell .oldprice[_v-461f035b]{color: #ccc; font-size: .6rem; text-decoration: line-through;}\r\n    \r\n    .userpic li[_v-461f035b]{width:30%;margin-right:1%;text-align:center;font-size:12px;display:inline-block;margin-bottom:10px;}\r\n    .userpic li img[_v-461f035b]{width:60px;height:60px;border-radius:50%;}\r\n     .userpic li a[_v-461f035b]{display:block;}\r\n     .userpic ul[_v-461f035b]{margin-top:10px;margin-bottom:10px;}\r\n     \r\n     .allheader[_v-461f035b]{font-size:14px;color:#4f4370;margin-bottom:10px;margin-top:10px;}\r\n     .allpic img[_v-461f035b]{width:40%;margin-right:1%;text-align:center;}   \r\n     .tuijianpic img[_v-461f035b]{width:50%;margin-right:1%;text-align:center;}    \r\n     #segmentedControls a[_v-461f035b]{font-size:0.28rem;}\r\n     ul[_v-461f035b]{border:0;}\r\n     .mui-table-view[_v-461f035b]{background:transparent!important;}\r\n     \r\n     .servicetitle[_v-461f035b]{text-align:center;font-size:14px;height:30px;line-height:30px;background:#fff;margin-top:10px;color:#333;}\r\n     .servicecontent p span[_v-461f035b]{display:inline-block;text-align:center;width:50%;font-size:12PX;}\r\n     .servicecontent p[_v-461f035b]{margin-top:10px;}\r\n     li[_v-461f035b],ul[_v-461f035b],p[_v-461f035b]{border:0!important;}\r\n     .mui-pull-right[_v-461f035b]{color:#aaa;margin-right:10px}\r\n     *[_v-461f035b]{border:o;box-shadow: 0;}\r\n", "", {"version":3,"sources":["/./yous/view/service/service.vue.style"],"names":[],"mappings":";EACA,6DAAA,aAAA,EAAA;IACA;wCACA,iBAAA,kBAAA,CAAA;IACA,wDAAA,mBAAA,CAAA,YAAA,CAAA,iBAAA,CAAA;IACA,iGAAA,uBAAA,aAAA,CAAA;;IAEA,6BAAA,YAAA,CAAA;IACA,kDAAA,iBAAA,CAAA;IACA,4DAAA,eAAA,CAAA;IACA,4DAAA,YAAA,CAAA,iBAAA,CAAA,8BAAA,CAAA;;IAEA,yBAAA,UAAA,gBAAA,kBAAA,eAAA,qBAAA,mBAAA,CAAA;IACA,6BAAA,WAAA,YAAA,kBAAA,CAAA;KACA,2BAAA,cAAA,CAAA;KACA,yBAAA,gBAAA,mBAAA,CAAA;;KAEA,wBAAA,eAAA,cAAA,mBAAA,gBAAA,CAAA;KACA,yBAAA,UAAA,gBAAA,kBAAA,CAAA;KACA,6BAAA,UAAA,gBAAA,kBAAA,CAAA;KACA,kCAAA,kBAAA,CAAA;KACA,gBAAA,SAAA,CAAA;KACA,6BAAA,iCAAA,CAAA;;KAEA,2BAAA,kBAAA,eAAA,YAAA,iBAAA,gBAAA,gBAAA,WAAA,CAAA;KACA,oCAAA,qBAAA,kBAAA,UAAA,eAAA,CAAA;KACA,+BAAA,gBAAA,CAAA;KACA,+CAAA,mBAAA,CAAA;KACA,6BAAA,WAAA,iBAAA,CAAA;KACA,eAAA,SAAA,cAAA,CAAA","file":"service.vue","sourcesContent":["<style scoped>\r\n\t .mui-row.mui-fullscreen > [class*=\"mui-col-\"] { height: 100%; }\r\n    .mui-col-xs-3,\r\n    .mui-control-content { overflow-y: auto;padding-top:.1rem;}\r\n    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; font-size:0.4rem;}\r\n    .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {background-color: #fff;color:#fa7611}\r\n    \r\n    .mui-table-view{height:100%;}\r\n    .mui-table-view .mui-table-view-cell{padding-left:10px}\r\n    .mui-table-view .mui-table-view-cell .curprice{color: #EC971F;}\r\n    .mui-table-view .mui-table-view-cell .oldprice{color: #ccc; font-size: .6rem; text-decoration: line-through;}\r\n    \r\n    .userpic li{width:30%;margin-right:1%;text-align:center;font-size:12px;display:inline-block;margin-bottom:10px;}\r\n    .userpic li img{width:60px;height:60px;border-radius:50%;}\r\n     .userpic li a{display:block;}\r\n     .userpic ul{margin-top:10px;margin-bottom:10px;}\r\n     \r\n     .allheader{font-size:14px;color:#4f4370;margin-bottom:10px;margin-top:10px;}\r\n     .allpic img{width:40%;margin-right:1%;text-align:center;}   \r\n     .tuijianpic img{width:50%;margin-right:1%;text-align:center;}    \r\n     #segmentedControls a{font-size:0.28rem;}\r\n     ul{border:0;}\r\n     .mui-table-view{background:transparent!important;}\r\n     \r\n     .servicetitle{text-align:center;font-size:14px;height:30px;line-height:30px;background:#fff;margin-top:10px;color:#333;}\r\n     .servicecontent p span{display:inline-block;text-align:center;width:50%;font-size:12PX;}\r\n     .servicecontent p{margin-top:10px;}\r\n     li,ul,p{border:0!important;}\r\n     .mui-pull-right{color:#aaa;margin-right:10px}\r\n     *{border:o;box-shadow: 0;}\r\n</style>\r\n<template>\r\n    <!--头部区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content mui-row mui-fullscreen\">\r\n    \t <div class=\"mui-col-xs-3\">\r\n            <div id=\"segmentedControls\" class=\"mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical\">\r\n                <a class=\"mui-control-item mui-active\">推荐服务</a>\r\n                <a class=\"mui-control-item\">工商财税</a>\r\n                <a class=\"mui-control-item\">法律服务</a>\r\n                <a class=\"mui-control-item\">投融资</a>\r\n                <a class=\"mui-control-item\">地产服务</a>\r\n                <a class=\"mui-control-item\">商学院</a>\r\n            </div>\r\n        </div>\r\n        <div id=\"segmentedControlContents\" class=\"mui-col-xs-9\" style=\"border-left: 1px solid #c8c7cc;\">\r\n            <div id=\"content1\" class=\"mui-control-content mui-active\">\r\n                <ul class=\"mui-table-view\">\r\n                    <li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<a>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t推荐服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\" style='width:100%;height:2.2rem;'>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t精选服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\">\r\n\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</li>   \r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t办公选址\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t按区域\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>面积</span><span>单价span></p>\r\n\t\t\t\t\t\t\t<p><span>地图</span><span>热门商圈</span></p>\r\n\t\t\t\t\t\t\t<p><span>地铁沿线</span><span>楼盘</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t装修装饰\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t空间装修\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>装修升级</span><span>装修定制</span></p>\r\n\t\t\t\t\t\t\t<p><span>安全监测</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t免费报价\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>免费设计</span><span>装修效果图</span></p>\r\n\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t工商财务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t注册、变更、注销\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>创业套餐</span><span>公司注册</span></p>\r\n\t\t\t\t\t\t\t<p><span>注册资本变更</span><span>名称变更</span></p>\r\n\t\t\t\t\t\t\t<p><span>法人变更</span><span>经营范围变更</span></p>\r\n\t\t\t\t\t\t\t<p><span>地址变更</span><span>股权转让</span></p>\r\n\t\t\t\t\t\t\t<p><span>公司注销</span><span></span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t财税服务\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>代理记账</span><span>财务助手</span></p>\r\n\t\t\t\t\t\t\t<p><span>出纳外包</span><span>企业年报</span></p>\r\n\t\t\t\t\t\t\t<p><span>税控机生情</span><span>残保金申报</span></p>\r\n\t\t\t\t\t\t\t<p><span>一般纳税人申请</span><span>财务审计</span></p>\r\n\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t法律服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t法律顾问\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t合同文书\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>合同撰与审核</span><span>合同模板下载</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t法律咨询\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t企业法务\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t地产服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t委托房源\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t抵押贷款\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>合同撰与审核</span><span>合同模板下载</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t商业地产投资\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t投融资\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t融资\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t贷款\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t投资\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\t\t\t\t\t\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t商学院\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t公司战略\r\n\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t资本营运\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t市场营销\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t人力资源\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n                </ul>\r\n            </div>\r\n           \r\n\r\n        </div>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n</template>\r\n<script>\r\n    import header1 from '.././componets/header.vue'\r\n    import nav1 from '.././componets/nav.vue'\r\n    import slide from '../../../src/components/slide.vue';\r\n    export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }]//banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t .mui-row.mui-fullscreen > [class*=\"mui-col-\"][_v-b5c33c9e] { height: 100%; }\r\n    .mui-col-xs-3[_v-b5c33c9e],\r\n    .mui-control-content[_v-b5c33c9e] { overflow-y: auto;padding-top:.1rem;}\r\n    .mui-segmented-control .mui-control-item[_v-b5c33c9e] { line-height:0.8rem; width: 100%; font-size:0.4rem;}\r\n    .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active[_v-b5c33c9e] {background-color: #fff;color:#fa7611}\r\n    \r\n    .mui-table-view[_v-b5c33c9e]{height:100%;}\r\n    .mui-table-view .mui-table-view-cell[_v-b5c33c9e]{padding-left:10px}\r\n    .mui-table-view .mui-table-view-cell .curprice[_v-b5c33c9e]{color: #EC971F;}\r\n    .mui-table-view .mui-table-view-cell .oldprice[_v-b5c33c9e]{color: #ccc; font-size: .6rem; text-decoration: line-through;}\r\n    \r\n    .userpic li[_v-b5c33c9e]{width:30%;margin-right:1%;text-align:center;font-size:12px;display:inline-block;margin-bottom:10px;}\r\n    .userpic li img[_v-b5c33c9e]{width:60px;height:60px;border-radius:50%;}\r\n     .userpic li a[_v-b5c33c9e]{display:block;}\r\n     .userpic ul[_v-b5c33c9e]{margin-top:10px;margin-bottom:10px;}\r\n     \r\n     .allheader[_v-b5c33c9e]{font-size:14px;color:#4f4370;margin-bottom:10px;margin-top:10px;}\r\n     .allpic img[_v-b5c33c9e]{width:40%;margin-right:1%;text-align:center;}   \r\n     .tuijianpic img[_v-b5c33c9e]{width:50%;margin-right:1%;text-align:center;}    \r\n     #segmentedControls a[_v-b5c33c9e]{font-size:0.28rem;}\r\n     ul[_v-b5c33c9e]{border:0;}\r\n     .mui-table-view[_v-b5c33c9e]{background:transparent!important;}\r\n     \r\n     .servicetitle[_v-b5c33c9e]{text-align:center;font-size:14px;height:30px;line-height:30px;background:#fff;margin-top:10px;color:#333;}\r\n     .servicecontent p span[_v-b5c33c9e]{display:inline-block;text-align:center;width:50%;font-size:12PX;}\r\n     .servicecontent p[_v-b5c33c9e]{margin-top:10px;}\r\n     li[_v-b5c33c9e],ul[_v-b5c33c9e],p[_v-b5c33c9e]{border:0!important;}\r\n     .mui-pull-right[_v-b5c33c9e]{color:#aaa;margin-right:10px}\r\n     *[_v-b5c33c9e]{border:o;box-shadow: 0;}\r\n", "", {"version":3,"sources":["/./yous/view/service/service.vue.style"],"names":[],"mappings":";EACA,6DAAA,aAAA,EAAA;IACA;wCACA,iBAAA,kBAAA,CAAA;IACA,wDAAA,mBAAA,CAAA,YAAA,CAAA,iBAAA,CAAA;IACA,iGAAA,uBAAA,aAAA,CAAA;;IAEA,6BAAA,YAAA,CAAA;IACA,kDAAA,iBAAA,CAAA;IACA,4DAAA,eAAA,CAAA;IACA,4DAAA,YAAA,CAAA,iBAAA,CAAA,8BAAA,CAAA;;IAEA,yBAAA,UAAA,gBAAA,kBAAA,eAAA,qBAAA,mBAAA,CAAA;IACA,6BAAA,WAAA,YAAA,kBAAA,CAAA;KACA,2BAAA,cAAA,CAAA;KACA,yBAAA,gBAAA,mBAAA,CAAA;;KAEA,wBAAA,eAAA,cAAA,mBAAA,gBAAA,CAAA;KACA,yBAAA,UAAA,gBAAA,kBAAA,CAAA;KACA,6BAAA,UAAA,gBAAA,kBAAA,CAAA;KACA,kCAAA,kBAAA,CAAA;KACA,gBAAA,SAAA,CAAA;KACA,6BAAA,iCAAA,CAAA;;KAEA,2BAAA,kBAAA,eAAA,YAAA,iBAAA,gBAAA,gBAAA,WAAA,CAAA;KACA,oCAAA,qBAAA,kBAAA,UAAA,eAAA,CAAA;KACA,+BAAA,gBAAA,CAAA;KACA,+CAAA,mBAAA,CAAA;KACA,6BAAA,WAAA,iBAAA,CAAA;KACA,eAAA,SAAA,cAAA,CAAA","file":"service.vue","sourcesContent":["<style scoped>\r\n\t .mui-row.mui-fullscreen > [class*=\"mui-col-\"] { height: 100%; }\r\n    .mui-col-xs-3,\r\n    .mui-control-content { overflow-y: auto;padding-top:.1rem;}\r\n    .mui-segmented-control .mui-control-item { line-height:0.8rem; width: 100%; font-size:0.4rem;}\r\n    .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {background-color: #fff;color:#fa7611}\r\n    \r\n    .mui-table-view{height:100%;}\r\n    .mui-table-view .mui-table-view-cell{padding-left:10px}\r\n    .mui-table-view .mui-table-view-cell .curprice{color: #EC971F;}\r\n    .mui-table-view .mui-table-view-cell .oldprice{color: #ccc; font-size: .6rem; text-decoration: line-through;}\r\n    \r\n    .userpic li{width:30%;margin-right:1%;text-align:center;font-size:12px;display:inline-block;margin-bottom:10px;}\r\n    .userpic li img{width:60px;height:60px;border-radius:50%;}\r\n     .userpic li a{display:block;}\r\n     .userpic ul{margin-top:10px;margin-bottom:10px;}\r\n     \r\n     .allheader{font-size:14px;color:#4f4370;margin-bottom:10px;margin-top:10px;}\r\n     .allpic img{width:40%;margin-right:1%;text-align:center;}   \r\n     .tuijianpic img{width:50%;margin-right:1%;text-align:center;}    \r\n     #segmentedControls a{font-size:0.28rem;}\r\n     ul{border:0;}\r\n     .mui-table-view{background:transparent!important;}\r\n     \r\n     .servicetitle{text-align:center;font-size:14px;height:30px;line-height:30px;background:#fff;margin-top:10px;color:#333;}\r\n     .servicecontent p span{display:inline-block;text-align:center;width:50%;font-size:12PX;}\r\n     .servicecontent p{margin-top:10px;}\r\n     li,ul,p{border:0!important;}\r\n     .mui-pull-right{color:#aaa;margin-right:10px}\r\n     *{border:o;box-shadow: 0;}\r\n</style>\r\n<template>\r\n    <!--头部区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content mui-row mui-fullscreen\">\r\n    \t <div class=\"mui-col-xs-3\">\r\n            <div id=\"segmentedControls\" class=\"mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical\">\r\n                <a class=\"mui-control-item mui-active\">推荐服务</a>\r\n                <a class=\"mui-control-item\">工商财税</a>\r\n                <a class=\"mui-control-item\">法律服务</a>\r\n                <a class=\"mui-control-item\">投融资</a>\r\n                <a class=\"mui-control-item\">地产服务</a>\r\n                <a class=\"mui-control-item\">商学院</a>\r\n            </div>\r\n        </div>\r\n        <div id=\"segmentedControlContents\" class=\"mui-col-xs-9\" style=\"border-left: 1px solid #c8c7cc;\">\r\n            <div id=\"content1\" class=\"mui-control-content mui-active\">\r\n                <ul class=\"mui-table-view\">\r\n                    <li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<a>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t推荐服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\" style='width:100%;height:2.2rem;'>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t精选服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\">\r\n\t\t\t\t\t\t\t\t<img src=\"../../../dist/img/decoration1.jpg\">\r\n\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</li>   \r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t办公选址\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t按区域\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>面积</span><span>单价span></p>\r\n\t\t\t\t\t\t\t<p><span>地图</span><span>热门商圈</span></p>\r\n\t\t\t\t\t\t\t<p><span>地铁沿线</span><span>楼盘</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t装修装饰\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t空间装修\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>装修升级</span><span>装修定制</span></p>\r\n\t\t\t\t\t\t\t<p><span>安全监测</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t免费报价\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>免费设计</span><span>装修效果图</span></p>\r\n\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t工商财务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t注册、变更、注销\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>创业套餐</span><span>公司注册</span></p>\r\n\t\t\t\t\t\t\t<p><span>注册资本变更</span><span>名称变更</span></p>\r\n\t\t\t\t\t\t\t<p><span>法人变更</span><span>经营范围变更</span></p>\r\n\t\t\t\t\t\t\t<p><span>地址变更</span><span>股权转让</span></p>\r\n\t\t\t\t\t\t\t<p><span>公司注销</span><span></span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t财税服务\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>代理记账</span><span>财务助手</span></p>\r\n\t\t\t\t\t\t\t<p><span>出纳外包</span><span>企业年报</span></p>\r\n\t\t\t\t\t\t\t<p><span>税控机生情</span><span>残保金申报</span></p>\r\n\t\t\t\t\t\t\t<p><span>一般纳税人申请</span><span>财务审计</span></p>\r\n\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t法律服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t法律顾问\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t合同文书\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>合同撰与审核</span><span>合同模板下载</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t法律咨询\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t企业法务\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t地产服务\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t委托房源\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t抵押贷款\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicecontent'>\r\n\t\t\t\t\t\t\t<p><span>合同撰与审核</span><span>合同模板下载</span></p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t商业地产投资\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t投融资\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t融资\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t贷款\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t投资\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\t\t\t\t\t\r\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\">\r\n\t\t\t\t\t\t\t\t商学院\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t公司战略\r\n\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t资本营运\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t市场营销\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class='servicetitle'>\r\n\t\t\t\t\t\t\t人力资源\r\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\">&gt;</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</li>\r\n                </ul>\r\n            </div>\r\n           \r\n\r\n        </div>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n</template>\r\n<script>\r\n    import header1 from '.././componets/header.vue'\r\n    import nav1 from '.././componets/nav.vue'\r\n    import slide from '../../../src/components/slide.vue';\r\n    export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }]//banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 165 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17702,25 +17679,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 166 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <!--头部区域-->\n    <header1 _v-461f035b=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content mui-row mui-fullscreen\" _v-461f035b=\"\">\n    \t <div class=\"mui-col-xs-3\" _v-461f035b=\"\">\n            <div id=\"segmentedControls\" class=\"mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical\" _v-461f035b=\"\">\n                <a class=\"mui-control-item mui-active\" _v-461f035b=\"\">推荐服务</a>\n                <a class=\"mui-control-item\" _v-461f035b=\"\">工商财税</a>\n                <a class=\"mui-control-item\" _v-461f035b=\"\">法律服务</a>\n                <a class=\"mui-control-item\" _v-461f035b=\"\">投融资</a>\n                <a class=\"mui-control-item\" _v-461f035b=\"\">地产服务</a>\n                <a class=\"mui-control-item\" _v-461f035b=\"\">商学院</a>\n            </div>\n        </div>\n        <div id=\"segmentedControlContents\" class=\"mui-col-xs-9\" style=\"border-left: 1px solid #c8c7cc;\" _v-461f035b=\"\">\n            <div id=\"content1\" class=\"mui-control-content mui-active\" _v-461f035b=\"\">\n                <ul class=\"mui-table-view\" _v-461f035b=\"\">\n                    <li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<a _v-461f035b=\"\">\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t推荐服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(167) + "\" style=\"width:100%;height:2.2rem;\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t精选服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(167) + "\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(167) + "\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(167) + "\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>   \n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t办公选址\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t按区域\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">面积</span><span _v-461f035b=\"\">单价span&gt;</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">地图</span><span _v-461f035b=\"\">热门商圈</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">地铁沿线</span><span _v-461f035b=\"\">楼盘</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t装修装饰\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t空间装修\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">装修升级</span><span _v-461f035b=\"\">装修定制</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">安全监测</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t免费报价\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">免费设计</span><span _v-461f035b=\"\">装修效果图</span></p>\n\t\t\t\t\t\t</div>\t\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t工商财务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t注册、变更、注销\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">创业套餐</span><span _v-461f035b=\"\">公司注册</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">注册资本变更</span><span _v-461f035b=\"\">名称变更</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">法人变更</span><span _v-461f035b=\"\">经营范围变更</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">地址变更</span><span _v-461f035b=\"\">股权转让</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">公司注销</span><span _v-461f035b=\"\"></span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t财税服务\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">代理记账</span><span _v-461f035b=\"\">财务助手</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">出纳外包</span><span _v-461f035b=\"\">企业年报</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">税控机生情</span><span _v-461f035b=\"\">残保金申报</span></p>\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">一般纳税人申请</span><span _v-461f035b=\"\">财务审计</span></p>\n\t\t\t\t\t\t</div>\t\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t法律服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t法律顾问\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t合同文书\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">合同撰与审核</span><span _v-461f035b=\"\">合同模板下载</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t法律咨询\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t企业法务\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t地产服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t委托房源\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t抵押贷款\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t<p _v-461f035b=\"\"><span _v-461f035b=\"\">合同撰与审核</span><span _v-461f035b=\"\">合同模板下载</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t商业地产投资\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t投融资\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t融资\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t贷款\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t投资\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\t\t\t\t\t\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-461f035b=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t\t商学院\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t公司战略\n\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t资本营运\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t市场营销\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-461f035b=\"\">\n\t\t\t\t\t\t\t人力资源\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-461f035b=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n                </ul>\n            </div>\n           \n\n        </div>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-461f035b=\"\"></nav1>\n";
+	module.exports = "\n    <!--头部区域-->\n    <header1 _v-b5c33c9e=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content mui-row mui-fullscreen\" _v-b5c33c9e=\"\">\n    \t <div class=\"mui-col-xs-3\" _v-b5c33c9e=\"\">\n            <div id=\"segmentedControls\" class=\"mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical\" _v-b5c33c9e=\"\">\n                <a class=\"mui-control-item mui-active\" _v-b5c33c9e=\"\">推荐服务</a>\n                <a class=\"mui-control-item\" _v-b5c33c9e=\"\">工商财税</a>\n                <a class=\"mui-control-item\" _v-b5c33c9e=\"\">法律服务</a>\n                <a class=\"mui-control-item\" _v-b5c33c9e=\"\">投融资</a>\n                <a class=\"mui-control-item\" _v-b5c33c9e=\"\">地产服务</a>\n                <a class=\"mui-control-item\" _v-b5c33c9e=\"\">商学院</a>\n            </div>\n        </div>\n        <div id=\"segmentedControlContents\" class=\"mui-col-xs-9\" style=\"border-left: 1px solid #c8c7cc;\" _v-b5c33c9e=\"\">\n            <div id=\"content1\" class=\"mui-control-content mui-active\" _v-b5c33c9e=\"\">\n                <ul class=\"mui-table-view\" _v-b5c33c9e=\"\">\n                    <li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<a _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t推荐服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(165) + "\" style=\"width:100%;height:2.2rem;\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t精选服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mui-media-body allpic\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(165) + "\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(165) + "\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t<img src=\"" + __webpack_require__(165) + "\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>   \n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t办公选址\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t按区域\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">面积</span><span _v-b5c33c9e=\"\">单价span&gt;</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">地图</span><span _v-b5c33c9e=\"\">热门商圈</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">地铁沿线</span><span _v-b5c33c9e=\"\">楼盘</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t装修装饰\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t空间装修\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">装修升级</span><span _v-b5c33c9e=\"\">装修定制</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">安全监测</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t免费报价\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">免费设计</span><span _v-b5c33c9e=\"\">装修效果图</span></p>\n\t\t\t\t\t\t</div>\t\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t工商财务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t注册、变更、注销\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">创业套餐</span><span _v-b5c33c9e=\"\">公司注册</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">注册资本变更</span><span _v-b5c33c9e=\"\">名称变更</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">法人变更</span><span _v-b5c33c9e=\"\">经营范围变更</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">地址变更</span><span _v-b5c33c9e=\"\">股权转让</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">公司注销</span><span _v-b5c33c9e=\"\"></span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t财税服务\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">代理记账</span><span _v-b5c33c9e=\"\">财务助手</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">出纳外包</span><span _v-b5c33c9e=\"\">企业年报</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">税控机生情</span><span _v-b5c33c9e=\"\">残保金申报</span></p>\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">一般纳税人申请</span><span _v-b5c33c9e=\"\">财务审计</span></p>\n\t\t\t\t\t\t</div>\t\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t法律服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t法律顾问\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t合同文书\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">合同撰与审核</span><span _v-b5c33c9e=\"\">合同模板下载</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t法律咨询\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t企业法务\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t地产服务\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t委托房源\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t抵押贷款\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicecontent\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t<p _v-b5c33c9e=\"\"><span _v-b5c33c9e=\"\">合同撰与审核</span><span _v-b5c33c9e=\"\">合同模板下载</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t商业地产投资\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t投融资\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t融资\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t贷款\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t投资\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\t\t\t\t\t\n\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body allheader\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t\t商学院\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t公司战略\n\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t资本营运\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t市场营销\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"servicetitle\" _v-b5c33c9e=\"\">\n\t\t\t\t\t\t\t人力资源\n\t\t\t\t\t\t\t<span class=\"mui-pull-right\" _v-b5c33c9e=\"\">&gt;</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n                </ul>\n            </div>\n           \n\n        </div>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-b5c33c9e=\"\"></nav1>\n";
 
 /***/ },
-/* 167 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "decoration1.jpg?5340e7ae984b3ee55cb54407d996e625";
 
 /***/ },
-/* 168 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(169)
-	__vue_script__ = __webpack_require__(171)
-	__vue_template__ = __webpack_require__(172)
+	__webpack_require__(167)
+	__vue_script__ = __webpack_require__(169)
+	__vue_template__ = __webpack_require__(170)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -17728,7 +17705,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\space\\space.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\space\\space.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17737,13 +17714,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 169 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(170);
+	var content = __webpack_require__(168);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -17752,8 +17729,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7ff13afd&file=space.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./space.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7ff13afd&file=space.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./space.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1e4d975a&file=space.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./space.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1e4d975a&file=space.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./space.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17763,7 +17740,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 170 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -17771,13 +17748,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.emindcontainer[_v-7ff13afd]{position:relative}\r\n\t.remind[_v-7ff13afd]{position:absolute;top:0.12rem;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright[_v-7ff13afd]{color:#aaa;font-size:0.24rem;}\r\n\t.mui-media-body[_v-7ff13afd]{font-size:0.32rem;color:#333}\r\n\t.mui-content[_v-7ff13afd]{padding:0;}\r\n", "", {"version":3,"sources":["/./yous/view/space/space.vue.style"],"names":[],"mappings":";CACA,6BAAA,iBAAA,CAAA;CACA,qBAAA,kBAAA,YAAA,UAAA,UAAA,WAAA,kBAAA,sBAAA,CAAA;CACA,wBAAA,WAAA,kBAAA,CAAA;CACA,6BAAA,kBAAA,UAAA,CAAA;CACA,0BAAA,UAAA,CAAA","file":"space.vue","sourcesContent":["<style scoped>\r\n\t.emindcontainer{position:relative}\r\n\t.remind{position:absolute;top:0.12rem;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright{color:#aaa;font-size:0.24rem;}\r\n\t.mui-media-body{font-size:0.32rem;color:#333}\r\n\t.mui-content{padding:0;}\r\n</style>\r\n<template>\r\n    <!--头部区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content\">\r\n    \t<!--第一个轮播开始-->\r\n        <ul class=\"mui-table-view\" style='margin-top:5px;'>\r\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\">cared\r\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\">\r\n\t\t\t\t\t<div class=\"mui-switch-handle\"></div>\r\n\t\t\t\t</div>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/informationchat.jpg\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>1小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n<script>\r\n    import header1 from '.././componets/header.vue'\r\n    import nav1 from '.././componets/nav.vue'\r\n    import slide from '../../../src/components/slide.vue';\r\n    export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }]//banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.emindcontainer[_v-1e4d975a]{position:relative}\r\n\t.remind[_v-1e4d975a]{position:absolute;top:0.12rem;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright[_v-1e4d975a]{color:#aaa;font-size:0.24rem;}\r\n\t.mui-media-body[_v-1e4d975a]{font-size:0.32rem;color:#333}\r\n\t.mui-content[_v-1e4d975a]{padding:0;}\r\n", "", {"version":3,"sources":["/./yous/view/space/space.vue.style"],"names":[],"mappings":";CACA,6BAAA,iBAAA,CAAA;CACA,qBAAA,kBAAA,YAAA,UAAA,UAAA,WAAA,kBAAA,sBAAA,CAAA;CACA,wBAAA,WAAA,kBAAA,CAAA;CACA,6BAAA,kBAAA,UAAA,CAAA;CACA,0BAAA,UAAA,CAAA","file":"space.vue","sourcesContent":["<style scoped>\r\n\t.emindcontainer{position:relative}\r\n\t.remind{position:absolute;top:0.12rem;left:55px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright{color:#aaa;font-size:0.24rem;}\r\n\t.mui-media-body{font-size:0.32rem;color:#333}\r\n\t.mui-content{padding:0;}\r\n</style>\r\n<template>\r\n    <!--头部区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content\">\r\n    \t<!--第一个轮播开始-->\r\n        <ul class=\"mui-table-view\" style='margin-top:5px;'>\r\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\">cared\r\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\">\r\n\t\t\t\t\t<div class=\"mui-switch-handle\"></div>\r\n\t\t\t\t</div>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/informationchat.jpg\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>1小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n<script>\r\n    import header1 from '.././componets/header.vue'\r\n    import nav1 from '.././componets/nav.vue'\r\n    import slide from '../../../src/components/slide.vue';\r\n    export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }]//banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 171 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17904,25 +17881,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 172 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <!--头部区域-->\n    <header1 _v-7ff13afd=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content\" _v-7ff13afd=\"\">\n    \t<!--第一个轮播开始-->\n        <ul class=\"mui-table-view\" style=\"margin-top:5px;\" _v-7ff13afd=\"\">\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\" _v-7ff13afd=\"\">cared\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\" _v-7ff13afd=\"\">\n\t\t\t\t\t<div class=\"mui-switch-handle\" _v-7ff13afd=\"\"></div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-7ff13afd=\"\">\n\t\t\t\t<a _v-7ff13afd=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(173) + "\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-7ff13afd=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-7ff13afd=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-7ff13afd=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-7ff13afd=\"\">\n\t\t\t\t<a _v-7ff13afd=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(173) + "\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-7ff13afd=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-7ff13afd=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-7ff13afd=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-7ff13afd=\"\">\n\t\t\t\t<a href=\"#\" _v-7ff13afd=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-7ff13afd=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-7ff13afd=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-7ff13afd=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-7ff13afd=\"\">\n\t\t\t\t<a href=\"#\" _v-7ff13afd=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(173) + "\" _v-7ff13afd=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-7ff13afd=\"\">1小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-7ff13afd=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-7ff13afd=\"\">\n\t\t\t\t<a href=\"#\" _v-7ff13afd=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-7ff13afd=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-7ff13afd=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-7ff13afd=\"\">2小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-7ff13afd=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t</ul>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-7ff13afd=\"\"></nav1>\n\n";
+	module.exports = "\n    <!--头部区域-->\n    <header1 _v-1e4d975a=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content\" _v-1e4d975a=\"\">\n    \t<!--第一个轮播开始-->\n        <ul class=\"mui-table-view\" style=\"margin-top:5px;\" _v-1e4d975a=\"\">\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\" _v-1e4d975a=\"\">cared\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\" _v-1e4d975a=\"\">\n\t\t\t\t\t<div class=\"mui-switch-handle\" _v-1e4d975a=\"\"></div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-1e4d975a=\"\">\n\t\t\t\t<a _v-1e4d975a=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(171) + "\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-1e4d975a=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-1e4d975a=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-1e4d975a=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-1e4d975a=\"\">\n\t\t\t\t<a _v-1e4d975a=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(171) + "\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-1e4d975a=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-1e4d975a=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-1e4d975a=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-1e4d975a=\"\">\n\t\t\t\t<a href=\"#\" _v-1e4d975a=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-1e4d975a=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-1e4d975a=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-1e4d975a=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-1e4d975a=\"\">\n\t\t\t\t<a href=\"#\" _v-1e4d975a=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(171) + "\" _v-1e4d975a=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-1e4d975a=\"\">1小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-1e4d975a=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-1e4d975a=\"\">\n\t\t\t\t<a href=\"#\" _v-1e4d975a=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-1e4d975a=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-1e4d975a=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-1e4d975a=\"\">2小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-1e4d975a=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t</ul>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-1e4d975a=\"\"></nav1>\n\n";
 
 /***/ },
-/* 173 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "informationchat.jpg?f415d0caee4b2427d321b1c7c34f9681";
 
 /***/ },
-/* 174 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(175)
-	__vue_script__ = __webpack_require__(177)
-	__vue_template__ = __webpack_require__(178)
+	__webpack_require__(173)
+	__vue_script__ = __webpack_require__(175)
+	__vue_template__ = __webpack_require__(176)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -17930,7 +17907,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\decorate\\decorate.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\decorate\\decorate.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17939,13 +17916,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 175 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(176);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -17954,8 +17931,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6407fd89&file=decorate.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./decorate.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6407fd89&file=decorate.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./decorate.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-00a91e5f&file=decorate.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./decorate.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-00a91e5f&file=decorate.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./decorate.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17965,7 +17942,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 176 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -17973,13 +17950,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.mui-content[_v-6407fd89]{padding-top:0.8rem}\r\n\t.top[_v-6407fd89]{background:#fff;overflow: auto;padding-top:0.2rem;}\r\n\t .left[_v-6407fd89]{width:49%;float:left;border-right:1px solid #ddd;}\r\n\t .right[_v-6407fd89]{float:left;}\r\n\t .title[_v-6407fd89]{font-size:0.28rem;color:#101010;margin-bottom:0;}\r\n\t .content[_v-6407fd89]{font-size:0.24rem;color:#b2b3b5;}\r\n\t .title[_v-6407fd89],.content[_v-6407fd89]{text-indent:0.2rem;}\r\n\t .pic[_v-6407fd89]{text-align:center;}\r\n\t .pic img[_v-6407fd89]{width:90%;}\t \r\n\t /*右侧设置*/\r\n\t.rightleft[_v-6407fd89]{float:left;}\r\n\t.rightpic[_v-6407fd89]{float:left;}\r\n\t.rightpic img[_v-6407fd89]{width:10%}\r\n", "", {"version":3,"sources":["/./yous/view/decorate/decorate.vue.style"],"names":[],"mappings":";CACA,0BAAA,kBAAA,CAAA;CACA,kBAAA,gBAAA,eAAA,mBAAA,CAAA;EACA,mBAAA,UAAA,WAAA,4BAAA,CAAA;EACA,oBAAA,WAAA,CAAA;EACA,oBAAA,kBAAA,cAAA,gBAAA,CAAA;EACA,sBAAA,kBAAA,cAAA,CAAA;EACA,0CAAA,mBAAA,CAAA;EACA,kBAAA,kBAAA,CAAA;EACA,sBAAA,UAAA,CAAA;EACA,QAAA;CACA,wBAAA,WAAA,CAAA;CACA,uBAAA,WAAA,CAAA;CACA,2BAAA,SAAA,CAAA","file":"decorate.vue","sourcesContent":["<style  scoped>\r\n\t.mui-content{padding-top:0.8rem}\r\n\t.top{background:#fff;overflow: auto;padding-top:0.2rem;}\r\n\t .left{width:49%;float:left;border-right:1px solid #ddd;}\r\n\t .right{float:left;}\r\n\t .title{font-size:0.28rem;color:#101010;margin-bottom:0;}\r\n\t .content{font-size:0.24rem;color:#b2b3b5;}\r\n\t .title,.content{text-indent:0.2rem;}\r\n\t .pic{text-align:center;}\r\n\t .pic img{width:90%;}\t \r\n\t /*右侧设置*/\r\n\t.rightleft{float:left;}\r\n\t.rightpic{float:left;}\r\n\t.rightpic img{width:10%}\r\n</style>\r\n<template>\r\n    <!--面板区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content\">\r\n    \t<div class='top'>\r\n    \t\t<div class='left'>  bnnn\r\n    \t\t\t<p class='title'>免费报价</p>\r\n    \t\t\t<p class='content'>1分钟了解装修花多少钱</p>\r\n    \t\t\t<p class='pic'><img src=\"../../../dist/img/mathjisuan.jpg\"></p>    \t\t\t\r\n    \t\t</div>\r\n    \t\t<div class='right'>\r\n    \t\t\t<div class='righttop'>\r\n    \t\t\t\t<div class='rightleft'>\r\n    \t\t\t\t\t<p class='title'>免费设计</p>\r\n    \t\t\t\t\t<p class='content'>3天出设计图</p>\t\r\n    \t\t\t\t</div>\r\n    \t\t\t\t<div class=\"rightpic\">\r\n    \t\t\t\t\t\r\n    \t\t\t\t</div>\r\n    \t\t\t</div>\r\n    \t\t\t<div class='rightbottom'>\r\n    \t\t\t\t\r\n    \t\t\t\t\r\n    \t\t\t\t\r\n    \t\t\t</div>\r\n   \t\t\t\r\n    \t\t</div>\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t</div>\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t<div class='lunbo'>\r\n    \t<!--第一个轮播-->\r\n         <h4>-幼狮装饰-</h4>\r\n          <div class=\"mui-slider\">\r\n            <slide :list=\"list\" ></slide>\r\n        </div>\r\n        <!--第二个轮播-->\r\n         <h4>-幼狮效果-</h4>\r\n          <div class=\"mui-slider\">\r\n            <slide :list=\"list2\" ></slide>\r\n       \t </div>   \r\n        </div> \r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n         \r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n<script>\r\n    import header1 from '.././componets/header.vue'\r\n    import nav1 from '.././componets/nav.vue'\r\n    import slide from '../../../src/components/slide.vue';\r\n     export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }],\r\n                list2 : [{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }] //banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.mui-content[_v-00a91e5f]{padding-top:0.8rem}\r\n\t.top[_v-00a91e5f]{background:#fff;overflow: auto;padding-top:0.2rem;}\r\n\t .left[_v-00a91e5f]{width:49%;float:left;border-right:1px solid #ddd;}\r\n\t .right[_v-00a91e5f]{float:left;}\r\n\t .title[_v-00a91e5f]{font-size:0.28rem;color:#101010;margin-bottom:0;}\r\n\t .content[_v-00a91e5f]{font-size:0.24rem;color:#b2b3b5;}\r\n\t .title[_v-00a91e5f],.content[_v-00a91e5f]{text-indent:0.2rem;}\r\n\t .pic[_v-00a91e5f]{text-align:center;}\r\n\t .pic img[_v-00a91e5f]{width:90%;}\t \r\n\t /*右侧设置*/\r\n\t.rightleft[_v-00a91e5f]{float:left;}\r\n\t.rightpic[_v-00a91e5f]{float:left;}\r\n\t.rightpic img[_v-00a91e5f]{width:10%}\r\n", "", {"version":3,"sources":["/./yous/view/decorate/decorate.vue.style"],"names":[],"mappings":";CACA,0BAAA,kBAAA,CAAA;CACA,kBAAA,gBAAA,eAAA,mBAAA,CAAA;EACA,mBAAA,UAAA,WAAA,4BAAA,CAAA;EACA,oBAAA,WAAA,CAAA;EACA,oBAAA,kBAAA,cAAA,gBAAA,CAAA;EACA,sBAAA,kBAAA,cAAA,CAAA;EACA,0CAAA,mBAAA,CAAA;EACA,kBAAA,kBAAA,CAAA;EACA,sBAAA,UAAA,CAAA;EACA,QAAA;CACA,wBAAA,WAAA,CAAA;CACA,uBAAA,WAAA,CAAA;CACA,2BAAA,SAAA,CAAA","file":"decorate.vue","sourcesContent":["<style  scoped>\r\n\t.mui-content{padding-top:0.8rem}\r\n\t.top{background:#fff;overflow: auto;padding-top:0.2rem;}\r\n\t .left{width:49%;float:left;border-right:1px solid #ddd;}\r\n\t .right{float:left;}\r\n\t .title{font-size:0.28rem;color:#101010;margin-bottom:0;}\r\n\t .content{font-size:0.24rem;color:#b2b3b5;}\r\n\t .title,.content{text-indent:0.2rem;}\r\n\t .pic{text-align:center;}\r\n\t .pic img{width:90%;}\t \r\n\t /*右侧设置*/\r\n\t.rightleft{float:left;}\r\n\t.rightpic{float:left;}\r\n\t.rightpic img{width:10%}\r\n</style>\r\n<template>\r\n    <!--面板区域-->\r\n    <header1></header1>\r\n    <!--面板区域-->\r\n    <div class=\"mui-content\">\r\n    \t<div class='top'>\r\n    \t\t<div class='left'>  bnnn\r\n    \t\t\t<p class='title'>免费报价</p>\r\n    \t\t\t<p class='content'>1分钟了解装修花多少钱</p>\r\n    \t\t\t<p class='pic'><img src=\"../../../dist/img/mathjisuan.jpg\"></p>\r\n    \t\t</div>\r\n    \t\t<div class='right'>\r\n    \t\t\t<div class='righttop'>\r\n    \t\t\t\t<div class='rightleft'>\r\n    \t\t\t\t\t<p class='title'>免费设计</p>\r\n    \t\t\t\t\t<p class='content'>3天出设计图</p>\t\r\n    \t\t\t\t</div>\r\n    \t\t\t\t<div class=\"rightpic\">\r\n    \t\t\t\t\t\r\n    \t\t\t\t</div>\r\n    \t\t\t</div>\r\n    \t\t\t<div class='rightbottom'>\r\n    \t\t\t\t\r\n    \t\t\t\t\r\n    \t\t\t\t\r\n    \t\t\t</div>\r\n   \t\t\t\r\n    \t\t</div>\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t\t\r\n    \t</div>\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t<div class='lunbo'>\r\n    \t<!--第一个轮播-->\r\n         <h4>-幼狮装饰-</h4>\r\n          <div class=\"mui-slider\">\r\n            <slide :list=\"list\" ></slide>\r\n        </div>\r\n        <!--第二个轮播-->\r\n         <h4>-幼狮效果-</h4>\r\n          <div class=\"mui-slider\">\r\n            <slide :list=\"list2\" ></slide>\r\n       \t </div>   \r\n        </div> \r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n         \r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n<script>\r\n    import header1 from '.././componets/header.vue'\r\n    import nav1 from '.././componets/nav.vue'\r\n    import slide from '../../../src/components/slide.vue';\r\n     export default {\r\n        data() {\r\n        return {\r\n                list : [{\r\n                    img : '../../../dist/img/homemarqueepic.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }],\r\n                list2 : [{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                },{\r\n                    img : '../../../dist/img/hotshoopingpic1.jpg',\r\n                    link : 'http://www.baidu.com'\r\n                }] //banner（list,list2）图数据源\r\n            }\r\n      },\r\n       components : {\r\n            header1,\r\n            nav1,\r\n            slide\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 177 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18060,7 +18037,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//     		<div class='left'>  bnnn
 	//     			<p class='title'>免费报价</p>
 	//     			<p class='content'>1分钟了解装修花多少钱</p>
-	//     			<p class='pic'><img src="../../../dist/img/mathjisuan.jpg"></p>    			
+	//     			<p class='pic'><img src="../../../dist/img/mathjisuan.jpg"></p>
 	//     		</div>
 	//     		<div class='right'>
 	//     			<div class='righttop'>
@@ -18149,25 +18126,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 178 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <!--面板区域-->\n    <header1 _v-6407fd89=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content\" _v-6407fd89=\"\">\n    \t<div class=\"top\" _v-6407fd89=\"\">\n    \t\t<div class=\"left\" _v-6407fd89=\"\">  bnnn\n    \t\t\t<p class=\"title\" _v-6407fd89=\"\">免费报价</p>\n    \t\t\t<p class=\"content\" _v-6407fd89=\"\">1分钟了解装修花多少钱</p>\n    \t\t\t<p class=\"pic\" _v-6407fd89=\"\"><img src=\"" + __webpack_require__(179) + "\" _v-6407fd89=\"\"></p>    \t\t\t\n    \t\t</div>\n    \t\t<div class=\"right\" _v-6407fd89=\"\">\n    \t\t\t<div class=\"righttop\" _v-6407fd89=\"\">\n    \t\t\t\t<div class=\"rightleft\" _v-6407fd89=\"\">\n    \t\t\t\t\t<p class=\"title\" _v-6407fd89=\"\">免费设计</p>\n    \t\t\t\t\t<p class=\"content\" _v-6407fd89=\"\">3天出设计图</p>\t\n    \t\t\t\t</div>\n    \t\t\t\t<div class=\"rightpic\" _v-6407fd89=\"\">\n    \t\t\t\t\t\n    \t\t\t\t</div>\n    \t\t\t</div>\n    \t\t\t<div class=\"rightbottom\" _v-6407fd89=\"\">\n    \t\t\t\t\n    \t\t\t\t\n    \t\t\t\t\n    \t\t\t</div>\n   \t\t\t\n    \t\t</div>\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t</div>\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t<div class=\"lunbo\" _v-6407fd89=\"\">\n    \t<!--第一个轮播-->\n         <h4 _v-6407fd89=\"\">-幼狮装饰-</h4>\n          <div class=\"mui-slider\" _v-6407fd89=\"\">\n            <slide :list=\"list\" _v-6407fd89=\"\"></slide>\n        </div>\n        <!--第二个轮播-->\n         <h4 _v-6407fd89=\"\">-幼狮效果-</h4>\n          <div class=\"mui-slider\" _v-6407fd89=\"\">\n            <slide :list=\"list2\" _v-6407fd89=\"\"></slide>\n       \t </div>   \n        </div> \n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n         \n    </div>\n    <!--导航区域-->\n    <nav1 _v-6407fd89=\"\"></nav1>\n\n";
+	module.exports = "\n    <!--面板区域-->\n    <header1 _v-00a91e5f=\"\"></header1>\n    <!--面板区域-->\n    <div class=\"mui-content\" _v-00a91e5f=\"\">\n    \t<div class=\"top\" _v-00a91e5f=\"\">\n    \t\t<div class=\"left\" _v-00a91e5f=\"\">  bnnn\n    \t\t\t<p class=\"title\" _v-00a91e5f=\"\">免费报价</p>\n    \t\t\t<p class=\"content\" _v-00a91e5f=\"\">1分钟了解装修花多少钱</p>\n    \t\t\t<p class=\"pic\" _v-00a91e5f=\"\"><img src=\"" + __webpack_require__(177) + "\" _v-00a91e5f=\"\"></p>\n    \t\t</div>\n    \t\t<div class=\"right\" _v-00a91e5f=\"\">\n    \t\t\t<div class=\"righttop\" _v-00a91e5f=\"\">\n    \t\t\t\t<div class=\"rightleft\" _v-00a91e5f=\"\">\n    \t\t\t\t\t<p class=\"title\" _v-00a91e5f=\"\">免费设计</p>\n    \t\t\t\t\t<p class=\"content\" _v-00a91e5f=\"\">3天出设计图</p>\t\n    \t\t\t\t</div>\n    \t\t\t\t<div class=\"rightpic\" _v-00a91e5f=\"\">\n    \t\t\t\t\t\n    \t\t\t\t</div>\n    \t\t\t</div>\n    \t\t\t<div class=\"rightbottom\" _v-00a91e5f=\"\">\n    \t\t\t\t\n    \t\t\t\t\n    \t\t\t\t\n    \t\t\t</div>\n   \t\t\t\n    \t\t</div>\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t\t\n    \t</div>\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n    \t<div class=\"lunbo\" _v-00a91e5f=\"\">\n    \t<!--第一个轮播-->\n         <h4 _v-00a91e5f=\"\">-幼狮装饰-</h4>\n          <div class=\"mui-slider\" _v-00a91e5f=\"\">\n            <slide :list=\"list\" _v-00a91e5f=\"\"></slide>\n        </div>\n        <!--第二个轮播-->\n         <h4 _v-00a91e5f=\"\">-幼狮效果-</h4>\n          <div class=\"mui-slider\" _v-00a91e5f=\"\">\n            <slide :list=\"list2\" _v-00a91e5f=\"\"></slide>\n       \t </div>   \n        </div> \n    \t\n    \t\n    \t\n    \t\n    \t\n    \t\n         \n    </div>\n    <!--导航区域-->\n    <nav1 _v-00a91e5f=\"\"></nav1>\n\n";
 
 /***/ },
-/* 179 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "mathjisuan.jpg?c659a2f17e3f79bda667e18db9328ad0";
 
 /***/ },
-/* 180 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(181)
-	__vue_script__ = __webpack_require__(183)
-	__vue_template__ = __webpack_require__(186)
+	__webpack_require__(179)
+	__vue_script__ = __webpack_require__(181)
+	__vue_template__ = __webpack_require__(184)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -18175,7 +18152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\main.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\main.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18184,13 +18161,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 181 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(182);
+	var content = __webpack_require__(180);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -18199,8 +18176,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-65402bb7&file=main.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-65402bb7&file=main.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5562828d&file=main.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5562828d&file=main.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -18210,7 +18187,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 182 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -18218,13 +18195,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    html[_v-65402bb7]{background:#fff;}\r\n    .mui-content[_v-65402bb7]{padding-bottom:1.2rem;}\r\n    .userpic[_v-65402bb7]{ text-align:center;}\r\n    .iconpic .mui-btn-link[_v-65402bb7]{color:#eee;}\r\n    .compantname[_v-65402bb7]{font-size:0.25rem;}\r\n\r\n\t.getuserpic[_v-65402bb7]{width:99%;margin:0px auto;margin-top:0.3rem;margin-bottom:0.2rem;position:relative;}\r\n    .getuserpic .headpeople[_v-65402bb7]{height:1.6rem;width:1.6rem;border-radius:50%;border:2px solid #b4b3af;}\r\n    .circlepic a[_v-65402bb7]{color:#ddd;}\r\n     .circlepic h4[_v-65402bb7]{color:#ddd;margin-bottom:0.1rem;margin-top:0.32rem;font-weight: normal;}\r\n     .yanzhengpic[_v-65402bb7]{height:0.25rem;border-radius:3px;position:absolute;top:0;margin-left:-2px;width:0.9rem}\r\n\r\n    .userlist[_v-65402bb7]{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.28rem;}\r\n    .userlist li[_v-65402bb7]{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}\r\n    .userlist li[_v-65402bb7]:last-child{border:0;}\r\n    .userlist li a[_v-65402bb7]{color:#aaa;}\r\n    .userlist li span[_v-65402bb7]{color:#fff;}\r\n\r\n    .mui-table-view li a[_v-65402bb7]{color:#3c3b40!important;}\r\n    .mui-table-view span[_v-65402bb7]{float:right;margin-right:0.25rem;font-size:0.24rem;color:#aaa;}\r\n\r\n    .pingjia[_v-65402bb7]{background:#fff;margin-top:0;}\r\n    .pingjia ul[_v-65402bb7]{width:100%;overflow:hidden;padding:0;}\r\n    .pingjia li[_v-65402bb7]{list-style-type:none;width:20%;float:left;text-align:center;}\r\n    .pingjia li a[_v-65402bb7]{color:#aaa;}\r\n\r\n    .mui-table-view[_v-65402bb7]{font-size:0.28rem;margin-bottom:0.2rem;}\r\n    .flex-container>a[_v-65402bb7]{\r\n        /*display: none;*/\r\n        position: relative;\r\n        width: 20%;\r\n        float: left;\r\n        /*flex: 1;*/\r\n        /*border: 1px red solid;*/\r\n        padding:10px 0;\r\n        text-align:center;\r\n    }\r\n    .flex-container span[_v-65402bb7]{\r\n\r\n        /*border: 1px #ccc solid;*/\r\n        border-radius: 100%;\r\n        padding: 5px;\r\n    }\r\n    .flex-container h6[_v-65402bb7]{\r\n        margin-top: 8px;\r\n\r\n    }\r\n\r\n    .flex-container img[_v-65402bb7]{\r\n        width: 45%;\r\n    }\r\n    \r\n    .munber[_v-65402bb7]{position:absolute;top:8px;height:14px;width:14px;\r\n    \t\ttext-align:left!important;border-radius:50%;background:transparent;left:60%;\r\n    \t\tborder:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}\r\n   \r\n   .mui-pull-right img[_v-65402bb7]{height:0.45rem;width:0.45rem;}\r\n   .mui-pull-left img[_v-65402bb7]{height:0.45rem;width:0.45rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/main.vue.style"],"names":[],"mappings":";IACA,kBAAA,gBAAA,CAAA;IACA,0BAAA,sBAAA,CAAA;IACA,uBAAA,kBAAA,CAAA;IACA,oCAAA,WAAA,CAAA;IACA,0BAAA,kBAAA,CAAA;;CAEA,yBAAA,UAAA,gBAAA,kBAAA,qBAAA,kBAAA,CAAA;IACA,qCAAA,cAAA,aAAA,kBAAA,yBAAA,CAAA;IACA,0BAAA,WAAA,CAAA;KACA,2BAAA,WAAA,qBAAA,mBAAA,oBAAA,CAAA;KACA,0BAAA,eAAA,kBAAA,kBAAA,MAAA,iBAAA,YAAA,CAAA;;IAEA,uBAAA,kBAAA,eAAA,sBAAA,kBAAA,CAAA;IACA,0BAAA,qBAAA,+BAAA,aAAA,mBAAA,gBAAA,CAAA;IACA,qCAAA,SAAA,CAAA;IACA,4BAAA,WAAA,CAAA;IACA,+BAAA,WAAA,CAAA;;IAEA,kCAAA,wBAAA,CAAA;IACA,kCAAA,YAAA,qBAAA,kBAAA,WAAA,CAAA;;IAEA,sBAAA,gBAAA,aAAA,CAAA;IACA,yBAAA,WAAA,gBAAA,UAAA,CAAA;IACA,yBAAA,qBAAA,UAAA,WAAA,kBAAA,CAAA;IACA,2BAAA,WAAA,CAAA;;IAEA,6BAAA,kBAAA,qBAAA,CAAA;IACA;QACA,kBAAA;QACA,mBAAA;QACA,WAAA;QACA,YAAA;QACA,YAAA;QACA,0BAAA;QACA,eAAA;QACA,kBAAA;KACA;IACA;;QAEA,2BAAA;QACA,oBAAA;QACA,aAAA;KACA;IACA;QACA,gBAAA;;KAEA;;IAEA;QACA,WAAA;KACA;;IAEA,qBAAA,kBAAA,QAAA,YAAA,WAAA;MACA,0BAAA,kBAAA,uBAAA,SAAA;MACA,sBAAA,WAAA,0BAAA,yBAAA,2BAAA,cAAA,CAAA;;GAEA,iCAAA,eAAA,cAAA,CAAA;GACA,gCAAA,eAAA,cAAA,CAAA","file":"main.vue","sourcesContent":["<style scoped>\r\n    html{background:#fff;}\r\n    .mui-content{padding-bottom:1.2rem;}\r\n    .userpic{ text-align:center;}\r\n    .iconpic .mui-btn-link{color:#eee;}\r\n    .compantname{font-size:0.25rem;}\r\n\r\n\t.getuserpic{width:99%;margin:0px auto;margin-top:0.3rem;margin-bottom:0.2rem;position:relative;}\r\n    .getuserpic .headpeople{height:1.6rem;width:1.6rem;border-radius:50%;border:2px solid #b4b3af;}\r\n    .circlepic a{color:#ddd;}\r\n     .circlepic h4{color:#ddd;margin-bottom:0.1rem;margin-top:0.32rem;font-weight: normal;}\r\n     .yanzhengpic{height:0.25rem;border-radius:3px;position:absolute;top:0;margin-left:-2px;width:0.9rem}\r\n\r\n    .userlist{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.28rem;}\r\n    .userlist li{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}\r\n    .userlist li:last-child{border:0;}\r\n    .userlist li a{color:#aaa;}\r\n    .userlist li span{color:#fff;}\r\n\r\n    .mui-table-view li a{color:#3c3b40!important;}\r\n    .mui-table-view span{float:right;margin-right:0.25rem;font-size:0.24rem;color:#aaa;}\r\n\r\n    .pingjia{background:#fff;margin-top:0;}\r\n    .pingjia ul{width:100%;overflow:hidden;padding:0;}\r\n    .pingjia li{list-style-type:none;width:20%;float:left;text-align:center;}\r\n    .pingjia li a{color:#aaa;}\r\n\r\n    .mui-table-view{font-size:0.28rem;margin-bottom:0.2rem;}\r\n    .flex-container>a{\r\n        /*display: none;*/\r\n        position: relative;\r\n        width: 20%;\r\n        float: left;\r\n        /*flex: 1;*/\r\n        /*border: 1px red solid;*/\r\n        padding:10px 0;\r\n        text-align:center;\r\n    }\r\n    .flex-container span{\r\n\r\n        /*border: 1px #ccc solid;*/\r\n        border-radius: 100%;\r\n        padding: 5px;\r\n    }\r\n    .flex-container h6{\r\n        margin-top: 8px;\r\n\r\n    }\r\n\r\n    .flex-container img{\r\n        width: 45%;\r\n    }\r\n    \r\n    .munber{position:absolute;top:8px;height:14px;width:14px;\r\n    \t\ttext-align:left!important;border-radius:50%;background:transparent;left:60%;\r\n    \t\tborder:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}\r\n   \r\n   .mui-pull-right img{height:0.45rem;width:0.45rem;}\r\n   .mui-pull-left img{height:0.45rem;width:0.45rem;}\r\n</style>\r\n<template>\r\n    <aoth></aoth>\r\n\t<!--导航区域-->\r\n    <nav1></nav1>\r\n\t\r\n    <div class=\"mui-content\">\r\n        <!--头部区域开始-->\r\n        <div class=\"userpic\" v-bind:style=\"styleObject\">\r\n            <div class=\"iconpic\">\r\n                <button class=\"mui-btn mui-btn-link mui-pull-right\">\r\n                    <img src='../../../dist/img/settingpng.png' v-link=\"{ path: '/user/setting'}\">\r\n                </button>\r\n                <button class=\"mui-btn mui-btn-link\" >\r\n                    <span class='compantname'>公司名称</span>\r\n                </button>\r\n                <button class=\"mui-btn mui-btn-link mui-pull-left\">\r\n                    <img src='../../../dist/img/myinformation.png'  v-link=\"{ path: '/user/message'}\">                  \r\n                </button>\r\n            </div>\r\n            <div class='circlepic'>\r\n                <div class='getuserpic'><img src='../../../dist/img/decoration3.jpg' class='headpeople'>              \r\n                \t\t\t\t\t<!--认证之后显示图片--><img src=\"../../../dist/img/yanzhengpic.png\" class='yanzhengpic'></div>\r\n                <!--<a href=\"#\" style='font-size:0.32rem'>登录</a><a href=\"#\" style='font-size:0.32rem'>/注册</a>-->\r\n                <!--登录进来需要显示用户名   --><a style='font-size:0.32rem;color:#ececec'>用户名:A156456</a>\r\n                 <a>{{ JSON.parse(localStorage.getItem(\"userinfo\")).fdphone }}</a>\r\n                <h4 v-link=\"{ path:'/user/label'}\" style='font-size:0.28rem;color:#919497'>在这里,找到属于你的不一样 &gt;</h4>\r\n            </div>\r\n            <div class='userlist'>\r\n                <ul>\r\n                    <li><a href=\"#\"><span>0</span><br>动态</a></li>\r\n                    <li><a href=\"#\"><span>0</span><br>关注</a></li>\r\n                    <li><a href=\"#\"><span>0</span><br>粉丝</a></li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n        <!--头部区域结束-->\r\n        <!--我的管家开始-->\r\n        <ul class=\"mui-table-view\" style='margin:0;'>\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/order/all'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    我的管家<span>查看全部订单</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <!--我的管家结束-->\r\n        <!--评价列表开始-->\r\n        <!--<div style=\"height: 35px;margin: 0 10px;\">\r\n            <span style=\"line-height: 35px;\">分享到：</span>\r\n            <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\r\n        </div>-->\r\n        <div class=\"flex-container\" style='overflow:hidden;background: #fff;'>\r\n            <a v-link=\"{path: '/user/order/untaking'}\">\r\n                <img src='../../../dist/img/mypic1.png'/>\r\n                <h6>待接单</h6>\r\n            </a>\r\n            <a v-link=\"{path: '/user/order/unservice'}\">\r\n                <img src='../../../dist/img/mypic2.png'/>\r\n                <h6>待服务</h6>\r\n            </a>\r\n            <a v-link=\"{path: '/user/order/unconfirm'}\">\r\n                <img src='../../../dist/img/mypic3.png'/>\r\n                  <span class=\"munber\">3</span>\r\n                <h6>待确认</h6>\r\n            </a>         \r\n            <a v-link=\"{path: '/user/order/unevaluate'}\">\r\n                <img src='../../../dist/img/mypic4.png'/>\r\n                  <span class=\"munber\">3</span>\r\n                <h6>待评价</h6>\r\n            </a>\r\n            <a v-link=\"{path:'/user/complaint'}\">\r\n                <img src='../../../dist/img/mypic5.png'/>\r\n                 <span class=\"munber\">3</span>\r\n                <h6>投诉</h6>\r\n            </a>\r\n            <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\r\n        </div>\r\n        <!--评价列表结束-->\r\n        <!--钱包类别开始-->\r\n        <ul class=\"mui-table-view\" style='margin-top:10px;clear:both;'>\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/myservice'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    我的服务\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        \r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/wallte'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    钱包\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <!--结尾钱包类-->\r\n    </div>\r\n</template>\r\n<script>\r\nimport aoth from '../componets/aoth.vue'\r\nimport nav1 from '.././componets/nav.vue'\r\n    export default {\r\n        data ()\r\n        {\r\n            return {\r\n                styleObject: {\r\n                    background: 'url(./dist/img/mainbg.jpg)'\r\n                }\r\n            }\r\n        },\r\n        components : {\r\n            nav1,\r\n            aoth\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    html[_v-5562828d]{background:#fff;}\r\n    .mui-content[_v-5562828d]{padding-bottom:1.2rem;}\r\n    .userpic[_v-5562828d]{ text-align:center;}\r\n    .iconpic .mui-btn-link[_v-5562828d]{color:#eee;}\r\n    .compantname[_v-5562828d]{font-size:0.24rem;}\r\n\r\n\t.getuserpic[_v-5562828d]{width:99%;margin:0px auto;margin-top:0.3rem;margin-bottom:0.2rem;position:relative;}\r\n    .getuserpic .headpeople[_v-5562828d]{height:1.3rem;width:1.3rem;border-radius:50%;border:2px solid #b4b3af;}\r\n    .circlepic a[_v-5562828d]{color:#ddd;}\r\n     .circlepic h4[_v-5562828d]{color:#ddd;margin-bottom:0.1rem;margin-top:0.32rem;font-weight: normal;}\r\n     .yanzhengpic[_v-5562828d]{height:0.25rem;border-radius:3px;position:absolute;top:0;margin-left:-2px;width:0.9rem}\r\n\r\n    .userlist[_v-5562828d]{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.24rem;}\r\n    .userlist li[_v-5562828d]{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}\r\n    .userlist li[_v-5562828d]:last-child{border:0;}\r\n    .userlist li a[_v-5562828d]{color:#aaa;}\r\n    .userlist li span[_v-5562828d]{color:#fff;}\r\n\r\n    .mui-table-view li a[_v-5562828d]{color:#3c3b40!important;}\r\n    .mui-table-view span[_v-5562828d]{float:right;margin-right:0.25rem;font-size:0.24rem;color:#aaa;}\r\n\r\n    .pingjia[_v-5562828d]{background:#fff;margin-top:0;}\r\n    .pingjia ul[_v-5562828d]{width:100%;overflow:hidden;padding:0;}\r\n    .pingjia li[_v-5562828d]{list-style-type:none;width:20%;float:left;text-align:center;}\r\n    .pingjia li a[_v-5562828d]{color:#aaa;}\r\n\r\n    .mui-table-view[_v-5562828d]{font-size:0.28rem;margin-bottom:0.2rem;}\r\n    .flex-container>a[_v-5562828d]{\r\n        position: relative;\r\n        width: 20%;\r\n        float: left;\r\n        padding:10px 0;\r\n        text-align:center;\r\n    }\r\n    .flex-container span[_v-5562828d]{\r\n        border-radius: 100%;\r\n        padding: 5px;\r\n    }\r\n    .flex-container h6[_v-5562828d]{\r\n        margin-top: 8px;\r\n    }\r\n    .flex-container img[_v-5562828d]{\r\n        width: 45%;\r\n    }   \r\n    .munber[_v-5562828d]{position:absolute;top:8px;height:14px;width:14px;\r\n    \t\ttext-align:left!important;border-radius:50%;background:transparent;left:60%;\r\n    \t\tborder:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}  \r\n   .mui-pull-right img[_v-5562828d]{height:0.5rem;width:0.5rem;}\r\n   .mui-pull-left img[_v-5562828d]{height:0.5rem;width:0.5rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/main.vue.style"],"names":[],"mappings":";IACA,kBAAA,gBAAA,CAAA;IACA,0BAAA,sBAAA,CAAA;IACA,uBAAA,kBAAA,CAAA;IACA,oCAAA,WAAA,CAAA;IACA,0BAAA,kBAAA,CAAA;;CAEA,yBAAA,UAAA,gBAAA,kBAAA,qBAAA,kBAAA,CAAA;IACA,qCAAA,cAAA,aAAA,kBAAA,yBAAA,CAAA;IACA,0BAAA,WAAA,CAAA;KACA,2BAAA,WAAA,qBAAA,mBAAA,oBAAA,CAAA;KACA,0BAAA,eAAA,kBAAA,kBAAA,MAAA,iBAAA,YAAA,CAAA;;IAEA,uBAAA,kBAAA,eAAA,sBAAA,kBAAA,CAAA;IACA,0BAAA,qBAAA,+BAAA,aAAA,mBAAA,gBAAA,CAAA;IACA,qCAAA,SAAA,CAAA;IACA,4BAAA,WAAA,CAAA;IACA,+BAAA,WAAA,CAAA;;IAEA,kCAAA,wBAAA,CAAA;IACA,kCAAA,YAAA,qBAAA,kBAAA,WAAA,CAAA;;IAEA,sBAAA,gBAAA,aAAA,CAAA;IACA,yBAAA,WAAA,gBAAA,UAAA,CAAA;IACA,yBAAA,qBAAA,UAAA,WAAA,kBAAA,CAAA;IACA,2BAAA,WAAA,CAAA;;IAEA,6BAAA,kBAAA,qBAAA,CAAA;IACA;QACA,mBAAA;QACA,WAAA;QACA,YAAA;QACA,eAAA;QACA,kBAAA;KACA;IACA;QACA,oBAAA;QACA,aAAA;KACA;IACA;QACA,gBAAA;KACA;IACA;QACA,WAAA;KACA;IACA,qBAAA,kBAAA,QAAA,YAAA,WAAA;MACA,0BAAA,kBAAA,uBAAA,SAAA;MACA,sBAAA,WAAA,0BAAA,yBAAA,2BAAA,cAAA,CAAA;GACA,iCAAA,cAAA,aAAA,CAAA;GACA,gCAAA,cAAA,aAAA,CAAA","file":"main.vue","sourcesContent":["<style scoped>\r\n    html{background:#fff;}\r\n    .mui-content{padding-bottom:1.2rem;}\r\n    .userpic{ text-align:center;}\r\n    .iconpic .mui-btn-link{color:#eee;}\r\n    .compantname{font-size:0.24rem;}\r\n\r\n\t.getuserpic{width:99%;margin:0px auto;margin-top:0.3rem;margin-bottom:0.2rem;position:relative;}\r\n    .getuserpic .headpeople{height:1.3rem;width:1.3rem;border-radius:50%;border:2px solid #b4b3af;}\r\n    .circlepic a{color:#ddd;}\r\n     .circlepic h4{color:#ddd;margin-bottom:0.1rem;margin-top:0.32rem;font-weight: normal;}\r\n     .yanzhengpic{height:0.25rem;border-radius:3px;position:absolute;top:0;margin-left:-2px;width:0.9rem}\r\n\r\n    .userlist{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.24rem;}\r\n    .userlist li{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}\r\n    .userlist li:last-child{border:0;}\r\n    .userlist li a{color:#aaa;}\r\n    .userlist li span{color:#fff;}\r\n\r\n    .mui-table-view li a{color:#3c3b40!important;}\r\n    .mui-table-view span{float:right;margin-right:0.25rem;font-size:0.24rem;color:#aaa;}\r\n\r\n    .pingjia{background:#fff;margin-top:0;}\r\n    .pingjia ul{width:100%;overflow:hidden;padding:0;}\r\n    .pingjia li{list-style-type:none;width:20%;float:left;text-align:center;}\r\n    .pingjia li a{color:#aaa;}\r\n\r\n    .mui-table-view{font-size:0.28rem;margin-bottom:0.2rem;}\r\n    .flex-container>a{\r\n        position: relative;\r\n        width: 20%;\r\n        float: left;\r\n        padding:10px 0;\r\n        text-align:center;\r\n    }\r\n    .flex-container span{\r\n        border-radius: 100%;\r\n        padding: 5px;\r\n    }\r\n    .flex-container h6{\r\n        margin-top: 8px;\r\n    }\r\n    .flex-container img{\r\n        width: 45%;\r\n    }   \r\n    .munber{position:absolute;top:8px;height:14px;width:14px;\r\n    \t\ttext-align:left!important;border-radius:50%;background:transparent;left:60%;\r\n    \t\tborder:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}  \r\n   .mui-pull-right img{height:0.5rem;width:0.5rem;}\r\n   .mui-pull-left img{height:0.5rem;width:0.5rem;}\r\n</style>\r\n<template>\r\n    <aoth></aoth>\r\n\t<!--导航区域-->\r\n    <nav1></nav1>\r\n\t\r\n    <div class=\"mui-content\">\r\n        <!--头部区域开始-->\r\n        <div class=\"userpic\" v-bind:style=\"styleObject\">\r\n            <div class=\"iconpic\">\r\n                <button class=\"mui-btn mui-btn-link mui-pull-right\">\r\n                    <img src='../../../dist/img/settingpng.png' v-link=\"{ path: '/user/setting'}\">\r\n                </button>\r\n                <button class=\"mui-btn mui-btn-link\" >\r\n                    <span class='compantname' style='font-size:0.12rem;color:#e5e5e5'>公司名称</span>\r\n                </button>\r\n                <button class=\"mui-btn mui-btn-link mui-pull-left\">\r\n                    <img src='../../../dist/img/myinformation.png'  v-link=\"{ path: '/user/message'}\">                  \r\n                </button>\r\n            </div>\r\n            <div class='circlepic'>\r\n                <div class='getuserpic'><img src=\"../../../dist/img/decoration3.jpg\" class='headpeople'>              \r\n                \t\t\t\t\t<!--认证之后显示图片--><img src=\"../../../dist/img/yanzhengpic.png\" class='yanzhengpic'></div>\r\n                <!--<a href=\"#\" style='font-size:0.32rem'>登录</a><a href=\"#\" style='font-size:0.32rem'>/注册</a>-->\r\n                <!--登录进来需要显示用户名   --><a style='font-size:0.28rem;color:#e5e5e5'>用户名:A156456</a>\r\n                 <a>{{ JSON.parse(localStorage.getItem(\"userinfo\")).fdphone }}</a>\r\n                <h4 v-link=\"{ path:'/user/label'}\" style='font-size:0.24rem;color:#919497'>在这里,找到属于你的不一样 &gt;</h4>\r\n            </div>\r\n            <div class='userlist'>\r\n                <ul>\r\n                    <li><a href=\"#\"><span>0</span><br>动态</a></li>\r\n                    <li><a href=\"#\"><span>0</span><br>关注</a></li>\r\n                    <li><a href=\"#\"><span>0</span><br>粉丝</a></li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n        <!--头部区域结束-->\r\n        <!--我的管家开始-->\r\n        <ul class=\"mui-table-view\" style='margin:0;'>\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/order/all'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    我的管家<span>查看全部订单</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <!--我的管家结束-->\r\n        <!--评价列表开始-->\r\n        <!--<div style=\"height: 35px;margin: 0 10px;\">\r\n            <span style=\"line-height: 35px;\">分享到：</span>\r\n            <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\r\n        </div>-->\r\n        <div class=\"flex-container\" style='overflow:hidden;background: #fff;'>\r\n            <a v-link=\"{path: '/user/order/untaking'}\">\r\n                <img src='../../../dist/img/mypic1.png'/>\r\n                <h6>待接单</h6>\r\n            </a>\r\n            <a v-link=\"{path: '/user/order/unservice'}\">\r\n                <img src='../../../dist/img/mypic2.png'/>\r\n                <h6>待服务</h6>\r\n            </a>\r\n            <a v-link=\"{path: '/user/order/unconfirm'}\">\r\n                <img src='../../../dist/img/mypic3.png'/>\r\n                  <span class=\"munber\">3</span>\r\n                <h6>待确认</h6>\r\n            </a>         \r\n            <a v-link=\"{path: '/user/order/unevaluate'}\">\r\n                <img src='../../../dist/img/mypic4.png'/>\r\n                  <span class=\"munber\">3</span>\r\n                <h6>待评价</h6>\r\n            </a>\r\n            <a v-link=\"{path:'/user/complaint'}\">\r\n                <img src='../../../dist/img/mypic5.png'/>\r\n                 <span class=\"munber\">3</span>\r\n                <h6>投诉</h6>\r\n            </a>\r\n            <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\r\n        </div>\r\n        <!--评价列表结束-->\r\n        <!--钱包类别开始-->\r\n        <ul class=\"mui-table-view\" style='margin-top:10px;clear:both;'>\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/myservice'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    我的服务\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        \r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/wallte'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    钱包\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <!--结尾钱包类-->\r\n    </div>\r\n</template>\r\n<script>\r\nimport aoth from '../componets/aoth.vue'\r\nimport nav1 from '.././componets/nav.vue'\r\n    export default {\r\n        data ()\r\n        {\r\n            return {\r\n                styleObject: {\r\n                    background: 'url(./dist/img/mainbg.jpg)' \r\n                }\r\n            }\r\n        },\r\n        components : {\r\n            nav1,\r\n            aoth\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 183 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18233,7 +18210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _aoth = __webpack_require__(184);
+	var _aoth = __webpack_require__(182);
 	
 	var _aoth2 = _interopRequireDefault(_aoth);
 	
@@ -18248,15 +18225,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	//     .mui-content{padding-bottom:1.2rem;}
 	//     .userpic{ text-align:center;}
 	//     .iconpic .mui-btn-link{color:#eee;}
-	//     .compantname{font-size:0.25rem;}
+	//     .compantname{font-size:0.24rem;}
 	//
 	// 	.getuserpic{width:99%;margin:0px auto;margin-top:0.3rem;margin-bottom:0.2rem;position:relative;}
-	//     .getuserpic .headpeople{height:1.6rem;width:1.6rem;border-radius:50%;border:2px solid #b4b3af;}
+	//     .getuserpic .headpeople{height:1.3rem;width:1.3rem;border-radius:50%;border:2px solid #b4b3af;}
 	//     .circlepic a{color:#ddd;}
 	//      .circlepic h4{color:#ddd;margin-bottom:0.1rem;margin-top:0.32rem;font-weight: normal;}
 	//      .yanzhengpic{height:0.25rem;border-radius:3px;position:absolute;top:0;margin-left:-2px;width:0.9rem}
 	//
-	//     .userlist{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.28rem;}
+	//     .userlist{text-align:center;padding:0.2rem;padding-bottom:0.2rem;font-size:0.24rem;}
 	//     .userlist li{display:inline-block;border-right:1px solid #969090;padding:15px;padding-bottom:0px;padding-top:0px;}
 	//     .userlist li:last-child{border:0;}
 	//     .userlist li a{color:#aaa;}
@@ -18272,36 +18249,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//     .mui-table-view{font-size:0.28rem;margin-bottom:0.2rem;}
 	//     .flex-container>a{
-	//         /*display: none;*/
 	//         position: relative;
 	//         width: 20%;
 	//         float: left;
-	//         /*flex: 1;*/
-	//         /*border: 1px red solid;*/
 	//         padding:10px 0;
 	//         text-align:center;
 	//     }
 	//     .flex-container span{
-	//
-	//         /*border: 1px #ccc solid;*/
 	//         border-radius: 100%;
 	//         padding: 5px;
 	//     }
 	//     .flex-container h6{
 	//         margin-top: 8px;
-	//
 	//     }
-	//
 	//     .flex-container img{
 	//         width: 45%;
-	//     }
-	//
+	//     }   
 	//     .munber{position:absolute;top:8px;height:14px;width:14px;
 	//     		text-align:left!important;border-radius:50%;background:transparent;left:60%;
-	//     		border:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}
-	//
-	//    .mui-pull-right img{height:0.45rem;width:0.45rem;}
-	//    .mui-pull-left img{height:0.45rem;width:0.45rem;}
+	//     		border:1px solid #f00;color:#f00;line-height:3px!important;font-size:12px!important;padding-left:3px!important;display:block;}  
+	//    .mui-pull-right img{height:0.5rem;width:0.5rem;}
+	//    .mui-pull-left img{height:0.5rem;width:0.5rem;}
 	// </style>
 	// <template>
 	//     <aoth></aoth>
@@ -18316,19 +18284,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	//                     <img src='../../../dist/img/settingpng.png' v-link="{ path: '/user/setting'}">
 	//                 </button>
 	//                 <button class="mui-btn mui-btn-link" >
-	//                     <span class='compantname'>公司名称</span>
+	//                     <span class='compantname' style='font-size:0.12rem;color:#e5e5e5'>公司名称</span>
 	//                 </button>
 	//                 <button class="mui-btn mui-btn-link mui-pull-left">
 	//                     <img src='../../../dist/img/myinformation.png'  v-link="{ path: '/user/message'}">                  
 	//                 </button>
 	//             </div>
 	//             <div class='circlepic'>
-	//                 <div class='getuserpic'><img src='../../../dist/img/decoration3.jpg' class='headpeople'>              
+	//                 <div class='getuserpic'><img src="../../../dist/img/decoration3.jpg" class='headpeople'>              
 	//                 					<!--认证之后显示图片--><img src="../../../dist/img/yanzhengpic.png" class='yanzhengpic'></div>
 	//                 <!--<a href="#" style='font-size:0.32rem'>登录</a><a href="#" style='font-size:0.32rem'>/注册</a>-->
-	//                 <!--登录进来需要显示用户名   --><a style='font-size:0.32rem;color:#ececec'>用户名:A156456</a>
+	//                 <!--登录进来需要显示用户名   --><a style='font-size:0.28rem;color:#e5e5e5'>用户名:A156456</a>
 	//                  <a>{{ JSON.parse(localStorage.getItem("userinfo")).fdphone }}</a>
-	//                 <h4 v-link="{ path:'/user/label'}" style='font-size:0.28rem;color:#919497'>在这里,找到属于你的不一样 &gt;</h4>
+	//                 <h4 v-link="{ path:'/user/label'}" style='font-size:0.24rem;color:#919497'>在这里,找到属于你的不一样 &gt;</h4>
 	//             </div>
 	//             <div class='userlist'>
 	//                 <ul>
@@ -18418,11 +18386,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 184 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(185)
+	__vue_script__ = __webpack_require__(183)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -18430,7 +18398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\componets\\aoth.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\componets\\aoth.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18439,7 +18407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 185 */
+/* 183 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18462,72 +18430,72 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 186 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <aoth _v-65402bb7=\"\"></aoth>\n\t<!--导航区域-->\n    <nav1 _v-65402bb7=\"\"></nav1>\n\t\n    <div class=\"mui-content\" _v-65402bb7=\"\">\n        <!--头部区域开始-->\n        <div class=\"userpic\" v-bind:style=\"styleObject\" _v-65402bb7=\"\">\n            <div class=\"iconpic\" _v-65402bb7=\"\">\n                <button class=\"mui-btn mui-btn-link mui-pull-right\" _v-65402bb7=\"\">\n                    <img src=\"" + __webpack_require__(187) + "\" v-link=\"{ path: '/user/setting'}\" _v-65402bb7=\"\">\n                </button>\n                <button class=\"mui-btn mui-btn-link\" _v-65402bb7=\"\">\n                    <span class=\"compantname\" _v-65402bb7=\"\">公司名称</span>\n                </button>\n                <button class=\"mui-btn mui-btn-link mui-pull-left\" _v-65402bb7=\"\">\n                    <img src=\"" + __webpack_require__(188) + "\" v-link=\"{ path: '/user/message'}\" _v-65402bb7=\"\">                  \n                </button>\n            </div>\n            <div class=\"circlepic\" _v-65402bb7=\"\">\n                <div class=\"getuserpic\" _v-65402bb7=\"\"><img src=\"" + __webpack_require__(189) + "\" class=\"headpeople\" _v-65402bb7=\"\">              \n                \t\t\t\t\t<!--认证之后显示图片--><img src=\"" + __webpack_require__(190) + "\" class=\"yanzhengpic\" _v-65402bb7=\"\"></div>\n                <!--<a href=\"#\" style='font-size:0.32rem'>登录</a><a href=\"#\" style='font-size:0.32rem'>/注册</a>-->\n                <!--登录进来需要显示用户名   --><a style=\"font-size:0.32rem;color:#ececec\" _v-65402bb7=\"\">用户名:A156456</a>\n                 <a _v-65402bb7=\"\">{{ JSON.parse(localStorage.getItem(\"userinfo\")).fdphone }}</a>\n                <h4 v-link=\"{ path:'/user/label'}\" style=\"font-size:0.28rem;color:#919497\" _v-65402bb7=\"\">在这里,找到属于你的不一样 &gt;</h4>\n            </div>\n            <div class=\"userlist\" _v-65402bb7=\"\">\n                <ul _v-65402bb7=\"\">\n                    <li _v-65402bb7=\"\"><a href=\"#\" _v-65402bb7=\"\"><span _v-65402bb7=\"\">0</span><br _v-65402bb7=\"\">动态</a></li>\n                    <li _v-65402bb7=\"\"><a href=\"#\" _v-65402bb7=\"\"><span _v-65402bb7=\"\">0</span><br _v-65402bb7=\"\">关注</a></li>\n                    <li _v-65402bb7=\"\"><a href=\"#\" _v-65402bb7=\"\"><span _v-65402bb7=\"\">0</span><br _v-65402bb7=\"\">粉丝</a></li>\n                </ul>\n            </div>\n        </div>\n        <!--头部区域结束-->\n        <!--我的管家开始-->\n        <ul class=\"mui-table-view\" style=\"margin:0;\" _v-65402bb7=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/order/all'}\" _v-65402bb7=\"\">\n                <a class=\"mui-navigate-right\" _v-65402bb7=\"\">\n                    我的管家<span _v-65402bb7=\"\">查看全部订单</span>\n                </a>\n            </li>\n        </ul>\n        <!--我的管家结束-->\n        <!--评价列表开始-->\n        <!--<div style=\"height: 35px;margin: 0 10px;\">\n            <span style=\"line-height: 35px;\">分享到：</span>\n            <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\n        </div>-->\n        <div class=\"flex-container\" style=\"overflow:hidden;background: #fff;\" _v-65402bb7=\"\">\n            <a v-link=\"{path: '/user/order/untaking'}\" _v-65402bb7=\"\">\n                <img src=\"" + __webpack_require__(191) + "\" _v-65402bb7=\"\">\n                <h6 _v-65402bb7=\"\">待接单</h6>\n            </a>\n            <a v-link=\"{path: '/user/order/unservice'}\" _v-65402bb7=\"\">\n                <img src=\"" + __webpack_require__(192) + "\" _v-65402bb7=\"\">\n                <h6 _v-65402bb7=\"\">待服务</h6>\n            </a>\n            <a v-link=\"{path: '/user/order/unconfirm'}\" _v-65402bb7=\"\">\n                <img src=\"" + __webpack_require__(193) + "\" _v-65402bb7=\"\">\n                  <span class=\"munber\" _v-65402bb7=\"\">3</span>\n                <h6 _v-65402bb7=\"\">待确认</h6>\n            </a>         \n            <a v-link=\"{path: '/user/order/unevaluate'}\" _v-65402bb7=\"\">\n                <img src=\"" + __webpack_require__(194) + "\" _v-65402bb7=\"\">\n                  <span class=\"munber\" _v-65402bb7=\"\">3</span>\n                <h6 _v-65402bb7=\"\">待评价</h6>\n            </a>\n            <a v-link=\"{path:'/user/complaint'}\" _v-65402bb7=\"\">\n                <img src=\"" + __webpack_require__(195) + "\" _v-65402bb7=\"\">\n                 <span class=\"munber\" _v-65402bb7=\"\">3</span>\n                <h6 _v-65402bb7=\"\">投诉</h6>\n            </a>\n            <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\n        </div>\n        <!--评价列表结束-->\n        <!--钱包类别开始-->\n        <ul class=\"mui-table-view\" style=\"margin-top:10px;clear:both;\" _v-65402bb7=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/myservice'}\" _v-65402bb7=\"\">\n                <a class=\"mui-navigate-right\" _v-65402bb7=\"\">\n                    我的服务\n                </a>\n            </li>\n        </ul>\n        \n        <ul class=\"mui-table-view\" _v-65402bb7=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/wallte'}\" _v-65402bb7=\"\">\n                <a class=\"mui-navigate-right\" _v-65402bb7=\"\">\n                    钱包\n                </a>\n            </li>\n        </ul>\n        <!--结尾钱包类-->\n    </div>\n";
+	module.exports = "\n    <aoth _v-5562828d=\"\"></aoth>\n\t<!--导航区域-->\n    <nav1 _v-5562828d=\"\"></nav1>\n\t\n    <div class=\"mui-content\" _v-5562828d=\"\">\n        <!--头部区域开始-->\n        <div class=\"userpic\" v-bind:style=\"styleObject\" _v-5562828d=\"\">\n            <div class=\"iconpic\" _v-5562828d=\"\">\n                <button class=\"mui-btn mui-btn-link mui-pull-right\" _v-5562828d=\"\">\n                    <img src=\"" + __webpack_require__(185) + "\" v-link=\"{ path: '/user/setting'}\" _v-5562828d=\"\">\n                </button>\n                <button class=\"mui-btn mui-btn-link\" _v-5562828d=\"\">\n                    <span class=\"compantname\" style=\"font-size:0.12rem;color:#e5e5e5\" _v-5562828d=\"\">公司名称</span>\n                </button>\n                <button class=\"mui-btn mui-btn-link mui-pull-left\" _v-5562828d=\"\">\n                    <img src=\"" + __webpack_require__(186) + "\" v-link=\"{ path: '/user/message'}\" _v-5562828d=\"\">                  \n                </button>\n            </div>\n            <div class=\"circlepic\" _v-5562828d=\"\">\n                <div class=\"getuserpic\" _v-5562828d=\"\"><img src=\"" + __webpack_require__(187) + "\" class=\"headpeople\" _v-5562828d=\"\">              \n                \t\t\t\t\t<!--认证之后显示图片--><img src=\"" + __webpack_require__(188) + "\" class=\"yanzhengpic\" _v-5562828d=\"\"></div>\n                <!--<a href=\"#\" style='font-size:0.32rem'>登录</a><a href=\"#\" style='font-size:0.32rem'>/注册</a>-->\n                <!--登录进来需要显示用户名   --><a style=\"font-size:0.28rem;color:#e5e5e5\" _v-5562828d=\"\">用户名:A156456</a>\n                 <a _v-5562828d=\"\">{{ JSON.parse(localStorage.getItem(\"userinfo\")).fdphone }}</a>\n                <h4 v-link=\"{ path:'/user/label'}\" style=\"font-size:0.24rem;color:#919497\" _v-5562828d=\"\">在这里,找到属于你的不一样 &gt;</h4>\n            </div>\n            <div class=\"userlist\" _v-5562828d=\"\">\n                <ul _v-5562828d=\"\">\n                    <li _v-5562828d=\"\"><a href=\"#\" _v-5562828d=\"\"><span _v-5562828d=\"\">0</span><br _v-5562828d=\"\">动态</a></li>\n                    <li _v-5562828d=\"\"><a href=\"#\" _v-5562828d=\"\"><span _v-5562828d=\"\">0</span><br _v-5562828d=\"\">关注</a></li>\n                    <li _v-5562828d=\"\"><a href=\"#\" _v-5562828d=\"\"><span _v-5562828d=\"\">0</span><br _v-5562828d=\"\">粉丝</a></li>\n                </ul>\n            </div>\n        </div>\n        <!--头部区域结束-->\n        <!--我的管家开始-->\n        <ul class=\"mui-table-view\" style=\"margin:0;\" _v-5562828d=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/order/all'}\" _v-5562828d=\"\">\n                <a class=\"mui-navigate-right\" _v-5562828d=\"\">\n                    我的管家<span _v-5562828d=\"\">查看全部订单</span>\n                </a>\n            </li>\n        </ul>\n        <!--我的管家结束-->\n        <!--评价列表开始-->\n        <!--<div style=\"height: 35px;margin: 0 10px;\">\n            <span style=\"line-height: 35px;\">分享到：</span>\n            <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\n        </div>-->\n        <div class=\"flex-container\" style=\"overflow:hidden;background: #fff;\" _v-5562828d=\"\">\n            <a v-link=\"{path: '/user/order/untaking'}\" _v-5562828d=\"\">\n                <img src=\"" + __webpack_require__(189) + "\" _v-5562828d=\"\">\n                <h6 _v-5562828d=\"\">待接单</h6>\n            </a>\n            <a v-link=\"{path: '/user/order/unservice'}\" _v-5562828d=\"\">\n                <img src=\"" + __webpack_require__(190) + "\" _v-5562828d=\"\">\n                <h6 _v-5562828d=\"\">待服务</h6>\n            </a>\n            <a v-link=\"{path: '/user/order/unconfirm'}\" _v-5562828d=\"\">\n                <img src=\"" + __webpack_require__(191) + "\" _v-5562828d=\"\">\n                  <span class=\"munber\" _v-5562828d=\"\">3</span>\n                <h6 _v-5562828d=\"\">待确认</h6>\n            </a>         \n            <a v-link=\"{path: '/user/order/unevaluate'}\" _v-5562828d=\"\">\n                <img src=\"" + __webpack_require__(192) + "\" _v-5562828d=\"\">\n                  <span class=\"munber\" _v-5562828d=\"\">3</span>\n                <h6 _v-5562828d=\"\">待评价</h6>\n            </a>\n            <a v-link=\"{path:'/user/complaint'}\" _v-5562828d=\"\">\n                <img src=\"" + __webpack_require__(193) + "\" _v-5562828d=\"\">\n                 <span class=\"munber\" _v-5562828d=\"\">3</span>\n                <h6 _v-5562828d=\"\">投诉</h6>\n            </a>\n            <!--<a id=\"WXSceneFavorite\" class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\n        </div>\n        <!--评价列表结束-->\n        <!--钱包类别开始-->\n        <ul class=\"mui-table-view\" style=\"margin-top:10px;clear:both;\" _v-5562828d=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/myservice'}\" _v-5562828d=\"\">\n                <a class=\"mui-navigate-right\" _v-5562828d=\"\">\n                    我的服务\n                </a>\n            </li>\n        </ul>\n        \n        <ul class=\"mui-table-view\" _v-5562828d=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/wallte'}\" _v-5562828d=\"\">\n                <a class=\"mui-navigate-right\" _v-5562828d=\"\">\n                    钱包\n                </a>\n            </li>\n        </ul>\n        <!--结尾钱包类-->\n    </div>\n";
 
 /***/ },
-/* 187 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "settingpng.png?c8e71820bd9a8c0eb31621bc77392d53";
 
 /***/ },
-/* 188 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "myinformation.png?0c2ba4f4d442a842a2fc25d19490078c";
 
 /***/ },
-/* 189 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "decoration3.jpg?ec8153e8f7117e831087c6e31590ba0b";
 
 /***/ },
-/* 190 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "yanzhengpic.png?b529cb2553454bea87f83c00a894459a";
+	module.exports = __webpack_require__.p + "yanzhengpic.png?d7ec411c0655815c979e3538496097ee";
 
 /***/ },
-/* 191 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "mypic1.png?45afa304144055a20b9186533845f3c5";
 
 /***/ },
-/* 192 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "mypic2.png?2fd9c4e1c09ce829b5922418f9594cf3";
 
 /***/ },
-/* 193 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "mypic3.png?211a31c2e1f328293f11546cca520bd1";
 
 /***/ },
-/* 194 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "mypic4.png?458c8c0b085a09404c9e1c04ed58694e";
 
 /***/ },
-/* 195 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "mypic5.png?c73a7c089adca4444b72de0521901de4";
 
 /***/ },
-/* 196 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(197)
-	__vue_template__ = __webpack_require__(199)
+	__webpack_require__(195)
+	__vue_template__ = __webpack_require__(197)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -18535,7 +18503,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\setting.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\setting.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18544,13 +18512,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 197 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(198);
+	var content = __webpack_require__(196);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -18559,8 +18527,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3435617c&file=setting.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3435617c&file=setting.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-dc06fea8&file=setting.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-dc06fea8&file=setting.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -18568,374 +18536,374 @@ return /******/ (function(modules) { // webpackBootstrap
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
+
+/***/ },
+/* 196 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-table-view[_v-dc06fea8]{margin-top:0.25rem;}\r\n\t.mui-table-view li a[_v-dc06fea8]{color:#353b3e;FONT-SIZE:0.28rem;}\r\n\t.mui-table-view span[_v-dc06fea8]{float:right;margin-right:15px;font-size:0.24px;color:#9b9b9b;}\r\n\t.quit[_v-dc06fea8]{color:#ffa14d!important;font-size:0.28rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/setting.vue.style"],"names":[],"mappings":";CACA,6BAAA,mBAAA,CAAA;CACA,kCAAA,cAAA,kBAAA,CAAA;CACA,kCAAA,YAAA,kBAAA,iBAAA,cAAA,CAAA;CACA,mBAAA,wBAAA,kBAAA,CAAA","file":"setting.vue","sourcesContent":["<style scoped>\r\n\t.mui-table-view{margin-top:0.25rem;}\r\n\t.mui-table-view li a{color:#353b3e;FONT-SIZE:0.28rem;}\r\n\t.mui-table-view span{float:right;margin-right:15px;font-size:0.24px;color:#9b9b9b;}\r\n\t.quit{color:#ffa14d!important;font-size:0.28rem;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">设置</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!--个人资料-->\r\n        <ul class=\"mui-table-view\" style='margin-top:0;'>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\" id='openziliao' v-link=\"{path:'/user/info'}\">\r\n                    个人资料\r\n                </a>\r\n            </li>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\" id='openapply' v-link=\"{path:'/user/apply'}\">\r\n                    申请认证<span>未认证</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/suggestion'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    反馈建议\r\n                </a>\r\n            </li>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\" href='tel:1234355'>\r\n                    提问客服<span>400 800 12545</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    给我评分\r\n                </a>\r\n            </li>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    常见问题\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    清除缓存<span>32.23M</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" style=\"text-align: center;color:#ffa14d\">\r\n                <a v-link=\"{ path: '/loginout'}\" class='quit'>退出当前账号</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 197 */
+/***/ function(module, exports) {
+
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-dc06fea8=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-dc06fea8=\"\"></a>\n        <h1 class=\"mui-title\" _v-dc06fea8=\"\">设置</h1>\n    </header>\n    <div class=\"mui-content\" _v-dc06fea8=\"\">\n        <!--个人资料-->\n        <ul class=\"mui-table-view\" style=\"margin-top:0;\" _v-dc06fea8=\"\">\n            <li class=\"mui-table-view-cell\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" id=\"openziliao\" v-link=\"{path:'/user/info'}\" _v-dc06fea8=\"\">\n                    个人资料\n                </a>\n            </li>\n            <li class=\"mui-table-view-cell\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" id=\"openapply\" v-link=\"{path:'/user/apply'}\" _v-dc06fea8=\"\">\n                    申请认证<span _v-dc06fea8=\"\">未认证</span>\n                </a>\n            </li>\n        </ul>\n\n        <ul class=\"mui-table-view\" _v-dc06fea8=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/suggestion'}\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" _v-dc06fea8=\"\">\n                    反馈建议\n                </a>\n            </li>\n            <li class=\"mui-table-view-cell\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" href=\"tel:1234355\" _v-dc06fea8=\"\">\n                    提问客服<span _v-dc06fea8=\"\">400 800 12545</span>\n                </a>\n            </li>\n        </ul>\n\n\n        <ul class=\"mui-table-view\" _v-dc06fea8=\"\">\n            <li class=\"mui-table-view-cell\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" _v-dc06fea8=\"\">\n                    给我评分\n                </a>\n            </li>\n            <li class=\"mui-table-view-cell\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" _v-dc06fea8=\"\">\n                    常见问题\n                </a>\n            </li>\n        </ul>\n\n        <ul class=\"mui-table-view\" _v-dc06fea8=\"\">\n            <li class=\"mui-table-view-cell\" _v-dc06fea8=\"\">\n                <a class=\"mui-navigate-right\" _v-dc06fea8=\"\">\n                    清除缓存<span _v-dc06fea8=\"\">32.23M</span>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-dc06fea8=\"\">\n            <li class=\"mui-table-view-cell\" style=\"text-align: center;color:#ffa14d\" _v-dc06fea8=\"\">\n                <a v-link=\"{ path: '/loginout'}\" class=\"quit\" _v-dc06fea8=\"\">退出当前账号</a>\n            </li>\n        </ul>\n    </div>\n";
 
 /***/ },
 /* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.mui-table-view[_v-3435617c]{margin-top:0.25rem;}\r\n\t.mui-table-view li a[_v-3435617c]{color:#353b3e;FONT-SIZE:0.28rem;}\r\n\t.mui-table-view span[_v-3435617c]{float:right;margin-right:15px;font-size:0.24px;color:#9b9b9b;}\r\n\t.quit[_v-3435617c]{color:#ffa14d!important;font-size:0.28rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/setting.vue.style"],"names":[],"mappings":";CACA,6BAAA,mBAAA,CAAA;CACA,kCAAA,cAAA,kBAAA,CAAA;CACA,kCAAA,YAAA,kBAAA,iBAAA,cAAA,CAAA;CACA,mBAAA,wBAAA,kBAAA,CAAA","file":"setting.vue","sourcesContent":["<style scoped>\r\n\t.mui-table-view{margin-top:0.25rem;}\r\n\t.mui-table-view li a{color:#353b3e;FONT-SIZE:0.28rem;}\r\n\t.mui-table-view span{float:right;margin-right:15px;font-size:0.24px;color:#9b9b9b;}\r\n\t.quit{color:#ffa14d!important;font-size:0.28rem;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">设置</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!--个人资料-->\r\n        <ul class=\"mui-table-view\" style='margin-top:0;'>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\" id='openziliao' v-link=\"{path:'/user/info'}\">\r\n                    个人资料\r\n                </a>\r\n            </li>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\" id='openapply' v-link=\"{path:'/user/apply'}\">\r\n                    申请认证<span>未认证</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/suggestion'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    反馈建议\r\n                </a>\r\n            </li>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\" href='tel:1234355'>\r\n                    提问客服<span>400 800 12545</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    给我评分\r\n                </a>\r\n            </li>\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    常见问题\r\n                </a>\r\n            </li>\r\n        </ul>\r\n\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    清除缓存<span>32.23M</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" style=\"text-align: center;color:#ffa14d\">\r\n                <a v-link=\"{ path: '/loginout'}\" class='quit'>退出当前账号</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	var __vue_script__, __vue_template__
+	__webpack_require__(199)
+	__vue_template__ = __webpack_require__(201)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\myservice.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 199 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-3435617c=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-3435617c=\"\"></a>\n        <h1 class=\"mui-title\" _v-3435617c=\"\">设置</h1>\n    </header>\n    <div class=\"mui-content\" _v-3435617c=\"\">\n        <!--个人资料-->\n        <ul class=\"mui-table-view\" style=\"margin-top:0;\" _v-3435617c=\"\">\n            <li class=\"mui-table-view-cell\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" id=\"openziliao\" v-link=\"{path:'/user/info'}\" _v-3435617c=\"\">\n                    个人资料\n                </a>\n            </li>\n            <li class=\"mui-table-view-cell\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" id=\"openapply\" v-link=\"{path:'/user/apply'}\" _v-3435617c=\"\">\n                    申请认证<span _v-3435617c=\"\">未认证</span>\n                </a>\n            </li>\n        </ul>\n\n        <ul class=\"mui-table-view\" _v-3435617c=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/suggestion'}\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" _v-3435617c=\"\">\n                    反馈建议\n                </a>\n            </li>\n            <li class=\"mui-table-view-cell\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" href=\"tel:1234355\" _v-3435617c=\"\">\n                    提问客服<span _v-3435617c=\"\">400 800 12545</span>\n                </a>\n            </li>\n        </ul>\n\n\n        <ul class=\"mui-table-view\" _v-3435617c=\"\">\n            <li class=\"mui-table-view-cell\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" _v-3435617c=\"\">\n                    给我评分\n                </a>\n            </li>\n            <li class=\"mui-table-view-cell\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" _v-3435617c=\"\">\n                    常见问题\n                </a>\n            </li>\n        </ul>\n\n        <ul class=\"mui-table-view\" _v-3435617c=\"\">\n            <li class=\"mui-table-view-cell\" _v-3435617c=\"\">\n                <a class=\"mui-navigate-right\" _v-3435617c=\"\">\n                    清除缓存<span _v-3435617c=\"\">32.23M</span>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-3435617c=\"\">\n            <li class=\"mui-table-view-cell\" style=\"text-align: center;color:#ffa14d\" _v-3435617c=\"\">\n                <a v-link=\"{ path: '/loginout'}\" class=\"quit\" _v-3435617c=\"\">退出当前账号</a>\n            </li>\n        </ul>\n    </div>\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(200);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b1a8c65&file=myservice.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./myservice.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b1a8c65&file=myservice.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./myservice.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(201)
-	__vue_template__ = __webpack_require__(203)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\myservice.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.emindcontainer[_v-5b1a8c65]{position:relative}\r\n\t.remind[_v-5b1a8c65]{position:absolute;top:10px;left:50px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright[_v-5b1a8c65]{color:#aaa;font-size:12px;}\r\n\t.mui-media-body[_v-5b1a8c65]{font-size:15px;color:#333}\r\n", "", {"version":3,"sources":["/./yous/view/user/myservice.vue.style"],"names":[],"mappings":";CACA,6BAAA,iBAAA,CAAA;CACA,qBAAA,kBAAA,SAAA,UAAA,UAAA,WAAA,kBAAA,sBAAA,CAAA;CACA,wBAAA,WAAA,eAAA,CAAA;CACA,6BAAA,eAAA,UAAA,CAAA","file":"myservice.vue","sourcesContent":["<style scoped>\r\n\t.emindcontainer{position:relative}\r\n\t.remind{position:absolute;top:10px;left:50px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright{color:#aaa;font-size:12px;}\r\n\t.mui-media-body{font-size:15px;color:#333}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t    <h1 class=\"mui-title\">我的服务</h1>\r\n\t</header>\r\n    <div class=\"mui-content\">\r\n    \t<!--第一个轮播开始-->\r\n        <ul class=\"mui-table-view\" style='margin-top:5px;'>\r\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\">cared\r\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\">\r\n\t\t\t\t\t<div class=\"mui-switch-handle\"></div>\r\n\t\t\t\t</div>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/informationchat.jpg\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>1小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n\r\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(202);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-580a0d7b&file=myservice.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./myservice.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-580a0d7b&file=myservice.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./myservice.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-5b1a8c65=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-5b1a8c65=\"\"></a>\n\t    <h1 class=\"mui-title\" _v-5b1a8c65=\"\">我的服务</h1>\n\t</header>\n    <div class=\"mui-content\" _v-5b1a8c65=\"\">\n    \t<!--第一个轮播开始-->\n        <ul class=\"mui-table-view\" style=\"margin-top:5px;\" _v-5b1a8c65=\"\">\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\" _v-5b1a8c65=\"\">cared\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<div class=\"mui-switch-handle\" _v-5b1a8c65=\"\"></div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-5b1a8c65=\"\">\n\t\t\t\t<a _v-5b1a8c65=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(171) + "\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-5b1a8c65=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-5b1a8c65=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-5b1a8c65=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-5b1a8c65=\"\">\n\t\t\t\t<a _v-5b1a8c65=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(171) + "\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-5b1a8c65=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-5b1a8c65=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-5b1a8c65=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-5b1a8c65=\"\">\n\t\t\t\t<a href=\"#\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-5b1a8c65=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-5b1a8c65=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-5b1a8c65=\"\">\n\t\t\t\t<a href=\"#\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(171) + "\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-5b1a8c65=\"\">1小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-5b1a8c65=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-5b1a8c65=\"\">\n\t\t\t\t<a href=\"#\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-5b1a8c65=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-5b1a8c65=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-5b1a8c65=\"\">2小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-5b1a8c65=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t</ul>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-5b1a8c65=\"\"></nav1>\n\n";
 
 /***/ },
 /* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.emindcontainer[_v-580a0d7b]{position:relative}\r\n\t.remind[_v-580a0d7b]{position:absolute;top:10px;left:50px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright[_v-580a0d7b]{color:#aaa;font-size:12px;}\r\n\t.mui-media-body[_v-580a0d7b]{font-size:15px;color:#333}\r\n", "", {"version":3,"sources":["/./yous/view/user/myservice.vue.style"],"names":[],"mappings":";CACA,6BAAA,iBAAA,CAAA;CACA,qBAAA,kBAAA,SAAA,UAAA,UAAA,WAAA,kBAAA,sBAAA,CAAA;CACA,wBAAA,WAAA,eAAA,CAAA;CACA,6BAAA,eAAA,UAAA,CAAA","file":"myservice.vue","sourcesContent":["<style scoped>\r\n\t.emindcontainer{position:relative}\r\n\t.remind{position:absolute;top:10px;left:50px;width:6px;height:6px;border-radius:50%;background: orangered;}\r\n\t.timeright{color:#aaa;font-size:12px;}\r\n\t.mui-media-body{font-size:15px;color:#333}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t    <h1 class=\"mui-title\">我的服务</h1>\r\n\t</header>\r\n    <div class=\"mui-content\">\r\n    \t<!--第一个轮播开始-->\r\n        <ul class=\"mui-table-view\" style='margin-top:5px;'>\r\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\">cared\r\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\">\r\n\t\t\t\t\t<div class=\"mui-switch-handle\"></div>\r\n\t\t\t\t</div>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a>\r\n\t\t\t\t\t<div class='remindcontainer'>\r\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../dist/img/informationchat.jpg'>\r\n\t\t\t\t\t\t<span class='remind'></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2分钟</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/informationchat.jpg\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮咨询<span class='mui-pull-right timeright'>1小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t<a href=\"#\">\r\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t幼狮快讯<span class='mui-pull-right timeright'>2小时</span>\r\n\t\t\t\t\t\t<p class='mui-ellipsis'>本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t</ul>\r\n    </div>\r\n    <!--导航区域-->\r\n    <nav1></nav1>\r\n\r\n</template>\r\n\r\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	var __vue_script__, __vue_template__
+	__webpack_require__(203)
+	__vue_template__ = __webpack_require__(205)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\wallte.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-580a0d7b=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-580a0d7b=\"\"></a>\n\t    <h1 class=\"mui-title\" _v-580a0d7b=\"\">我的服务</h1>\n\t</header>\n    <div class=\"mui-content\" _v-580a0d7b=\"\">\n    \t<!--第一个轮播开始-->\n        <ul class=\"mui-table-view\" style=\"margin-top:5px;\" _v-580a0d7b=\"\">\n\t\t\t<li class=\"mui-table-view-cell mui-hidden\" _v-580a0d7b=\"\">cared\n\t\t\t\t<div id=\"M_Toggle\" class=\"mui-switch mui-active\" _v-580a0d7b=\"\">\n\t\t\t\t\t<div class=\"mui-switch-handle\" _v-580a0d7b=\"\"></div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-580a0d7b=\"\">\n\t\t\t\t<a _v-580a0d7b=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(173) + "\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-580a0d7b=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-580a0d7b=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-580a0d7b=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-580a0d7b=\"\">\n\t\t\t\t<a _v-580a0d7b=\"\">\n\t\t\t\t\t<div class=\"remindcontainer\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(173) + "\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t<span class=\"remind\" _v-580a0d7b=\"\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"mui-media-body\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-580a0d7b=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-580a0d7b=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-580a0d7b=\"\">\n\t\t\t\t<a href=\"#\" _v-580a0d7b=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-580a0d7b=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-580a0d7b=\"\">2分钟</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-580a0d7b=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-580a0d7b=\"\">\n\t\t\t\t<a href=\"#\" _v-580a0d7b=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(173) + "\" _v-580a0d7b=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t幼狮咨询<span class=\"mui-pull-right timeright\" _v-580a0d7b=\"\">1小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-580a0d7b=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd.</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-580a0d7b=\"\">\n\t\t\t\t<a href=\"#\" _v-580a0d7b=\"\">\n\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-580a0d7b=\"\">\n\t\t\t\t\t<div class=\"mui-media-body\" _v-580a0d7b=\"\">\n\t\t\t\t\t\t幼狮快讯<span class=\"mui-pull-right timeright\" _v-580a0d7b=\"\">2小时</span>\n\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-580a0d7b=\"\">本年度幼狮空间完成300家中小型企业咨询高大上看过啥的vashbd</p>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t</ul>\n    </div>\n    <!--导航区域-->\n    <nav1 _v-580a0d7b=\"\"></nav1>\n\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(204);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55e5428f&file=wallte.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./wallte.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55e5428f&file=wallte.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./wallte.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(205)
-	__vue_template__ = __webpack_require__(207)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\wallte.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\thtml[_v-55e5428f]{font-size:10px;}\r\n\t.mui-bar-nav[_v-55e5428f]{background:#c8791d;color:#fff;}\r\n\t.mui-title[_v-55e5428f]{font-size:18px;color:#fff;letter-spacing:0.3rem;}\r\n\t.mui-pull-left[_v-55e5428f]{color:#fff;}\r\n\t.mui-pull-right[_v-55e5428f]{font-size:14px;color:#fff;line-height:45px;}\r\n\t/*header{height:30rem!important;}\r\n\t.mui-content{margin-top:26rem;}*/\r\n\t.mui-bar-nav[_v-55e5428f]{box-shadow:0 1px 6px #c8791d;}\r\n\t.number[_v-55e5428f]{background:#c8791d;text-align:center;\r\n\t\t\tcolor:#fff;font-size:60px;height:300px;line-height:300px;}\r\n\t.mui-table-view[_v-55e5428f]{margin-top:10px;;}\r\n\t.mui-table-view li a[_v-55e5428f]{color:#3c3b40!important;font-size:14px;}\r\n\t.mui-table-view span[_v-55e5428f]{float:right;margin-right:20px;font-size:12px;color:#aaa;}\r\n", "", {"version":3,"sources":["/./yous/view/user/wallte.vue.style"],"names":[],"mappings":";CACA,kBAAA,eAAA,CAAA;CACA,0BAAA,mBAAA,WAAA,CAAA;CACA,wBAAA,eAAA,WAAA,sBAAA,CAAA;CACA,4BAAA,WAAA,CAAA;CACA,6BAAA,eAAA,WAAA,iBAAA,CAAA;CACA;kCACA;CACA,0BAAA,6BAAA,CAAA;CACA,qBAAA,mBAAA,kBAAA;GACA,WAAA,eAAA,aAAA,kBAAA,CAAA;CACA,6BAAA,gBAAA,EAAA;CACA,kCAAA,wBAAA,eAAA,CAAA;CACA,kCAAA,YAAA,kBAAA,eAAA,WAAA,CAAA","file":"wallte.vue","sourcesContent":["<style scoped>\r\n\thtml{font-size:10px;}\r\n\t.mui-bar-nav{background:#c8791d;color:#fff;}\r\n\t.mui-title{font-size:18px;color:#fff;letter-spacing:0.3rem;}\r\n\t.mui-pull-left{color:#fff;}\r\n\t.mui-pull-right{font-size:14px;color:#fff;line-height:45px;}\r\n\t/*header{height:30rem!important;}\r\n\t.mui-content{margin-top:26rem;}*/\r\n\t.mui-bar-nav{box-shadow:0 1px 6px #c8791d;}\r\n\t.number{background:#c8791d;text-align:center;\r\n\t\t\tcolor:#fff;font-size:60px;height:300px;line-height:300px;}\r\n\t.mui-table-view{margin-top:10px;;}\r\n\t.mui-table-view li a{color:#3c3b40!important;font-size:14px;}\r\n\t.mui-table-view span{float:right;margin-right:20px;font-size:12px;color:#aaa;}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">钱包</h1>\r\n\t\t    <a class=\"mui-pull-right\">支付密码</a>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<div class='number'>\t\t\t\r\n\t\t\t\t<div>¥&nbsp;<span>0.00</span></div>\r\n\t\t\t</div>\r\n\t\t    <ul class=\"mui-table-view\">\r\n\t\t    \t<li class=\"mui-table-view-cell\">\r\n\t\t\t\t\t<a class=\"mui-navigate-right\">\r\n\t\t\t\t\t\t充值\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t <ul class=\"mui-table-view\">\r\n\t\t    \t<li class=\"mui-table-view-cell\">\r\n\t\t\t\t\t<a class=\"mui-navigate-right\">\r\n\t\t\t\t\t\t绑定会员卡\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t <ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell\">\r\n\t\t\t\t\t<a class=\"mui-navigate-right\">\r\n\t\t\t\t\t\t消费明细\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n</template>"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 205 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(206);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-36056d8e&file=wallte.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./wallte.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-36056d8e&file=wallte.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./wallte.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-55e5428f=\"\">\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-55e5428f=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-55e5428f=\"\">钱包</h1>\n\t\t    <a class=\"mui-pull-right\" _v-55e5428f=\"\">支付密码</a>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-55e5428f=\"\">\n\t\t\t<div class=\"number\" _v-55e5428f=\"\">\t\t\t\n\t\t\t\t<div _v-55e5428f=\"\">¥&nbsp;<span _v-55e5428f=\"\">0.00</span></div>\n\t\t\t</div>\n\t\t    <ul class=\"mui-table-view\" _v-55e5428f=\"\">\n\t\t    \t<li class=\"mui-table-view-cell\" _v-55e5428f=\"\">\n\t\t\t\t\t<a class=\"mui-navigate-right\" _v-55e5428f=\"\">\n\t\t\t\t\t\t充值\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t <ul class=\"mui-table-view\" _v-55e5428f=\"\">\n\t\t    \t<li class=\"mui-table-view-cell\" _v-55e5428f=\"\">\n\t\t\t\t\t<a class=\"mui-navigate-right\" _v-55e5428f=\"\">\n\t\t\t\t\t\t绑定会员卡\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t <ul class=\"mui-table-view\" _v-55e5428f=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell\" _v-55e5428f=\"\">\n\t\t\t\t\t<a class=\"mui-navigate-right\" _v-55e5428f=\"\">\n\t\t\t\t\t\t消费明细\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n";
 
 /***/ },
 /* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\thtml[_v-36056d8e]{font-size:10px;}\r\n\t.mui-bar-nav[_v-36056d8e]{background:#c8791d;color:#fff;}\r\n\t.mui-title[_v-36056d8e]{font-size:18px;color:#fff;letter-spacing:0.3rem;}\r\n\t.mui-pull-left[_v-36056d8e]{color:#fff;}\r\n\t.mui-pull-right[_v-36056d8e]{font-size:14px;color:#fff;line-height:45px;}\r\n\t/*header{height:30rem!important;}\r\n\t.mui-content{margin-top:26rem;}*/\r\n\t.mui-bar-nav[_v-36056d8e]{box-shadow:0 1px 6px #c8791d;}\r\n\t.number[_v-36056d8e]{background:#c8791d;text-align:center;\r\n\t\t\tcolor:#fff;font-size:60px;height:300px;line-height:300px;}\r\n\t.mui-table-view[_v-36056d8e]{margin-top:10px;;}\r\n\t.mui-table-view li a[_v-36056d8e]{color:#3c3b40!important;font-size:14px;}\r\n\t.mui-table-view span[_v-36056d8e]{float:right;margin-right:20px;font-size:12px;color:#aaa;}\r\n", "", {"version":3,"sources":["/./yous/view/user/wallte.vue.style"],"names":[],"mappings":";CACA,kBAAA,eAAA,CAAA;CACA,0BAAA,mBAAA,WAAA,CAAA;CACA,wBAAA,eAAA,WAAA,sBAAA,CAAA;CACA,4BAAA,WAAA,CAAA;CACA,6BAAA,eAAA,WAAA,iBAAA,CAAA;CACA;kCACA;CACA,0BAAA,6BAAA,CAAA;CACA,qBAAA,mBAAA,kBAAA;GACA,WAAA,eAAA,aAAA,kBAAA,CAAA;CACA,6BAAA,gBAAA,EAAA;CACA,kCAAA,wBAAA,eAAA,CAAA;CACA,kCAAA,YAAA,kBAAA,eAAA,WAAA,CAAA","file":"wallte.vue","sourcesContent":["<style scoped>\r\n\thtml{font-size:10px;}\r\n\t.mui-bar-nav{background:#c8791d;color:#fff;}\r\n\t.mui-title{font-size:18px;color:#fff;letter-spacing:0.3rem;}\r\n\t.mui-pull-left{color:#fff;}\r\n\t.mui-pull-right{font-size:14px;color:#fff;line-height:45px;}\r\n\t/*header{height:30rem!important;}\r\n\t.mui-content{margin-top:26rem;}*/\r\n\t.mui-bar-nav{box-shadow:0 1px 6px #c8791d;}\r\n\t.number{background:#c8791d;text-align:center;\r\n\t\t\tcolor:#fff;font-size:60px;height:300px;line-height:300px;}\r\n\t.mui-table-view{margin-top:10px;;}\r\n\t.mui-table-view li a{color:#3c3b40!important;font-size:14px;}\r\n\t.mui-table-view span{float:right;margin-right:20px;font-size:12px;color:#aaa;}\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">钱包</h1>\r\n\t\t    <a class=\"mui-pull-right\">支付密码</a>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<div class='number'>\t\t\t\r\n\t\t\t\t<div>¥&nbsp;<span>0.00</span></div>\r\n\t\t\t</div>\r\n\t\t    <ul class=\"mui-table-view\">\r\n\t\t    \t<li class=\"mui-table-view-cell\">\r\n\t\t\t\t\t<a class=\"mui-navigate-right\">\r\n\t\t\t\t\t\t充值\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t <ul class=\"mui-table-view\">\r\n\t\t    \t<li class=\"mui-table-view-cell\">\r\n\t\t\t\t\t<a class=\"mui-navigate-right\">\r\n\t\t\t\t\t\t绑定会员卡\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t <ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell\">\r\n\t\t\t\t\t<a class=\"mui-navigate-right\">\r\n\t\t\t\t\t\t消费明细\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n</template>"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	var __vue_script__, __vue_template__
+	__webpack_require__(207)
+	__vue_template__ = __webpack_require__(209)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\complaint.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 207 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-36056d8e=\"\">\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-36056d8e=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-36056d8e=\"\">钱包</h1>\n\t\t    <a class=\"mui-pull-right\" _v-36056d8e=\"\">支付密码</a>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-36056d8e=\"\">\n\t\t\t<div class=\"number\" _v-36056d8e=\"\">\t\t\t\n\t\t\t\t<div _v-36056d8e=\"\">¥&nbsp;<span _v-36056d8e=\"\">0.00</span></div>\n\t\t\t</div>\n\t\t    <ul class=\"mui-table-view\" _v-36056d8e=\"\">\n\t\t    \t<li class=\"mui-table-view-cell\" _v-36056d8e=\"\">\n\t\t\t\t\t<a class=\"mui-navigate-right\" _v-36056d8e=\"\">\n\t\t\t\t\t\t充值\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t <ul class=\"mui-table-view\" _v-36056d8e=\"\">\n\t\t    \t<li class=\"mui-table-view-cell\" _v-36056d8e=\"\">\n\t\t\t\t\t<a class=\"mui-navigate-right\" _v-36056d8e=\"\">\n\t\t\t\t\t\t绑定会员卡\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t <ul class=\"mui-table-view\" _v-36056d8e=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell\" _v-36056d8e=\"\">\n\t\t\t\t\t<a class=\"mui-navigate-right\" _v-36056d8e=\"\">\n\t\t\t\t\t\t消费明细\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(208);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-59462ef2&file=complaint.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./complaint.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-59462ef2&file=complaint.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./complaint.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(209)
-	__vue_template__ = __webpack_require__(211)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\complaint.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-input-group[_v-59462ef2]{padding-top:20px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/complaint.vue.style"],"names":[],"mappings":";CACA,8BAAA,iBAAA,CAAA","file":"complaint.vue","sourcesContent":["<style scoped>\r\n\t.mui-input-group{padding-top:20px;}\r\n</style>\r\n<template>\r\n\t\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">投诉意见</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t    <form class=\"mui-input-group\">\r\n\t\t\t    <div class=\"mui-input-row\">\r\n\t\t\t        <label style='color:#666'>联系方式</label>\r\n\t\t\t    <input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入您的邮箱或者电话\">\r\n\t\t\t    </div>\r\n\t\t\t    <textarea rows=\"6\" placeholder=\"请填写您的反馈意见,我们将不断为您改进\"></textarea>\r\n\t\t\t</form>\r\n\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-block\">确认提交</button>\r\n\t\t</div>\r\n</template>"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 209 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(210);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5f672cc6&file=complaint.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./complaint.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5f672cc6&file=complaint.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./complaint.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n\t\t<header class=\"mui-bar mui-bar-nav\" _v-59462ef2=\"\">\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-59462ef2=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-59462ef2=\"\">投诉意见</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-59462ef2=\"\">\n\t\t    <form class=\"mui-input-group\" _v-59462ef2=\"\">\n\t\t\t    <div class=\"mui-input-row\" _v-59462ef2=\"\">\n\t\t\t        <label style=\"color:#666\" _v-59462ef2=\"\">联系方式</label>\n\t\t\t    <input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入您的邮箱或者电话\" _v-59462ef2=\"\">\n\t\t\t    </div>\n\t\t\t    <textarea rows=\"6\" placeholder=\"请填写您的反馈意见,我们将不断为您改进\" _v-59462ef2=\"\"></textarea>\n\t\t\t</form>\n\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-block\" _v-59462ef2=\"\">确认提交</button>\n\t\t</div>\n";
 
 /***/ },
 /* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.mui-input-group[_v-5f672cc6]{padding-top:20px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/complaint.vue.style"],"names":[],"mappings":";CACA,8BAAA,iBAAA,CAAA","file":"complaint.vue","sourcesContent":["<style scoped>\r\n\t.mui-input-group{padding-top:20px;}\r\n</style>\r\n<template>\r\n\t\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">投诉意见</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t    <form class=\"mui-input-group\">\r\n\t\t\t    <div class=\"mui-input-row\">\r\n\t\t\t        <label style='color:#666'>联系方式</label>\r\n\t\t\t    <input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入您的邮箱或者电话\">\r\n\t\t\t    </div>\r\n\t\t\t    <textarea rows=\"6\" placeholder=\"请填写您的反馈意见,我们将不断为您改进\"></textarea>\r\n\t\t\t</form>\r\n\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-block\">确认提交</button>\r\n\t\t</div>\r\n</template>"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	var __vue_script__, __vue_template__
+	__webpack_require__(211)
+	__vue_template__ = __webpack_require__(213)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\info.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 211 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n\t\t<header class=\"mui-bar mui-bar-nav\" _v-5f672cc6=\"\">\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-5f672cc6=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-5f672cc6=\"\">投诉意见</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-5f672cc6=\"\">\n\t\t    <form class=\"mui-input-group\" _v-5f672cc6=\"\">\n\t\t\t    <div class=\"mui-input-row\" _v-5f672cc6=\"\">\n\t\t\t        <label style=\"color:#666\" _v-5f672cc6=\"\">联系方式</label>\n\t\t\t    <input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入您的邮箱或者电话\" _v-5f672cc6=\"\">\n\t\t\t    </div>\n\t\t\t    <textarea rows=\"6\" placeholder=\"请填写您的反馈意见,我们将不断为您改进\" _v-5f672cc6=\"\"></textarea>\n\t\t\t</form>\n\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-block\" _v-5f672cc6=\"\">确认提交</button>\n\t\t</div>\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(212);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-607e5f02&file=info.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./info.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-607e5f02&file=info.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./info.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(213)
-	__vue_template__ = __webpack_require__(215)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\info.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-table-view[_v-607e5f02]{margin-top:0.2rem;}\r\n\t.mui-table-view[_v-607e5f02]:first-child{height:1rem;}\r\n\t.mui-table-view li a[_v-607e5f02]{color:#353b3e!important;font-size:0.28rem;}\r\n\t.mui-table-view span[_v-607e5f02]{float:right;margin-right:20px;font-size:0.24rem;color:#aaa;}\r\n", "", {"version":3,"sources":["/./yous/view/user/info.vue.style"],"names":[],"mappings":";CACA,6BAAA,kBAAA,CAAA;CACA,yCAAA,YAAA,CAAA;CACA,kCAAA,wBAAA,kBAAA,CAAA;CACA,kCAAA,YAAA,kBAAA,kBAAA,WAAA,CAAA","file":"info.vue","sourcesContent":["<style scoped>\r\n\t.mui-table-view{margin-top:0.2rem;}\r\n\t.mui-table-view:first-child{height:1rem;}\r\n\t.mui-table-view li a{color:#353b3e!important;font-size:0.28rem;}\r\n\t.mui-table-view span{float:right;margin-right:20px;font-size:0.24rem;color:#aaa;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">个人资料</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    头像\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    账号<span>space</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/restpassword'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    修改密码\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/address'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    所在地址\r\n                </a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 213 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(214);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-705c082c&file=info.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./info.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-705c082c&file=info.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./info.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-607e5f02=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-607e5f02=\"\"></a>\n        <h1 class=\"mui-title\" _v-607e5f02=\"\">个人资料</h1>\n    </header>\n    <div class=\"mui-content\" _v-607e5f02=\"\">\n        <ul class=\"mui-table-view\" _v-607e5f02=\"\">\n            <li class=\"mui-table-view-cell\" _v-607e5f02=\"\">\n                <a class=\"mui-navigate-right\" _v-607e5f02=\"\">\n                    头像\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-607e5f02=\"\">\n            <li class=\"mui-table-view-cell\" _v-607e5f02=\"\">\n                <a class=\"mui-navigate-right\" _v-607e5f02=\"\">\n                    账号<span _v-607e5f02=\"\">space</span>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-607e5f02=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/restpassword'}\" _v-607e5f02=\"\">\n                <a class=\"mui-navigate-right\" _v-607e5f02=\"\">\n                    修改密码\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-607e5f02=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/address'}\" _v-607e5f02=\"\">\n                <a class=\"mui-navigate-right\" _v-607e5f02=\"\">\n                    所在地址\n                </a>\n            </li>\n        </ul>\n    </div>\n";
 
 /***/ },
 /* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.mui-table-view[_v-705c082c]{margin-top:0.2rem;}\r\n\t.mui-table-view[_v-705c082c]:first-child{height:1rem;}\r\n\t.mui-table-view li a[_v-705c082c]{color:#353b3e!important;font-size:0.28rem;}\r\n\t.mui-table-view span[_v-705c082c]{float:right;margin-right:20px;font-size:0.24rem;color:#aaa;}\r\n", "", {"version":3,"sources":["/./yous/view/user/info.vue.style"],"names":[],"mappings":";CACA,6BAAA,kBAAA,CAAA;CACA,yCAAA,YAAA,CAAA;CACA,kCAAA,wBAAA,kBAAA,CAAA;CACA,kCAAA,YAAA,kBAAA,kBAAA,WAAA,CAAA","file":"info.vue","sourcesContent":["<style scoped>\r\n\t.mui-table-view{margin-top:0.2rem;}\r\n\t.mui-table-view:first-child{height:1rem;}\r\n\t.mui-table-view li a{color:#353b3e!important;font-size:0.28rem;}\r\n\t.mui-table-view span{float:right;margin-right:20px;font-size:0.24rem;color:#aaa;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">个人资料</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    头像\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\">\r\n                <a class=\"mui-navigate-right\">\r\n                    账号<span>space</span>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/restpassword'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    修改密码\r\n                </a>\r\n            </li>\r\n        </ul>\r\n        <ul class=\"mui-table-view\">\r\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/address'}\">\r\n                <a class=\"mui-navigate-right\">\r\n                    所在地址\r\n                </a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	var __vue_script__, __vue_template__
+	__webpack_require__(215)
+	__vue_template__ = __webpack_require__(217)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\address.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 215 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-705c082c=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-705c082c=\"\"></a>\n        <h1 class=\"mui-title\" _v-705c082c=\"\">个人资料</h1>\n    </header>\n    <div class=\"mui-content\" _v-705c082c=\"\">\n        <ul class=\"mui-table-view\" _v-705c082c=\"\">\n            <li class=\"mui-table-view-cell\" _v-705c082c=\"\">\n                <a class=\"mui-navigate-right\" _v-705c082c=\"\">\n                    头像\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-705c082c=\"\">\n            <li class=\"mui-table-view-cell\" _v-705c082c=\"\">\n                <a class=\"mui-navigate-right\" _v-705c082c=\"\">\n                    账号<span _v-705c082c=\"\">space</span>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-705c082c=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/restpassword'}\" _v-705c082c=\"\">\n                <a class=\"mui-navigate-right\" _v-705c082c=\"\">\n                    修改密码\n                </a>\n            </li>\n        </ul>\n        <ul class=\"mui-table-view\" _v-705c082c=\"\">\n            <li class=\"mui-table-view-cell\" v-link=\"{path:'/user/address'}\" _v-705c082c=\"\">\n                <a class=\"mui-navigate-right\" _v-705c082c=\"\">\n                    所在地址\n                </a>\n            </li>\n        </ul>\n    </div>\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(216);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-472d9c50&file=address.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./address.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-472d9c50&file=address.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./address.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(217)
-	__vue_template__ = __webpack_require__(219)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\address.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-ellipsis[_v-472d9c50]{clear:both;color:#353b3e;}\r\n\t.mui-content .mui-pull-left[_v-472d9c50]{color:#444;font-size:0.28rem;color:#353b3e;}\r\n\t.mui-pull-right[_v-472d9c50]{color:#aaa;font-size:0.24rem;color:#353b3e;}\r\n\t.mui-table-view[_v-472d9c50]{margin-bottom:0.2rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/address.vue.style"],"names":[],"mappings":";CACA,2BAAA,WAAA,cAAA,CAAA;CACA,yCAAA,WAAA,kBAAA,cAAA,CAAA;CACA,6BAAA,WAAA,kBAAA,cAAA,CAAA;CACA,6BAAA,qBAAA,CAAA","file":"address.vue","sourcesContent":["<style scoped>\r\n\t.mui-ellipsis{clear:both;color:#353b3e;}\r\n\t.mui-content .mui-pull-left{color:#444;font-size:0.28rem;color:#353b3e;}\r\n\t.mui-pull-right{color:#aaa;font-size:0.24rem;color:#353b3e;}\r\n\t.mui-table-view{margin-bottom:0.2rem;}\r\n</style>\r\n<template>\r\n\t\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t\t <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">我的地址</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t    <ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t<a href=\"javascript:;\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t<span class='mui-pull-left'>XXXXXX</span><span class='mui-pull-right'>12231546848</span>\r\n\t\t\t\t\t\t\t<p class='mui-ellipsis'>北京市朝阳区国贸北京市朝阳区国贸</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t<a href=\"javascript:;\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t<span class='mui-pull-left'>XXXXXX</span><span class='mui-pull-right'>12231546848</span>\r\n\t\t\t\t\t\t\t<p class='mui-ellipsis'>北京市朝阳区国贸北京市朝阳区国贸</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t<a href=\"javascript:;\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t<span class='mui-pull-left'>XXXXXX</span><span class='mui-pull-right'>12231546848</span>\r\n\t\t\t\t\t\t\t<p class='mui-ellipsis'>北京市朝阳区国贸北京市朝阳区国贸</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t\r\n\t\t\t<ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell\" style=\"text-align: center;\">\r\n\t\t\t\t\t<a><span class=\"mui-icon mui-icon-plusempty\" style='color:#444;'></span>新增地址</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t\r\n\t\r\n\t\r\n</template>"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 217 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(218);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c9d32a34&file=address.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./address.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c9d32a34&file=address.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./address.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n\t\t<header class=\"mui-bar mui-bar-nav\" _v-472d9c50=\"\">\n\t\t\t <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-472d9c50=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-472d9c50=\"\">我的地址</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-472d9c50=\"\">\n\t\t    <ul class=\"mui-table-view\" _v-472d9c50=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-472d9c50=\"\">\n\t\t\t\t\t<a href=\"javascript:;\" _v-472d9c50=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body\" _v-472d9c50=\"\">\n\t\t\t\t\t\t\t<span class=\"mui-pull-left\" _v-472d9c50=\"\">XXXXXX</span><span class=\"mui-pull-right\" _v-472d9c50=\"\">12231546848</span>\n\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-472d9c50=\"\">北京市朝阳区国贸北京市朝阳区国贸</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-472d9c50=\"\">\n\t\t\t\t\t<a href=\"javascript:;\" _v-472d9c50=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body\" _v-472d9c50=\"\">\n\t\t\t\t\t\t\t<span class=\"mui-pull-left\" _v-472d9c50=\"\">XXXXXX</span><span class=\"mui-pull-right\" _v-472d9c50=\"\">12231546848</span>\n\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-472d9c50=\"\">北京市朝阳区国贸北京市朝阳区国贸</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-472d9c50=\"\">\n\t\t\t\t\t<a href=\"javascript:;\" _v-472d9c50=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body\" _v-472d9c50=\"\">\n\t\t\t\t\t\t\t<span class=\"mui-pull-left\" _v-472d9c50=\"\">XXXXXX</span><span class=\"mui-pull-right\" _v-472d9c50=\"\">12231546848</span>\n\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-472d9c50=\"\">北京市朝阳区国贸北京市朝阳区国贸</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t\n\t\t\t<ul class=\"mui-table-view\" _v-472d9c50=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell\" style=\"text-align: center;\" _v-472d9c50=\"\">\n\t\t\t\t\t<a _v-472d9c50=\"\"><span class=\"mui-icon mui-icon-plusempty\" style=\"color:#444;\" _v-472d9c50=\"\"></span>新增地址</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t\n\t\n\t\n";
 
 /***/ },
 /* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.mui-ellipsis[_v-c9d32a34]{clear:both;color:#353b3e;}\r\n\t.mui-content .mui-pull-left[_v-c9d32a34]{color:#444;font-size:0.28rem;color:#353b3e;}\r\n\t.mui-pull-right[_v-c9d32a34]{color:#aaa;font-size:0.24rem;color:#353b3e;}\r\n\t.mui-table-view[_v-c9d32a34]{margin-bottom:0.2rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/address.vue.style"],"names":[],"mappings":";CACA,2BAAA,WAAA,cAAA,CAAA;CACA,yCAAA,WAAA,kBAAA,cAAA,CAAA;CACA,6BAAA,WAAA,kBAAA,cAAA,CAAA;CACA,6BAAA,qBAAA,CAAA","file":"address.vue","sourcesContent":["<style scoped>\r\n\t.mui-ellipsis{clear:both;color:#353b3e;}\r\n\t.mui-content .mui-pull-left{color:#444;font-size:0.28rem;color:#353b3e;}\r\n\t.mui-pull-right{color:#aaa;font-size:0.24rem;color:#353b3e;}\r\n\t.mui-table-view{margin-bottom:0.2rem;}\r\n</style>\r\n<template>\r\n\t\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t\t <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">我的地址</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t    <ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t<a href=\"javascript:;\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t<span class='mui-pull-left'>XXXXXX</span><span class='mui-pull-right'>12231546848</span>\r\n\t\t\t\t\t\t\t<p class='mui-ellipsis'>北京市朝阳区国贸北京市朝阳区国贸</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t<a href=\"javascript:;\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t<span class='mui-pull-left'>XXXXXX</span><span class='mui-pull-right'>12231546848</span>\r\n\t\t\t\t\t\t\t<p class='mui-ellipsis'>北京市朝阳区国贸北京市朝阳区国贸</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t<a href=\"javascript:;\">\r\n\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t<span class='mui-pull-left'>XXXXXX</span><span class='mui-pull-right'>12231546848</span>\r\n\t\t\t\t\t\t\t<p class='mui-ellipsis'>北京市朝阳区国贸北京市朝阳区国贸</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t\r\n\t\t\t<ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell\" style=\"text-align: center;\">\r\n\t\t\t\t\t<a><span class=\"mui-icon mui-icon-plusempty\" style='color:#444;'></span>新增地址</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t\r\n\t\r\n\t\r\n</template>"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 219 */
-/***/ function(module, exports) {
-
-	module.exports = "\n\t\t<header class=\"mui-bar mui-bar-nav\" _v-c9d32a34=\"\">\n\t\t\t <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-c9d32a34=\"\"></a>\n\t\t    <h1 class=\"mui-title\" _v-c9d32a34=\"\">我的地址</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-c9d32a34=\"\">\n\t\t    <ul class=\"mui-table-view\" _v-c9d32a34=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-c9d32a34=\"\">\n\t\t\t\t\t<a href=\"javascript:;\" _v-c9d32a34=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body\" _v-c9d32a34=\"\">\n\t\t\t\t\t\t\t<span class=\"mui-pull-left\" _v-c9d32a34=\"\">XXXXXX</span><span class=\"mui-pull-right\" _v-c9d32a34=\"\">12231546848</span>\n\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-c9d32a34=\"\">北京市朝阳区国贸北京市朝阳区国贸</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-c9d32a34=\"\">\n\t\t\t\t\t<a href=\"javascript:;\" _v-c9d32a34=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body\" _v-c9d32a34=\"\">\n\t\t\t\t\t\t\t<span class=\"mui-pull-left\" _v-c9d32a34=\"\">XXXXXX</span><span class=\"mui-pull-right\" _v-c9d32a34=\"\">12231546848</span>\n\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-c9d32a34=\"\">北京市朝阳区国贸北京市朝阳区国贸</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-c9d32a34=\"\">\n\t\t\t\t\t<a href=\"javascript:;\" _v-c9d32a34=\"\">\n\t\t\t\t\t\t<div class=\"mui-media-body\" _v-c9d32a34=\"\">\n\t\t\t\t\t\t\t<span class=\"mui-pull-left\" _v-c9d32a34=\"\">XXXXXX</span><span class=\"mui-pull-right\" _v-c9d32a34=\"\">12231546848</span>\n\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-c9d32a34=\"\">北京市朝阳区国贸北京市朝阳区国贸</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t\n\t\t\t<ul class=\"mui-table-view\" _v-c9d32a34=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell\" style=\"text-align: center;\" _v-c9d32a34=\"\">\n\t\t\t\t\t<a _v-c9d32a34=\"\"><span class=\"mui-icon mui-icon-plusempty\" style=\"color:#444;\" _v-c9d32a34=\"\"></span>新增地址</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t\n\t\n\t\n";
-
-/***/ },
-/* 220 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var __vue_script__, __vue_template__
-	__webpack_require__(221)
-	__vue_template__ = __webpack_require__(223)
+	__webpack_require__(219)
+	__vue_template__ = __webpack_require__(221)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -18943,7 +18911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\apply.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\apply.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18952,13 +18920,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 221 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(222);
+	var content = __webpack_require__(220);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -18967,8 +18935,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4eb85840&file=apply.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./apply.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4eb85840&file=apply.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./apply.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2667506c&file=apply.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./apply.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2667506c&file=apply.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./apply.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -18978,7 +18946,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 222 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -18986,24 +18954,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\tlabel[_v-4eb85840],input[_v-4eb85840]{color:#444;font-size:0.28rem;}\r\n\t.mui-button-row[_v-4eb85840]{margin-top:0.2px;}\r\n\t.mui-input-group[_v-4eb85840]{padding-top:0.1rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/apply.vue.style"],"names":[],"mappings":";CACA,sCAAA,WAAA,kBAAA,CAAA;CACA,6BAAA,iBAAA,CAAA;CACA,8BAAA,mBAAA,CAAA","file":"apply.vue","sourcesContent":["<style scoped>\r\n\tlabel,input{color:#444;font-size:0.28rem;}\r\n\t.mui-button-row{margin-top:0.2px;}\r\n\t.mui-input-group{padding-top:0.1rem;}\r\n</style>\r\n\r\n\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t    <h1 class=\"mui-title\">申请认证</h1>\r\n\t</header>\r\n\t<div class=\"mui-content\">\r\n     <form class=\"mui-input-group\">\r\n\t\t\t<div class=\"mui-input-row\">\r\n\t\t\t\t<label>公司名称</label>\r\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入公司名称\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"mui-input-row logo\">\r\n\t\t\t\t<label>公司LOGO</label>\r\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请上传公司LOGO\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"mui-button-row\">\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-primary\" onclick=\"return false;\">确认</button>&nbsp;&nbsp;\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-danger\" onclick=\"return false;\">取消</button>\r\n\t\t\t</div>\r\n\t\t</form>\r\n\t</div>\r\n\t\r\n\t\r\n\t\r\n\t\r\n</template>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\tlabel[_v-2667506c],input[_v-2667506c]{color:#444;font-size:0.28rem;}\r\n\t.mui-button-row[_v-2667506c]{margin-top:0.2px;}\r\n\t.mui-input-group[_v-2667506c]{padding-top:0.1rem;}\r\n", "", {"version":3,"sources":["/./yous/view/user/apply.vue.style"],"names":[],"mappings":";CACA,sCAAA,WAAA,kBAAA,CAAA;CACA,6BAAA,iBAAA,CAAA;CACA,8BAAA,mBAAA,CAAA","file":"apply.vue","sourcesContent":["<style scoped>\r\n\tlabel,input{color:#444;font-size:0.28rem;}\r\n\t.mui-button-row{margin-top:0.2px;}\r\n\t.mui-input-group{padding-top:0.1rem;}\r\n</style>\r\n\r\n\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t    <h1 class=\"mui-title\">申请认证</h1>\r\n\t</header>\r\n\t<div class=\"mui-content\">\r\n     <form class=\"mui-input-group\">\r\n\t\t\t<div class=\"mui-input-row\">\r\n\t\t\t\t<label>公司名称</label>\r\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入公司名称\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"mui-input-row logo\">\r\n\t\t\t\t<label>公司LOGO</label>\r\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请上传公司LOGO\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"mui-button-row\">\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-primary\" onclick=\"return false;\">确认</button>&nbsp;&nbsp;\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-danger\" onclick=\"return false;\">取消</button>\r\n\t\t\t</div>\r\n\t\t</form>\r\n\t</div>\r\n\t\r\n\t\r\n\t\r\n\t\r\n</template>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 223 */
+/* 221 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-4eb85840=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-4eb85840=\"\"></a>\n\t    <h1 class=\"mui-title\" _v-4eb85840=\"\">申请认证</h1>\n\t</header>\n\t<div class=\"mui-content\" _v-4eb85840=\"\">\n     <form class=\"mui-input-group\" _v-4eb85840=\"\">\n\t\t\t<div class=\"mui-input-row\" _v-4eb85840=\"\">\n\t\t\t\t<label _v-4eb85840=\"\">公司名称</label>\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入公司名称\" _v-4eb85840=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"mui-input-row logo\" _v-4eb85840=\"\">\n\t\t\t\t<label _v-4eb85840=\"\">公司LOGO</label>\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请上传公司LOGO\" _v-4eb85840=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"mui-button-row\" _v-4eb85840=\"\">\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-primary\" onclick=\"return false;\" _v-4eb85840=\"\">确认</button>&nbsp;&nbsp;\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-danger\" onclick=\"return false;\" _v-4eb85840=\"\">取消</button>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t\n\t\n\t\n\t\n";
+	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-2667506c=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-2667506c=\"\"></a>\n\t    <h1 class=\"mui-title\" _v-2667506c=\"\">申请认证</h1>\n\t</header>\n\t<div class=\"mui-content\" _v-2667506c=\"\">\n     <form class=\"mui-input-group\" _v-2667506c=\"\">\n\t\t\t<div class=\"mui-input-row\" _v-2667506c=\"\">\n\t\t\t\t<label _v-2667506c=\"\">公司名称</label>\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请输入公司名称\" _v-2667506c=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"mui-input-row logo\" _v-2667506c=\"\">\n\t\t\t\t<label _v-2667506c=\"\">公司LOGO</label>\n\t\t\t\t<input type=\"text\" class=\"mui-input-clear\" placeholder=\"请上传公司LOGO\" _v-2667506c=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"mui-button-row\" _v-2667506c=\"\">\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-primary\" onclick=\"return false;\" _v-2667506c=\"\">确认</button>&nbsp;&nbsp;\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-danger\" onclick=\"return false;\" _v-2667506c=\"\">取消</button>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n\t\n\t\n\t\n\t\n";
 
 /***/ },
-/* 224 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(225)
-	__vue_template__ = __webpack_require__(226)
+	__vue_script__ = __webpack_require__(223)
+	__vue_template__ = __webpack_require__(224)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -19011,7 +18979,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\restpassword.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\restpassword.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19020,7 +18988,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 225 */
+/* 223 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -19099,19 +19067,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 226 */
+/* 224 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\"  onclick=\"window.history.go(-1)\"></a>\r\n\t\t    <h1 class=\"mui-title\">修改密码</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t    <form class=\"mui-input-group\">\r\n\t\t\t\t<div class=\"mui-input-row\">\t\t\r\n\t\t\t\t\t<input id='oldpwd' type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"原密码\" v-model=\"oldpwd\">\t\t\t\t\t\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"mui-input-row\">\t\t\r\n\t\t\t\t\t<input id='surepwd' type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"新密码\" v-model=\"pwd\">\t\t\t\t\t\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"mui-input-row\">\t\t\r\n\t\t\t\t\t<input id='surepwdagain' type=\"password\" class=\"mui-input-clear mui-input\" placeholder=\"确认新密码\">\t\t\t\t\t\r\n\t\t\t\t</div>\r\n\t\t\t</form>\r\n\t\t\t<div class=\"mui-content-padded\">\r\n\t\t\t\t<button id='sendMail' class=\"mui-btn mui-btn-block mui-btn-primary\" v-on:click=\"asySubmit\">确认修改</button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n";
 
 /***/ },
-/* 227 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(228)
-	__vue_script__ = __webpack_require__(230)
-	__vue_template__ = __webpack_require__(231)
+	__webpack_require__(226)
+	__vue_script__ = __webpack_require__(228)
+	__vue_template__ = __webpack_require__(229)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -19119,7 +19087,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\maintenance\\lists.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\maintenance\\lists.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19128,13 +19096,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 228 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(229);
+	var content = __webpack_require__(227);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -19143,8 +19111,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cc559bdc&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cc559bdc&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7bd5b208&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7bd5b208&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19154,7 +19122,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 229 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -19162,13 +19130,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .flex-container[_v-cc559bdc] {\r\n        text-align: center;\r\n    }\r\n    .flex-container>a[_v-cc559bdc] {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container img[_v-cc559bdc] {\r\n        width: 50%;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/maintenance/lists.vue.style"],"names":[],"mappings":";IACA;QACA,mBAAA;KACA;IACA;QACA,mBAAA;QACA,WAAA;QACA,YAAA;QACA,gBAAA;KACA;IACA;QACA,WAAA;KACA","file":"lists.vue","sourcesContent":["<style scoped>\r\n    .flex-container {\r\n        text-align: center;\r\n    }\r\n    .flex-container>a {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container img {\r\n        width: 50%;\r\n    }\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">设备维修</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n\r\n    </nav>\r\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\">\r\n        <div class=\"mui-scroll\">\r\n            <!--<div style=\"height: 35px;margin: 0 10px;\">\r\n                <span style=\"line-height: 35px;\">分享到：</span>\r\n                <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\r\n            </div>-->\r\n            <div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n                <a v-link=\"{name:'maintenance_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n                    <img src='{{ entry.fdsmallimagepath}}'>\r\n                    <h6>{{ entry.fdname}}</h6>\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n<script>\r\n    export default {\r\n        data() {\r\n        return {\r\n            gridData: []\r\n        }\r\n    },\r\n    ready: function() {\r\n        this.getCustomers()\r\n    },\r\n    methods: {\r\n        getCustomers: function (){\r\n            var vm = this\r\n            vm.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        Parameters:{\r\n                            \"code\":1\r\n                        },\r\n                        ForeEndType:\"2\",\r\n                        Code:\"20000001\"\r\n                    }\r\n            ).then((response)=>{\r\n                var response=JSON.parse(response.data);\r\n                vm.$set('gridData', response.data);\r\n            console.log(response.data);\r\n        })\r\n    }\r\n    }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .flex-container[_v-7bd5b208] {\r\n        text-align: center;\r\n    }\r\n    .flex-container>a[_v-7bd5b208] {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container img[_v-7bd5b208] {\r\n        width: 50%;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/maintenance/lists.vue.style"],"names":[],"mappings":";IACA;QACA,mBAAA;KACA;IACA;QACA,mBAAA;QACA,WAAA;QACA,YAAA;QACA,gBAAA;KACA;IACA;QACA,WAAA;KACA","file":"lists.vue","sourcesContent":["<style scoped>\r\n    .flex-container {\r\n        text-align: center;\r\n    }\r\n    .flex-container>a {\r\n        position: relative;\r\n        width: 25%;\r\n        float: left;\r\n        padding: 10px 0;\r\n    }\r\n    .flex-container img {\r\n        width: 50%;\r\n    }\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">设备维修</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n\r\n    </nav>\r\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\">\r\n        <div class=\"mui-scroll\">\r\n            <!--<div style=\"height: 35px;margin: 0 10px;\">\r\n                <span style=\"line-height: 35px;\">分享到：</span>\r\n                <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\r\n            </div>-->\r\n            <div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n                <a v-link=\"{name:'maintenance_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n                    <img src='{{ entry.fdsmallimagepath}}'>\r\n                    <h6>{{ entry.fdname}}</h6>\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n<script>\r\n    export default {\r\n        data() {\r\n        return {\r\n            gridData: []\r\n        }\r\n    },\r\n    ready: function() {\r\n        this.getCustomers()\r\n    },\r\n    methods: {\r\n        getCustomers: function (){\r\n            var vm = this\r\n            vm.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        Parameters:{\r\n                            \"code\":1\r\n                        },\r\n                        ForeEndType:\"2\",\r\n                        Code:\"20000001\"\r\n                    }\r\n            ).then((response)=>{\r\n                var response=JSON.parse(response.data);\r\n                vm.$set('gridData', response.data);\r\n            console.log(response.data);\r\n        })\r\n    }\r\n    }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 230 */
+/* 228 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -19248,19 +19216,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 231 */
+/* 229 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-cc559bdc=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-cc559bdc=\"\"></a>\n        <h1 class=\"mui-title\" _v-cc559bdc=\"\">设备维修</h1>\n    </header>\n    <nav class=\"mui-bar mui-bar-tab\" style=\"line-height:51px;text-align:center;background:#106eac;\" _v-cc559bdc=\"\">\n        <a href=\"tel:123-23123\" style=\"color:#fff;\" _v-cc559bdc=\"\">\n            在线客服:<span class=\"mui-icon mui-icon-phone\" _v-cc559bdc=\"\"></span>12316615\n        </a>\n\n    </nav>\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\" _v-cc559bdc=\"\">\n        <div class=\"mui-scroll\" _v-cc559bdc=\"\">\n            <!--<div style=\"height: 35px;margin: 0 10px;\">\n                <span style=\"line-height: 35px;\">分享到：</span>\n                <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\n            </div>-->\n            <div class=\"flex-container\" v-for=\"(index,entry) in gridData\" _v-cc559bdc=\"\">\n                <a v-link=\"{name:'maintenance_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\" _v-cc559bdc=\"\">\n                    <img src=\"{{ entry.fdsmallimagepath}}\" _v-cc559bdc=\"\">\n                    <h6 _v-cc559bdc=\"\">{{ entry.fdname}}</h6>\n                </a>\n            </div>\n        </div>\n    </div>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-7bd5b208=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-7bd5b208=\"\"></a>\n        <h1 class=\"mui-title\" _v-7bd5b208=\"\">设备维修</h1>\n    </header>\n    <nav class=\"mui-bar mui-bar-tab\" style=\"line-height:51px;text-align:center;background:#106eac;\" _v-7bd5b208=\"\">\n        <a href=\"tel:123-23123\" style=\"color:#fff;\" _v-7bd5b208=\"\">\n            在线客服:<span class=\"mui-icon mui-icon-phone\" _v-7bd5b208=\"\"></span>12316615\n        </a>\n\n    </nav>\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\" _v-7bd5b208=\"\">\n        <div class=\"mui-scroll\" _v-7bd5b208=\"\">\n            <!--<div style=\"height: 35px;margin: 0 10px;\">\n                <span style=\"line-height: 35px;\">分享到：</span>\n                <button  type=\"button\" style=\"height: 30px;margin-top: 5px;\" class=\"mui-btn mui-btn-yellow mui-pull-right\" id='exit'>取消</button>\n            </div>-->\n            <div class=\"flex-container\" v-for=\"(index,entry) in gridData\" _v-7bd5b208=\"\">\n                <a v-link=\"{name:'maintenance_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\" _v-7bd5b208=\"\">\n                    <img src=\"{{ entry.fdsmallimagepath}}\" _v-7bd5b208=\"\">\n                    <h6 _v-7bd5b208=\"\">{{ entry.fdname}}</h6>\n                </a>\n            </div>\n        </div>\n    </div>\n";
 
 /***/ },
-/* 232 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(233)
-	__vue_script__ = __webpack_require__(235)
-	__vue_template__ = __webpack_require__(308)
+	__webpack_require__(231)
+	__vue_script__ = __webpack_require__(233)
+	__vue_template__ = __webpack_require__(306)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -19268,7 +19236,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\maintenance\\order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\maintenance\\order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19277,13 +19245,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 233 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(234);
+	var content = __webpack_require__(232);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -19292,8 +19260,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b2e5d6a&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b2e5d6a&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1aae7396&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1aae7396&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19303,7 +19271,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 234 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -19311,13 +19279,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .tel[_v-6b2e5d6a]{float:right;}\r\n    textarea[_v-6b2e5d6a]{border:0;}\r\n    .questionpic[_v-6b2e5d6a]{margin-bottom:10px;}\r\n    #submit[_v-6b2e5d6a]{width:96%;margin:10px auto;}\r\n    .image-item[_v-6b2e5d6a] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/maintenance/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n</style>\r\n<template>\r\n    <aoth></aoth>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n\t        <div>\r\n\t            <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n\t            <p class='address'>{{address}}</p>\r\n\t        </div>\r\n    \t</panel>\r\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class='question'>\r\n            <div>\r\n                <textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\"></textarea>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class='questionpic'>\r\n            <div class=\"demo image-item\">\r\n                <upload\r\n                        :server=\"upload.server\"\r\n                        :api=\"upload.api\"\r\n                        :params=\"upload.params\"\r\n                        :success=\"upload.success\"\r\n                        :file.sync=\"upload.file\"\r\n                        :crop=\"upload.crop\"\r\n                        :width=\"upload.width\"\r\n                        :height=\"upload.height\"\r\n                        :ok=\"upload.ok\"\r\n                        :cancel=\"upload.cancel\">\r\n                    <imgdd>\r\n                </upload>\r\n            </div>\r\n        </panel>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n                upload:{\r\n                    server:\"\",\r\n                    api:\"\",\r\n                    params:{\r\n                        token:\"test\"\r\n                    },\r\n                    file:\"\",\r\n                    preview:true,\r\n                    crop:true,\r\n                    width:400,\r\n                    height:400,\r\n                    cancel:\"取消\",\r\n                    ok:\"裁剪\",\r\n                    success:(data)=>{\r\n                    alert(data.length)\r\n                }\r\n            }\r\n        }},\r\n        components : {\r\n            panel,\r\n            aoth,\r\n            upload,\r\n\r\n        },\r\n        methods:{\r\n           asy_send_order:function(){\r\n                   var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n                   var images=new Array();\r\n                  images.push(byte);\r\n                   this.$http.post(\r\n                           'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                           {\r\n                               parameters:{\r\n                                   \"phone\":this.tel,\r\n                                   \"serveiceid\":this.$route.params.serviceId,\r\n                                   \"address\":this.address,\r\n                                   \"content\":this.content,\r\n                                   \"images\":images\r\n                               },\r\n                               foreEndType:\"2\",\r\n                               code:\"10000005\"\r\n                           }\r\n                           ).then(function(response) {\r\n                                       var  reslute=JSON.parse(response.data);\r\n                                       alert(\"上传成功\");\r\n                                   });\r\n           }\r\n\r\n        },\r\n        ready: function(){\r\n            this.poptitle=this.$route.params.serviceName\r\n        }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .tel[_v-1aae7396]{float:right;}\r\n    textarea[_v-1aae7396]{border:0;}\r\n    .questionpic[_v-1aae7396]{margin-bottom:10px;}\r\n    #submit[_v-1aae7396]{width:96%;margin:10px auto;}\r\n    .image-item[_v-1aae7396] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/maintenance/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n</style>\r\n<template>\r\n    <aoth></aoth>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n\t        <div>\r\n\t            <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n\t            <p class='address'>{{address}}</p>\r\n\t        </div>\r\n    \t</panel>\r\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class='question'>\r\n            <div>\r\n                <textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\"></textarea>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class='questionpic'>\r\n            <div class=\"demo image-item\">\r\n                <upload\r\n                        :server=\"upload.server\"\r\n                        :api=\"upload.api\"\r\n                        :params=\"upload.params\"\r\n                        :success=\"upload.success\"\r\n                        :file.sync=\"upload.file\"\r\n                        :crop=\"upload.crop\"\r\n                        :width=\"upload.width\"\r\n                        :height=\"upload.height\"\r\n                        :ok=\"upload.ok\"\r\n                        :cancel=\"upload.cancel\">\r\n                    <imgdd>\r\n                </upload>\r\n            </div>\r\n        </panel>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:false,\r\n\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n        }},\r\n        components : {\r\n            panel,\r\n            aoth,\r\n            upload,\r\n        },\r\n        methods:{\r\n           asy_send_order:function(){\r\n                   var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n                   var images=new Array();\r\n                  images.push(byte);\r\n                   this.$http.post(\r\n                           'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                           {\r\n                               parameters:{\r\n                                   \"phone\":this.tel,\r\n                                   \"serveiceid\":this.$route.params.serviceId,\r\n                                   \"address\":this.address,\r\n                                   \"content\":this.content,\r\n                                   \"images\":images\r\n                               },\r\n                               foreEndType:\"2\",\r\n                               code:\"10000005\"\r\n                           }\r\n                           ).then(function(response) {\r\n                                       var  reslute=JSON.parse(response.data);\r\n                                       alert(\"上传成功\");\r\n                                   });\r\n           }\r\n\r\n        },\r\n        ready: function(){\r\n            this.poptitle=this.$route.params.serviceName\r\n        }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 235 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19326,7 +19294,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _aoth = __webpack_require__(184);
+	var _aoth = __webpack_require__(182);
 	
 	var _aoth2 = _interopRequireDefault(_aoth);
 	
@@ -19334,7 +19302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _panel2 = _interopRequireDefault(_panel);
 	
-	var _upload = __webpack_require__(236);
+	var _upload = __webpack_require__(234);
 	
 	var _upload2 = _interopRequireDefault(_upload);
 	
@@ -19357,7 +19325,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                },
 	                file: "",
 	                preview: true,
-	                crop: true,
+	                crop: false,
+	
 	                width: 400,
 	                height: 400,
 	                cancel: "取消",
@@ -19373,7 +19342,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        panel: _panel2.default,
 	        aoth: _aoth2.default,
 	        upload: _upload2.default
-	
 	    },
 	    methods: {
 	        asy_send_order: function asy_send_order() {
@@ -19466,13 +19434,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 236 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(237)
-	__vue_script__ = __webpack_require__(239)
-	__vue_template__ = __webpack_require__(307)
+	__webpack_require__(235)
+	__vue_script__ = __webpack_require__(237)
+	__vue_template__ = __webpack_require__(305)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -19480,7 +19448,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\src\\components\\upload.vue"
+	  var id = "d:\\Yous-H5\\src\\components\\upload.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19489,13 +19457,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 237 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(238);
+	var content = __webpack_require__(236);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -19504,8 +19472,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9604122a&file=upload.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./upload.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9604122a&file=upload.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./upload.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-25e5f041&file=upload.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./upload.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-25e5f041&file=upload.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./upload.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19515,7 +19483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 238 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -19523,13 +19491,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .upload[_v-9604122a]{\r\n        position: relative;\r\n        width: 100%;\r\n        height:100%;\r\n        cursor: pointer;\r\n        border-radius: inherit;\r\n    }\r\n    .upload .image[_v-9604122a]{\r\n        -webkit-transition: all .3s ease-in-out;\r\n        transition: all .3s ease-in-out;\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        background-size: cover;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        border-radius: inherit;\r\n    }\r\n\r\n    .upload>input[_v-9604122a]{\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        opacity: 0;\r\n        cursor: pointer;\r\n    }\r\n    .upload .progress[_v-9604122a]{\r\n        position: absolute;\r\n        left:0;\r\n        bottom:0;\r\n        right:0;\r\n        top:0;\r\n        width:100%;\r\n        box-sizing:border-box;\r\n        background-color:rgba(0, 0, 0,.8);\r\n    }\r\n    .upload .progress span[_v-9604122a]{\r\n        box-sizing: border-box;\r\n        display: block;\r\n        height:100%;\r\n        width:0%;\r\n        border-bottom:5px solid rgba(164, 208, 99,.8);\r\n    }\r\n    .upload .progress em[_v-9604122a]{\r\n        left:50%;\r\n        top:50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        font-size:.8rem;\r\n        line-height: 100%;\r\n        color:#fff;\r\n    }\r\n\r\n    .crop[_v-9604122a]{\r\n        position: fixed;\r\n        z-index: 9998;\r\n        width:100%;\r\n        height:100%;\r\n        left:0;\r\n        top:0;\r\n        background-color: rgba(0,0,0,.7);\r\n        -webkit-transition: opacity .5s ease;\r\n        transition: opacity .5s ease;\r\n        -webkit-backdrop-filter: blur(5px);\r\n    }\r\n    .crop-enter[_v-9604122a],\r\n    .crop-leave[_v-9604122a] {\r\n        opacity: 0;\r\n    }\r\n    .crop-enter .dialog[_v-9604122a],\r\n    .crop-leave .dialog[_v-9604122a]{\r\n        -webkit-transform: translate(-50%,-50%) scale(1.2);\r\n        transform:translate(-50%,-50%) scale(1.2);\r\n    }\r\n    .crop .dialog[_v-9604122a] {\r\n        position: fixed;\r\n        left:50%;\r\n        top:0%;\r\n        -webkit-transform: translate(-50%,0%);\r\n                transform: translate(-50%,0%);\r\n        width: 30%;\r\n        background-color:#FAFAFC;\r\n        border-radius:3px;\r\n        -webkit-transition: all .5s ease;\r\n        transition: all .5s ease;\r\n    }\r\n\r\n    .crop .dialog section[_v-9604122a]{\r\n        display:block;\r\n        position: relative;\r\n        overflow: hidden;\r\n        -webkit-user-select:none;\r\n        -moz-user-select:none;\r\n         -ms-user-select:none;\r\n             user-select:none;\r\n        border-radius:3px 3px 0 0;\r\n    }\r\n    .crop .dialog section.grab[_v-9604122a]{\r\n        cursor:grab;\r\n        cursor:-webkit-grab;\r\n    }\r\n    .crop .dialog section.grabbing[_v-9604122a]{\r\n        cursor:grabbing;\r\n        cursor:-webkit-grabbing;\r\n    }\r\n    .crop .dialog section>img[_v-9604122a]{\r\n        position: absolute;\r\n\r\n\r\n    }\r\n    .crop .dialog>input[_v-9604122a]{\r\n        position: absolute;\r\n        bottom:70px;\r\n        left:50%;\r\n        -webkit-transform: translateX(-50%);\r\n                transform: translateX(-50%);\r\n    }\r\n    .crop .dialog footer[_v-9604122a]{\r\n        display:block;\r\n        border-top:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button[_v-9604122a]{\r\n        float:left;\r\n        width:50%;\r\n        height:100%;\r\n        padding:1rem 0;\r\n        font-weight:600;\r\n        text-align:center;\r\n        color:#5F7B88;\r\n        cursor: pointer;\r\n        font-size: 1rem;\r\n        background-color: transparent;\r\n    }\r\n    .crop .dialog footer button[_v-9604122a]:nth-child(1){\r\n        border-right:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button[_v-9604122a]:nth-child(2){\r\n        margin-left: -1px;\r\n    }\r\n    .loading[_v-9604122a]{\r\n        position: absolute;\r\n        left:50%;\r\n        top:50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n    }\r\n    .v-beat[_v-9604122a]{\r\n        -webkit-animation: v-beatStretchDelay 0.7s infinite linear;\r\n        animation: v-beatStretchDelay 0.7s infinite linear;\r\n        -webkit-animation-fill-mode: both;\r\n        animation-fill-mode: both;\r\n        display: inline-block;\r\n        width:10px;\r\n        height:10px;\r\n        background-color: #fff;\r\n        border-radius: 50%;\r\n    }\r\n    .v-beat-odd[_v-9604122a]{\r\n        -webkit-animation-delay: 0s;\r\n        animation-delay: 0s;\r\n    }\r\n    .v-beat-even[_v-9604122a]{\r\n        -webkit-animation-delay: 0.35s;\r\n        animation-delay: 0.35s;\r\n    }\r\n    @-webkit-keyframes v-beatStretchDelay{\r\n        50%{\r\n            -webkit-transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            -webkit-transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    @keyframes v-beatStretchDelay{\r\n        50%{\r\n            -webkit-transform: scale(0.75);\r\n                    transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            -webkit-transform: scale(1);\r\n                    transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    input[type=range][_v-9604122a] {\r\n        -webkit-appearance: none;\r\n    }\r\n    input[type=range][_v-9604122a]:focus {\r\n        outline: none;\r\n    }\r\n    input[type=range][_v-9604122a]::-webkit-slider-runnable-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n\r\n    }\r\n    input[type=range][_v-9604122a]::-webkit-slider-thumb {\r\n        height:20px;\r\n        width: 20px;\r\n        border-radius: 10px;\r\n        background: #ffffff;\r\n        border:2px solid #efb708;\r\n        cursor: pointer;\r\n        -webkit-appearance: none;\r\n        margin-top: -10px;\r\n    }\r\n\r\n    input[type=range][_v-9604122a]::-moz-range-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n    }\r\n    input[type=range][_v-9604122a]::-moz-range-thumb {\r\n        height:16px;\r\n        width:16px;\r\n        border-radius: 8px;\r\n        border:2px solid #efb708;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n    }\r\n    input[type=range][_v-9604122a]::-ms-track {\r\n        width: 100%;\r\n        height: 1px;\r\n        cursor: pointer;\r\n        background: transparent;\r\n        border-color: transparent;\r\n        color: transparent;\r\n    }\r\n    input[type=range][_v-9604122a]::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range][_v-9604122a]::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range][_v-9604122a]::-ms-thumb {\r\n        height: 16px;\r\n        width: 16px;\r\n        border-radius: 8px;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n        height: 1px;\r\n    }\r\n    input[type=range][_v-9604122a]:focus::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n    input[type=range][_v-9604122a]:focus::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n", "", {"version":3,"sources":["/./src/components/upload.vue.style"],"names":[],"mappings":";IAsgBA;QACA,mBAAA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,uBAAA;KACA;IACA;QACA,wCAAA;QAAA,gCAAA;QACA,mBAAA;QACA,OAAA;QACA,MAAA;QACA,QAAA;QACA,SAAA;QACA,uBAAA;QACA,4BAAA;QACA,6BAAA;QACA,uBAAA;KACA;;IAEA;QACA,mBAAA;QACA,OAAA;QACA,MAAA;QACA,QAAA;QACA,SAAA;QACA,WAAA;QACA,gBAAA;KACA;IACA;QACA,mBAAA;QACA,OAAA;QACA,SAAA;QACA,QAAA;QACA,MAAA;QACA,WAAA;QACA,sBAAA;QACA,kCAAA;KACA;IACA;QACA,uBAAA;QACA,eAAA;QACA,YAAA;QACA,SAAA;QACA,8CAAA;KACA;IACA;QACA,SAAA;QACA,QAAA;QACA,wCAAA;gBAAA,gCAAA;QACA,gBAAA;QACA,kBAAA;QACA,WAAA;KACA;;IAEA;QACA,gBAAA;QACA,cAAA;QACA,WAAA;QACA,YAAA;QACA,OAAA;QACA,MAAA;QACA,iCAAA;QACA,qCAAA;QAAA,6BAAA;QACA,mCAAA;KACA;IACA;;QAEA,WAAA;KACA;IACA;;QAEA,mDAAA;QACA,0CAAA;KACA;IACA;QACA,gBAAA;QACA,SAAA;QACA,OAAA;QACA,sCAAA;gBAAA,8BAAA;QACA,WAAA;QACA,yBAAA;QACA,kBAAA;QACA,iCAAA;QAAA,yBAAA;KACA;;IAEA;QACA,cAAA;QACA,mBAAA;QACA,iBAAA;QACA,yBAAA;QACA,sBAAA;SAAA,qBAAA;aAAA,iBAAA;QACA,0BAAA;KACA;IACA;QACA,YAAA;QAEA,oBAAA;KACA;IACA;QACA,gBAAA;QAEA,wBAAA;KACA;IACA;QACA,mBAAA;;;KAGA;IACA;QACA,mBAAA;QACA,YAAA;QACA,SAAA;QACA,oCAAA;gBAAA,4BAAA;KACA;IACA;QACA,cAAA;QACA,6BAAA;KACA;IACA;QACA,WAAA;QACA,UAAA;QACA,YAAA;QACA,eAAA;QACA,gBAAA;QACA,kBAAA;QACA,cAAA;QACA,gBAAA;QACA,gBAAA;QACA,8BAAA;KACA;IACA;QACA,+BAAA;KACA;IACA;QACA,kBAAA;KACA;IACA;QACA,mBAAA;QACA,SAAA;QACA,QAAA;QACA,wCAAA;gBAAA,gCAAA;KACA;IACA;QACA,2DAAA;QACA,mDAAA;QACA,kCAAA;QACA,0BAAA;QACA,sBAAA;QACA,WAAA;QACA,YAAA;QACA,uBAAA;QACA,mBAAA;KACA;IACA;QACA,4BAAA;QACA,oBAAA;KACA;IACA;QACA,+BAAA;QACA,uBAAA;KACA;IACA;QACA;YACA,+BAAA;YACA,aAAA;SACA;QACA;YACA,4BAAA;YACA,WAAA;SACA;KACA;IACA;QACA;YACA,+BAAA;oBAAA,uBAAA;YACA,aAAA;SACA;QACA;YACA,4BAAA;oBAAA,oBAAA;YACA,WAAA;SACA;KACA;IACA;QACA,yBAAA;KACA;IACA;QACA,cAAA;KACA;IACA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,oBAAA;;KAEA;IACA;QACA,YAAA;QACA,YAAA;QACA,oBAAA;QACA,oBAAA;QACA,yBAAA;QACA,gBAAA;QACA,yBAAA;QACA,kBAAA;KACA;;IAEA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,oBAAA;KACA;IACA;QACA,YAAA;QACA,WAAA;QACA,mBAAA;QACA,yBAAA;QACA,oBAAA;QACA,gBAAA;KACA;IACA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,wBAAA;QACA,0BAAA;QACA,mBAAA;KACA;IACA;QACA,+BAAA;QACA,2CAAA;QACA,mBAAA;QACA,0EAAA;KACA;IACA;QACA,+BAAA;QACA,2CAAA;QACA,mBAAA;QACA,0EAAA;KACA;IACA;QACA,aAAA;QACA,YAAA;QACA,mBAAA;QACA,oBAAA;QACA,gBAAA;QACA,YAAA;KACA;IACA;QACA,+BAAA;KACA;IACA;QACA,+BAAA;KACA","file":"upload.vue","sourcesContent":["<script>\r\n    /**\r\n     * vue-upload\r\n     * E-mail   :129@jinzhe.net\r\n     * website  :http://jinzhe.net\r\n     * author   :zee\r\n     * date     :2016/09/05\r\n     */\r\n    export default {\r\n        props: {\r\n            // Server host,like \"http://jinzhe.net\"\r\n            server: {\r\n                type: String,\r\n                require:true\r\n            },\r\n            // Server api path,like \"/api/v1/getdata/\"\r\n            api: {\r\n                type: String,\r\n                require:true\r\n            },\r\n            // POST Params\r\n            params:{\r\n                type:Object,\r\n                default:()=>{\r\n                return {}\r\n            }\r\n        },\r\n        // Upload input filename,used for server side get the file stream.\r\n        filename: {\r\n            type: String,\r\n            default:\"file\"\r\n        },\r\n        // Used for binding parent component data and show image preview.\r\n        file: {\r\n            type: String,\r\n            default:\"\",\r\n            twoWay:true\r\n        },\r\n        // Allow Upload extension\r\n        ext:{\r\n            type:String,\r\n            default:'jpg,gif,png'\r\n        },\r\n        // Used for send to server side\r\n        header:{\r\n            type:Object,\r\n            default:()=>{\r\n            return {}\r\n        }\r\n    },\r\n    // File upload limit\r\n    limit:{\r\n        type:Number,\r\n    default:1024 * 1024 * 64\r\n    },\r\n    multiple: {\r\n        type: Boolean,\r\n    default:true\r\n    },\r\n    preview: {\r\n        type: Boolean,\r\n    default:true\r\n    },\r\n    auto: {\r\n        type: Boolean,\r\n    default:true\r\n    },\r\n    // Crop on or off\r\n    crop:{\r\n        type: Boolean,\r\n    default:false\r\n    },\r\n    // Crop image width\r\n    width:{\r\n        type:Number,\r\n    default:200,\r\n    },\r\n    // Crop image height\r\n    height:{\r\n        type:Number,\r\n    default:200,\r\n    },\r\n    // Crop image \"OK\" button text\r\n    ok: {\r\n        type: String,\r\n    default: 'OK'\r\n    },\r\n    // Crop image \"cancel\" button text\r\n    cancel: {\r\n        type: String,\r\n    default: 'Cancel'\r\n    },\r\n    // Crop image quality\r\n    quality:{\r\n        type:Number,\r\n    default:0.8,\r\n    },\r\n    // Used for crop display position,default is document.body\r\n    container: {\r\n        type: String,\r\n    default: ''\r\n    },\r\n    success:{\r\n        type:Function\r\n    }\r\n    },\r\n    data(){\r\n        return {\r\n            isMobile:/(iphone|ios|android|iPad)/i.test(navigator.userAgent),\r\n            percent: 0,\r\n            files:[],\r\n            accepts:\"\",\r\n            mimes:{\r\n                \"jpg\": \"image/jpeg\",\r\n                \"png\": \"image/png\",\r\n                \"gif\": \"image/gif\",\r\n                \"mp4\": \"video/mp4\",\r\n                \"mov\": \"video/quicktime\",\r\n                \"wmv\": \"video/x-ms-wmv\",\r\n                \"flv\": \"video/x-flv\",\r\n                \"svg\": \"image/svg+xml\",\r\n                \"psd\": \"image/photoshop\",\r\n                \"mp3\": \"audio/mpeg\",\r\n                \"rar\": \"application/x-rar-compressed\",\r\n                \"zip\": \"application/zip\",\r\n                \"json\": \"application/json\",\r\n                \"docx\": \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\",\r\n                \"xlsx\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\r\n                \"pptx\": \"application/vnd.openxmlformats-officedocument.presentationml.presentation\",\r\n                \"doc\": \"application/msword\",\r\n                \"pdf\": \"application/pdf\",\r\n                \"xls\": \"application/vnd.ms-excel\",\r\n                \"ppt\": \"application/vnd.ms-powerpoint\"\r\n            },\r\n            scrollbar:null,\r\n            input:null,\r\n            cropHeight:0,\r\n            cropTop:0,\r\n            showCrop:false,\r\n            showCropDialog:false,\r\n            scale:100,//缩放\r\n            scaleX:0,\r\n            scaleY:0,\r\n            scaleLength:0,\r\n            scaleWidth:0,\r\n            scaleHeight:0,\r\n            drag:false,\r\n            grabbing:false,\r\n            beginX:0,\r\n            beginY:0,\r\n            beginLength:0,\r\n            img:null,\r\n            canvas:null,\r\n            context:null,\r\n        }\r\n    },\r\n    watch:{\r\n        percent(){\r\n            if(this.percent==100){\r\n                setTimeout(()=>{\r\n                    this.percent=0\r\n            },500)\r\n        }\r\n    },\r\n    auto(){\r\n        if(this.auto){\r\n            this.uploadFiles()\r\n            this.auto=false\r\n        }\r\n    },\r\n    },\r\n    ready(){\r\n        if(this.crop){\r\n            this.multiple=false\r\n            this.ext=\"jpg\"\r\n            this.auto=false\r\n        }\r\n        let accepts=[]\r\n        let exts = this.ext.split(\",\");\r\n        for (let i = 0; i < exts.length; i++) {\r\n            accepts.push(this.mimes[exts[i]]);\r\n        }\r\n        this.accepts=accepts.join(\",\")\r\n    },\r\n    methods:{\r\n        fileChange(e){\r\n            this.input=e.target\r\n            // console.log(e)\r\n            if(this.crop){\r\n                if(e.target.files.length==0)return false\r\n                this.showCrop=true\r\n                this.showCropDialog=false\r\n                // 读取本地图片转成base64显示到页面待使用\r\n                let fr=new FileReader()\r\n                fr.onload=e=>{\r\n                    this.img=new Image()\r\n                    this.img.src=fr.result\r\n                    this.img.onload=()=>{\r\n                        if(this.container==''){\r\n                            if(window.getComputedStyle(document.body).overflow=='hidden'){\r\n                                this.scrollbar=document.querySelector('.router')\r\n                            }else{\r\n                                this.scrollbar=document.body\r\n                            }\r\n                        }else{\r\n                            this.scrollbar=document.querySelector(this.container)\r\n                        }\r\n\r\n                        let scrollHeight=this.scrollbar.scrollHeight\r\n                        // let scrollTop=this.scrollbar.scrollTop\r\n                        let windowHeight=window.innerHeight\r\n                        // console.log(windowHeight,scrollHeight)\r\n                        if(scrollHeight<=windowHeight){\r\n                            this.cropHeight=windowHeight\r\n                            this.cropTop=~~(windowHeight-(this.height+50))/2\r\n                        }else{\r\n                            this.cropHeight=scrollHeight\r\n                            this.cropTop=~~((windowHeight-(this.height+50))/2)\r\n                        }\r\n                        // 按原始图片比例优先使用小值设置最低值\r\n                        if(this.img.naturalWidth>this.img.naturalHeight){\r\n                            this.scaleHeight=this.height\r\n                            this.scaleWidth=Math.round(this.scaleHeight*this.img.naturalWidth/this.img.naturalHeight)\r\n                        }else{\r\n                            this.scaleWidth=this.width\r\n                            this.scaleHeight=Math.round(this.scaleWidth*this.img.naturalHeight/this.img.naturalWidth)\r\n                        }\r\n                        this.scaleX=-Math.round((this.scaleWidth-this.width)/2)\r\n                        this.scaleY=-Math.round((this.scaleHeight-this.height)/2)\r\n\r\n                        this.cropImage=fr.result\r\n\r\n                        // 渲染到canvas\r\n                        this.canvas=document.createElement(\"canvas\")\r\n                        this.canvas.width=this.width\r\n                        this.canvas.height=this.height\r\n                        this.canvas.setAttribute(\"style\",\"position:absolute;left:0;top:0;opacity:0;z-index:99999\")\r\n                        this.context=this.canvas.getContext(\"2d\")\r\n                        this.cropToCanvas()\r\n                        document.body.appendChild(this.canvas)\r\n                        this.showCropDialog=true\r\n                    }\r\n                }\r\n                fr.readAsDataURL(e.target.files[0])\r\n            }else{\r\n                this.files=[]\r\n                this.getFiles(e)\r\n                if (this.auto)this.uploadFiles()\r\n            }\r\n        },\r\n        getFiles(e) {\r\n            e.stopPropagation();\r\n            e.preventDefault();\r\n            this.files = e.target.files || e.dataTransfer.files\r\n            let _exts=this.ext.split(\",\")\r\n            let _mimes=[]\r\n            if(_exts.length>0){\r\n                _exts.forEach(v=>{\r\n                    if(this.mimes[v]!=undefined){\r\n                    _mimes.push(this.mimes[v])\r\n                }\r\n            })\r\n        }\r\n        for (var i = 0, file; file = this.files[i]; i++) {\r\n            if (file.size > this.limit||!_mimes.includes(file.type)) {\r\n                this.removeFile(file.name)\r\n            }\r\n        }\r\n    },\r\n    removeFile(name) {\r\n        var newFiles = []\r\n        for (var i = 0, file; file = this.files[i]; i++) {\r\n            if (file.name != name)newFiles.push(file)\r\n        }\r\n        this.files = newFiles\r\n    },\r\n    uploadFiles(){\r\n        if(this.files.length==0)return false\r\n        for (var i = 0, f; f = this.files[i]; i++) {\r\n            (file=>{\r\n                var xhr = new XMLHttpRequest()\r\n                if (xhr.upload) {\r\n                var formData = new FormData()\r\n                formData.append(this.filename, file)\r\n                if(this.params!=undefined){\r\n                    for (let key in this.params)formData.append(key, this.params[key])\r\n                }\r\n                xhr.upload.addEventListener(\"progress\",e=>{\r\n                    this.percent=Math.floor(e.loaded/e.total*100)\r\n                console.log(\"uploadProgress\",this.percent)\r\n            }, false)\r\n            xhr.onreadystatechange = e=> {\r\n                if (xhr.readyState == 4) {\r\n                    if (xhr.status == 200) {\r\n                        let data=xhr.responseText\r\n                        if(data.substr(0,1)==\"{\"){\r\n                            data=JSON.parse(data)\r\n                        }\r\n                        if(data.result!=undefined){\r\n                            this.file=data.result\r\n                        }\r\n                        if(this.success!=undefined){\r\n                            this.success(data)\r\n                        }\r\n                        if (this.files.length==0) {\r\n                            console.log(\"uploadDone\")\r\n                        }\r\n                    } else {\r\n                        console.log(\"uploadError\",data)\r\n                    }\r\n                }\r\n            }\r\n            xhr.open(\"POST\", this.server+this.api, true)\r\n            if(this.header!=undefined){\r\n                for (let key in this.header)xhr.setRequestHeader(key, this.header[key])\r\n            }\r\n            xhr.withCredentials = false\r\n            xhr.send(formData)\r\n        }\r\n    })(f)\r\n    }\r\n    },\r\n    cropDragBegin(e){\r\n        this.drag=true\r\n        this.grabbing=true\r\n        this.beginX=e.pageX-e.target.offsetLeft\r\n        this.beginY=e.pageY-e.target.offsetTop\r\n        if(this.isMobile){\r\n            if(e.touches.length==2){\r\n                this.beginLength=this.beginLength==0?this.cropTouchData(e).length:this.beginLength\r\n            }\r\n            document.addEventListener('touchmove',this.cropDragMove,false)\r\n            document.addEventListener('touchend',this.cropDragEnd,false)\r\n        }else{\r\n            document.addEventListener('mouseover',this.cropDragMove,false)\r\n            document.addEventListener('mouseup',this.cropDragEnd,false)\r\n        }\r\n    },\r\n    cropDragMove(e){\r\n        if(!this.drag)return false\r\n        // 放大\r\n        if(this.isMobile){\r\n            if(e.touches.length==2){\r\n                this.scaleLength=this.cropTouchData(e).length\r\n                this.scale=Math.min(200,Math.max(100,this.scaleLength/this.beginLength*100))\r\n                this.cropZoom()\r\n            }else{\r\n                this.scaleX= e.pageX - this.beginX\r\n                this.scaleY= e.pageY - this.beginY\r\n\r\n            }\r\n        }else{\r\n            this.scaleX= e.pageX - this.beginX\r\n            this.scaleY= e.pageY - this.beginY\r\n\r\n        }\r\n        this.cropLimit()\r\n    },\r\n    cropDragEnd(e){\r\n        this.drag=false\r\n        this.grabbing=false\r\n        this.cropToCanvas()\r\n        if(this.isMobile){\r\n            document.removeEventListener('touchmove',this.cropDragMove,false)\r\n            document.removeEventListener('touchend',this.cropDragEnd,false)\r\n        }else{\r\n            document.removeEventListener('mouseover',this.cropDragMove,false)\r\n            document.removeEventListener('mouseup',this.cropDragEnd,false)\r\n        }\r\n    },\r\n    cropToCanvas(){\r\n        this.context.clearRect(0,0,this.width,this.height)\r\n        let sx= Math.round(Math.abs(this.scaleX)*this.img.naturalWidth/this.scaleWidth) //图像源x坐标\r\n        let sy= Math.round(Math.abs(this.scaleY)*this.img.naturalHeight/this.scaleHeight) //图像源y坐标\r\n        let sw=this.width*this.img.naturalWidth/this.scaleWidth\r\n        let sh=this.height*this.img.naturalHeight/this.scaleHeight\r\n        this.context.drawImage(this.img,sx,sy,sw,sh,0,0,this.width,this.height/this.cropGetRatio())\r\n    },\r\n    cropZoom(){\r\n        let s=this.scale/100\r\n        let osx=this.scaleX-this.width/2\r\n        let osy=this.scaleY-this.height/2\r\n        let os\r\n        // 按原始图片比例优先使用小值设置最低值\r\n        if(this.img.naturalWidth>this.img.naturalHeight){\r\n            os=this.scaleHeight/this.height\r\n            this.scaleHeight=this.height*s\r\n            this.scaleWidth=this.scaleHeight*this.img.naturalWidth/this.img.naturalHeight\r\n        }else{\r\n            os=this.scaleWidth/this.width\r\n            this.scaleWidth=this.width*s\r\n            this.scaleHeight=this.scaleWidth*this.img.naturalHeight/this.img.naturalWidth\r\n        }\r\n        this.scaleX=(osx)*s/os+this.width/2\r\n        this.scaleY=(osy)*s/os+this.height/2\r\n        this.cropLimit()\r\n        this.cropToCanvas()\r\n    },\r\n    // 获取多点触控\r\n    cropTouchData(e){\r\n        if(e.touches.length<2)return\r\n        let x1 = e.touches[0].pageX\r\n        let x2 = e.touches[1].pageX\r\n        let x3=(x1<=x2 ? (x2-x1)/2+x1 : (x1-x2)/2+x2)\r\n        let y1 = e.touches[0].pageY - this.scrollbar.scrollTop\r\n        let y2 = e.touches[1].pageY - this.scrollbar.scrollTop\r\n        let y3=(y1<=y2 ? (y2-y1)/2+y1 : (y1-y2)/2+y2)\r\n        return {\r\n            length: Math.round(Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2))),\r\n            x: Math.round(x3),\r\n            y: Math.round(y3)\r\n        }\r\n    },\r\n    // 限制边界\r\n    cropLimit(){\r\n        if(this.scaleX < -(this.scaleWidth-this.width))this.scaleX=-(this.scaleWidth-this.width)\r\n        if(this.scaleY < -(this.scaleHeight-this.height))this.scaleY=-(this.scaleHeight-this.height)\r\n        if(this.scaleX>0)this.scaleX=0\r\n        if(this.scaleY>0)this.scaleY=0\r\n        if(this.scaleHeight===this.height)this.scaleY=0\r\n        if(this.scaleWidth===this.width)this.scaleX=0\r\n    },\r\n    // 提交裁剪\r\n    cropOK(){\r\n        let data=this.canvas.toDataURL(\"image/jpeg\",this.quality||0.8)\r\n        //没有设置服务器直接返回base64\r\n        if(this.server==\"\"||this.api==\"\"){\r\n            this.file=data\r\n            this.showCrop=false\r\n            document.body.removeChild(this.canvas)\r\n            this.input.value=\"\"\r\n            return false\r\n        }\r\n        data=window.atob(data.split(',')[1]);\r\n        let aBuffer = new ArrayBuffer(data.length);\r\n        let uBuffer = new Uint8Array(aBuffer);\r\n        for (let i = 0; i < data.length; i++) {\r\n            uBuffer[i] = data.charCodeAt(i);\r\n        }\r\n        let blob=new Blob([uBuffer], {type:\"image/jpeg\"})\r\n        let formData = new FormData()\r\n        formData.append(this.filename, blob)\r\n        if(this.params!=undefined){\r\n            for (let key in this.params)formData.append(key, this.params[key])\r\n        }\r\n        let xhr = new XMLHttpRequest()\r\n        if (xhr.upload) {\r\n            xhr.upload.addEventListener(\"progress\",e=>{\r\n                this.percent=Math.floor(e.loaded/e.total*100)\r\n            console.log(\"uploadProgress\",this.percent)\r\n        }, false)\r\n        xhr.onreadystatechange = e=> {\r\n            if (xhr.readyState == 4) {\r\n                if (xhr.status == 200) {\r\n                    let data=xhr.responseText\r\n                    if(data.substr(0,1)==\"{\"){\r\n                        data=JSON.parse(data)\r\n                    }\r\n                    if(data.result!=undefined){\r\n                        this.file=data.result\r\n                    }\r\n                    if(this.success!=undefined){\r\n                        this.success(data)\r\n                    }\r\n                    if (this.files.length==0) {\r\n                        console.log(\"uploadDone\")\r\n                    }\r\n                } else {\r\n                    console.log(\"uploadError\",data)\r\n                }\r\n            }\r\n        }\r\n        xhr.open(\"POST\", this.server+this.api, true)\r\n        if(this.header!=undefined){\r\n            for (let key in this.header)xhr.setRequestHeader(key, this.header[key])\r\n        }\r\n        xhr.withCredentials = false\r\n        xhr.send(formData)\r\n    }\r\n    this.showCrop=false\r\n    document.body.removeChild(this.canvas)\r\n    this.input.value=\"\"\r\n    },\r\n    // 取消裁剪\r\n    cropCancel(){\r\n        this.showCrop=false\r\n        document.body.removeChild(this.canvas)\r\n        this.input.value=\"\"\r\n    },\r\n    // http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios\r\n    cropGetRatio(){\r\n        var iw = this.img.naturalWidth, ih = this.img.naturalHeight;\r\n        var canvas = document.createElement('canvas');\r\n        canvas.width = 1;\r\n        canvas.height = ih;\r\n        var ctx = canvas.getContext('2d');\r\n        ctx.drawImage(this.img, 0, 0);\r\n        var data = ctx.getImageData(0, 0, 1, ih).data;\r\n        // search image edge pixel position in case it is squashed vertically.\r\n        var sy = 0;\r\n        var ey = ih;\r\n        var py = ih;\r\n        while (py > sy) {\r\n            var alpha = data[(py - 1) * 4 + 3];\r\n            if (alpha === 0) {\r\n                ey = py;\r\n            } else {\r\n                sy = py;\r\n            }\r\n            py = (ey + sy) >> 1;\r\n        }\r\n        var ratio = (py / ih);\r\n        return (ratio===0)?1:ratio;\r\n    }\r\n    }\r\n    }\r\n</script>\r\n<style scoped>\r\n    .upload{\r\n        position: relative;\r\n        width: 100%;\r\n        height:100%;\r\n        cursor: pointer;\r\n        border-radius: inherit;\r\n    }\r\n    .upload .image{\r\n        transition: all .3s ease-in-out;\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        background-size: cover;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        border-radius: inherit;\r\n    }\r\n\r\n    .upload>input{\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        opacity: 0;\r\n        cursor: pointer;\r\n    }\r\n    .upload .progress{\r\n        position: absolute;\r\n        left:0;\r\n        bottom:0;\r\n        right:0;\r\n        top:0;\r\n        width:100%;\r\n        box-sizing:border-box;\r\n        background-color:rgba(0, 0, 0,.8);\r\n    }\r\n    .upload .progress span{\r\n        box-sizing: border-box;\r\n        display: block;\r\n        height:100%;\r\n        width:0%;\r\n        border-bottom:5px solid rgba(164, 208, 99,.8);\r\n    }\r\n    .upload .progress em{\r\n        left:50%;\r\n        top:50%;\r\n        transform: translate(-50%,-50%);\r\n        font-size:.8rem;\r\n        line-height: 100%;\r\n        color:#fff;\r\n    }\r\n\r\n    .crop{\r\n        position: fixed;\r\n        z-index: 9998;\r\n        width:100%;\r\n        height:100%;\r\n        left:0;\r\n        top:0;\r\n        background-color: rgba(0,0,0,.7);\r\n        transition: opacity .5s ease;\r\n        -webkit-backdrop-filter: blur(5px);\r\n    }\r\n    .crop-enter,\r\n    .crop-leave {\r\n        opacity: 0;\r\n    }\r\n    .crop-enter .dialog,\r\n    .crop-leave .dialog{\r\n        -webkit-transform: translate(-50%,-50%) scale(1.2);\r\n        transform:translate(-50%,-50%) scale(1.2);\r\n    }\r\n    .crop .dialog {\r\n        position: fixed;\r\n        left:50%;\r\n        top:0%;\r\n        transform: translate(-50%,0%);\r\n        width: 30%;\r\n        background-color:#FAFAFC;\r\n        border-radius:3px;\r\n        transition: all .5s ease;\r\n    }\r\n\r\n    .crop .dialog section{\r\n        display:block;\r\n        position: relative;\r\n        overflow: hidden;\r\n        -webkit-user-select:none;\r\n        user-select:none;\r\n        border-radius:3px 3px 0 0;\r\n    }\r\n    .crop .dialog section.grab{\r\n        cursor:grab;\r\n        cursor:-moz-grab;\r\n        cursor:-webkit-grab;\r\n    }\r\n    .crop .dialog section.grabbing{\r\n        cursor:grabbing;\r\n        cursor:-moz-grabbing;\r\n        cursor:-webkit-grabbing;\r\n    }\r\n    .crop .dialog section>img{\r\n        position: absolute;\r\n\r\n\r\n    }\r\n    .crop .dialog>input{\r\n        position: absolute;\r\n        bottom:70px;\r\n        left:50%;\r\n        transform: translateX(-50%);\r\n    }\r\n    .crop .dialog footer{\r\n        display:block;\r\n        border-top:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button{\r\n        float:left;\r\n        width:50%;\r\n        height:100%;\r\n        padding:1rem 0;\r\n        font-weight:600;\r\n        text-align:center;\r\n        color:#5F7B88;\r\n        cursor: pointer;\r\n        font-size: 1rem;\r\n        background-color: transparent;\r\n    }\r\n    .crop .dialog footer button:nth-child(1){\r\n        border-right:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button:nth-child(2){\r\n        margin-left: -1px;\r\n    }\r\n    .loading{\r\n        position: absolute;\r\n        left:50%;\r\n        top:50%;\r\n        transform: translate(-50%,-50%);\r\n    }\r\n    .v-beat{\r\n        -webkit-animation: v-beatStretchDelay 0.7s infinite linear;\r\n        animation: v-beatStretchDelay 0.7s infinite linear;\r\n        -webkit-animation-fill-mode: both;\r\n        animation-fill-mode: both;\r\n        display: inline-block;\r\n        width:10px;\r\n        height:10px;\r\n        background-color: #fff;\r\n        border-radius: 50%;\r\n    }\r\n    .v-beat-odd{\r\n        -webkit-animation-delay: 0s;\r\n        animation-delay: 0s;\r\n    }\r\n    .v-beat-even{\r\n        -webkit-animation-delay: 0.35s;\r\n        animation-delay: 0.35s;\r\n    }\r\n    @-webkit-keyframes v-beatStretchDelay{\r\n        50%{\r\n            -webkit-transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            -webkit-transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    @keyframes v-beatStretchDelay{\r\n        50%{\r\n            transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    input[type=range] {\r\n        -webkit-appearance: none;\r\n    }\r\n    input[type=range]:focus {\r\n        outline: none;\r\n    }\r\n    input[type=range]::-webkit-slider-runnable-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n\r\n    }\r\n    input[type=range]::-webkit-slider-thumb {\r\n        height:20px;\r\n        width: 20px;\r\n        border-radius: 10px;\r\n        background: #ffffff;\r\n        border:2px solid #efb708;\r\n        cursor: pointer;\r\n        -webkit-appearance: none;\r\n        margin-top: -10px;\r\n    }\r\n\r\n    input[type=range]::-moz-range-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n    }\r\n    input[type=range]::-moz-range-thumb {\r\n        height:16px;\r\n        width:16px;\r\n        border-radius: 8px;\r\n        border:2px solid #efb708;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n    }\r\n    input[type=range]::-ms-track {\r\n        width: 100%;\r\n        height: 1px;\r\n        cursor: pointer;\r\n        background: transparent;\r\n        border-color: transparent;\r\n        color: transparent;\r\n    }\r\n    input[type=range]::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range]::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range]::-ms-thumb {\r\n        height: 16px;\r\n        width: 16px;\r\n        border-radius: 8px;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n        height: 1px;\r\n    }\r\n    input[type=range]:focus::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n    input[type=range]:focus::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n</style>\r\n\r\n<template>\r\n    <div class=\"upload\">\r\n        <slot></slot>\r\n        <div class=\"image\" :style=\"{'background-image':'url('+server+file+')'}\" v-if=\"file!=''&&preview\"></div>\r\n        <div class=\"progress\" v-if=\"percent>0\">\r\n            <span :style=\"{width:percent+'%'}\"></span>\r\n            <em class=\"pa\">{{percent}}%</em>\r\n        </div>\r\n        <input type=\"file\" class=\"upload\" @change=\"fileChange\" accept=\"{{accepts}}\" multiple=\"{{multiple}}\">\r\n\r\n        <div class=\"crop\" v-if=\"showCrop\" transition=\"crop\"  :style=\"{height:cropHeight+'px'}\">\r\n            <div class=\"loading\" v-if=\"!showCropDialog\">\r\n                <div class=\"v-beat v-beat-odd\"></div>\r\n                <div class=\"v-beat v-beat-even\"></div>\r\n                <div class=\"v-beat v-beat-odd\"></div>\r\n            </div>\r\n            <div class=\"dialog\" :style=\"{width:width+'px',top:cropTop+'px'}\" v-if=\"showCropDialog\">\r\n                <section :style=\"{width:width+'px',height:height+'px'}\" :class=\"{'grab':grabbing==false,'grabbing':grabbing}\">\r\n                    <img\r\n                            :style=\"{width:scaleWidth+'px',height:scaleHeight+'px',left:scaleX+'px',top:scaleY+'px'}\"\r\n                            @mousedown.prevent=\"cropDragBegin\"\r\n                            @mousemove.prevent=\"cropDragMove\"\r\n                            @mouseup.prevent=\"cropDragEnd\"\r\n\r\n                            @touchstart.prevent=\"cropDragBegin\"\r\n                            @touchmove.prevent=\"cropDragMove\"\r\n                            @touchend.prevent=\"cropDragEnd\"\r\n                            :src=\"cropImage\">\r\n                </section>\r\n                <footer>\r\n                    <button @click=\"cropCancel\">{{cancel}}</button>\r\n                    <button @click=\"cropOK\">{{ok}}</button>\r\n                </footer>\r\n                <input type=\"range\" v-model=\"scale\" value=\"100\" min=\"100\" max=\"200\" step=\"1\" @input=\"cropZoom\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .upload[_v-25e5f041]{\r\n        position: relative;\r\n        width: 100%;\r\n        height:100%;\r\n        cursor: pointer;\r\n        border-radius: inherit;\r\n    }\r\n    .upload .image[_v-25e5f041]{\r\n        -webkit-transition: all .3s ease-in-out;\r\n        transition: all .3s ease-in-out;\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        background-size: cover;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        border-radius: inherit;\r\n    }\r\n\r\n    .upload>input[_v-25e5f041]{\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        opacity: 0;\r\n        cursor: pointer;\r\n    }\r\n    .upload .progress[_v-25e5f041]{\r\n        position: absolute;\r\n        left:0;\r\n        bottom:0;\r\n        right:0;\r\n        top:0;\r\n        width:100%;\r\n        box-sizing:border-box;\r\n        background-color:rgba(0, 0, 0,.8);\r\n    }\r\n    .upload .progress span[_v-25e5f041]{\r\n        box-sizing: border-box;\r\n        display: block;\r\n        height:100%;\r\n        width:0%;\r\n        border-bottom:5px solid rgba(164, 208, 99,.8);\r\n    }\r\n    .upload .progress em[_v-25e5f041]{\r\n        left:50%;\r\n        top:50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        font-size:0.5rem;\r\n        line-height: 100%;\r\n        color:#fff;\r\n    }\r\n\r\n    .crop[_v-25e5f041]{\r\n        position: fixed;\r\n        z-index: 9998;\r\n        width:100%;\r\n        height:100%;\r\n        left:0;\r\n        top:0;\r\n        background-color: rgba(0,0,0,.7);\r\n        -webkit-transition: opacity .5s ease;\r\n        transition: opacity .5s ease;\r\n        -webkit-backdrop-filter: blur(5px);\r\n    }\r\n    .crop-enter[_v-25e5f041],\r\n    .crop-leave[_v-25e5f041] {\r\n        opacity: 0;\r\n    }\r\n    .crop-enter .dialog[_v-25e5f041],\r\n    .crop-leave .dialog[_v-25e5f041]{\r\n        -webkit-transform: translate(-50%,-50%) scale(1.2);\r\n        transform:translate(-50%,-50%) scale(1.2);\r\n    }\r\n    .crop .dialog[_v-25e5f041] {\r\n        position: fixed;\r\n        left:50%;\r\n        top:0%;\r\n        -webkit-transform: translate(-50%,0%);\r\n                transform: translate(-50%,0%);\r\n        width: 30%;\r\n        background-color:#FAFAFC;\r\n        border-radius:3px;\r\n        -webkit-transition: all .5s ease;\r\n        transition: all .5s ease;\r\n    }\r\n\r\n    .crop .dialog section[_v-25e5f041]{\r\n        display:block;\r\n        position: relative;\r\n        overflow: hidden;\r\n        -webkit-user-select:none;\r\n        -moz-user-select:none;\r\n         -ms-user-select:none;\r\n             user-select:none;\r\n        border-radius:3px 3px 0 0;\r\n    }\r\n    .crop .dialog section.grab[_v-25e5f041]{\r\n        cursor:grab;\r\n        cursor:-webkit-grab;\r\n    }\r\n    .crop .dialog section.grabbing[_v-25e5f041]{\r\n        cursor:grabbing;\r\n        cursor:-webkit-grabbing;\r\n    }\r\n    .crop .dialog section>img[_v-25e5f041]{\r\n        position: absolute;\r\n\r\n\r\n    }\r\n    .crop .dialog>input[_v-25e5f041]{\r\n        position: absolute;\r\n        bottom:70px;\r\n        left:50%;\r\n        -webkit-transform: translateX(-50%);\r\n                transform: translateX(-50%);\r\n    }\r\n    .crop .dialog footer[_v-25e5f041]{\r\n        display:block;\r\n        border-top:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button[_v-25e5f041]{\r\n        float:left;\r\n        width:50%;\r\n        height:100%;\r\n        padding:0.2rem 0;\r\n        font-weight:600;\r\n        text-align:center;\r\n        color:#5F7B88;\r\n        cursor: pointer;\r\n        font-size: 0.2rem;\r\n        background-color: transparent;\r\n    }\r\n    .crop .dialog footer button[_v-25e5f041]:nth-child(1){\r\n        border-right:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button[_v-25e5f041]:nth-child(2){\r\n        margin-left: -1px;\r\n    }\r\n    .loading[_v-25e5f041]{\r\n        position: absolute;\r\n        left:50%;\r\n        top:50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n    }\r\n    .v-beat[_v-25e5f041]{\r\n        -webkit-animation: v-beatStretchDelay 0.7s infinite linear;\r\n        animation: v-beatStretchDelay 0.7s infinite linear;\r\n        -webkit-animation-fill-mode: both;\r\n        animation-fill-mode: both;\r\n        display: inline-block;\r\n        width:10px;\r\n        height:10px;\r\n        background-color: #fff;\r\n        border-radius: 50%;\r\n    }\r\n    .v-beat-odd[_v-25e5f041]{\r\n        -webkit-animation-delay: 0s;\r\n        animation-delay: 0s;\r\n    }\r\n    .v-beat-even[_v-25e5f041]{\r\n        -webkit-animation-delay: 0.35s;\r\n        animation-delay: 0.35s;\r\n    }\r\n    @-webkit-keyframes v-beatStretchDelay{\r\n        50%{\r\n            -webkit-transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            -webkit-transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    @keyframes v-beatStretchDelay{\r\n        50%{\r\n            -webkit-transform: scale(0.75);\r\n                    transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            -webkit-transform: scale(1);\r\n                    transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    input[type=range][_v-25e5f041] {\r\n        -webkit-appearance: none;\r\n    }\r\n    input[type=range][_v-25e5f041]:focus {\r\n        outline: none;\r\n    }\r\n    input[type=range][_v-25e5f041]::-webkit-slider-runnable-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n\r\n    }\r\n    input[type=range][_v-25e5f041]::-webkit-slider-thumb {\r\n        height:20px;\r\n        width: 20px;\r\n        border-radius: 10px;\r\n        background: #ffffff;\r\n        border:2px solid #efb708;\r\n        cursor: pointer;\r\n        -webkit-appearance: none;\r\n        margin-top: -10px;\r\n    }\r\n\r\n    input[type=range][_v-25e5f041]::-moz-range-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n    }\r\n    input[type=range][_v-25e5f041]::-moz-range-thumb {\r\n        height:16px;\r\n        width:16px;\r\n        border-radius: 8px;\r\n        border:2px solid #efb708;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n    }\r\n    input[type=range][_v-25e5f041]::-ms-track {\r\n        width: 100%;\r\n        height: 1px;\r\n        cursor: pointer;\r\n        background: transparent;\r\n        border-color: transparent;\r\n        color: transparent;\r\n    }\r\n    input[type=range][_v-25e5f041]::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range][_v-25e5f041]::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range][_v-25e5f041]::-ms-thumb {\r\n        height: 16px;\r\n        width: 16px;\r\n        border-radius: 8px;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n        height: 1px;\r\n    }\r\n    input[type=range][_v-25e5f041]:focus::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n    input[type=range][_v-25e5f041]:focus::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n", "", {"version":3,"sources":["/./src/components/upload.vue.style"],"names":[],"mappings":";IAugBA;QACA,mBAAA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,uBAAA;KACA;IACA;QACA,wCAAA;QAAA,gCAAA;QACA,mBAAA;QACA,OAAA;QACA,MAAA;QACA,QAAA;QACA,SAAA;QACA,uBAAA;QACA,4BAAA;QACA,6BAAA;QACA,uBAAA;KACA;;IAEA;QACA,mBAAA;QACA,OAAA;QACA,MAAA;QACA,QAAA;QACA,SAAA;QACA,WAAA;QACA,gBAAA;KACA;IACA;QACA,mBAAA;QACA,OAAA;QACA,SAAA;QACA,QAAA;QACA,MAAA;QACA,WAAA;QACA,sBAAA;QACA,kCAAA;KACA;IACA;QACA,uBAAA;QACA,eAAA;QACA,YAAA;QACA,SAAA;QACA,8CAAA;KACA;IACA;QACA,SAAA;QACA,QAAA;QACA,wCAAA;gBAAA,gCAAA;QACA,iBAAA;QACA,kBAAA;QACA,WAAA;KACA;;IAEA;QACA,gBAAA;QACA,cAAA;QACA,WAAA;QACA,YAAA;QACA,OAAA;QACA,MAAA;QACA,iCAAA;QACA,qCAAA;QAAA,6BAAA;QACA,mCAAA;KACA;IACA;;QAEA,WAAA;KACA;IACA;;QAEA,mDAAA;QACA,0CAAA;KACA;IACA;QACA,gBAAA;QACA,SAAA;QACA,OAAA;QACA,sCAAA;gBAAA,8BAAA;QACA,WAAA;QACA,yBAAA;QACA,kBAAA;QACA,iCAAA;QAAA,yBAAA;KACA;;IAEA;QACA,cAAA;QACA,mBAAA;QACA,iBAAA;QACA,yBAAA;QACA,sBAAA;SAAA,qBAAA;aAAA,iBAAA;QACA,0BAAA;KACA;IACA;QACA,YAAA;QAEA,oBAAA;KACA;IACA;QACA,gBAAA;QAEA,wBAAA;KACA;IACA;QACA,mBAAA;;;KAGA;IACA;QACA,mBAAA;QACA,YAAA;QACA,SAAA;QACA,oCAAA;gBAAA,4BAAA;KACA;IACA;QACA,cAAA;QACA,6BAAA;KACA;IACA;QACA,WAAA;QACA,UAAA;QACA,YAAA;QACA,iBAAA;QACA,gBAAA;QACA,kBAAA;QACA,cAAA;QACA,gBAAA;QACA,kBAAA;QACA,8BAAA;KACA;IACA;QACA,+BAAA;KACA;IACA;QACA,kBAAA;KACA;IACA;QACA,mBAAA;QACA,SAAA;QACA,QAAA;QACA,wCAAA;gBAAA,gCAAA;KACA;IACA;QACA,2DAAA;QACA,mDAAA;QACA,kCAAA;QACA,0BAAA;QACA,sBAAA;QACA,WAAA;QACA,YAAA;QACA,uBAAA;QACA,mBAAA;KACA;IACA;QACA,4BAAA;QACA,oBAAA;KACA;IACA;QACA,+BAAA;QACA,uBAAA;KACA;IACA;QACA;YACA,+BAAA;YACA,aAAA;SACA;QACA;YACA,4BAAA;YACA,WAAA;SACA;KACA;IACA;QACA;YACA,+BAAA;oBAAA,uBAAA;YACA,aAAA;SACA;QACA;YACA,4BAAA;oBAAA,oBAAA;YACA,WAAA;SACA;KACA;IACA;QACA,yBAAA;KACA;IACA;QACA,cAAA;KACA;IACA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,oBAAA;;KAEA;IACA;QACA,YAAA;QACA,YAAA;QACA,oBAAA;QACA,oBAAA;QACA,yBAAA;QACA,gBAAA;QACA,yBAAA;QACA,kBAAA;KACA;;IAEA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,oBAAA;KACA;IACA;QACA,YAAA;QACA,WAAA;QACA,mBAAA;QACA,yBAAA;QACA,oBAAA;QACA,gBAAA;KACA;IACA;QACA,YAAA;QACA,YAAA;QACA,gBAAA;QACA,wBAAA;QACA,0BAAA;QACA,mBAAA;KACA;IACA;QACA,+BAAA;QACA,2CAAA;QACA,mBAAA;QACA,0EAAA;KACA;IACA;QACA,+BAAA;QACA,2CAAA;QACA,mBAAA;QACA,0EAAA;KACA;IACA;QACA,aAAA;QACA,YAAA;QACA,mBAAA;QACA,oBAAA;QACA,gBAAA;QACA,YAAA;KACA;IACA;QACA,+BAAA;KACA;IACA;QACA,+BAAA;KACA","file":"upload.vue","sourcesContent":["<script>\r\n    /**\r\n     * vue-upload\r\n     * E-mail   :129@jinzhe.net\r\n     * website  :http://jinzhe.net\r\n     * author   :zee\r\n     * date     :2016/09/05\r\n     */\r\n    export default {\r\n        props: {\r\n            // Server host,like \"http://jinzhe.net\"\r\n            server: {\r\n                type: String,\r\n                require:true\r\n            },\r\n            // Server api path,like \"/api/v1/getdata/\"\r\n            api: {\r\n                type: String,\r\n                require:true\r\n            },\r\n            // POST Params\r\n            params:{\r\n                type:Object,\r\n                default:()=>{\r\n                return {}\r\n            }\r\n        },\r\n        // Upload input filename,used for server side get the file stream.\r\n        filename: {\r\n            type: String,\r\n            default:\"file\"\r\n        },\r\n        // Used for binding parent component data and show image preview.\r\n        file: {\r\n            type: String,\r\n            default:\"\",\r\n            twoWay:true\r\n        },\r\n        // Allow Upload extension\r\n        ext:{\r\n            type:String,\r\n            default:'jpg,gif,png'\r\n        },\r\n        // Used for send to server side\r\n        header:{\r\n            type:Object,\r\n            default:()=>{\r\n            return {}\r\n        }\r\n    },\r\n    // File upload limit\r\n    limit:{\r\n        type:Number,\r\n    default:1024 * 1024 * 64\r\n    },\r\n    multiple: {\r\n        type: Boolean,\r\n    default:true\r\n    },\r\n    preview: {\r\n        type: Boolean,\r\n    default:true\r\n    },\r\n    auto: {\r\n        type: Boolean,\r\n    default:true\r\n    },\r\n    // Crop on or off\r\n    crop:{\r\n        type: Boolean,\r\n    default:false\r\n    },\r\n    // Crop image width\r\n    width:{\r\n        type:Number,\r\n    default:200,\r\n    },\r\n    // Crop image height\r\n    height:{\r\n        type:Number,\r\n    default:200,\r\n    },\r\n    // Crop image \"OK\" button text\r\n    ok: {\r\n        type: String,\r\n    default: 'OK'\r\n    },\r\n    // Crop image \"cancel\" button text\r\n    cancel: {\r\n        type: String,\r\n    default: 'Cancel'\r\n    },\r\n    // Crop image quality\r\n    quality:{\r\n        type:Number,\r\n    default:0.8,\r\n    },\r\n    // Used for crop display position,default is document.body\r\n    container: {\r\n        type: String,\r\n    default: ''\r\n    },\r\n    success:{\r\n        type:Function\r\n    }\r\n    },\r\n    data(){\r\n        return {\r\n            isMobile:/(iphone|ios|android|iPad)/i.test(navigator.userAgent),\r\n            percent: 0,\r\n            files:[],\r\n            accepts:\"\",\r\n            mimes:{\r\n                \"jpg\": \"image/jpeg\",\r\n                \"png\": \"image/png\",\r\n                \"gif\": \"image/gif\",\r\n                \"mp4\": \"video/mp4\",\r\n                \"mov\": \"video/quicktime\",\r\n                \"wmv\": \"video/x-ms-wmv\",\r\n                \"flv\": \"video/x-flv\",\r\n                \"svg\": \"image/svg+xml\",\r\n                \"psd\": \"image/photoshop\",\r\n                \"mp3\": \"audio/mpeg\",\r\n                \"rar\": \"application/x-rar-compressed\",\r\n                \"zip\": \"application/zip\",\r\n                \"json\": \"application/json\",\r\n                \"docx\": \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\",\r\n                \"xlsx\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\r\n                \"pptx\": \"application/vnd.openxmlformats-officedocument.presentationml.presentation\",\r\n                \"doc\": \"application/msword\",\r\n                \"pdf\": \"application/pdf\",\r\n                \"xls\": \"application/vnd.ms-excel\",\r\n                \"ppt\": \"application/vnd.ms-powerpoint\"\r\n            },\r\n            scrollbar:null,\r\n            input:null,\r\n            cropHeight:0,\r\n            cropTop:0,\r\n            showCrop:false,\r\n            showCropDialog:false,\r\n            scale:100,//缩放\r\n            scaleX:0,\r\n            scaleY:0,\r\n            scaleLength:0,\r\n            scaleWidth:0,\r\n            scaleHeight:0,\r\n            drag:false,\r\n            grabbing:false,\r\n            beginX:0,\r\n            beginY:0,\r\n            beginLength:0,\r\n            img:null,\r\n            canvas:null,\r\n            context:null,\r\n        }\r\n    },\r\n    watch:{\r\n        percent(){\r\n            if(this.percent==100){\r\n                setTimeout(()=>{\r\n                    this.percent=0\r\n            },500)\r\n        }\r\n    },\r\n    auto(){\r\n        if(this.auto){\r\n            this.uploadFiles()\r\n            this.auto=false\r\n        }\r\n    },\r\n    },\r\n    ready(){\r\n        if(this.crop){\r\n            this.multiple=false\r\n            this.ext=\"jpg\"\r\n            this.auto=false\r\n        }\r\n        let accepts=[]\r\n        let exts = this.ext.split(\",\");\r\n        for (let i = 0; i < exts.length; i++) {\r\n            accepts.push(this.mimes[exts[i]]);\r\n        }\r\n        this.accepts=accepts.join(\",\")\r\n    },\r\n    methods:{\r\n        fileChange(e){\r\n            debugger;\r\n            this.input=e.target\r\n            // console.log(e)\r\n            if(this.crop){\r\n                if(e.target.files.length==0)return false\r\n                this.showCrop=true\r\n                this.showCropDialog=false\r\n                // 读取本地图片转成base64显示到页面待使用\r\n                let fr=new FileReader()\r\n                fr.onload=e=>{\r\n                    this.img=new Image()\r\n                    this.img.src=fr.result\r\n                    this.img.onload=()=>{\r\n                        if(this.container==''){\r\n                            if(window.getComputedStyle(document.body).overflow=='hidden'){\r\n                                this.scrollbar=document.querySelector('.router')\r\n                            }else{\r\n                                this.scrollbar=document.body\r\n                            }\r\n                        }else{\r\n                            this.scrollbar=document.querySelector(this.container)\r\n                        }\r\n\r\n                        let scrollHeight=this.scrollbar.scrollHeight\r\n                        // let scrollTop=this.scrollbar.scrollTop\r\n                        let windowHeight=window.innerHeight\r\n                        // console.log(windowHeight,scrollHeight)\r\n                        if(scrollHeight<=windowHeight){\r\n                            this.cropHeight=windowHeight\r\n                            this.cropTop=~~(windowHeight-(this.height+50))/2\r\n                        }else{\r\n                            this.cropHeight=scrollHeight\r\n                            this.cropTop=~~((windowHeight-(this.height+50))/2)\r\n                        }\r\n                        // 按原始图片比例优先使用小值设置最低值\r\n                        if(this.img.naturalWidth>this.img.naturalHeight){\r\n                            this.scaleHeight=this.height\r\n                            this.scaleWidth=Math.round(this.scaleHeight*this.img.naturalWidth/this.img.naturalHeight)\r\n                        }else{\r\n                            this.scaleWidth=this.width\r\n                            this.scaleHeight=Math.round(this.scaleWidth*this.img.naturalHeight/this.img.naturalWidth)\r\n                        }\r\n                        this.scaleX=-Math.round((this.scaleWidth-this.width)/2)\r\n                        this.scaleY=-Math.round((this.scaleHeight-this.height)/2)\r\n\r\n                        this.cropImage=fr.result\r\n\r\n                        // 渲染到canvas\r\n                        this.canvas=document.createElement(\"canvas\")\r\n                        this.canvas.width=this.width\r\n                        this.canvas.height=this.height\r\n                        this.canvas.setAttribute(\"style\",\"position:absolute;left:0;top:0;opacity:0;z-index:99999\")\r\n                        this.context=this.canvas.getContext(\"2d\")\r\n                        this.cropToCanvas()\r\n                        document.body.appendChild(this.canvas)\r\n                        this.showCropDialog=true\r\n                    }\r\n                }\r\n                fr.readAsDataURL(e.target.files[0])\r\n            }else{\r\n                this.files=[]\r\n                this.getFiles(e)\r\n                if (this.auto)this.uploadFiles()\r\n            }\r\n        },\r\n        getFiles(e) {\r\n            e.stopPropagation();\r\n            e.preventDefault();\r\n            this.files = e.target.files || e.dataTransfer.files\r\n            let _exts=this.ext.split(\",\")\r\n            let _mimes=[]\r\n            if(_exts.length>0){\r\n                _exts.forEach(v=>{\r\n                    if(this.mimes[v]!=undefined){\r\n                    _mimes.push(this.mimes[v])\r\n                }\r\n            })\r\n        }\r\n        for (var i = 0, file; file = this.files[i]; i++) {\r\n            if (file.size > this.limit||!_mimes.includes(file.type)) {\r\n                this.removeFile(file.name)\r\n            }\r\n        }\r\n    },\r\n    removeFile(name) {\r\n        var newFiles = []\r\n        for (var i = 0, file; file = this.files[i]; i++) {\r\n            if (file.name != name)newFiles.push(file)\r\n        }\r\n        this.files = newFiles\r\n    },\r\n    uploadFiles(){\r\n        if(this.files.length==0)return false\r\n        for (var i = 0, f; f = this.files[i]; i++) {\r\n            (file=>{\r\n                var xhr = new XMLHttpRequest()\r\n                if (xhr.upload) {\r\n                var formData = new FormData()\r\n                formData.append(this.filename, file)\r\n                if(this.params!=undefined){\r\n                    for (let key in this.params)formData.append(key, this.params[key])\r\n                }\r\n                xhr.upload.addEventListener(\"progress\",e=>{\r\n                    this.percent=Math.floor(e.loaded/e.total*100)\r\n                console.log(\"uploadProgress\",this.percent)\r\n            }, false)\r\n            xhr.onreadystatechange = e=> {\r\n                if (xhr.readyState == 4) {\r\n                    if (xhr.status == 200) {\r\n                        let data=xhr.responseText\r\n                        if(data.substr(0,1)==\"{\"){\r\n                            data=JSON.parse(data)\r\n                        }\r\n                        if(data.result!=undefined){\r\n                            this.file=data.result\r\n                        }\r\n                        if(this.success!=undefined){\r\n                            this.success(data)\r\n                        }\r\n                        if (this.files.length==0) {\r\n                            console.log(\"uploadDone\")\r\n                        }\r\n                    } else {\r\n                        console.log(\"uploadError\",data)\r\n                    }\r\n                }\r\n            }\r\n            xhr.open(\"POST\", this.server+this.api, true)\r\n            if(this.header!=undefined){\r\n                for (let key in this.header)xhr.setRequestHeader(key, this.header[key])\r\n            }\r\n            xhr.withCredentials = false\r\n            xhr.send(formData)\r\n        }\r\n    })(f)\r\n    }\r\n    },\r\n    cropDragBegin(e){\r\n        this.drag=true\r\n        this.grabbing=true\r\n        this.beginX=e.pageX-e.target.offsetLeft\r\n        this.beginY=e.pageY-e.target.offsetTop\r\n        if(this.isMobile){\r\n            if(e.touches.length==2){\r\n                this.beginLength=this.beginLength==0?this.cropTouchData(e).length:this.beginLength\r\n            }\r\n            document.addEventListener('touchmove',this.cropDragMove,false)\r\n            document.addEventListener('touchend',this.cropDragEnd,false)\r\n        }else{\r\n            document.addEventListener('mouseover',this.cropDragMove,false)\r\n            document.addEventListener('mouseup',this.cropDragEnd,false)\r\n        }\r\n    },\r\n    cropDragMove(e){\r\n        if(!this.drag)return false\r\n        // 放大\r\n        if(this.isMobile){\r\n            if(e.touches.length==2){\r\n                this.scaleLength=this.cropTouchData(e).length\r\n                this.scale=Math.min(200,Math.max(100,this.scaleLength/this.beginLength*100))\r\n                this.cropZoom()\r\n            }else{\r\n                this.scaleX= e.pageX - this.beginX\r\n                this.scaleY= e.pageY - this.beginY\r\n\r\n            }\r\n        }else{\r\n            this.scaleX= e.pageX - this.beginX\r\n            this.scaleY= e.pageY - this.beginY\r\n\r\n        }\r\n        this.cropLimit()\r\n    },\r\n    cropDragEnd(e){\r\n        this.drag=false\r\n        this.grabbing=false\r\n        this.cropToCanvas()\r\n        if(this.isMobile){\r\n            document.removeEventListener('touchmove',this.cropDragMove,false)\r\n            document.removeEventListener('touchend',this.cropDragEnd,false)\r\n        }else{\r\n            document.removeEventListener('mouseover',this.cropDragMove,false)\r\n            document.removeEventListener('mouseup',this.cropDragEnd,false)\r\n        }\r\n    },\r\n    cropToCanvas(){\r\n        this.context.clearRect(0,0,this.width,this.height)\r\n        let sx= Math.round(Math.abs(this.scaleX)*this.img.naturalWidth/this.scaleWidth) //图像源x坐标\r\n        let sy= Math.round(Math.abs(this.scaleY)*this.img.naturalHeight/this.scaleHeight) //图像源y坐标\r\n        let sw=this.width*this.img.naturalWidth/this.scaleWidth\r\n        let sh=this.height*this.img.naturalHeight/this.scaleHeight\r\n        this.context.drawImage(this.img,sx,sy,sw,sh,0,0,this.width,this.height/this.cropGetRatio())\r\n    },\r\n    cropZoom(){\r\n        let s=this.scale/100\r\n        let osx=this.scaleX-this.width/2\r\n        let osy=this.scaleY-this.height/2\r\n        let os\r\n        // 按原始图片比例优先使用小值设置最低值\r\n        if(this.img.naturalWidth>this.img.naturalHeight){\r\n            os=this.scaleHeight/this.height\r\n            this.scaleHeight=this.height*s\r\n            this.scaleWidth=this.scaleHeight*this.img.naturalWidth/this.img.naturalHeight\r\n        }else{\r\n            os=this.scaleWidth/this.width\r\n            this.scaleWidth=this.width*s\r\n            this.scaleHeight=this.scaleWidth*this.img.naturalHeight/this.img.naturalWidth\r\n        }\r\n        this.scaleX=(osx)*s/os+this.width/2\r\n        this.scaleY=(osy)*s/os+this.height/2\r\n        this.cropLimit()\r\n        this.cropToCanvas()\r\n    },\r\n    // 获取多点触控\r\n    cropTouchData(e){\r\n        if(e.touches.length<2)return\r\n        let x1 = e.touches[0].pageX\r\n        let x2 = e.touches[1].pageX\r\n        let x3=(x1<=x2 ? (x2-x1)/2+x1 : (x1-x2)/2+x2)\r\n        let y1 = e.touches[0].pageY - this.scrollbar.scrollTop\r\n        let y2 = e.touches[1].pageY - this.scrollbar.scrollTop\r\n        let y3=(y1<=y2 ? (y2-y1)/2+y1 : (y1-y2)/2+y2)\r\n        return {\r\n            length: Math.round(Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2))),\r\n            x: Math.round(x3),\r\n            y: Math.round(y3)\r\n        }\r\n    },\r\n    // 限制边界\r\n    cropLimit(){\r\n        if(this.scaleX < -(this.scaleWidth-this.width))this.scaleX=-(this.scaleWidth-this.width)\r\n        if(this.scaleY < -(this.scaleHeight-this.height))this.scaleY=-(this.scaleHeight-this.height)\r\n        if(this.scaleX>0)this.scaleX=0\r\n        if(this.scaleY>0)this.scaleY=0\r\n        if(this.scaleHeight===this.height)this.scaleY=0\r\n        if(this.scaleWidth===this.width)this.scaleX=0\r\n    },\r\n    // 提交裁剪\r\n    cropOK(){\r\n        let data=this.canvas.toDataURL(\"image/jpeg\",this.quality||0.8)\r\n        //没有设置服务器直接返回base64\r\n        if(this.server==\"\"||this.api==\"\"){\r\n            this.file=data\r\n            this.showCrop=false\r\n            document.body.removeChild(this.canvas)\r\n            this.input.value=\"\"\r\n            return false\r\n        }\r\n        data=window.atob(data.split(',')[1]);\r\n        let aBuffer = new ArrayBuffer(data.length);\r\n        let uBuffer = new Uint8Array(aBuffer);\r\n        for (let i = 0; i < data.length; i++) {\r\n            uBuffer[i] = data.charCodeAt(i);\r\n        }\r\n        let blob=new Blob([uBuffer], {type:\"image/jpeg\"})\r\n        let formData = new FormData()\r\n        formData.append(this.filename, blob)\r\n        if(this.params!=undefined){\r\n            for (let key in this.params)formData.append(key, this.params[key])\r\n        }\r\n        let xhr = new XMLHttpRequest()\r\n        if (xhr.upload) {\r\n            xhr.upload.addEventListener(\"progress\",e=>{\r\n                this.percent=Math.floor(e.loaded/e.total*100)\r\n            console.log(\"uploadProgress\",this.percent)\r\n        }, false)\r\n        xhr.onreadystatechange = e=> {\r\n            if (xhr.readyState == 4) {\r\n                if (xhr.status == 200) {\r\n                    let data=xhr.responseText\r\n                    if(data.substr(0,1)==\"{\"){\r\n                        data=JSON.parse(data)\r\n                    }\r\n                    if(data.result!=undefined){\r\n                        this.file=data.result\r\n                    }\r\n                    if(this.success!=undefined){\r\n                        this.success(data)\r\n                    }\r\n                    if (this.files.length==0) {\r\n                        console.log(\"uploadDone\")\r\n                    }\r\n                } else {\r\n                    console.log(\"uploadError\",data)\r\n                }\r\n            }\r\n        }\r\n        xhr.open(\"POST\", this.server+this.api, true)\r\n        if(this.header!=undefined){\r\n            for (let key in this.header)xhr.setRequestHeader(key, this.header[key])\r\n        }\r\n        xhr.withCredentials = false\r\n        xhr.send(formData)\r\n    }\r\n    this.showCrop=false\r\n    document.body.removeChild(this.canvas)\r\n    this.input.value=\"\"\r\n    },\r\n    // 取消裁剪\r\n    cropCancel(){\r\n        this.showCrop=false\r\n        document.body.removeChild(this.canvas)\r\n        this.input.value=\"\"\r\n    },\r\n    // http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios\r\n    cropGetRatio(){\r\n        var iw = this.img.naturalWidth, ih = this.img.naturalHeight;\r\n        var canvas = document.createElement('canvas');\r\n        canvas.width = 1;\r\n        canvas.height = ih;\r\n        var ctx = canvas.getContext('2d');\r\n        ctx.drawImage(this.img, 0, 0);\r\n        var data = ctx.getImageData(0, 0, 1, ih).data;\r\n        // search image edge pixel position in case it is squashed vertically.\r\n        var sy = 0;\r\n        var ey = ih;\r\n        var py = ih;\r\n        while (py > sy) {\r\n            var alpha = data[(py - 1) * 4 + 3];\r\n            if (alpha === 0) {\r\n                ey = py;\r\n            } else {\r\n                sy = py;\r\n            }\r\n            py = (ey + sy) >> 1;\r\n        }\r\n        var ratio = (py / ih);\r\n        return (ratio===0)?1:ratio;\r\n    }\r\n    }\r\n    }\r\n</script>\r\n<style scoped>\r\n    .upload{\r\n        position: relative;\r\n        width: 100%;\r\n        height:100%;\r\n        cursor: pointer;\r\n        border-radius: inherit;\r\n    }\r\n    .upload .image{\r\n        transition: all .3s ease-in-out;\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        background-size: cover;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        border-radius: inherit;\r\n    }\r\n\r\n    .upload>input{\r\n        position: absolute;\r\n        left:0;\r\n        top:0;\r\n        right:0;\r\n        bottom:0;\r\n        opacity: 0;\r\n        cursor: pointer;\r\n    }\r\n    .upload .progress{\r\n        position: absolute;\r\n        left:0;\r\n        bottom:0;\r\n        right:0;\r\n        top:0;\r\n        width:100%;\r\n        box-sizing:border-box;\r\n        background-color:rgba(0, 0, 0,.8);\r\n    }\r\n    .upload .progress span{\r\n        box-sizing: border-box;\r\n        display: block;\r\n        height:100%;\r\n        width:0%;\r\n        border-bottom:5px solid rgba(164, 208, 99,.8);\r\n    }\r\n    .upload .progress em{\r\n        left:50%;\r\n        top:50%;\r\n        transform: translate(-50%,-50%);\r\n        font-size:0.5rem;\r\n        line-height: 100%;\r\n        color:#fff;\r\n    }\r\n\r\n    .crop{\r\n        position: fixed;\r\n        z-index: 9998;\r\n        width:100%;\r\n        height:100%;\r\n        left:0;\r\n        top:0;\r\n        background-color: rgba(0,0,0,.7);\r\n        transition: opacity .5s ease;\r\n        -webkit-backdrop-filter: blur(5px);\r\n    }\r\n    .crop-enter,\r\n    .crop-leave {\r\n        opacity: 0;\r\n    }\r\n    .crop-enter .dialog,\r\n    .crop-leave .dialog{\r\n        -webkit-transform: translate(-50%,-50%) scale(1.2);\r\n        transform:translate(-50%,-50%) scale(1.2);\r\n    }\r\n    .crop .dialog {\r\n        position: fixed;\r\n        left:50%;\r\n        top:0%;\r\n        transform: translate(-50%,0%);\r\n        width: 30%;\r\n        background-color:#FAFAFC;\r\n        border-radius:3px;\r\n        transition: all .5s ease;\r\n    }\r\n\r\n    .crop .dialog section{\r\n        display:block;\r\n        position: relative;\r\n        overflow: hidden;\r\n        -webkit-user-select:none;\r\n        user-select:none;\r\n        border-radius:3px 3px 0 0;\r\n    }\r\n    .crop .dialog section.grab{\r\n        cursor:grab;\r\n        cursor:-moz-grab;\r\n        cursor:-webkit-grab;\r\n    }\r\n    .crop .dialog section.grabbing{\r\n        cursor:grabbing;\r\n        cursor:-moz-grabbing;\r\n        cursor:-webkit-grabbing;\r\n    }\r\n    .crop .dialog section>img{\r\n        position: absolute;\r\n\r\n\r\n    }\r\n    .crop .dialog>input{\r\n        position: absolute;\r\n        bottom:70px;\r\n        left:50%;\r\n        transform: translateX(-50%);\r\n    }\r\n    .crop .dialog footer{\r\n        display:block;\r\n        border-top:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button{\r\n        float:left;\r\n        width:50%;\r\n        height:100%;\r\n        padding:0.2rem 0;\r\n        font-weight:600;\r\n        text-align:center;\r\n        color:#5F7B88;\r\n        cursor: pointer;\r\n        font-size: 0.2rem;\r\n        background-color: transparent;\r\n    }\r\n    .crop .dialog footer button:nth-child(1){\r\n        border-right:1px solid #E8E8EA;\r\n    }\r\n    .crop .dialog footer button:nth-child(2){\r\n        margin-left: -1px;\r\n    }\r\n    .loading{\r\n        position: absolute;\r\n        left:50%;\r\n        top:50%;\r\n        transform: translate(-50%,-50%);\r\n    }\r\n    .v-beat{\r\n        -webkit-animation: v-beatStretchDelay 0.7s infinite linear;\r\n        animation: v-beatStretchDelay 0.7s infinite linear;\r\n        -webkit-animation-fill-mode: both;\r\n        animation-fill-mode: both;\r\n        display: inline-block;\r\n        width:10px;\r\n        height:10px;\r\n        background-color: #fff;\r\n        border-radius: 50%;\r\n    }\r\n    .v-beat-odd{\r\n        -webkit-animation-delay: 0s;\r\n        animation-delay: 0s;\r\n    }\r\n    .v-beat-even{\r\n        -webkit-animation-delay: 0.35s;\r\n        animation-delay: 0.35s;\r\n    }\r\n    @-webkit-keyframes v-beatStretchDelay{\r\n        50%{\r\n            -webkit-transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            -webkit-transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    @keyframes v-beatStretchDelay{\r\n        50%{\r\n            transform: scale(0.75);\r\n            opacity: 0.2;\r\n        }\r\n        100%{\r\n            transform: scale(1);\r\n            opacity: 1;\r\n        }\r\n    }\r\n    input[type=range] {\r\n        -webkit-appearance: none;\r\n    }\r\n    input[type=range]:focus {\r\n        outline: none;\r\n    }\r\n    input[type=range]::-webkit-slider-runnable-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n\r\n    }\r\n    input[type=range]::-webkit-slider-thumb {\r\n        height:20px;\r\n        width: 20px;\r\n        border-radius: 10px;\r\n        background: #ffffff;\r\n        border:2px solid #efb708;\r\n        cursor: pointer;\r\n        -webkit-appearance: none;\r\n        margin-top: -10px;\r\n    }\r\n\r\n    input[type=range]::-moz-range-track {\r\n        width: 100%;\r\n        height: 2px;\r\n        cursor: pointer;\r\n        background: #efb708;\r\n    }\r\n    input[type=range]::-moz-range-thumb {\r\n        height:16px;\r\n        width:16px;\r\n        border-radius: 8px;\r\n        border:2px solid #efb708;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n    }\r\n    input[type=range]::-ms-track {\r\n        width: 100%;\r\n        height: 1px;\r\n        cursor: pointer;\r\n        background: transparent;\r\n        border-color: transparent;\r\n        color: transparent;\r\n    }\r\n    input[type=range]::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range]::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n        border: 0px solid rgba(200, 200, 200, 0.2);\r\n        border-radius: 0px;\r\n        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);\r\n    }\r\n    input[type=range]::-ms-thumb {\r\n        height: 16px;\r\n        width: 16px;\r\n        border-radius: 8px;\r\n        background: #ffffff;\r\n        cursor: pointer;\r\n        height: 1px;\r\n    }\r\n    input[type=range]:focus::-ms-fill-lower {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n    input[type=range]:focus::-ms-fill-upper {\r\n        background: rgba(0, 0, 0, 0.5);\r\n    }\r\n</style>\r\n\r\n<template>\r\n    <div class=\"upload\">\r\n        <slot></slot>\r\n        <div class=\"image\" :style=\"{'background-image':'url('+server+file+')'}\" v-if=\"file!=''&&preview\"></div>\r\n        <div class=\"progress\" v-if=\"percent>0\">\r\n            <span :style=\"{width:percent+'%'}\"></span>\r\n            <em class=\"pa\">{{percent}}%</em>\r\n        </div>\r\n        <input type=\"file\" class=\"upload\" @change=\"fileChange\" accept=\"{{accepts}}\" multiple=\"{{multiple}}\">\r\n\r\n        <div class=\"crop\" v-if=\"showCrop\" transition=\"crop\"  :style=\"{height:cropHeight+'px'}\">\r\n            <div class=\"loading\" v-if=\"!showCropDialog\">\r\n                <div class=\"v-beat v-beat-odd\"></div>\r\n                <div class=\"v-beat v-beat-even\"></div>\r\n                <div class=\"v-beat v-beat-odd\"></div>\r\n            </div>\r\n            <div class=\"dialog\" :style=\"{width:width+'px',top:cropTop+'px'}\" v-if=\"showCropDialog\">\r\n                <section :style=\"{width:width+'px',height:height+'px'}\" :class=\"{'grab':grabbing==false,'grabbing':grabbing}\">\r\n                    <img\r\n                            :style=\"{width:scaleWidth+'px',height:scaleHeight+'px',left:scaleX+'px',top:scaleY+'px'}\"\r\n                            @mousedown.prevent=\"cropDragBegin\"\r\n                            @mousemove.prevent=\"cropDragMove\"\r\n                            @mouseup.prevent=\"cropDragEnd\"\r\n\r\n                            @touchstart.prevent=\"cropDragBegin\"\r\n                            @touchmove.prevent=\"cropDragMove\"\r\n                            @touchend.prevent=\"cropDragEnd\"\r\n                            :src=\"cropImage\">\r\n                </section>\r\n                <footer>\r\n                    <button @click=\"cropCancel\">{{cancel}}</button>\r\n                    <button @click=\"cropOK\">{{ok}}</button>\r\n                </footer>\r\n                <input type=\"range\" v-model=\"scale\" value=\"100\" min=\"100\" max=\"200\" step=\"1\" @input=\"cropZoom\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 239 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19538,7 +19506,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _typeof2 = __webpack_require__(240);
+	var _typeof2 = __webpack_require__(238);
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
@@ -19736,6 +19704,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        fileChange: function fileChange(e) {
 	            var _this2 = this;
 	
+	            debugger;
 	            this.input = e.target;
 	            // console.log(e)
 	            if (this.crop) {
@@ -20142,7 +20111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//         left:50%;
 	//         top:50%;
 	//         transform: translate(-50%,-50%);
-	//         font-size:.8rem;
+	//         font-size:0.5rem;
 	//         line-height: 100%;
 	//         color:#fff;
 	//     }
@@ -20215,12 +20184,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	//         float:left;
 	//         width:50%;
 	//         height:100%;
-	//         padding:1rem 0;
+	//         padding:0.2rem 0;
 	//         font-weight:600;
 	//         text-align:center;
 	//         color:#5F7B88;
 	//         cursor: pointer;
-	//         font-size: 1rem;
+	//         font-size: 0.2rem;
 	//         background-color: transparent;
 	//     }
 	//     .crop .dialog footer button:nth-child(1){
@@ -20389,18 +20358,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 240 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _iterator = __webpack_require__(241);
+	var _iterator = __webpack_require__(239);
 	
 	var _iterator2 = _interopRequireDefault(_iterator);
 	
-	var _symbol = __webpack_require__(291);
+	var _symbol = __webpack_require__(289);
 	
 	var _symbol2 = _interopRequireDefault(_symbol);
 	
@@ -20415,28 +20384,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(240), __esModule: true };
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(241);
+	__webpack_require__(284);
+	module.exports = __webpack_require__(288).f('iterator');
+
+/***/ },
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(242), __esModule: true };
-
-/***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(243);
-	__webpack_require__(286);
-	module.exports = __webpack_require__(290).f('iterator');
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
-	var $at  = __webpack_require__(244)(true);
+	var $at  = __webpack_require__(242)(true);
 	
 	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(247)(String, 'String', function(iterated){
+	__webpack_require__(245)(String, 'String', function(iterated){
 	  this._t = String(iterated); // target
 	  this._i = 0;                // next index
 	// 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -20451,11 +20420,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 /***/ },
-/* 244 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(245)
-	  , defined   = __webpack_require__(246);
+	var toInteger = __webpack_require__(243)
+	  , defined   = __webpack_require__(244);
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -20473,7 +20442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 245 */
+/* 243 */
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -20484,7 +20453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 246 */
+/* 244 */
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -20494,20 +20463,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 247 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var LIBRARY        = __webpack_require__(248)
-	  , $export        = __webpack_require__(249)
-	  , redefine       = __webpack_require__(263)
-	  , hide           = __webpack_require__(253)
-	  , has            = __webpack_require__(264)
-	  , Iterators      = __webpack_require__(265)
-	  , $iterCreate    = __webpack_require__(266)
-	  , setToStringTag = __webpack_require__(282)
-	  , getPrototypeOf = __webpack_require__(284)
-	  , ITERATOR       = __webpack_require__(283)('iterator')
+	var LIBRARY        = __webpack_require__(246)
+	  , $export        = __webpack_require__(247)
+	  , redefine       = __webpack_require__(261)
+	  , hide           = __webpack_require__(251)
+	  , has            = __webpack_require__(262)
+	  , Iterators      = __webpack_require__(263)
+	  , $iterCreate    = __webpack_require__(264)
+	  , setToStringTag = __webpack_require__(280)
+	  , getPrototypeOf = __webpack_require__(282)
+	  , ITERATOR       = __webpack_require__(281)('iterator')
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -20569,19 +20538,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 248 */
+/* 246 */
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
-/* 249 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global    = __webpack_require__(250)
-	  , core      = __webpack_require__(152)
-	  , ctx       = __webpack_require__(251)
-	  , hide      = __webpack_require__(253)
+	var global    = __webpack_require__(248)
+	  , core      = __webpack_require__(150)
+	  , ctx       = __webpack_require__(249)
+	  , hide      = __webpack_require__(251)
 	  , PROTOTYPE = 'prototype';
 	
 	var $export = function(type, name, source){
@@ -20641,7 +20610,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = $export;
 
 /***/ },
-/* 250 */
+/* 248 */
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -20650,11 +20619,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-/* 251 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
-	var aFunction = __webpack_require__(252);
+	var aFunction = __webpack_require__(250);
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -20675,7 +20644,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 252 */
+/* 250 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -20684,12 +20653,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 253 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var dP         = __webpack_require__(254)
-	  , createDesc = __webpack_require__(262);
-	module.exports = __webpack_require__(258) ? function(object, key, value){
+	var dP         = __webpack_require__(252)
+	  , createDesc = __webpack_require__(260);
+	module.exports = __webpack_require__(256) ? function(object, key, value){
 	  return dP.f(object, key, createDesc(1, value));
 	} : function(object, key, value){
 	  object[key] = value;
@@ -20697,15 +20666,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 254 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var anObject       = __webpack_require__(255)
-	  , IE8_DOM_DEFINE = __webpack_require__(257)
-	  , toPrimitive    = __webpack_require__(261)
+	var anObject       = __webpack_require__(253)
+	  , IE8_DOM_DEFINE = __webpack_require__(255)
+	  , toPrimitive    = __webpack_require__(259)
 	  , dP             = Object.defineProperty;
 	
-	exports.f = __webpack_require__(258) ? Object.defineProperty : function defineProperty(O, P, Attributes){
+	exports.f = __webpack_require__(256) ? Object.defineProperty : function defineProperty(O, P, Attributes){
 	  anObject(O);
 	  P = toPrimitive(P, true);
 	  anObject(Attributes);
@@ -20718,17 +20687,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 255 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(256);
+	var isObject = __webpack_require__(254);
 	module.exports = function(it){
 	  if(!isObject(it))throw TypeError(it + ' is not an object!');
 	  return it;
 	};
 
 /***/ },
-/* 256 */
+/* 254 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -20736,24 +20705,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 257 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = !__webpack_require__(258) && !__webpack_require__(259)(function(){
-	  return Object.defineProperty(__webpack_require__(260)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+	module.exports = !__webpack_require__(256) && !__webpack_require__(257)(function(){
+	  return Object.defineProperty(__webpack_require__(258)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-/* 258 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(259)(function(){
+	module.exports = !__webpack_require__(257)(function(){
 	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-/* 259 */
+/* 257 */
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -20765,11 +20734,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 260 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(256)
-	  , document = __webpack_require__(250).document
+	var isObject = __webpack_require__(254)
+	  , document = __webpack_require__(248).document
 	  // in old IE typeof document.createElement is 'object'
 	  , is = isObject(document) && isObject(document.createElement);
 	module.exports = function(it){
@@ -20777,11 +20746,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 261 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(256);
+	var isObject = __webpack_require__(254);
 	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
 	// and the second argument - flag - preferred type is a string
 	module.exports = function(it, S){
@@ -20794,7 +20763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 262 */
+/* 260 */
 /***/ function(module, exports) {
 
 	module.exports = function(bitmap, value){
@@ -20807,13 +20776,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 263 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(253);
+	module.exports = __webpack_require__(251);
 
 /***/ },
-/* 264 */
+/* 262 */
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -20822,23 +20791,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 265 */
+/* 263 */
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
-/* 266 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var create         = __webpack_require__(267)
-	  , descriptor     = __webpack_require__(262)
-	  , setToStringTag = __webpack_require__(282)
+	var create         = __webpack_require__(265)
+	  , descriptor     = __webpack_require__(260)
+	  , setToStringTag = __webpack_require__(280)
 	  , IteratorPrototype = {};
 	
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(253)(IteratorPrototype, __webpack_require__(283)('iterator'), function(){ return this; });
+	__webpack_require__(251)(IteratorPrototype, __webpack_require__(281)('iterator'), function(){ return this; });
 	
 	module.exports = function(Constructor, NAME, next){
 	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
@@ -20846,27 +20815,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 267 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(255)
-	  , dPs         = __webpack_require__(268)
-	  , enumBugKeys = __webpack_require__(280)
-	  , IE_PROTO    = __webpack_require__(277)('IE_PROTO')
+	var anObject    = __webpack_require__(253)
+	  , dPs         = __webpack_require__(266)
+	  , enumBugKeys = __webpack_require__(278)
+	  , IE_PROTO    = __webpack_require__(275)('IE_PROTO')
 	  , Empty       = function(){ /* empty */ }
 	  , PROTOTYPE   = 'prototype';
 	
 	// Create object with fake `null` prototype: use iframe Object with cleared prototype
 	var createDict = function(){
 	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = __webpack_require__(260)('iframe')
+	  var iframe = __webpack_require__(258)('iframe')
 	    , i      = enumBugKeys.length
 	    , lt     = '<'
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
-	  __webpack_require__(281).appendChild(iframe);
+	  __webpack_require__(279).appendChild(iframe);
 	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
 	  // createDict = iframe.contentWindow.Object;
 	  // html.removeChild(iframe);
@@ -20893,14 +20862,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 268 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var dP       = __webpack_require__(254)
-	  , anObject = __webpack_require__(255)
-	  , getKeys  = __webpack_require__(269);
+	var dP       = __webpack_require__(252)
+	  , anObject = __webpack_require__(253)
+	  , getKeys  = __webpack_require__(267);
 	
-	module.exports = __webpack_require__(258) ? Object.defineProperties : function defineProperties(O, Properties){
+	module.exports = __webpack_require__(256) ? Object.defineProperties : function defineProperties(O, Properties){
 	  anObject(O);
 	  var keys   = getKeys(Properties)
 	    , length = keys.length
@@ -20911,25 +20880,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 269 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(270)
-	  , enumBugKeys = __webpack_require__(280);
+	var $keys       = __webpack_require__(268)
+	  , enumBugKeys = __webpack_require__(278);
 	
 	module.exports = Object.keys || function keys(O){
 	  return $keys(O, enumBugKeys);
 	};
 
 /***/ },
-/* 270 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var has          = __webpack_require__(264)
-	  , toIObject    = __webpack_require__(271)
-	  , arrayIndexOf = __webpack_require__(274)(false)
-	  , IE_PROTO     = __webpack_require__(277)('IE_PROTO');
+	var has          = __webpack_require__(262)
+	  , toIObject    = __webpack_require__(269)
+	  , arrayIndexOf = __webpack_require__(272)(false)
+	  , IE_PROTO     = __webpack_require__(275)('IE_PROTO');
 	
 	module.exports = function(object, names){
 	  var O      = toIObject(object)
@@ -20945,28 +20914,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 271 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(272)
-	  , defined = __webpack_require__(246);
+	var IObject = __webpack_require__(270)
+	  , defined = __webpack_require__(244);
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
 /***/ },
-/* 272 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(273);
+	var cof = __webpack_require__(271);
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 273 */
+/* 271 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -20976,14 +20945,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 274 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
-	var toIObject = __webpack_require__(271)
-	  , toLength  = __webpack_require__(275)
-	  , toIndex   = __webpack_require__(276);
+	var toIObject = __webpack_require__(269)
+	  , toLength  = __webpack_require__(273)
+	  , toIndex   = __webpack_require__(274);
 	module.exports = function(IS_INCLUDES){
 	  return function($this, el, fromIndex){
 	    var O      = toIObject($this)
@@ -21002,21 +20971,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 275 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(245)
+	var toInteger = __webpack_require__(243)
 	  , min       = Math.min;
 	module.exports = function(it){
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
 /***/ },
-/* 276 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(245)
+	var toInteger = __webpack_require__(243)
 	  , max       = Math.max
 	  , min       = Math.min;
 	module.exports = function(index, length){
@@ -21025,20 +20994,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 277 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var shared = __webpack_require__(278)('keys')
-	  , uid    = __webpack_require__(279);
+	var shared = __webpack_require__(276)('keys')
+	  , uid    = __webpack_require__(277);
 	module.exports = function(key){
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
 /***/ },
-/* 278 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global = __webpack_require__(250)
+	var global = __webpack_require__(248)
 	  , SHARED = '__core-js_shared__'
 	  , store  = global[SHARED] || (global[SHARED] = {});
 	module.exports = function(key){
@@ -21046,7 +21015,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 279 */
+/* 277 */
 /***/ function(module, exports) {
 
 	var id = 0
@@ -21056,7 +21025,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 280 */
+/* 278 */
 /***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
@@ -21065,30 +21034,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	).split(',');
 
 /***/ },
-/* 281 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(250).document && document.documentElement;
+	module.exports = __webpack_require__(248).document && document.documentElement;
 
 /***/ },
-/* 282 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var def = __webpack_require__(254).f
-	  , has = __webpack_require__(264)
-	  , TAG = __webpack_require__(283)('toStringTag');
+	var def = __webpack_require__(252).f
+	  , has = __webpack_require__(262)
+	  , TAG = __webpack_require__(281)('toStringTag');
 	
 	module.exports = function(it, tag, stat){
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
 /***/ },
-/* 283 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var store      = __webpack_require__(278)('wks')
-	  , uid        = __webpack_require__(279)
-	  , Symbol     = __webpack_require__(250).Symbol
+	var store      = __webpack_require__(276)('wks')
+	  , uid        = __webpack_require__(277)
+	  , Symbol     = __webpack_require__(248).Symbol
 	  , USE_SYMBOL = typeof Symbol == 'function';
 	
 	var $exports = module.exports = function(name){
@@ -21099,13 +21068,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	$exports.store = store;
 
 /***/ },
-/* 284 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(264)
-	  , toObject    = __webpack_require__(285)
-	  , IE_PROTO    = __webpack_require__(277)('IE_PROTO')
+	var has         = __webpack_require__(262)
+	  , toObject    = __webpack_require__(283)
+	  , IE_PROTO    = __webpack_require__(275)('IE_PROTO')
 	  , ObjectProto = Object.prototype;
 	
 	module.exports = Object.getPrototypeOf || function(O){
@@ -21117,24 +21086,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 285 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(246);
+	var defined = __webpack_require__(244);
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-/* 286 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(287);
-	var global        = __webpack_require__(250)
-	  , hide          = __webpack_require__(253)
-	  , Iterators     = __webpack_require__(265)
-	  , TO_STRING_TAG = __webpack_require__(283)('toStringTag');
+	__webpack_require__(285);
+	var global        = __webpack_require__(248)
+	  , hide          = __webpack_require__(251)
+	  , Iterators     = __webpack_require__(263)
+	  , TO_STRING_TAG = __webpack_require__(281)('toStringTag');
 	
 	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
 	  var NAME       = collections[i]
@@ -21145,20 +21114,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 287 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var addToUnscopables = __webpack_require__(288)
-	  , step             = __webpack_require__(289)
-	  , Iterators        = __webpack_require__(265)
-	  , toIObject        = __webpack_require__(271);
+	var addToUnscopables = __webpack_require__(286)
+	  , step             = __webpack_require__(287)
+	  , Iterators        = __webpack_require__(263)
+	  , toIObject        = __webpack_require__(269);
 	
 	// 22.1.3.4 Array.prototype.entries()
 	// 22.1.3.13 Array.prototype.keys()
 	// 22.1.3.29 Array.prototype.values()
 	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(247)(Array, 'Array', function(iterated, kind){
+	module.exports = __webpack_require__(245)(Array, 'Array', function(iterated, kind){
 	  this._t = toIObject(iterated); // target
 	  this._i = 0;                   // next index
 	  this._k = kind;                // kind
@@ -21184,13 +21153,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	addToUnscopables('entries');
 
 /***/ },
-/* 288 */
+/* 286 */
 /***/ function(module, exports) {
 
 	module.exports = function(){ /* empty */ };
 
 /***/ },
-/* 289 */
+/* 287 */
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -21198,58 +21167,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports.f = __webpack_require__(281);
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(290), __esModule: true };
+
+/***/ },
 /* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.f = __webpack_require__(283);
+	__webpack_require__(291);
+	__webpack_require__(302);
+	__webpack_require__(303);
+	__webpack_require__(304);
+	module.exports = __webpack_require__(150).Symbol;
 
 /***/ },
 /* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(292), __esModule: true };
-
-/***/ },
-/* 292 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(293);
-	__webpack_require__(304);
-	__webpack_require__(305);
-	__webpack_require__(306);
-	module.exports = __webpack_require__(152).Symbol;
-
-/***/ },
-/* 293 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 	// ECMAScript 6 symbols shim
-	var global         = __webpack_require__(250)
-	  , has            = __webpack_require__(264)
-	  , DESCRIPTORS    = __webpack_require__(258)
-	  , $export        = __webpack_require__(249)
-	  , redefine       = __webpack_require__(263)
-	  , META           = __webpack_require__(294).KEY
-	  , $fails         = __webpack_require__(259)
-	  , shared         = __webpack_require__(278)
-	  , setToStringTag = __webpack_require__(282)
-	  , uid            = __webpack_require__(279)
-	  , wks            = __webpack_require__(283)
-	  , wksExt         = __webpack_require__(290)
-	  , wksDefine      = __webpack_require__(295)
-	  , keyOf          = __webpack_require__(296)
-	  , enumKeys       = __webpack_require__(297)
-	  , isArray        = __webpack_require__(300)
-	  , anObject       = __webpack_require__(255)
-	  , toIObject      = __webpack_require__(271)
-	  , toPrimitive    = __webpack_require__(261)
-	  , createDesc     = __webpack_require__(262)
-	  , _create        = __webpack_require__(267)
-	  , gOPNExt        = __webpack_require__(301)
-	  , $GOPD          = __webpack_require__(303)
-	  , $DP            = __webpack_require__(254)
-	  , $keys          = __webpack_require__(269)
+	var global         = __webpack_require__(248)
+	  , has            = __webpack_require__(262)
+	  , DESCRIPTORS    = __webpack_require__(256)
+	  , $export        = __webpack_require__(247)
+	  , redefine       = __webpack_require__(261)
+	  , META           = __webpack_require__(292).KEY
+	  , $fails         = __webpack_require__(257)
+	  , shared         = __webpack_require__(276)
+	  , setToStringTag = __webpack_require__(280)
+	  , uid            = __webpack_require__(277)
+	  , wks            = __webpack_require__(281)
+	  , wksExt         = __webpack_require__(288)
+	  , wksDefine      = __webpack_require__(293)
+	  , keyOf          = __webpack_require__(294)
+	  , enumKeys       = __webpack_require__(295)
+	  , isArray        = __webpack_require__(298)
+	  , anObject       = __webpack_require__(253)
+	  , toIObject      = __webpack_require__(269)
+	  , toPrimitive    = __webpack_require__(259)
+	  , createDesc     = __webpack_require__(260)
+	  , _create        = __webpack_require__(265)
+	  , gOPNExt        = __webpack_require__(299)
+	  , $GOPD          = __webpack_require__(301)
+	  , $DP            = __webpack_require__(252)
+	  , $keys          = __webpack_require__(267)
 	  , gOPD           = $GOPD.f
 	  , dP             = $DP.f
 	  , gOPN           = gOPNExt.f
@@ -21372,11 +21341,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  $GOPD.f = $getOwnPropertyDescriptor;
 	  $DP.f   = $defineProperty;
-	  __webpack_require__(302).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(299).f  = $propertyIsEnumerable;
-	  __webpack_require__(298).f = $getOwnPropertySymbols;
+	  __webpack_require__(300).f = gOPNExt.f = $getOwnPropertyNames;
+	  __webpack_require__(297).f  = $propertyIsEnumerable;
+	  __webpack_require__(296).f = $getOwnPropertySymbols;
 	
-	  if(DESCRIPTORS && !__webpack_require__(248)){
+	  if(DESCRIPTORS && !__webpack_require__(246)){
 	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
 	  }
 	
@@ -21451,7 +21420,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	
 	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(253)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(251)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 	// 19.4.3.5 Symbol.prototype[@@toStringTag]
 	setToStringTag($Symbol, 'Symbol');
 	// 20.2.1.9 Math[@@toStringTag]
@@ -21460,18 +21429,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	setToStringTag(global.JSON, 'JSON', true);
 
 /***/ },
-/* 294 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var META     = __webpack_require__(279)('meta')
-	  , isObject = __webpack_require__(256)
-	  , has      = __webpack_require__(264)
-	  , setDesc  = __webpack_require__(254).f
+	var META     = __webpack_require__(277)('meta')
+	  , isObject = __webpack_require__(254)
+	  , has      = __webpack_require__(262)
+	  , setDesc  = __webpack_require__(252).f
 	  , id       = 0;
 	var isExtensible = Object.isExtensible || function(){
 	  return true;
 	};
-	var FREEZE = !__webpack_require__(259)(function(){
+	var FREEZE = !__webpack_require__(257)(function(){
 	  return isExtensible(Object.preventExtensions({}));
 	});
 	var setMeta = function(it){
@@ -21518,25 +21487,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 295 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global         = __webpack_require__(250)
-	  , core           = __webpack_require__(152)
-	  , LIBRARY        = __webpack_require__(248)
-	  , wksExt         = __webpack_require__(290)
-	  , defineProperty = __webpack_require__(254).f;
+	var global         = __webpack_require__(248)
+	  , core           = __webpack_require__(150)
+	  , LIBRARY        = __webpack_require__(246)
+	  , wksExt         = __webpack_require__(288)
+	  , defineProperty = __webpack_require__(252).f;
 	module.exports = function(name){
 	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
 	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
 	};
 
 /***/ },
-/* 296 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getKeys   = __webpack_require__(269)
-	  , toIObject = __webpack_require__(271);
+	var getKeys   = __webpack_require__(267)
+	  , toIObject = __webpack_require__(269);
 	module.exports = function(object, el){
 	  var O      = toIObject(object)
 	    , keys   = getKeys(O)
@@ -21547,13 +21516,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 297 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(269)
-	  , gOPS    = __webpack_require__(298)
-	  , pIE     = __webpack_require__(299);
+	var getKeys = __webpack_require__(267)
+	  , gOPS    = __webpack_require__(296)
+	  , pIE     = __webpack_require__(297);
 	module.exports = function(it){
 	  var result     = getKeys(it)
 	    , getSymbols = gOPS.f;
@@ -21567,34 +21536,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 298 */
+/* 296 */
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
-/* 299 */
+/* 297 */
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
-/* 300 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(273);
+	var cof = __webpack_require__(271);
 	module.exports = Array.isArray || function isArray(arg){
 	  return cof(arg) == 'Array';
 	};
 
 /***/ },
-/* 301 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(271)
-	  , gOPN      = __webpack_require__(302).f
+	var toIObject = __webpack_require__(269)
+	  , gOPN      = __webpack_require__(300).f
 	  , toString  = {}.toString;
 	
 	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -21614,30 +21583,30 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 302 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(270)
-	  , hiddenKeys = __webpack_require__(280).concat('length', 'prototype');
+	var $keys      = __webpack_require__(268)
+	  , hiddenKeys = __webpack_require__(278).concat('length', 'prototype');
 	
 	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 	  return $keys(O, hiddenKeys);
 	};
 
 /***/ },
-/* 303 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var pIE            = __webpack_require__(299)
-	  , createDesc     = __webpack_require__(262)
-	  , toIObject      = __webpack_require__(271)
-	  , toPrimitive    = __webpack_require__(261)
-	  , has            = __webpack_require__(264)
-	  , IE8_DOM_DEFINE = __webpack_require__(257)
+	var pIE            = __webpack_require__(297)
+	  , createDesc     = __webpack_require__(260)
+	  , toIObject      = __webpack_require__(269)
+	  , toPrimitive    = __webpack_require__(259)
+	  , has            = __webpack_require__(262)
+	  , IE8_DOM_DEFINE = __webpack_require__(255)
 	  , gOPD           = Object.getOwnPropertyDescriptor;
 	
-	exports.f = __webpack_require__(258) ? gOPD : function getOwnPropertyDescriptor(O, P){
+	exports.f = __webpack_require__(256) ? gOPD : function getOwnPropertyDescriptor(O, P){
 	  O = toIObject(O);
 	  P = toPrimitive(P, true);
 	  if(IE8_DOM_DEFINE)try {
@@ -21647,43 +21616,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 304 */
+/* 302 */
 /***/ function(module, exports) {
 
 
+
+/***/ },
+/* 303 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(293)('asyncIterator');
+
+/***/ },
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(293)('observable');
 
 /***/ },
 /* 305 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	__webpack_require__(295)('asyncIterator');
+	module.exports = "\n    <div class=\"upload\" _v-25e5f041=\"\">\n        <slot _v-25e5f041=\"\"></slot>\n        <div class=\"image\" :style=\"{'background-image':'url('+server+file+')'}\" v-if=\"file!=''&amp;&amp;preview\" _v-25e5f041=\"\"></div>\n        <div class=\"progress\" v-if=\"percent>0\" _v-25e5f041=\"\">\n            <span :style=\"{width:percent+'%'}\" _v-25e5f041=\"\"></span>\n            <em class=\"pa\" _v-25e5f041=\"\">{{percent}}%</em>\n        </div>\n        <input type=\"file\" class=\"upload\" @change=\"fileChange\" accept=\"{{accepts}}\" multiple=\"{{multiple}}\" _v-25e5f041=\"\">\n\n        <div class=\"crop\" v-if=\"showCrop\" transition=\"crop\" :style=\"{height:cropHeight+'px'}\" _v-25e5f041=\"\">\n            <div class=\"loading\" v-if=\"!showCropDialog\" _v-25e5f041=\"\">\n                <div class=\"v-beat v-beat-odd\" _v-25e5f041=\"\"></div>\n                <div class=\"v-beat v-beat-even\" _v-25e5f041=\"\"></div>\n                <div class=\"v-beat v-beat-odd\" _v-25e5f041=\"\"></div>\n            </div>\n            <div class=\"dialog\" :style=\"{width:width+'px',top:cropTop+'px'}\" v-if=\"showCropDialog\" _v-25e5f041=\"\">\n                <section :style=\"{width:width+'px',height:height+'px'}\" :class=\"{'grab':grabbing==false,'grabbing':grabbing}\" _v-25e5f041=\"\">\n                    <img :style=\"{width:scaleWidth+'px',height:scaleHeight+'px',left:scaleX+'px',top:scaleY+'px'}\" @mousedown.prevent=\"cropDragBegin\" @mousemove.prevent=\"cropDragMove\" @mouseup.prevent=\"cropDragEnd\" @touchstart.prevent=\"cropDragBegin\" @touchmove.prevent=\"cropDragMove\" @touchend.prevent=\"cropDragEnd\" :src=\"cropImage\" _v-25e5f041=\"\">\n                </section>\n                <footer _v-25e5f041=\"\">\n                    <button @click=\"cropCancel\" _v-25e5f041=\"\">{{cancel}}</button>\n                    <button @click=\"cropOK\" _v-25e5f041=\"\">{{ok}}</button>\n                </footer>\n                <input type=\"range\" v-model=\"scale\" value=\"100\" min=\"100\" max=\"200\" step=\"1\" @input=\"cropZoom\" _v-25e5f041=\"\">\n            </div>\n        </div>\n    </div>\n";
 
 /***/ },
 /* 306 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	__webpack_require__(295)('observable');
+	module.exports = "\n    <aoth _v-1aae7396=\"\"></aoth>\n    <header class=\"mui-bar mui-bar-nav\" _v-1aae7396=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-1aae7396=\"\"></a>\n        <h1 class=\"mui-title\" _v-1aae7396=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-1aae7396=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-1aae7396=\"\">\n\t        <div _v-1aae7396=\"\">\n\t            <p class=\"name\" _v-1aae7396=\"\">{{username}}<span class=\"tel\" _v-1aae7396=\"\">{{tel}}</span></p>\n\t            <p class=\"address\" _v-1aae7396=\"\">{{address}}</p>\n\t        </div>\n    \t</panel>\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class=\"question\" _v-1aae7396=\"\">\n            <div _v-1aae7396=\"\">\n                <textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\" _v-1aae7396=\"\"></textarea>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class=\"questionpic\" _v-1aae7396=\"\">\n            <div class=\"demo image-item\" _v-1aae7396=\"\">\n                <upload :server=\"upload.server\" :api=\"upload.api\" :params=\"upload.params\" :success=\"upload.success\" :file.sync=\"upload.file\" :crop=\"upload.crop\" :width=\"upload.width\" :height=\"upload.height\" :ok=\"upload.ok\" :cancel=\"upload.cancel\" _v-1aae7396=\"\">\n                    <imgdd _v-1aae7396=\"\">\n                </imgdd></upload>\n            </div>\n        </panel>\n        <div id=\"image-list\" class=\"row image-list\" _v-1aae7396=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-1aae7396=\"\">发送</button>\n    </div>\n";
 
 /***/ },
 /* 307 */
-/***/ function(module, exports) {
-
-	module.exports = "\n    <div class=\"upload\" _v-9604122a=\"\">\n        <slot _v-9604122a=\"\"></slot>\n        <div class=\"image\" :style=\"{'background-image':'url('+server+file+')'}\" v-if=\"file!=''&amp;&amp;preview\" _v-9604122a=\"\"></div>\n        <div class=\"progress\" v-if=\"percent>0\" _v-9604122a=\"\">\n            <span :style=\"{width:percent+'%'}\" _v-9604122a=\"\"></span>\n            <em class=\"pa\" _v-9604122a=\"\">{{percent}}%</em>\n        </div>\n        <input type=\"file\" class=\"upload\" @change=\"fileChange\" accept=\"{{accepts}}\" multiple=\"{{multiple}}\" _v-9604122a=\"\">\n\n        <div class=\"crop\" v-if=\"showCrop\" transition=\"crop\" :style=\"{height:cropHeight+'px'}\" _v-9604122a=\"\">\n            <div class=\"loading\" v-if=\"!showCropDialog\" _v-9604122a=\"\">\n                <div class=\"v-beat v-beat-odd\" _v-9604122a=\"\"></div>\n                <div class=\"v-beat v-beat-even\" _v-9604122a=\"\"></div>\n                <div class=\"v-beat v-beat-odd\" _v-9604122a=\"\"></div>\n            </div>\n            <div class=\"dialog\" :style=\"{width:width+'px',top:cropTop+'px'}\" v-if=\"showCropDialog\" _v-9604122a=\"\">\n                <section :style=\"{width:width+'px',height:height+'px'}\" :class=\"{'grab':grabbing==false,'grabbing':grabbing}\" _v-9604122a=\"\">\n                    <img :style=\"{width:scaleWidth+'px',height:scaleHeight+'px',left:scaleX+'px',top:scaleY+'px'}\" @mousedown.prevent=\"cropDragBegin\" @mousemove.prevent=\"cropDragMove\" @mouseup.prevent=\"cropDragEnd\" @touchstart.prevent=\"cropDragBegin\" @touchmove.prevent=\"cropDragMove\" @touchend.prevent=\"cropDragEnd\" :src=\"cropImage\" _v-9604122a=\"\">\n                </section>\n                <footer _v-9604122a=\"\">\n                    <button @click=\"cropCancel\" _v-9604122a=\"\">{{cancel}}</button>\n                    <button @click=\"cropOK\" _v-9604122a=\"\">{{ok}}</button>\n                </footer>\n                <input type=\"range\" v-model=\"scale\" value=\"100\" min=\"100\" max=\"200\" step=\"1\" @input=\"cropZoom\" _v-9604122a=\"\">\n            </div>\n        </div>\n    </div>\n";
-
-/***/ },
-/* 308 */
-/***/ function(module, exports) {
-
-	module.exports = "\n    <aoth _v-6b2e5d6a=\"\"></aoth>\n    <header class=\"mui-bar mui-bar-nav\" _v-6b2e5d6a=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-6b2e5d6a=\"\"></a>\n        <h1 class=\"mui-title\" _v-6b2e5d6a=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-6b2e5d6a=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-6b2e5d6a=\"\">\n\t        <div _v-6b2e5d6a=\"\">\n\t            <p class=\"name\" _v-6b2e5d6a=\"\">{{username}}<span class=\"tel\" _v-6b2e5d6a=\"\">{{tel}}</span></p>\n\t            <p class=\"address\" _v-6b2e5d6a=\"\">{{address}}</p>\n\t        </div>\n    \t</panel>\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class=\"question\" _v-6b2e5d6a=\"\">\n            <div _v-6b2e5d6a=\"\">\n                <textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\" _v-6b2e5d6a=\"\"></textarea>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class=\"questionpic\" _v-6b2e5d6a=\"\">\n            <div class=\"demo image-item\" _v-6b2e5d6a=\"\">\n                <upload :server=\"upload.server\" :api=\"upload.api\" :params=\"upload.params\" :success=\"upload.success\" :file.sync=\"upload.file\" :crop=\"upload.crop\" :width=\"upload.width\" :height=\"upload.height\" :ok=\"upload.ok\" :cancel=\"upload.cancel\" _v-6b2e5d6a=\"\">\n                    <imgdd _v-6b2e5d6a=\"\">\n                </imgdd></upload>\n            </div>\n        </panel>\n        <div id=\"image-list\" class=\"row image-list\" _v-6b2e5d6a=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-6b2e5d6a=\"\">发送</button>\n    </div>\n";
-
-/***/ },
-/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(310)
-	__vue_script__ = __webpack_require__(312)
-	__vue_template__ = __webpack_require__(313)
+	__webpack_require__(308)
+	__vue_script__ = __webpack_require__(310)
+	__vue_template__ = __webpack_require__(311)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -21691,7 +21660,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\transfer\\lists.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\transfer\\lists.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21700,13 +21669,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 310 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(311);
+	var content = __webpack_require__(309);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -21715,8 +21684,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a0224064&file=lists.vue!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a0224064&file=lists.vue!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ae69b9b8&file=lists.vue!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ae69b9b8&file=lists.vue!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21726,7 +21695,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 311 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -21740,7 +21709,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 312 */
+/* 310 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21839,19 +21808,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 313 */
+/* 311 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">物业对接</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n    </nav>\r\n    <div transter-lists class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 50px 0;\">\r\n        <div class=\"mui-scroll\">\r\n            <div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n                <a v-link=\"{name:'transfer_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n                    <img src='{{ entry.fdsmallimagepath}}'>\r\n                    <h6>{{ entry.fdname}}</h6>\r\n                </a>\r\n                <!--<a class=\"weixin bad-jianxian\"><span class=\"mui-icon mui-icon-star\" style=\"color: #E2D45F;\"></span><h6>微信收藏</h6></a>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n";
 
 /***/ },
-/* 314 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(315)
-	__vue_script__ = __webpack_require__(317)
-	__vue_template__ = __webpack_require__(318)
+	__webpack_require__(313)
+	__vue_script__ = __webpack_require__(315)
+	__vue_template__ = __webpack_require__(316)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -21859,7 +21828,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\transfer\\order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\transfer\\order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21868,13 +21837,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 315 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(316);
+	var content = __webpack_require__(314);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -21883,8 +21852,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3efb01f2&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3efb01f2&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d427b46&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d427b46&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21894,7 +21863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 316 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -21902,13 +21871,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .tel[_v-3efb01f2]{float:right;}\r\n    textarea[_v-3efb01f2]{border:0;}\r\n    .questionpic[_v-3efb01f2]{margin-bottom:10px;}\r\n    #submit[_v-3efb01f2]{width:96%;margin:10px auto;}\r\n    .image-item[_v-3efb01f2] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/transfer/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n            <div>\r\n                <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n                <p class='address'>{{address}}</p>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class='question'>\r\n            <div>\r\n                <textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\"></textarea>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class='questionpic'>\r\n            <div class=\"demo image-item\">\r\n                <upload\r\n                        :server=\"upload.server\"\r\n                        :api=\"upload.api\"\r\n                        :params=\"upload.params\"\r\n                        :success=\"upload.success\"\r\n                        :file.sync=\"upload.file\"\r\n                        :crop=\"upload.crop\"\r\n                        :width=\"upload.width\"\r\n                        :height=\"upload.height\"\r\n                        :ok=\"upload.ok\"\r\n                        :cancel=\"upload.cancel\">\r\n                    <imgdd>\r\n                </upload>\r\n            </div>\r\n        </panel>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:true,\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n    }},\r\n    components : {\r\n        panel,\r\n                aoth,\r\n                upload,\r\n\r\n    },\r\n    methods:{\r\n        asy_send_order:function(){\r\n            var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n            var images=new Array();\r\n            images.push(byte);\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.tel,\r\n                            \"serveiceid\":this.$route.params.serviceId,\r\n                            \"address\":this.address,\r\n                            \"content\":this.content,\r\n                            \"images\":images\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        alert(\"上传成功\");\r\n                    });\r\n        }\r\n\r\n    },\r\n    ready: function(){\r\n        this.poptitle=this.$route.params.serviceName\r\n    }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .tel[_v-4d427b46]{float:right;}\r\n    textarea[_v-4d427b46]{border:0;}\r\n    .questionpic[_v-4d427b46]{margin-bottom:10px;}\r\n    #submit[_v-4d427b46]{width:96%;margin:10px auto;}\r\n    .image-item[_v-4d427b46] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/transfer/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n            <div>\r\n                <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n                <p class='address'>{{address}}</p>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class='question'>\r\n            <div>\r\n                <textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\"></textarea>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class='questionpic'>\r\n            <div class=\"demo image-item\">\r\n                <upload\r\n                        :server=\"upload.server\"\r\n                        :api=\"upload.api\"\r\n                        :params=\"upload.params\"\r\n                        :success=\"upload.success\"\r\n                        :file.sync=\"upload.file\"\r\n                        :crop=\"upload.crop\"\r\n                        :width=\"upload.width\"\r\n                        :height=\"upload.height\"\r\n                        :ok=\"upload.ok\"\r\n                        :cancel=\"upload.cancel\">\r\n                    <imgdd>\r\n                </upload>\r\n            </div>\r\n        </panel>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:true,\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n    }},\r\n    components : {\r\n        panel,\r\n                aoth,\r\n                upload,\r\n\r\n    },\r\n    methods:{\r\n        asy_send_order:function(){\r\n            var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n            var images=new Array();\r\n            images.push(byte);\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.tel,\r\n                            \"serveiceid\":this.$route.params.serviceId,\r\n                            \"address\":this.address,\r\n                            \"content\":this.content,\r\n                            \"images\":images\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        alert(\"上传成功\");\r\n                    });\r\n        }\r\n\r\n    },\r\n    ready: function(){\r\n        this.poptitle=this.$route.params.serviceName\r\n    }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 317 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21917,7 +21886,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _aoth = __webpack_require__(184);
+	var _aoth = __webpack_require__(182);
 	
 	var _aoth2 = _interopRequireDefault(_aoth);
 	
@@ -21925,7 +21894,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _panel2 = _interopRequireDefault(_panel);
 	
-	var _upload = __webpack_require__(236);
+	var _upload = __webpack_require__(234);
 	
 	var _upload2 = _interopRequireDefault(_upload);
 	
@@ -22056,19 +22025,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 318 */
+/* 316 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-3efb01f2=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-3efb01f2=\"\"></a>\n        <h1 class=\"mui-title\" _v-3efb01f2=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-3efb01f2=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-3efb01f2=\"\">\n            <div _v-3efb01f2=\"\">\n                <p class=\"name\" _v-3efb01f2=\"\">{{username}}<span class=\"tel\" _v-3efb01f2=\"\">{{tel}}</span></p>\n                <p class=\"address\" _v-3efb01f2=\"\">{{address}}</p>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class=\"question\" _v-3efb01f2=\"\">\n            <div _v-3efb01f2=\"\">\n                <textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\" _v-3efb01f2=\"\"></textarea>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class=\"questionpic\" _v-3efb01f2=\"\">\n            <div class=\"demo image-item\" _v-3efb01f2=\"\">\n                <upload :server=\"upload.server\" :api=\"upload.api\" :params=\"upload.params\" :success=\"upload.success\" :file.sync=\"upload.file\" :crop=\"upload.crop\" :width=\"upload.width\" :height=\"upload.height\" :ok=\"upload.ok\" :cancel=\"upload.cancel\" _v-3efb01f2=\"\">\n                    <imgdd _v-3efb01f2=\"\">\n                </imgdd></upload>\n            </div>\n        </panel>\n        <div id=\"image-list\" class=\"row image-list\" _v-3efb01f2=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-3efb01f2=\"\">发送</button>\n    </div>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-4d427b46=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-4d427b46=\"\"></a>\n        <h1 class=\"mui-title\" _v-4d427b46=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-4d427b46=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-4d427b46=\"\">\n            <div _v-4d427b46=\"\">\n                <p class=\"name\" _v-4d427b46=\"\">{{username}}<span class=\"tel\" _v-4d427b46=\"\">{{tel}}</span></p>\n                <p class=\"address\" _v-4d427b46=\"\">{{address}}</p>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class=\"question\" _v-4d427b46=\"\">\n            <div _v-4d427b46=\"\">\n                <textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\" _v-4d427b46=\"\"></textarea>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class=\"questionpic\" _v-4d427b46=\"\">\n            <div class=\"demo image-item\" _v-4d427b46=\"\">\n                <upload :server=\"upload.server\" :api=\"upload.api\" :params=\"upload.params\" :success=\"upload.success\" :file.sync=\"upload.file\" :crop=\"upload.crop\" :width=\"upload.width\" :height=\"upload.height\" :ok=\"upload.ok\" :cancel=\"upload.cancel\" _v-4d427b46=\"\">\n                    <imgdd _v-4d427b46=\"\">\n                </imgdd></upload>\n            </div>\n        </panel>\n        <div id=\"image-list\" class=\"row image-list\" _v-4d427b46=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-4d427b46=\"\">发送</button>\n    </div>\n";
 
 /***/ },
-/* 319 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(320)
-	__vue_script__ = __webpack_require__(322)
-	__vue_template__ = __webpack_require__(323)
+	__webpack_require__(318)
+	__vue_script__ = __webpack_require__(320)
+	__vue_template__ = __webpack_require__(321)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -22076,7 +22045,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\pay\\lists.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\pay\\lists.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22085,13 +22054,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 320 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(321);
+	var content = __webpack_require__(319);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -22100,8 +22069,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-026cf132&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-026cf132&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-01da0651&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-01da0651&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22111,7 +22080,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 321 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -22119,13 +22088,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.flex-container[_v-026cf132] {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a[_v-026cf132] {\r\n\t\tposition: relative;\r\n\t\twidth: 25%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img[_v-026cf132] {\r\n\t\twidth: 50%;\r\n\t}\r\n", "", {"version":3,"sources":["/./yous/view/home/pay/lists.vue.style"],"names":[],"mappings":";CACA;EACA,mBAAA;EACA;CACA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA;CACA;EACA,WAAA;EACA","file":"lists.vue","sourcesContent":["<style scoped>\r\n\t.flex-container {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a {\r\n\t\tposition: relative;\r\n\t\twidth: 25%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img {\r\n\t\twidth: 50%;\r\n\t}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">缴费事项</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n\r\n    </nav>\r\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\">\r\n       <div class=\"mui-scroll\">\r\n\r\n\t\t\t\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t<a v-link=\"{name:'pay_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n\t\t\t\t\t\t\t<img src='{{ entry.fdsmallimagepath}}'>\r\n\t\t\t\t\t\t\t<h6>{{ entry.fdname}}</h6>\r\n\t\t\t\t\t\t</a>\r\n\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</div>\r\n\r\n    </div>\r\n</template>\r\n<script>\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"code\":3\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000001\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tdebugger;\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.flex-container[_v-01da0651] {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a[_v-01da0651] {\r\n\t\tposition: relative;\r\n\t\twidth: 25%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img[_v-01da0651] {\r\n\t\twidth: 50%;\r\n\t}\r\n", "", {"version":3,"sources":["/./yous/view/home/pay/lists.vue.style"],"names":[],"mappings":";CACA;EACA,mBAAA;EACA;CACA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA;CACA;EACA,WAAA;EACA","file":"lists.vue","sourcesContent":["<style scoped>\r\n\t.flex-container {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a {\r\n\t\tposition: relative;\r\n\t\twidth: 25%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img {\r\n\t\twidth: 50%;\r\n\t}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">缴费事项</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n\r\n    </nav>\r\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\">\r\n       <div class=\"mui-scroll\">\r\n\r\n\t\t\t\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t<a v-link=\"{name:'pay_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n\t\t\t\t\t\t\t<img src='{{ entry.fdsmallimagepath}}'>\r\n\t\t\t\t\t\t\t<h6>{{ entry.fdname}}</h6>\r\n\t\t\t\t\t\t</a>\r\n\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</div>\r\n\r\n    </div>\r\n</template>\r\n<script>\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"code\":3\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000001\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tdebugger;\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 322 */
+/* 320 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22206,19 +22175,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 323 */
+/* 321 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-026cf132=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-026cf132=\"\"></a>\n        <h1 class=\"mui-title\" _v-026cf132=\"\">缴费事项</h1>\n    </header>\n    <nav class=\"mui-bar mui-bar-tab\" style=\"line-height:51px;text-align:center;background:#106eac;\" _v-026cf132=\"\">\n        <a href=\"tel:123-23123\" style=\"color:#fff;\" _v-026cf132=\"\">\n            在线客服:<span class=\"mui-icon mui-icon-phone\" _v-026cf132=\"\"></span>12316615\n        </a>\n\n    </nav>\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\" _v-026cf132=\"\">\n       <div class=\"mui-scroll\" _v-026cf132=\"\">\n\n\t\t\t\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\" _v-026cf132=\"\">\n\t\t\t\t\t\t<a v-link=\"{name:'pay_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\" _v-026cf132=\"\">\n\t\t\t\t\t\t\t<img src=\"{{ entry.fdsmallimagepath}}\" _v-026cf132=\"\">\n\t\t\t\t\t\t\t<h6 _v-026cf132=\"\">{{ entry.fdname}}</h6>\n\t\t\t\t\t\t</a>\n\n\t\t\t\t\t</div>\n\n\t\t\t\t</div>\n\n    </div>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-01da0651=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-01da0651=\"\"></a>\n        <h1 class=\"mui-title\" _v-01da0651=\"\">缴费事项</h1>\n    </header>\n    <nav class=\"mui-bar mui-bar-tab\" style=\"line-height:51px;text-align:center;background:#106eac;\" _v-01da0651=\"\">\n        <a href=\"tel:123-23123\" style=\"color:#fff;\" _v-01da0651=\"\">\n            在线客服:<span class=\"mui-icon mui-icon-phone\" _v-01da0651=\"\"></span>12316615\n        </a>\n\n    </nav>\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\" _v-01da0651=\"\">\n       <div class=\"mui-scroll\" _v-01da0651=\"\">\n\n\t\t\t\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\" _v-01da0651=\"\">\n\t\t\t\t\t\t<a v-link=\"{name:'pay_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\" _v-01da0651=\"\">\n\t\t\t\t\t\t\t<img src=\"{{ entry.fdsmallimagepath}}\" _v-01da0651=\"\">\n\t\t\t\t\t\t\t<h6 _v-01da0651=\"\">{{ entry.fdname}}</h6>\n\t\t\t\t\t\t</a>\n\n\t\t\t\t\t</div>\n\n\t\t\t\t</div>\n\n    </div>\n";
 
 /***/ },
-/* 324 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(325)
-	__vue_script__ = __webpack_require__(327)
-	__vue_template__ = __webpack_require__(328)
+	__webpack_require__(323)
+	__vue_script__ = __webpack_require__(325)
+	__vue_template__ = __webpack_require__(326)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -22226,7 +22195,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\pay\\order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\pay\\order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22235,13 +22204,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 325 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(326);
+	var content = __webpack_require__(324);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -22250,8 +22219,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f5d26a0&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f5d26a0&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-326da58a&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-326da58a&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22261,7 +22230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 326 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -22269,13 +22238,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .tel[_v-2f5d26a0]{float:right;}\r\n    textarea[_v-2f5d26a0]{border:0;}\r\n    .questionpic[_v-2f5d26a0]{margin-bottom:10px;}\r\n    #submit[_v-2f5d26a0]{width:96%;margin:10px auto;}\r\n    .image-item[_v-2f5d26a0] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n    .money[_v-2f5d26a0]{margin-top:0.1rem;}\r\n", "", {"version":3,"sources":["/./yous/view/home/pay/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA;IACA,oBAAA,kBAAA,CAAA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n    .money{margin-top:0.1rem;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n            <div>\r\n                <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n                <p class='address'>{{address}}</p>\r\n            </div>\r\n        </panel>\r\n        <div class='money'>\r\n        \t<input type='text' placeholder=\"请输入缴费金额\">\r\n        </div>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:true,\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n    }},\r\n    components : {\r\n        panel,\r\n                aoth,\r\n                upload,\r\n\r\n    },\r\n    methods:{\r\n        asy_send_order:function(){\r\n            var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n            var images=new Array();\r\n            images.push(byte);\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.tel,\r\n                            \"serveiceid\":this.$route.params.serviceId,\r\n                            \"address\":this.address,\r\n                            \"content\":this.content,\r\n                            \"images\":images\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        alert(\"上传成功\");\r\n                    });\r\n        }\r\n\r\n    },\r\n    ready: function(){\r\n        this.poptitle=this.$route.params.serviceName\r\n    }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .tel[_v-326da58a]{float:right;}\r\n    textarea[_v-326da58a]{border:0;}\r\n    .questionpic[_v-326da58a]{margin-bottom:10px;}\r\n    #submit[_v-326da58a]{width:96%;margin:10px auto;}\r\n    .image-item[_v-326da58a] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n    .money[_v-326da58a]{margin-top:0.1rem;}\r\n", "", {"version":3,"sources":["/./yous/view/home/pay/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA;IACA,oBAAA,kBAAA,CAAA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n    .money{margin-top:0.1rem;}\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n            <div>\r\n                <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n                <p class='address'>{{address}}</p>\r\n            </div>\r\n        </panel>\r\n        <div class='money'>\r\n        \t<input type='text' placeholder=\"请输入缴费金额\">\r\n        </div>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:true,\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n    }},\r\n    components : {\r\n        panel,\r\n                aoth,\r\n                upload,\r\n\r\n    },\r\n    methods:{\r\n        asy_send_order:function(){\r\n            var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n            var images=new Array();\r\n            images.push(byte);\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.tel,\r\n                            \"serveiceid\":this.$route.params.serviceId,\r\n                            \"address\":this.address,\r\n                            \"content\":this.content,\r\n                            \"images\":images\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        alert(\"上传成功\");\r\n                    });\r\n        }\r\n\r\n    },\r\n    ready: function(){\r\n        this.poptitle=this.$route.params.serviceName\r\n    }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 327 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22284,7 +22253,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _aoth = __webpack_require__(184);
+	var _aoth = __webpack_require__(182);
 	
 	var _aoth2 = _interopRequireDefault(_aoth);
 	
@@ -22292,7 +22261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _panel2 = _interopRequireDefault(_panel);
 	
-	var _upload = __webpack_require__(236);
+	var _upload = __webpack_require__(234);
 	
 	var _upload2 = _interopRequireDefault(_upload);
 	
@@ -22405,19 +22374,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 328 */
+/* 326 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-2f5d26a0=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-2f5d26a0=\"\"></a>\n        <h1 class=\"mui-title\" _v-2f5d26a0=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-2f5d26a0=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-2f5d26a0=\"\">\n            <div _v-2f5d26a0=\"\">\n                <p class=\"name\" _v-2f5d26a0=\"\">{{username}}<span class=\"tel\" _v-2f5d26a0=\"\">{{tel}}</span></p>\n                <p class=\"address\" _v-2f5d26a0=\"\">{{address}}</p>\n            </div>\n        </panel>\n        <div class=\"money\" _v-2f5d26a0=\"\">\n        \t<input type=\"text\" placeholder=\"请输入缴费金额\" _v-2f5d26a0=\"\">\n        </div>\n        <div id=\"image-list\" class=\"row image-list\" _v-2f5d26a0=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-2f5d26a0=\"\">发送</button>\n    </div>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-326da58a=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-326da58a=\"\"></a>\n        <h1 class=\"mui-title\" _v-326da58a=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-326da58a=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-326da58a=\"\">\n            <div _v-326da58a=\"\">\n                <p class=\"name\" _v-326da58a=\"\">{{username}}<span class=\"tel\" _v-326da58a=\"\">{{tel}}</span></p>\n                <p class=\"address\" _v-326da58a=\"\">{{address}}</p>\n            </div>\n        </panel>\n        <div class=\"money\" _v-326da58a=\"\">\n        \t<input type=\"text\" placeholder=\"请输入缴费金额\" _v-326da58a=\"\">\n        </div>\n        <div id=\"image-list\" class=\"row image-list\" _v-326da58a=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-326da58a=\"\">发送</button>\n    </div>\n";
 
 /***/ },
-/* 329 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(330)
-	__vue_script__ = __webpack_require__(332)
-	__vue_template__ = __webpack_require__(333)
+	__webpack_require__(328)
+	__vue_script__ = __webpack_require__(330)
+	__vue_template__ = __webpack_require__(331)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -22425,7 +22394,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\more\\lists.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\more\\lists.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22434,13 +22403,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 330 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(331);
+	var content = __webpack_require__(329);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -22449,8 +22418,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ffe84090&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ffe84090&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-41e983e4&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-41e983e4&file=lists.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./lists.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22460,7 +22429,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 331 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -22468,13 +22437,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t.flex-container[_v-ffe84090] {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a[_v-ffe84090] {\r\n\t\tposition: relative;\r\n\t\twidth: 33%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img[_v-ffe84090] {\r\n\t\twidth: 50%;\r\n\t}\r\n\t.mui-content[_v-ffe84090]{padding-bottom:3rem;overflow: auto;}\r\n\t.title[_v-ffe84090]{font-size:0.28rem;color:#353b3e}\r\n\t\r\n", "", {"version":3,"sources":["/./yous/view/home/more/lists.vue.style"],"names":[],"mappings":";CACA;EACA,mBAAA;EACA;CACA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA;CACA;EACA,WAAA;EACA;CACA,0BAAA,oBAAA,eAAA,CAAA;CACA,oBAAA,kBAAA,aAAA,CAAA","file":"lists.vue","sourcesContent":["<style scoped>\r\n\t.flex-container {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a {\r\n\t\tposition: relative;\r\n\t\twidth: 33%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img {\r\n\t\twidth: 50%;\r\n\t}\r\n\t.mui-content{padding-bottom:3rem;overflow: auto;}\r\n\t.title{font-size:0.28rem;color:#353b3e}\r\n\t\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">全部服务\t</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n\r\n    </nav>\r\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\">\r\n    \t\t\t\t\r\n    \t\r\n    \t\r\n\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t<a v-link=\"{name:'more_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n\t\t\t\t\t<img src='{{ entry.fdsmallimagepath}}'>\r\n\t\t\t\t\t<h6>{{ entry.fdname}}</h6>\r\n\t\t\t\t</a>\r\n\t\t\t</div>\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n\r\n    </div>\r\n</template>\r\n<script>\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"level\":2\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000001\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t.flex-container[_v-41e983e4] {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a[_v-41e983e4] {\r\n\t\tposition: relative;\r\n\t\twidth: 33%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img[_v-41e983e4] {\r\n\t\twidth: 50%;\r\n\t}\r\n\t.mui-content[_v-41e983e4]{padding-bottom:3rem;overflow: auto;}\r\n\t.title[_v-41e983e4]{font-size:0.28rem;color:#353b3e}\r\n\t\r\n", "", {"version":3,"sources":["/./yous/view/home/more/lists.vue.style"],"names":[],"mappings":";CACA;EACA,mBAAA;EACA;CACA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA;CACA;EACA,WAAA;EACA;CACA,0BAAA,oBAAA,eAAA,CAAA;CACA,oBAAA,kBAAA,aAAA,CAAA","file":"lists.vue","sourcesContent":["<style scoped>\r\n\t.flex-container {\r\n\t\ttext-align: center;\r\n\t}\r\n\t.flex-container>a {\r\n\t\tposition: relative;\r\n\t\twidth: 33%;\r\n\t\tfloat: left;\r\n\t\tpadding: 10px 0;\r\n\t}\r\n\t.flex-container img {\r\n\t\twidth: 50%;\r\n\t}\r\n\t.mui-content{padding-bottom:3rem;overflow: auto;}\r\n\t.title{font-size:0.28rem;color:#353b3e}\r\n\t\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">全部服务\t</h1>\r\n    </header>\r\n    <nav class=\"mui-bar mui-bar-tab\" style='line-height:51px;text-align:center;background:#106eac;'>\r\n        <a href='tel:123-23123' style='color:#fff;'>\r\n            在线客服:<span class=\"mui-icon mui-icon-phone\"></span>12316615\r\n        </a>\r\n\r\n    </nav>\r\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\">\r\n    \t\t\t\t\r\n    \t\r\n    \t\r\n\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t<a v-link=\"{name:'more_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\">\r\n\t\t\t\t\t<img src='{{ entry.fdsmallimagepath}}'>\r\n\t\t\t\t\t<h6>{{ entry.fdname}}</h6>\r\n\t\t\t\t</a>\r\n\t\t\t</div>\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n\r\n    </div>\r\n</template>\r\n<script>\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"level\":2\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000001\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 332 */
+/* 330 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22560,19 +22529,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 333 */
+/* 331 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-ffe84090=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-ffe84090=\"\"></a>\n        <h1 class=\"mui-title\" _v-ffe84090=\"\">全部服务\t</h1>\n    </header>\n    <nav class=\"mui-bar mui-bar-tab\" style=\"line-height:51px;text-align:center;background:#106eac;\" _v-ffe84090=\"\">\n        <a href=\"tel:123-23123\" style=\"color:#fff;\" _v-ffe84090=\"\">\n            在线客服:<span class=\"mui-icon mui-icon-phone\" _v-ffe84090=\"\"></span>12316615\n        </a>\n\n    </nav>\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\" _v-ffe84090=\"\">\n    \t\t\t\t\n    \t\n    \t\n\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\" _v-ffe84090=\"\">\n\t\t\t\t<a v-link=\"{name:'more_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\" _v-ffe84090=\"\">\n\t\t\t\t\t<img src=\"{{ entry.fdsmallimagepath}}\" _v-ffe84090=\"\">\n\t\t\t\t\t<h6 _v-ffe84090=\"\">{{ entry.fdname}}</h6>\n\t\t\t\t</a>\n\t\t\t</div>\n    \t\n    \t\n    \t\n    \t\n    \t\n\n    </div>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-41e983e4=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-41e983e4=\"\"></a>\n        <h1 class=\"mui-title\" _v-41e983e4=\"\">全部服务\t</h1>\n    </header>\n    <nav class=\"mui-bar mui-bar-tab\" style=\"line-height:51px;text-align:center;background:#106eac;\" _v-41e983e4=\"\">\n        <a href=\"tel:123-23123\" style=\"color:#fff;\" _v-41e983e4=\"\">\n            在线客服:<span class=\"mui-icon mui-icon-phone\" _v-41e983e4=\"\"></span>12316615\n        </a>\n\n    </nav>\n    <div class=\"mui-content mui-scroll-wrapper shareRoom\" style=\"position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;\" _v-41e983e4=\"\">\n    \t\t\t\t\n    \t\n    \t\n\t\t<div class=\"flex-container\" v-for=\"(index,entry) in gridData\" _v-41e983e4=\"\">\n\t\t\t\t<a v-link=\"{name:'more_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}\" _v-41e983e4=\"\">\n\t\t\t\t\t<img src=\"{{ entry.fdsmallimagepath}}\" _v-41e983e4=\"\">\n\t\t\t\t\t<h6 _v-41e983e4=\"\">{{ entry.fdname}}</h6>\n\t\t\t\t</a>\n\t\t\t</div>\n    \t\n    \t\n    \t\n    \t\n    \t\n\n    </div>\n";
 
 /***/ },
-/* 334 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(335)
-	__vue_script__ = __webpack_require__(337)
-	__vue_template__ = __webpack_require__(338)
+	__webpack_require__(333)
+	__vue_script__ = __webpack_require__(335)
+	__vue_template__ = __webpack_require__(336)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -22580,7 +22549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\home\\more\\order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\more\\order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22589,13 +22558,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 335 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(336);
+	var content = __webpack_require__(334);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -22604,8 +22573,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9ec1021e&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9ec1021e&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f9edd47&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f9edd47&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22615,7 +22584,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 336 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -22623,13 +22592,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .tel[_v-9ec1021e]{float:right;}\r\n    textarea[_v-9ec1021e]{border:0;}\r\n    .questionpic[_v-9ec1021e]{margin-bottom:10px;}\r\n    #submit[_v-9ec1021e]{width:96%;margin:10px auto;}\r\n    .image-item[_v-9ec1021e] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/more/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n            <div>\r\n                <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n                <p class='address'>{{address}}</p>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class='question'>\r\n            <div>\r\n                <textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\"></textarea>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class='questionpic'>\r\n            <div class=\"demo image-item\">\r\n                <upload\r\n                        :server=\"upload.server\"\r\n                        :api=\"upload.api\"\r\n                        :params=\"upload.params\"\r\n                        :success=\"upload.success\"\r\n                        :file.sync=\"upload.file\"\r\n                        :crop=\"upload.crop\"\r\n                        :width=\"upload.width\"\r\n                        :height=\"upload.height\"\r\n                        :ok=\"upload.ok\"\r\n                        :cancel=\"upload.cancel\">\r\n                    <imgdd>\r\n                </upload>\r\n            </div>\r\n        </panel>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:true,\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n    }},\r\n    components : {\r\n        panel,\r\n                aoth,\r\n                upload,\r\n\r\n    },\r\n    methods:{\r\n        asy_send_order:function(){\r\n            var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n            var images=new Array();\r\n            images.push(byte);\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.tel,\r\n                            \"serveiceid\":this.$route.params.serviceId,\r\n                            \"address\":this.address,\r\n                            \"content\":this.content,\r\n                            \"images\":images\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        alert(\"上传成功\");\r\n                    });\r\n        }\r\n\r\n    },\r\n    ready: function(){\r\n        this.poptitle=this.$route.params.serviceName\r\n    }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .tel[_v-0f9edd47]{float:right;}\r\n    textarea[_v-0f9edd47]{border:0;}\r\n    .questionpic[_v-0f9edd47]{margin-bottom:10px;}\r\n    #submit[_v-0f9edd47]{width:96%;margin:10px auto;}\r\n    .image-item[_v-0f9edd47] {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n", "", {"version":3,"sources":["/./yous/view/home/more/order.vue.style"],"names":[],"mappings":";IACA,kBAAA,YAAA,CAAA;IACA,sBAAA,SAAA,CAAA;IACA,0BAAA,mBAAA,CAAA;IACA,qBAAA,UAAA,iBAAA,CAAA;IACA;QACA,YAAA;QACA,aAAA;QACA,04CAAA;QACA,2BAAA;QACA,sBAAA;QACA,mBAAA;QACA,mBAAA;QACA,mBAAA;QACA,oBAAA;QACA,0BAAA;KACA","file":"order.vue","sourcesContent":["<style scoped>\r\n    .tel{float:right;}\r\n    textarea{border:0;}\r\n    .questionpic{margin-bottom:10px;}\r\n    #submit{width:96%;margin:10px auto;}\r\n    .image-item {\r\n        width: 65px;\r\n        height: 65px;\r\n        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOCSURBVHic7d0xSxxRFIbh15DOwl47u0MglVtEEQSL5B/YxtrKX2Jlra3/QAtBCGqxVoFwunRub2G9KeYuMbOzRhJnZtfve5pBZlcvnHfvjgujS+PxGNP1ru8FWL8cgDgHIO79Sx6UmZ+AXWAAbACrbS7K/tkIuAOGwGVE3P7tCUvPXQRm5gpwBOy/1gqtUyfAYUQ8zHrAzAAycws4A9aAR+AYuAGGETF6/bXa/8rMVapdehM4AJaBe2AvIq6bntMYQHnl/6Aa/jfga0T8bGnd1oLMXAdOgW2qCD407QSzLgKP+D38HQ9/8ZSZ7VDNcI1qplOmdoBywXdDte1/9PAXW9kJvlO9HWzWLwybdoDdcjz28BdfmeFx+XK3fr4pgEE53rS1KOvcZJaD+ommADbKcdjacqxrk1lu1E80BbAK4F/13o4ns5z6AM8fBYtzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIkw0gM88z87zvdfTtRX8f4I363PcC5oHsDmAVByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYhzAOIcgDgHIM4BiHMA4hyAOAcgzgGIcwDiHIA4ByDOAYibi3sDy02avdyrl5mz/3duOy4i4kvHP3Mm7wDi5mIH6OMVMXnlR8RS1z97nngHEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcXNxb2BPLvpewDyQDWCebtHuk98CxDkAcQ5AnAMQ5wDEOQBxDkCcAxDnAMQ5AHEOQJwDEOcAxDkAcQ5AnAMQ5wDEOQBxDkBcUwAjgMxc7Xgt1pInsxzVzzUFcFeOg9ZWZF2bzPKufqIpgGE5bra2HOvaZJbD+ommAC7L8SAz11tbknWizPCgfHlZPz8VQETcAifAMnCamb5QXFBldqdUszwps/3DrOEeAvfANnDlnWDxlJldUc3wnmqmU5bG4+b/m5iZW8AZsAY8AsfADTCMiKmrSetfudofUL3nH1C98u+BvYi4bnrOzADKN1wBjoD9V1+tdeEEOIyIh1kPeDaAicz8BOxS1bUB+DOC+TSi+lVvCFw2vefXvSgAe7t8hS/OAYhzAOJ+ATeBuJOueKnYAAAAAElFTkSuQmCC);\r\n        background-size: 100% 100%;\r\n        display: inline-block;\r\n        position: relative;\r\n        border-radius: 5px;\r\n        margin-right: 10px;\r\n        margin-bottom: 10px;\r\n        border: solid 1px #e8e8e8;\r\n    }\r\n</style>\r\n<template>\r\n    <header class=\"mui-bar mui-bar-nav\">\r\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n        <h1 class=\"mui-title\">{{poptitle}}</h1>\r\n    </header>\r\n    <div class=\"mui-content\">\r\n        <!-- 普通面板 -->\r\n        <panel :show=\"false\" title=\"个人信息\" class='inform'>\r\n            <div>\r\n                <p class='name'>{{username}}<span class='tel'>{{tel}}</span></p>\r\n                <p class='address'>{{address}}</p>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class='question'>\r\n            <div>\r\n                <textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\"></textarea>\r\n            </div>\r\n        </panel>\r\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class='questionpic'>\r\n            <div class=\"demo image-item\">\r\n                <upload\r\n                        :server=\"upload.server\"\r\n                        :api=\"upload.api\"\r\n                        :params=\"upload.params\"\r\n                        :success=\"upload.success\"\r\n                        :file.sync=\"upload.file\"\r\n                        :crop=\"upload.crop\"\r\n                        :width=\"upload.width\"\r\n                        :height=\"upload.height\"\r\n                        :ok=\"upload.ok\"\r\n                        :cancel=\"upload.cancel\">\r\n                    <imgdd>\r\n                </upload>\r\n            </div>\r\n        </panel>\r\n        <div id='image-list' class=\"row image-list\"></div>\r\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\">发送</button>\r\n    </div>\r\n</template>\r\n<script>\r\n    import aoth from '../../componets/aoth.vue'\r\n    import panel from '../../../../src/components/panel.vue'\r\n    import upload from '../../../../src/components/upload.vue'\r\n    export default {\r\n        data() {\r\n        var userinfo=JSON.parse(localStorage.getItem(\"userinfo\"));\r\n        return {\r\n            username: userinfo !=null?userinfo.fdname:\"\",\r\n            tel:userinfo!=null?userinfo.fdphone:\"\",\r\n            address:userinfo!=null?userinfo.address:\"\",\r\n            content:'',\r\n            poptitle:\"\",//title标题\r\n            upload:{\r\n                server:\"\",\r\n                api:\"\",\r\n                params:{\r\n                    token:\"test\"\r\n                },\r\n                file:\"\",\r\n                preview:true,\r\n                crop:true,\r\n                width:400,\r\n                height:400,\r\n                cancel:\"取消\",\r\n                ok:\"裁剪\",\r\n                success:(data)=>{\r\n                alert(data.length)\r\n            }\r\n        }\r\n    }},\r\n    components : {\r\n        panel,\r\n                aoth,\r\n                upload,\r\n\r\n    },\r\n    methods:{\r\n        asy_send_order:function(){\r\n            var byte=document.getElementsByClassName('upload')[0].innerHTML;\r\n            var images=new Array();\r\n            images.push(byte);\r\n            this.$http.post(\r\n                    'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n                    {\r\n                        parameters:{\r\n                            \"phone\":this.tel,\r\n                            \"serveiceid\":this.$route.params.serviceId,\r\n                            \"address\":this.address,\r\n                            \"content\":this.content,\r\n                            \"images\":images\r\n                        },\r\n                        foreEndType:\"2\",\r\n                        code:\"10000005\"\r\n                    }\r\n            ).then(function(response) {\r\n                        var  reslute=JSON.parse(response.data);\r\n                        alert(\"上传成功\");\r\n                    });\r\n        }\r\n\r\n    },\r\n    ready: function(){\r\n        this.poptitle=this.$route.params.serviceName\r\n    }\r\n    }\r\n</script>\r\n\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 337 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22638,7 +22607,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	var _aoth = __webpack_require__(184);
+	var _aoth = __webpack_require__(182);
 	
 	var _aoth2 = _interopRequireDefault(_aoth);
 	
@@ -22646,7 +22615,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _panel2 = _interopRequireDefault(_panel);
 	
-	var _upload = __webpack_require__(236);
+	var _upload = __webpack_require__(234);
 	
 	var _upload2 = _interopRequireDefault(_upload);
 	
@@ -22777,155 +22746,155 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 338 */
+/* 336 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-9ec1021e=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-9ec1021e=\"\"></a>\n        <h1 class=\"mui-title\" _v-9ec1021e=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-9ec1021e=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-9ec1021e=\"\">\n            <div _v-9ec1021e=\"\">\n                <p class=\"name\" _v-9ec1021e=\"\">{{username}}<span class=\"tel\" _v-9ec1021e=\"\">{{tel}}</span></p>\n                <p class=\"address\" _v-9ec1021e=\"\">{{address}}</p>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class=\"question\" _v-9ec1021e=\"\">\n            <div _v-9ec1021e=\"\">\n                <textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\" _v-9ec1021e=\"\"></textarea>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class=\"questionpic\" _v-9ec1021e=\"\">\n            <div class=\"demo image-item\" _v-9ec1021e=\"\">\n                <upload :server=\"upload.server\" :api=\"upload.api\" :params=\"upload.params\" :success=\"upload.success\" :file.sync=\"upload.file\" :crop=\"upload.crop\" :width=\"upload.width\" :height=\"upload.height\" :ok=\"upload.ok\" :cancel=\"upload.cancel\" _v-9ec1021e=\"\">\n                    <imgdd _v-9ec1021e=\"\">\n                </imgdd></upload>\n            </div>\n        </panel>\n        <div id=\"image-list\" class=\"row image-list\" _v-9ec1021e=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-9ec1021e=\"\">发送</button>\n    </div>\n";
+	module.exports = "\n    <header class=\"mui-bar mui-bar-nav\" _v-0f9edd47=\"\">\n        <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-0f9edd47=\"\"></a>\n        <h1 class=\"mui-title\" _v-0f9edd47=\"\">{{poptitle}}</h1>\n    </header>\n    <div class=\"mui-content\" _v-0f9edd47=\"\">\n        <!-- 普通面板 -->\n        <panel :show=\"false\" title=\"个人信息\" class=\"inform\" _v-0f9edd47=\"\">\n            <div _v-0f9edd47=\"\">\n                <p class=\"name\" _v-0f9edd47=\"\">{{username}}<span class=\"tel\" _v-0f9edd47=\"\">{{tel}}</span></p>\n                <p class=\"address\" _v-0f9edd47=\"\">{{address}}</p>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"问题和意见 快捷输入\" class=\"question\" _v-0f9edd47=\"\">\n            <div _v-0f9edd47=\"\">\n                <textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" v-model=\"content\" _v-0f9edd47=\"\"></textarea>\n            </div>\n        </panel>\n        <panel :show=\"false\" title=\"图片(选填,提供问题截图,总大小10M以下)\" class=\"questionpic\" _v-0f9edd47=\"\">\n            <div class=\"demo image-item\" _v-0f9edd47=\"\">\n                <upload :server=\"upload.server\" :api=\"upload.api\" :params=\"upload.params\" :success=\"upload.success\" :file.sync=\"upload.file\" :crop=\"upload.crop\" :width=\"upload.width\" :height=\"upload.height\" :ok=\"upload.ok\" :cancel=\"upload.cancel\" _v-0f9edd47=\"\">\n                    <imgdd _v-0f9edd47=\"\">\n                </imgdd></upload>\n            </div>\n        </panel>\n        <div id=\"image-list\" class=\"row image-list\" _v-0f9edd47=\"\"></div>\n        <button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block\" v-on:click=\"asy_send_order\" _v-0f9edd47=\"\">发送</button>\n    </div>\n";
+
+/***/ },
+/* 337 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(338)
+	__vue_template__ = __webpack_require__(340)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\label.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 338 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(339);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-444b2050&file=label.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./label.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-444b2050&file=label.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./label.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(340)
-	__vue_template__ = __webpack_require__(342)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\label.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n  .mui-content[_v-444b2050]{margin-top:10px;}\r\n  .mui-content button[_v-444b2050]{width:25%;margin:3%;}\r\n", "", {"version":3,"sources":["/./yous/view/user/label.vue.style"],"names":[],"mappings":";EACA,0BAAA,gBAAA,CAAA;EACA,iCAAA,UAAA,UAAA,CAAA","file":"label.vue","sourcesContent":["<style scoped>\r\n  .mui-content{margin-top:10px;}\r\n  .mui-content button{width:25%;margin:3%;}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n      <h1 class=\"mui-title\">公司标签</h1>\r\n  </header>\r\n  <div class=\"mui-content\">\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n  </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 340 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(341);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-30229c66&file=label.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./label.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-30229c66&file=label.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./label.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-444b2050=\"\">\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-444b2050=\"\"></a>\n      <h1 class=\"mui-title\" _v-444b2050=\"\">公司标签</h1>\n  </header>\n  <div class=\"mui-content\" _v-444b2050=\"\">\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-444b2050=\"\">\n      中介\n    </button>\n  </div>\n";
 
 /***/ },
 /* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n  .mui-content[_v-30229c66]{margin-top:10px;}\r\n  .mui-content button[_v-30229c66]{width:25%;margin:3%;}\r\n", "", {"version":3,"sources":["/./yous/view/user/label.vue.style"],"names":[],"mappings":";EACA,0BAAA,gBAAA,CAAA;EACA,iCAAA,UAAA,UAAA,CAAA","file":"label.vue","sourcesContent":["<style scoped>\r\n  .mui-content{margin-top:10px;}\r\n  .mui-content button{width:25%;margin:3%;}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n      <h1 class=\"mui-title\">公司标签</h1>\r\n  </header>\r\n  <div class=\"mui-content\">\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\">\r\n      中介\r\n    </button>\r\n  </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	var __vue_script__, __vue_template__
+	__webpack_require__(342)
+	__vue_template__ = __webpack_require__(344)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\message.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 342 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-30229c66=\"\">\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-30229c66=\"\"></a>\n      <h1 class=\"mui-title\" _v-30229c66=\"\">公司标签</h1>\n  </header>\n  <div class=\"mui-content\" _v-30229c66=\"\">\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n    <button type=\"button\" class=\"mui-btn mui-btn-warning mui-btn-outlined\" _v-30229c66=\"\">\n      中介\n    </button>\n  </div>\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(343);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-653abee3&file=message.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./message.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-653abee3&file=message.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./message.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(344)
-	__vue_template__ = __webpack_require__(346)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\message.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-media-body[_v-653abee3]{font-size:15px;color:#333}\r\n\t.mui-ellipsis[_v-653abee3],.timeright[_v-653abee3]{color:#aaa;}\r\n", "", {"version":3,"sources":["/./yous/view/user/message.vue.style"],"names":[],"mappings":";CACA,6BAAA,eAAA,UAAA,CAAA;CACA,mDAAA,WAAA,CAAA","file":"message.vue","sourcesContent":["<style scoped>\r\n\t.mui-media-body{font-size:15px;color:#333}\r\n\t.mui-ellipsis,.timeright{color:#aaa;}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n      <h1 class=\"mui-title\">通知消息</h1>\r\n  </header>\r\n  <div class=\"mui-content\">\r\n      <ul class=\"mui-table-view\">\r\n    <li class=\"mui-table-view-cell mui-hidden\">cared\r\n      <div id=\"M_Toggle\" class=\"mui-switch mui-active\">\r\n        <div class=\"mui-switch-handle\"></div>\r\n      </div>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          幸福<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>2分钟</span>\r\n          <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          木屋<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>2分钟</span>\r\n          <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          CBD<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>1小时</span>\r\n          <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          远眺<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>2小时</span>\r\n          <p class='mui-ellipsis'>静静的看这个世界，最后终于疯了</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n  </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(345);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8db8e50e&file=message.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./message.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8db8e50e&file=message.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./message.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-653abee3=\"\">\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-653abee3=\"\"></a>\n      <h1 class=\"mui-title\" _v-653abee3=\"\">通知消息</h1>\n  </header>\n  <div class=\"mui-content\" _v-653abee3=\"\">\n      <ul class=\"mui-table-view\" _v-653abee3=\"\">\n    <li class=\"mui-table-view-cell mui-hidden\" _v-653abee3=\"\">cared\n      <div id=\"M_Toggle\" class=\"mui-switch mui-active\" _v-653abee3=\"\">\n        <div class=\"mui-switch-handle\" _v-653abee3=\"\"></div>\n      </div>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-653abee3=\"\">\n      <a href=\"#\" _v-653abee3=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-653abee3=\"\">\n        <div class=\"mui-media-body\" _v-653abee3=\"\">\n          幸福<span class=\"mui-pull-left mui-pull-left-span\" _v-653abee3=\"\"></span><span class=\"mui-pull-right timeright\" _v-653abee3=\"\">2分钟</span>\n          <p class=\"mui-ellipsis\" _v-653abee3=\"\">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>\n        </div>\n      </a>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-653abee3=\"\">\n      <a href=\"#\" _v-653abee3=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-653abee3=\"\">\n        <div class=\"mui-media-body\" _v-653abee3=\"\">\n          木屋<span class=\"mui-pull-left mui-pull-left-span\" _v-653abee3=\"\"></span><span class=\"mui-pull-right timeright\" _v-653abee3=\"\">2分钟</span>\n          <p class=\"mui-ellipsis\" _v-653abee3=\"\">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>\n        </div>\n      </a>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-653abee3=\"\">\n      <a href=\"#\" _v-653abee3=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-653abee3=\"\">\n        <div class=\"mui-media-body\" _v-653abee3=\"\">\n          CBD<span class=\"mui-pull-left mui-pull-left-span\" _v-653abee3=\"\"></span><span class=\"mui-pull-right timeright\" _v-653abee3=\"\">1小时</span>\n          <p class=\"mui-ellipsis\" _v-653abee3=\"\">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>\n        </div>\n      </a>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-653abee3=\"\">\n      <a href=\"#\" _v-653abee3=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(143) + "\" _v-653abee3=\"\">\n        <div class=\"mui-media-body\" _v-653abee3=\"\">\n          远眺<span class=\"mui-pull-left mui-pull-left-span\" _v-653abee3=\"\"></span><span class=\"mui-pull-right timeright\" _v-653abee3=\"\">2小时</span>\n          <p class=\"mui-ellipsis\" _v-653abee3=\"\">静静的看这个世界，最后终于疯了</p>\n        </div>\n      </a>\n    </li>\n  </ul>\n  </div>\n";
 
 /***/ },
 /* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.mui-media-body[_v-8db8e50e]{font-size:15px;color:#333}\r\n\t.mui-ellipsis[_v-8db8e50e],.timeright[_v-8db8e50e]{color:#aaa;}\r\n", "", {"version":3,"sources":["/./yous/view/user/message.vue.style"],"names":[],"mappings":";CACA,6BAAA,eAAA,UAAA,CAAA;CACA,mDAAA,WAAA,CAAA","file":"message.vue","sourcesContent":["<style scoped>\r\n\t.mui-media-body{font-size:15px;color:#333}\r\n\t.mui-ellipsis,.timeright{color:#aaa;}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n      <h1 class=\"mui-title\">通知消息</h1>\r\n  </header>\r\n  <div class=\"mui-content\">\r\n      <ul class=\"mui-table-view\">\r\n    <li class=\"mui-table-view-cell mui-hidden\">cared\r\n      <div id=\"M_Toggle\" class=\"mui-switch mui-active\">\r\n        <div class=\"mui-switch-handle\"></div>\r\n      </div>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          幸福<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>2分钟</span>\r\n          <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          木屋<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>2分钟</span>\r\n          <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          CBD<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>1小时</span>\r\n          <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n    <li class=\"mui-table-view-cell mui-media\">\r\n      <a href=\"#\">\r\n        <img class=\"mui-media-object mui-pull-left\" src=\"../../../dist/img/urslistleft.png\">\r\n        <div class=\"mui-media-body\">\r\n          远眺<span class='mui-pull-left mui-pull-left-span'></span><span class='mui-pull-right timeright'>2小时</span>\r\n          <p class='mui-ellipsis'>静静的看这个世界，最后终于疯了</p>\r\n        </div>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n  </div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 346 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-8db8e50e=\"\">\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-8db8e50e=\"\"></a>\n      <h1 class=\"mui-title\" _v-8db8e50e=\"\">通知消息</h1>\n  </header>\n  <div class=\"mui-content\" _v-8db8e50e=\"\">\n      <ul class=\"mui-table-view\" _v-8db8e50e=\"\">\n    <li class=\"mui-table-view-cell mui-hidden\" _v-8db8e50e=\"\">cared\n      <div id=\"M_Toggle\" class=\"mui-switch mui-active\" _v-8db8e50e=\"\">\n        <div class=\"mui-switch-handle\" _v-8db8e50e=\"\"></div>\n      </div>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-8db8e50e=\"\">\n      <a href=\"#\" _v-8db8e50e=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-8db8e50e=\"\">\n        <div class=\"mui-media-body\" _v-8db8e50e=\"\">\n          幸福<span class=\"mui-pull-left mui-pull-left-span\" _v-8db8e50e=\"\"></span><span class=\"mui-pull-right timeright\" _v-8db8e50e=\"\">2分钟</span>\n          <p class=\"mui-ellipsis\" _v-8db8e50e=\"\">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>\n        </div>\n      </a>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-8db8e50e=\"\">\n      <a href=\"#\" _v-8db8e50e=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-8db8e50e=\"\">\n        <div class=\"mui-media-body\" _v-8db8e50e=\"\">\n          木屋<span class=\"mui-pull-left mui-pull-left-span\" _v-8db8e50e=\"\"></span><span class=\"mui-pull-right timeright\" _v-8db8e50e=\"\">2分钟</span>\n          <p class=\"mui-ellipsis\" _v-8db8e50e=\"\">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>\n        </div>\n      </a>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-8db8e50e=\"\">\n      <a href=\"#\" _v-8db8e50e=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-8db8e50e=\"\">\n        <div class=\"mui-media-body\" _v-8db8e50e=\"\">\n          CBD<span class=\"mui-pull-left mui-pull-left-span\" _v-8db8e50e=\"\"></span><span class=\"mui-pull-right timeright\" _v-8db8e50e=\"\">1小时</span>\n          <p class=\"mui-ellipsis\" _v-8db8e50e=\"\">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>\n        </div>\n      </a>\n    </li>\n    <li class=\"mui-table-view-cell mui-media\" _v-8db8e50e=\"\">\n      <a href=\"#\" _v-8db8e50e=\"\">\n        <img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(145) + "\" _v-8db8e50e=\"\">\n        <div class=\"mui-media-body\" _v-8db8e50e=\"\">\n          远眺<span class=\"mui-pull-left mui-pull-left-span\" _v-8db8e50e=\"\"></span><span class=\"mui-pull-right timeright\" _v-8db8e50e=\"\">2小时</span>\n          <p class=\"mui-ellipsis\" _v-8db8e50e=\"\">静静的看这个世界，最后终于疯了</p>\n        </div>\n      </a>\n    </li>\n  </ul>\n  </div>\n";
-
-/***/ },
-/* 347 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var __vue_script__, __vue_template__
-	__webpack_require__(348)
-	__vue_script__ = __webpack_require__(350)
-	__vue_template__ = __webpack_require__(356)
+	__webpack_require__(346)
+	__vue_script__ = __webpack_require__(348)
+	__vue_template__ = __webpack_require__(354)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -22933,7 +22902,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22942,13 +22911,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 348 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(349);
+	var content = __webpack_require__(347);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -22957,8 +22926,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-18af7d9c&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-18af7d9c&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7494ad9c&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7494ad9c&file=order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22968,7 +22937,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 349 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -22976,13 +22945,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    #sliderSegmentedControl>a[_v-18af7d9c]\r\n        {text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n        #sliderSegmentedControl>a.mui-active[_v-18af7d9c]\r\n        {color:#ff7b18;  }\r\n       #sliderProgressBar[_v-18af7d9c]\r\n        {background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n  .mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-18af7d9c] {\r\n      border-top: 1px solid #c8c7cc;\r\n      border-bottom: 0px solid #c8c7cc;\r\n  }\r\n  .mui-table-view .mui-media-object[_v-18af7d9c] {\r\n      line-height: 70px;\r\n      max-width: 70px;\r\n      height:70px;\r\n  }\r\n\r\n  .ending[_v-18af7d9c]{border:0;color:orangered}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/order.vue.style"],"names":[],"mappings":";IACA;SACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;QACA;SACA,cAAA,GAAA;OACA;SACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;EACA;MACA,8BAAA;MACA,iCAAA;GACA;EACA;MACA,kBAAA;MACA,gBAAA;MACA,YAAA;GACA;;EAEA,qBAAA,SAAA,eAAA,CAAA","file":"order.vue","sourcesContent":["<style scoped>\r\n    #sliderSegmentedControl>a\r\n        {text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n        #sliderSegmentedControl>a.mui-active\r\n        {color:#ff7b18;  }\r\n       #sliderProgressBar\r\n        {background:#ff7b18;  width:20%;  transition:0.3s;}\r\n  .mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n      border-top: 1px solid #c8c7cc;\r\n      border-bottom: 0px solid #c8c7cc;\r\n  }\r\n  .mui-table-view .mui-media-object {\r\n      line-height: 70px;\r\n      max-width: 70px;\r\n      height:70px;\r\n  }\r\n\r\n  .ending{border:0;color:orangered}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" v-link=\"{ path: '/user/main'}\"></a>\r\n      <h1 class=\"mui-title\">订单中心</h1>\r\n  </header>\r\n   <div class='mui-content'>\r\n\t    <tabpanel :list=\"list\"></tabpanel>\r\n   </div>\r\n</template>\r\n<script>\r\n\r\nimport tabpanel from '../../../../src/components/tabRouterPanel.vue';\r\nexport default {\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tlist : [{\r\n\t\t\t\ttitle : '全部',\r\n\t\t\t\tpath : \"/user/order/all\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待接单',\r\n                path : \"/user/order/untaking\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待服务',\r\n                path : \"/user/order/unservice\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待确认',\r\n                path :\"/user/order/unconfirm\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待评价',\r\n                    path : \"/user/order/unevaluate\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '空列表',\r\n                    path : \"/user/order/nothing\"\r\n\t\t\t}\r\n\r\n    ]\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\ttabpanel\r\n\t}\r\n}\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    #sliderSegmentedControl>a[_v-7494ad9c]\r\n        {text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n        #sliderSegmentedControl>a.mui-active[_v-7494ad9c]\r\n        {color:#ff7b18;  }\r\n       #sliderProgressBar[_v-7494ad9c]\r\n        {background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n  .mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-7494ad9c] {\r\n      border-top: 1px solid #c8c7cc;\r\n      border-bottom: 0px solid #c8c7cc;\r\n  }\r\n  .mui-table-view .mui-media-object[_v-7494ad9c] {\r\n      line-height: 70px;\r\n      max-width: 70px;\r\n      height:70px;\r\n  }\r\n\r\n  .ending[_v-7494ad9c]{border:0;color:orangered}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/order.vue.style"],"names":[],"mappings":";IACA;SACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;QACA;SACA,cAAA,GAAA;OACA;SACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;EACA;MACA,8BAAA;MACA,iCAAA;GACA;EACA;MACA,kBAAA;MACA,gBAAA;MACA,YAAA;GACA;;EAEA,qBAAA,SAAA,eAAA,CAAA","file":"order.vue","sourcesContent":["<style scoped>\r\n    #sliderSegmentedControl>a\r\n        {text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n        #sliderSegmentedControl>a.mui-active\r\n        {color:#ff7b18;  }\r\n       #sliderProgressBar\r\n        {background:#ff7b18;  width:20%;  transition:0.3s;}\r\n  .mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n      border-top: 1px solid #c8c7cc;\r\n      border-bottom: 0px solid #c8c7cc;\r\n  }\r\n  .mui-table-view .mui-media-object {\r\n      line-height: 70px;\r\n      max-width: 70px;\r\n      height:70px;\r\n  }\r\n\r\n  .ending{border:0;color:orangered}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" v-link=\"{ path: '/user/main'}\"></a>\r\n      <h1 class=\"mui-title\">订单中心</h1>\r\n  </header>\r\n   <div class='mui-content'>\r\n\t    <tabpanel :list=\"list\"></tabpanel>\r\n   </div>\r\n</template>\r\n<script>\r\n\r\nimport tabpanel from '../../../../src/components/tabRouterPanel.vue';\r\nexport default {\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tlist : [{\r\n\t\t\t\ttitle : '全部',\r\n\t\t\t\tpath : \"/user/order/all\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待接单',\r\n                path : \"/user/order/untaking\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待服务',\r\n                path : \"/user/order/unservice\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待确认',\r\n                path :\"/user/order/unconfirm\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '待评价',\r\n                    path : \"/user/order/unevaluate\"\r\n\t\t\t},{\r\n\t\t\t\ttitle : '空列表',\r\n                    path : \"/user/order/nothing\"\r\n\t\t\t}\r\n\r\n    ]\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\ttabpanel\r\n\t}\r\n}\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 350 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22991,7 +22960,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _tabRouterPanel = __webpack_require__(351);
+	var _tabRouterPanel = __webpack_require__(349);
 	
 	var _tabRouterPanel2 = _interopRequireDefault(_tabRouterPanel);
 	
@@ -23060,13 +23029,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 351 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(352)
-	__vue_script__ = __webpack_require__(354)
-	__vue_template__ = __webpack_require__(355)
+	__webpack_require__(350)
+	__vue_script__ = __webpack_require__(352)
+	__vue_template__ = __webpack_require__(353)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23074,7 +23043,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\src\\components\\tabRouterPanel.vue"
+	  var id = "d:\\Yous-H5\\src\\components\\tabRouterPanel.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23083,13 +23052,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 352 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(353);
+	var content = __webpack_require__(351);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -23098,8 +23067,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1673a460&file=tabRouterPanel.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./tabRouterPanel.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1673a460&file=tabRouterPanel.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./tabRouterPanel.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-24bb1db4&file=tabRouterPanel.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./tabRouterPanel.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-24bb1db4&file=tabRouterPanel.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./tabRouterPanel.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23109,7 +23078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 353 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -23117,13 +23086,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n    .t-tab__bd[_v-1673a460]{\r\n        display: block;margin-top:0px;background:#fff;padding:0px;\r\n    }\r\n    section[_v-1673a460] {\r\n        padding:0;\r\n    }\r\n    .t-tab nav a[_v-1673a460]{\r\n        padding-top:2px;padding-bottom:2px;display:inline-block;\r\n        width:19%;text-align:center;border-right:1px solid #ddd;font-size:14px;color:#333;\r\n        border-bottom:2px solid transparent;background-color:#fff;\r\n    }\r\n    .t-tab nav a[_v-1673a460]:last-child{border:0;}\r\n    .t-tab nav a.active[_v-1673a460]{border-bottom:2px solid orangered}\r\n    .t-tab nav a.v-link-active[_v-1673a460]{border-bottom:2px solid orangered;color:orangered}\r\n    .t-tab nav[_v-1673a460]{position:fixed;left:0;z-index:10;}\r\n\t.t-tab__bd[_v-1673a460]{padding-top:50px;}\r\n", "", {"version":3,"sources":["/./src/components/tabRouterPanel.vue.style"],"names":[],"mappings":";IACA;QACA,eAAA,eAAA,gBAAA,YAAA;KACA;IACA;QACA,UAAA;KACA;IACA;QACA,gBAAA,mBAAA,qBAAA;QACA,UAAA,kBAAA,4BAAA,eAAA,WAAA;QACA,oCAAA,sBAAA;KACA;IACA,qCAAA,SAAA,CAAA;IACA,iCAAA,iCAAA,CAAA;IACA,wCAAA,kCAAA,eAAA,CAAA;IACA,wBAAA,eAAA,OAAA,WAAA,CAAA;CACA,wBAAA,iBAAA,CAAA","file":"tabRouterPanel.vue","sourcesContent":["<style scoped>\r\n    .t-tab__bd{\r\n        display: block;margin-top:0px;background:#fff;padding:0px;\r\n    }\r\n    section {\r\n        padding:0;\r\n    }\r\n    .t-tab nav a{\r\n        padding-top:2px;padding-bottom:2px;display:inline-block;\r\n        width:19%;text-align:center;border-right:1px solid #ddd;font-size:14px;color:#333;\r\n        border-bottom:2px solid transparent;background-color:#fff;\r\n    }\r\n    .t-tab nav a:last-child{border:0;}\r\n    .t-tab nav a.active{border-bottom:2px solid orangered}\r\n    .t-tab nav a.v-link-active{border-bottom:2px solid orangered;color:orangered}\r\n    .t-tab nav{position:fixed;left:0;z-index:10;}\r\n\t.t-tab__bd{padding-top:50px;}\r\n</style>\r\n<template>\r\n    <section class=\"t-tab\">\r\n        <nav>\r\n            <a v-for=\"its in list\" v-link=\"{ path: its.path}\" v-text=\"its.title\" ></a>\r\n        </nav>\r\n        <div class=\"t-tab__bd\">\r\n            <router-view></router-view>\r\n        </div>\r\n    </section>\r\n</template>\r\n<script>\r\n    export default {\r\n        data() {\r\n        return {\r\n            index : 0\r\n        }\r\n    },\r\n    props : {\r\n        list : {\r\n            type : Array\r\n        }\r\n    }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n    .t-tab__bd[_v-24bb1db4]{\r\n        display: block;margin-top:0px;background:#fff;padding:0px;\r\n    }\r\n    section[_v-24bb1db4] {\r\n        padding:0;\r\n    }\r\n    .t-tab nav a[_v-24bb1db4]{\r\n        padding-top:2px;padding-bottom:2px;display:inline-block;\r\n        width:19%;text-align:center;border-right:1px solid #ddd;font-size:14px;color:#333;\r\n        border-bottom:2px solid transparent;background-color:#fff;\r\n    }\r\n    .t-tab nav a[_v-24bb1db4]:last-child{border:0;}\r\n    .t-tab nav a.active[_v-24bb1db4]{border-bottom:2px solid orangered}\r\n    .t-tab nav a.v-link-active[_v-24bb1db4]{border-bottom:2px solid orangered;color:orangered}\r\n    .t-tab nav[_v-24bb1db4]{position:fixed;left:0;z-index:10;}\r\n\t.t-tab__bd[_v-24bb1db4]{padding-top:50px;}\r\n", "", {"version":3,"sources":["/./src/components/tabRouterPanel.vue.style"],"names":[],"mappings":";IACA;QACA,eAAA,eAAA,gBAAA,YAAA;KACA;IACA;QACA,UAAA;KACA;IACA;QACA,gBAAA,mBAAA,qBAAA;QACA,UAAA,kBAAA,4BAAA,eAAA,WAAA;QACA,oCAAA,sBAAA;KACA;IACA,qCAAA,SAAA,CAAA;IACA,iCAAA,iCAAA,CAAA;IACA,wCAAA,kCAAA,eAAA,CAAA;IACA,wBAAA,eAAA,OAAA,WAAA,CAAA;CACA,wBAAA,iBAAA,CAAA","file":"tabRouterPanel.vue","sourcesContent":["<style scoped>\r\n    .t-tab__bd{\r\n        display: block;margin-top:0px;background:#fff;padding:0px;\r\n    }\r\n    section {\r\n        padding:0;\r\n    }\r\n    .t-tab nav a{\r\n        padding-top:2px;padding-bottom:2px;display:inline-block;\r\n        width:19%;text-align:center;border-right:1px solid #ddd;font-size:14px;color:#333;\r\n        border-bottom:2px solid transparent;background-color:#fff;\r\n    }\r\n    .t-tab nav a:last-child{border:0;}\r\n    .t-tab nav a.active{border-bottom:2px solid orangered}\r\n    .t-tab nav a.v-link-active{border-bottom:2px solid orangered;color:orangered}\r\n    .t-tab nav{position:fixed;left:0;z-index:10;}\r\n\t.t-tab__bd{padding-top:50px;}\r\n</style>\r\n<template>\r\n    <section class=\"t-tab\">\r\n        <nav>\r\n            <a v-for=\"its in list\" v-link=\"{ path: its.path}\" v-text=\"its.title\" ></a>\r\n        </nav>\r\n        <div class=\"t-tab__bd\">\r\n            <router-view></router-view>\r\n        </div>\r\n    </section>\r\n</template>\r\n<script>\r\n    export default {\r\n        data() {\r\n        return {\r\n            index : 0\r\n        }\r\n    },\r\n    props : {\r\n        list : {\r\n            type : Array\r\n        }\r\n    }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 354 */
+/* 352 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -23177,23 +23146,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
+/* 353 */
+/***/ function(module, exports) {
+
+	module.exports = "\n    <section class=\"t-tab\" _v-24bb1db4=\"\">\n        <nav _v-24bb1db4=\"\">\n            <a v-for=\"its in list\" v-link=\"{ path: its.path}\" v-text=\"its.title\" _v-24bb1db4=\"\"></a>\n        </nav>\n        <div class=\"t-tab__bd\" _v-24bb1db4=\"\">\n            <router-view _v-24bb1db4=\"\"></router-view>\n        </div>\n    </section>\n";
+
+/***/ },
+/* 354 */
+/***/ function(module, exports) {
+
+	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-7494ad9c=\"\">\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" v-link=\"{ path: '/user/main'}\" _v-7494ad9c=\"\"></a>\n      <h1 class=\"mui-title\" _v-7494ad9c=\"\">订单中心</h1>\n  </header>\n   <div class=\"mui-content\" _v-7494ad9c=\"\">\n\t    <tabpanel :list=\"list\" _v-7494ad9c=\"\"></tabpanel>\n   </div>\n";
+
+/***/ },
 /* 355 */
-/***/ function(module, exports) {
-
-	module.exports = "\n    <section class=\"t-tab\" _v-1673a460=\"\">\n        <nav _v-1673a460=\"\">\n            <a v-for=\"its in list\" v-link=\"{ path: its.path}\" v-text=\"its.title\" _v-1673a460=\"\"></a>\n        </nav>\n        <div class=\"t-tab__bd\" _v-1673a460=\"\">\n            <router-view _v-1673a460=\"\"></router-view>\n        </div>\n    </section>\n";
-
-/***/ },
-/* 356 */
-/***/ function(module, exports) {
-
-	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-18af7d9c=\"\">\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" v-link=\"{ path: '/user/main'}\" _v-18af7d9c=\"\"></a>\n      <h1 class=\"mui-title\" _v-18af7d9c=\"\">订单中心</h1>\n  </header>\n   <div class=\"mui-content\" _v-18af7d9c=\"\">\n\t    <tabpanel :list=\"list\" _v-18af7d9c=\"\"></tabpanel>\n   </div>\n";
-
-/***/ },
-/* 357 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_template__ = __webpack_require__(358)
+	__vue_template__ = __webpack_require__(356)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23201,7 +23170,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\profile.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\profile.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 356 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n      <h1 class=\"mui-title\">个人资料</h1>\r\n  </header>\r\n  <div class=\"mui-content\">\r\n       <ul class=\"mui-table-view\">\r\n        <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\">\r\n          头像\r\n        </a>\r\n      </li>\r\n    </ul>\r\n     <ul class=\"mui-table-view\">\r\n        <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\">\r\n          账号<span>space</span>\r\n        </a>\r\n      </li>\r\n    </ul>\r\n    <ul class=\"mui-table-view\">\r\n      <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\" id='modifypwd'>\r\n          修改密码\r\n        </a>\r\n      </li>\r\n    </ul>\r\n     <ul class=\"mui-table-view\">\r\n      <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\" id='openaddress'>\r\n          所在地址\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n";
+
+/***/ },
+/* 357 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(358)
+	__vue_template__ = __webpack_require__(360)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\suggestion.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23211,86 +23208,58 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 358 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n      <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n      <h1 class=\"mui-title\">个人资料</h1>\r\n  </header>\r\n  <div class=\"mui-content\">\r\n       <ul class=\"mui-table-view\">\r\n        <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\">\r\n          头像\r\n        </a>\r\n      </li>\r\n    </ul>\r\n     <ul class=\"mui-table-view\">\r\n        <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\">\r\n          账号<span>space</span>\r\n        </a>\r\n      </li>\r\n    </ul>\r\n    <ul class=\"mui-table-view\">\r\n      <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\" id='modifypwd'>\r\n          修改密码\r\n        </a>\r\n      </li>\r\n    </ul>\r\n     <ul class=\"mui-table-view\">\r\n      <li class=\"mui-table-view-cell\">\r\n        <a class=\"mui-navigate-right\" id='openaddress'>\r\n          所在地址\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(359);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0ad32c58&file=suggestion.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./suggestion.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0ad32c58&file=suggestion.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./suggestion.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(360)
-	__vue_template__ = __webpack_require__(362)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\suggestion.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t.mui-inline[_v-0ad32c58]{font-size:0.28rem;color:#aaa;}\r\n\tp[_v-0ad32c58]{text-indent:0.1rem;}\r\n\t.mui-input-row[_v-0ad32c58]{width:96%;margin:10px auto;}\r\n", "", {"version":3,"sources":["/./yous/view/user/suggestion.vue.style"],"names":[],"mappings":";CACA,yBAAA,kBAAA,WAAA,CAAA;CACA,eAAA,mBAAA,CAAA;CACA,4BAAA,UAAA,iBAAA,CAAA","file":"suggestion.vue","sourcesContent":["<style scoped>\r\n\t.mui-inline{font-size:0.28rem;color:#aaa;}\r\n\tp{text-indent:0.1rem;}\r\n\t.mui-input-row{width:96%;margin:10px auto;}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n\t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t\t<h1 class=\"mui-title\">问题反馈</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<div class=\"mui-content-padded\">\r\n\t\t\t\t<div class=\"mui-inline\">问题和意见</div>\r\n\t\t\t\t<a class=\"mui-pull-right mui-inline\" href=\"#popover\">\r\n\t\t\t\t\t快捷输入\r\n\t\t\t\t\t<span class=\"mui-icon mui-icon-arrowdown\"></span>\r\n\t\t\t\t</a>\r\n\t\t\t\t<!--快捷输入具体内容，开发者可自己替换常用语-->\r\n\t\t\t\t<div id=\"popover\" class=\"mui-popover\">\r\n\t\t\t\t\t<div class=\"mui-popover-arrow\"></div>\r\n\t\t\t\t\t<div class=\"mui-scroll-wrapper\">\r\n\t\t\t\t\t\t<div class=\"mui-scroll\">\r\n\t\t\t\t\t\t\t<ul class=\"mui-table-view\">\r\n\t\t\t\t\t\t\t\t<!--仅流应用环境下显示-->\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">界面显示错乱</a></li>\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">启动缓慢，卡出翔了</a></li>\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">偶发性崩溃</a></li>\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">UI无法直视，丑哭了</a></li>\r\n\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"row mui-input-row\">\r\n\t\t\t\t<textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\"></textarea>\r\n\t\t\t</div>\r\n\t\t\t<p>图片(选填,提供问题截图,总大小10M以下)</p>\r\n\t\t\t<div id='image-list' class=\"row image-list\"></div>\r\n\t\t\t<p>QQ/邮箱</p>\r\n\t\t\t<div class=\"mui-input-row\">\r\n\t\t\t\t<input id='contact' type=\"text\" class=\"mui-input-clear contact\" placeholder=\"(选填,方便我们联系你 )\" />\r\n\t\t\t</div>\r\n\t\t\t\t\t\t<button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block mui-pull-right\">发送</button>\r\n\t\t</div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 360 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(361);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a85863fc&file=suggestion.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./suggestion.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a85863fc&file=suggestion.vue&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./suggestion.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-0ad32c58=\"\">\n\t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-0ad32c58=\"\"></a>\n\t\t\t<h1 class=\"mui-title\" _v-0ad32c58=\"\">问题反馈</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-0ad32c58=\"\">\n\t\t\t<div class=\"mui-content-padded\" _v-0ad32c58=\"\">\n\t\t\t\t<div class=\"mui-inline\" _v-0ad32c58=\"\">问题和意见</div>\n\t\t\t\t<a class=\"mui-pull-right mui-inline\" href=\"#popover\" _v-0ad32c58=\"\">\n\t\t\t\t\t快捷输入\n\t\t\t\t\t<span class=\"mui-icon mui-icon-arrowdown\" _v-0ad32c58=\"\"></span>\n\t\t\t\t</a>\n\t\t\t\t<!--快捷输入具体内容，开发者可自己替换常用语-->\n\t\t\t\t<div id=\"popover\" class=\"mui-popover\" _v-0ad32c58=\"\">\n\t\t\t\t\t<div class=\"mui-popover-arrow\" _v-0ad32c58=\"\"></div>\n\t\t\t\t\t<div class=\"mui-scroll-wrapper\" _v-0ad32c58=\"\">\n\t\t\t\t\t\t<div class=\"mui-scroll\" _v-0ad32c58=\"\">\n\t\t\t\t\t\t\t<ul class=\"mui-table-view\" _v-0ad32c58=\"\">\n\t\t\t\t\t\t\t\t<!--仅流应用环境下显示-->\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-0ad32c58=\"\"><a href=\"#\" _v-0ad32c58=\"\">界面显示错乱</a></li>\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-0ad32c58=\"\"><a href=\"#\" _v-0ad32c58=\"\">启动缓慢，卡出翔了</a></li>\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-0ad32c58=\"\"><a href=\"#\" _v-0ad32c58=\"\">偶发性崩溃</a></li>\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-0ad32c58=\"\"><a href=\"#\" _v-0ad32c58=\"\">UI无法直视，丑哭了</a></li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"row mui-input-row\" _v-0ad32c58=\"\">\n\t\t\t\t<textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" _v-0ad32c58=\"\"></textarea>\n\t\t\t</div>\n\t\t\t<p _v-0ad32c58=\"\">图片(选填,提供问题截图,总大小10M以下)</p>\n\t\t\t<div id=\"image-list\" class=\"row image-list\" _v-0ad32c58=\"\"></div>\n\t\t\t<p _v-0ad32c58=\"\">QQ/邮箱</p>\n\t\t\t<div class=\"mui-input-row\" _v-0ad32c58=\"\">\n\t\t\t\t<input id=\"contact\" type=\"text\" class=\"mui-input-clear contact\" placeholder=\"(选填,方便我们联系你 )\" _v-0ad32c58=\"\">\n\t\t\t</div>\n\t\t\t\t\t\t<button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block mui-pull-right\" _v-0ad32c58=\"\">发送</button>\n\t\t</div>\n";
 
 /***/ },
 /* 361 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t.mui-inline[_v-a85863fc]{font-size:0.28rem;color:#aaa;}\r\n\tp[_v-a85863fc]{text-indent:0.1rem;}\r\n\t.mui-input-row[_v-a85863fc]{width:96%;margin:10px auto;}\r\n", "", {"version":3,"sources":["/./yous/view/user/suggestion.vue.style"],"names":[],"mappings":";CACA,yBAAA,kBAAA,WAAA,CAAA;CACA,eAAA,mBAAA,CAAA;CACA,4BAAA,UAAA,iBAAA,CAAA","file":"suggestion.vue","sourcesContent":["<style scoped>\r\n\t.mui-inline{font-size:0.28rem;color:#aaa;}\r\n\tp{text-indent:0.1rem;}\r\n\t.mui-input-row{width:96%;margin:10px auto;}\r\n</style>\r\n<template>\r\n  <header class=\"mui-bar mui-bar-nav\">\r\n\t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t\t\t<h1 class=\"mui-title\">问题反馈</h1>\r\n\t\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<div class=\"mui-content-padded\">\r\n\t\t\t\t<div class=\"mui-inline\">问题和意见</div>\r\n\t\t\t\t<a class=\"mui-pull-right mui-inline\" href=\"#popover\">\r\n\t\t\t\t\t快捷输入\r\n\t\t\t\t\t<span class=\"mui-icon mui-icon-arrowdown\"></span>\r\n\t\t\t\t</a>\r\n\t\t\t\t<!--快捷输入具体内容，开发者可自己替换常用语-->\r\n\t\t\t\t<div id=\"popover\" class=\"mui-popover\">\r\n\t\t\t\t\t<div class=\"mui-popover-arrow\"></div>\r\n\t\t\t\t\t<div class=\"mui-scroll-wrapper\">\r\n\t\t\t\t\t\t<div class=\"mui-scroll\">\r\n\t\t\t\t\t\t\t<ul class=\"mui-table-view\">\r\n\t\t\t\t\t\t\t\t<!--仅流应用环境下显示-->\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">界面显示错乱</a></li>\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">启动缓慢，卡出翔了</a></li>\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">偶发性崩溃</a></li>\r\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\"><a href=\"#\">UI无法直视，丑哭了</a></li>\r\n\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"row mui-input-row\">\r\n\t\t\t\t<textarea id='question' class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\"></textarea>\r\n\t\t\t</div>\r\n\t\t\t<p>图片(选填,提供问题截图,总大小10M以下)</p>\r\n\t\t\t<div id='image-list' class=\"row image-list\"></div>\r\n\t\t\t<p>QQ/邮箱</p>\r\n\t\t\t<div class=\"mui-input-row\">\r\n\t\t\t\t<input id='contact' type=\"text\" class=\"mui-input-clear contact\" placeholder=\"(选填,方便我们联系你 )\" />\r\n\t\t\t</div>\r\n\t\t\t\t\t\t<button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block mui-pull-right\">发送</button>\r\n\t\t</div>\r\n</template>\r\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 362 */
-/***/ function(module, exports) {
-
-	module.exports = "\n  <header class=\"mui-bar mui-bar-nav\" _v-a85863fc=\"\">\n\t\t\t<a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-a85863fc=\"\"></a>\n\t\t\t<h1 class=\"mui-title\" _v-a85863fc=\"\">问题反馈</h1>\n\t\t</header>\n\t\t<div class=\"mui-content\" _v-a85863fc=\"\">\n\t\t\t<div class=\"mui-content-padded\" _v-a85863fc=\"\">\n\t\t\t\t<div class=\"mui-inline\" _v-a85863fc=\"\">问题和意见</div>\n\t\t\t\t<a class=\"mui-pull-right mui-inline\" href=\"#popover\" _v-a85863fc=\"\">\n\t\t\t\t\t快捷输入\n\t\t\t\t\t<span class=\"mui-icon mui-icon-arrowdown\" _v-a85863fc=\"\"></span>\n\t\t\t\t</a>\n\t\t\t\t<!--快捷输入具体内容，开发者可自己替换常用语-->\n\t\t\t\t<div id=\"popover\" class=\"mui-popover\" _v-a85863fc=\"\">\n\t\t\t\t\t<div class=\"mui-popover-arrow\" _v-a85863fc=\"\"></div>\n\t\t\t\t\t<div class=\"mui-scroll-wrapper\" _v-a85863fc=\"\">\n\t\t\t\t\t\t<div class=\"mui-scroll\" _v-a85863fc=\"\">\n\t\t\t\t\t\t\t<ul class=\"mui-table-view\" _v-a85863fc=\"\">\n\t\t\t\t\t\t\t\t<!--仅流应用环境下显示-->\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-a85863fc=\"\"><a href=\"#\" _v-a85863fc=\"\">界面显示错乱</a></li>\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-a85863fc=\"\"><a href=\"#\" _v-a85863fc=\"\">启动缓慢，卡出翔了</a></li>\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-a85863fc=\"\"><a href=\"#\" _v-a85863fc=\"\">偶发性崩溃</a></li>\n\t\t\t\t\t\t\t\t<li class=\"mui-table-view-cell\" _v-a85863fc=\"\"><a href=\"#\" _v-a85863fc=\"\">UI无法直视，丑哭了</a></li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"row mui-input-row\" _v-a85863fc=\"\">\n\t\t\t\t<textarea id=\"question\" class=\"mui-input-clear question\" placeholder=\"请详细描述你的问题和意见...\" _v-a85863fc=\"\"></textarea>\n\t\t\t</div>\n\t\t\t<p _v-a85863fc=\"\">图片(选填,提供问题截图,总大小10M以下)</p>\n\t\t\t<div id=\"image-list\" class=\"row image-list\" _v-a85863fc=\"\"></div>\n\t\t\t<p _v-a85863fc=\"\">QQ/邮箱</p>\n\t\t\t<div class=\"mui-input-row\" _v-a85863fc=\"\">\n\t\t\t\t<input id=\"contact\" type=\"text\" class=\"mui-input-clear contact\" placeholder=\"(选填,方便我们联系你 )\" _v-a85863fc=\"\">\n\t\t\t</div>\n\t\t\t\t\t\t<button id=\"submit\" class=\"mui-btn mui-btn-blue mui-btn-block mui-pull-right\" _v-a85863fc=\"\">发送</button>\n\t\t</div>\n";
-
-/***/ },
-/* 363 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var __vue_script__, __vue_template__
-	__webpack_require__(364)
-	__vue_script__ = __webpack_require__(366)
-	__vue_template__ = __webpack_require__(372)
+	__webpack_require__(362)
+	__vue_script__ = __webpack_require__(364)
+	__vue_template__ = __webpack_require__(370)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23298,7 +23267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\all_order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\all_order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23307,13 +23276,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 364 */
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(365);
+	var content = __webpack_require__(363);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -23322,8 +23291,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-32cbda14&file=all_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./all_order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-32cbda14&file=all_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./all_order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5578017e&file=all_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./all_order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5578017e&file=all_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./all_order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23333,7 +23302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 365 */
+/* 363 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -23341,13 +23310,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-32cbda14]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-32cbda14]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-32cbda14]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-32cbda14] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-32cbda14] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-32cbda14]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-32cbda14]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-32cbda14]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/all_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"all_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\">\r\n                  <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\"  v-for=\"(index,entry) in gridData\" v-link=\"{ path: '/user/order/detail'}\">\r\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t\t<a>\r\n\t\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">{{entry.orderstateestr}}</button>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>去评价</button>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;margin-right:10px;'>删除订单</button>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<h6>感谢使用幼狮空间维修服务</h6>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t</ul>\r\n                   </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\t state:\"\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-5578017e]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-5578017e]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-5578017e]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-5578017e] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-5578017e] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-5578017e]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-5578017e]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-5578017e]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/all_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"all_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\">\r\n                  <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\"  v-for=\"(index,entry) in gridData\" v-link=\"{ path: '/user/order/detail'}\">\r\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t\t<a>\r\n\t\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">{{entry.orderstateestr}}</button>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>去评价</button>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;margin-right:10px;'>删除订单</button>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<h6>感谢使用幼狮空间维修服务</h6>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t</ul>\r\n                   </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\t state:\"\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 366 */
+/* 364 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23356,7 +23325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _nothing = __webpack_require__(367);
+	var _nothing = __webpack_require__(365);
 	
 	var _nothing2 = _interopRequireDefault(_nothing);
 	
@@ -23452,12 +23421,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 367 */
+/* 365 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(368)
-	__vue_template__ = __webpack_require__(370)
+	__webpack_require__(366)
+	__vue_template__ = __webpack_require__(368)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23465,86 +23434,86 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\nothing.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\nothing.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
 	    hotAPI.update(id, module.exports, __vue_template__)
 	  }
 	})()}
+
+/***/ },
+/* 366 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(367);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3c73e11b&file=nothing.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nothing.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3c73e11b&file=nothing.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nothing.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 367 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n\t/*这里是没有任何订单的显示页面*/\r\n\r\n\t *[_v-3c73e11b]{background:#fff;}\r\n\t .mui-content[_v-3c73e11b]{position:absolute;height:100%;width:100%;}\r\n\t .nothingpic img[_v-3c73e11b]{height:80px;}\r\n\t .nothingpic[_v-3c73e11b]{text-align:center;}\r\n\t .nothingcontainer[_v-3c73e11b]{position:absolute;top:50%;left:50%;-webkit-transform: translate(-50%,-100%);transform: translate(-50%,-100%);}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/nothing.vue.style"],"names":[],"mappings":";CACA,kBAAA;;EAEA,eAAA,gBAAA,CAAA;EACA,0BAAA,kBAAA,YAAA,WAAA,CAAA;EACA,6BAAA,YAAA,CAAA;EACA,yBAAA,kBAAA,CAAA;EACA,+BAAA,kBAAA,QAAA,SAAA,yCAAA,iCAAA,CAAA","file":"nothing.vue","sourcesContent":["<style scoped>\r\n\t/*这里是没有任何订单的显示页面*/\r\n\r\n\t *{background:#fff;}\r\n\t .mui-content{position:absolute;height:100%;width:100%;}\r\n\t .nothingpic img{height:80px;}\r\n\t .nothingpic{text-align:center;}\r\n\t .nothingcontainer{position:absolute;top:50%;left:50%;transform: translate(-50%,-100%);}\r\n</style>\r\n<template>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<div class='nothingcontainer'>\r\n\t\t    <div class='nothingpic'><img src=\"../../../../dist/img/nothing.png\"></div>\r\n\t\t    <div class='nothingtext'>\r\n\t\t    \t<p style='font-size:14px;margin-top:20px;'>您还没有相关的订单</p>\r\n\t\t    </div>\r\n\t\t</div>\r\n</div>\r\n</template>"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
 
 /***/ },
 /* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(369);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-44f0e731&file=nothing.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nothing.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-44f0e731&file=nothing.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./nothing.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = "\n\t\t<div class=\"mui-content\" _v-3c73e11b=\"\">\n\t\t\t<div class=\"nothingcontainer\" _v-3c73e11b=\"\">\n\t\t    <div class=\"nothingpic\" _v-3c73e11b=\"\"><img src=\"" + __webpack_require__(369) + "\" _v-3c73e11b=\"\"></div>\n\t\t    <div class=\"nothingtext\" _v-3c73e11b=\"\">\n\t\t    \t<p style=\"font-size:14px;margin-top:20px;\" _v-3c73e11b=\"\">您还没有相关的订单</p>\n\t\t    </div>\n\t\t</div>\n</div>\n";
 
 /***/ },
 /* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\t/*这里是没有任何订单的显示页面*/\r\n\r\n\t *[_v-44f0e731]{background:#fff;}\r\n\t .mui-content[_v-44f0e731]{position:absolute;height:100%;width:100%;}\r\n\t .nothingpic img[_v-44f0e731]{height:80px;}\r\n\t .nothingpic[_v-44f0e731]{text-align:center;}\r\n\t .nothingcontainer[_v-44f0e731]{position:absolute;top:50%;left:50%;-webkit-transform: translate(-50%,-100%);transform: translate(-50%,-100%);}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/nothing.vue.style"],"names":[],"mappings":";CACA,kBAAA;;EAEA,eAAA,gBAAA,CAAA;EACA,0BAAA,kBAAA,YAAA,WAAA,CAAA;EACA,6BAAA,YAAA,CAAA;EACA,yBAAA,kBAAA,CAAA;EACA,+BAAA,kBAAA,QAAA,SAAA,yCAAA,iCAAA,CAAA","file":"nothing.vue","sourcesContent":["<style scoped>\r\n\t/*这里是没有任何订单的显示页面*/\r\n\r\n\t *{background:#fff;}\r\n\t .mui-content{position:absolute;height:100%;width:100%;}\r\n\t .nothingpic img{height:80px;}\r\n\t .nothingpic{text-align:center;}\r\n\t .nothingcontainer{position:absolute;top:50%;left:50%;transform: translate(-50%,-100%);}\r\n</style>\r\n<template>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<div class='nothingcontainer'>\r\n\t\t    <div class='nothingpic'><img src=\"../../../../dist/img/nothing.png\"></div>\r\n\t\t    <div class='nothingtext'>\r\n\t\t    \t<p style='font-size:14px;margin-top:20px;'>您还没有相关的订单</p>\r\n\t\t    </div>\r\n\t\t</div>\r\n</div>\r\n</template>"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
+	module.exports = __webpack_require__.p + "nothing.png?d217aecca45e872a0de7991969702b25";
 
 /***/ },
 /* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n\t\t<div class=\"mui-content\" _v-44f0e731=\"\">\n\t\t\t<div class=\"nothingcontainer\" _v-44f0e731=\"\">\n\t\t    <div class=\"nothingpic\" _v-44f0e731=\"\"><img src=\"" + __webpack_require__(371) + "\" _v-44f0e731=\"\"></div>\n\t\t    <div class=\"nothingtext\" _v-44f0e731=\"\">\n\t\t    \t<p style=\"font-size:14px;margin-top:20px;\" _v-44f0e731=\"\">您还没有相关的订单</p>\n\t\t    </div>\n\t\t</div>\n</div>\n";
+	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-5578017e=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-5578017e=\"\">\n                <div class=\"mui-slider-group\" _v-5578017e=\"\">\n                  <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-5578017e=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" v-link=\"{ path: '/user/order/detail'}\" _v-5578017e=\"\">\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-5578017e=\"\">\n\t\t\t\t\t\t\t\t<a _v-5578017e=\"\">\n\t\t\t\t\t\t\t\t\t<div _v-5578017e=\"\">\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-5578017e=\"\">{{entry.orderstateestr}}</button>\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-5578017e=\"\">去评价</button>\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;margin-right:10px;\" _v-5578017e=\"\">删除订单</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-5578017e=\"\">\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(371) + "\" _v-5578017e=\"\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-5578017e=\"\">\n\t\t\t\t\t\t\t\t\t\t\t<p _v-5578017e=\"\">订单号:<span _v-5578017e=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-5578017e=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t\t<p _v-5578017e=\"\">订单时间:<span _v-5578017e=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<h6 _v-5578017e=\"\">感谢使用幼狮空间维修服务</h6>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n                   </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-5578017e=\"\">\n\t\t\t\t\t\t<empty_data _v-5578017e=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n        </div>\n";
 
 /***/ },
 /* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "nothing.png?d217aecca45e872a0de7991969702b25";
+	module.exports = __webpack_require__.p + "btn_qq@3x.png?9b0d57bb84694b9097aad19896adab7a";
 
 /***/ },
 /* 372 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-32cbda14=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-32cbda14=\"\">\n                <div class=\"mui-slider-group\" _v-32cbda14=\"\">\n                  <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-32cbda14=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" v-link=\"{ path: '/user/order/detail'}\" _v-32cbda14=\"\">\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-32cbda14=\"\">\n\t\t\t\t\t\t\t\t<a _v-32cbda14=\"\">\n\t\t\t\t\t\t\t\t\t<div _v-32cbda14=\"\">\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-32cbda14=\"\">{{entry.orderstateestr}}</button>\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-32cbda14=\"\">去评价</button>\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;margin-right:10px;\" _v-32cbda14=\"\">删除订单</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-32cbda14=\"\">\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(373) + "\" _v-32cbda14=\"\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-32cbda14=\"\">\n\t\t\t\t\t\t\t\t\t\t\t<p _v-32cbda14=\"\">订单号:<span _v-32cbda14=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-32cbda14=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t\t<p _v-32cbda14=\"\">订单时间:<span _v-32cbda14=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<h6 _v-32cbda14=\"\">感谢使用幼狮空间维修服务</h6>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n                   </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-32cbda14=\"\">\n\t\t\t\t\t\t<empty_data _v-32cbda14=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n        </div>\n";
-
-/***/ },
-/* 373 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "btn_qq@3x.png?9b0d57bb84694b9097aad19896adab7a";
-
-/***/ },
-/* 374 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var __vue_script__, __vue_template__
-	__webpack_require__(375)
-	__vue_script__ = __webpack_require__(377)
-	__vue_template__ = __webpack_require__(378)
+	__webpack_require__(373)
+	__vue_script__ = __webpack_require__(375)
+	__vue_template__ = __webpack_require__(376)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23552,7 +23521,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\untaking_order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\untaking_order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23561,13 +23530,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 375 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(376);
+	var content = __webpack_require__(374);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -23576,8 +23545,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b0617090&file=untaking_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./untaking_order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b0617090&file=untaking_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./untaking_order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-daf59ae4&file=untaking_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./untaking_order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-daf59ae4&file=untaking_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./untaking_order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23587,7 +23556,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 376 */
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -23595,13 +23564,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-b0617090]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-b0617090]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-b0617090]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-b0617090] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-b0617090] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-b0617090]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-b0617090]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-b0617090]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/untaking_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"untaking_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\">\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待接单</button>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>取消订单</button>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t</ul>\r\n                   </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n    </div>\r\n\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\t state:\"1\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-daf59ae4]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-daf59ae4]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-daf59ae4]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-daf59ae4] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-daf59ae4] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-daf59ae4]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-daf59ae4]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-daf59ae4]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/untaking_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"untaking_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\">\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待接单</button>\r\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>取消订单</button>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t</ul>\r\n                   </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n    </div>\r\n\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\t state:\"1\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 377 */
+/* 375 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23610,7 +23579,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _nothing = __webpack_require__(367);
+	var _nothing = __webpack_require__(365);
 	
 	var _nothing2 = _interopRequireDefault(_nothing);
 	
@@ -23705,19 +23674,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 378 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-b0617090=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-b0617090=\"\">\n                <div class=\"mui-slider-group\" _v-b0617090=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-b0617090=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-b0617090=\"\">\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-b0617090=\"\">\n\t\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-b0617090=\"\">\n\t\t\t\t\t\t\t\t\t<div _v-b0617090=\"\">\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-b0617090=\"\">待接单</button>\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-b0617090=\"\">取消订单</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-b0617090=\"\">\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(373) + "\" _v-b0617090=\"\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-b0617090=\"\">\n\t\t\t\t\t\t\t\t\t\t\t<p _v-b0617090=\"\">订单号:<span _v-b0617090=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-b0617090=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t\t<p _v-b0617090=\"\">订单时间:<span _v-b0617090=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n                   </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-b0617090=\"\">\n\t\t\t\t\t\t<empty_data _v-b0617090=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n    </div>\n\n";
+	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-daf59ae4=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-daf59ae4=\"\">\n                <div class=\"mui-slider-group\" _v-daf59ae4=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t\t\t<div _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-daf59ae4=\"\">待接单</button>\n\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-daf59ae4=\"\">取消订单</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(371) + "\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t\t\t\t\t\t<p _v-daf59ae4=\"\">订单号:<span _v-daf59ae4=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-daf59ae4=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t\t<p _v-daf59ae4=\"\">订单时间:<span _v-daf59ae4=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n                   </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-daf59ae4=\"\">\n\t\t\t\t\t\t<empty_data _v-daf59ae4=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n    </div>\n\n";
 
 /***/ },
-/* 379 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(380)
-	__vue_script__ = __webpack_require__(382)
-	__vue_template__ = __webpack_require__(383)
+	__webpack_require__(378)
+	__vue_script__ = __webpack_require__(380)
+	__vue_template__ = __webpack_require__(381)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23725,7 +23694,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\unservice_order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\unservice_order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23734,13 +23703,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 380 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(381);
+	var content = __webpack_require__(379);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -23749,8 +23718,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-df1568a2&file=unservice_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unservice_order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-df1568a2&file=unservice_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unservice_order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-070688ce&file=unservice_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unservice_order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-070688ce&file=unservice_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unservice_order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23760,7 +23729,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 381 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -23768,13 +23737,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-df1568a2]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-df1568a2]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-df1568a2]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-df1568a2] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-df1568a2] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-df1568a2]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-df1568a2]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-df1568a2]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/unservice_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"unservice_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\">\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(this.gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待服务</button>\t\t\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>查看进程</button>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n                   </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n       </div>\r\n\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tdebugger;\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\tstate:\"2\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-070688ce]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-070688ce]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-070688ce]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-070688ce] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-070688ce] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-070688ce]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-070688ce]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-070688ce]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/unservice_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"unservice_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\">\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(this.gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待服务</button>\t\t\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>查看进程</button>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n                   </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n       </div>\r\n\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tdebugger;\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\tstate:\"2\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 382 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23783,7 +23752,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _nothing = __webpack_require__(367);
+	var _nothing = __webpack_require__(365);
 	
 	var _nothing2 = _interopRequireDefault(_nothing);
 	
@@ -23879,19 +23848,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 383 */
+/* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-df1568a2=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-df1568a2=\"\">\n                <div class=\"mui-slider-group\" _v-df1568a2=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(this.gridData.length>0)\" _v-df1568a2=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-df1568a2=\"\">\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-df1568a2=\"\">\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-df1568a2=\"\">\n\t\t\t\t\t\t\t\t<div _v-df1568a2=\"\">\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-df1568a2=\"\">待服务</button>\t\t\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-df1568a2=\"\">查看进程</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-df1568a2=\"\">\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(373) + "\" _v-df1568a2=\"\">\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-df1568a2=\"\">\n\t\t\t\t\t\t\t\t\t\t<p _v-df1568a2=\"\">订单号:<span _v-df1568a2=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-df1568a2=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t<p _v-df1568a2=\"\">订单时间:<span _v-df1568a2=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n                   </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-df1568a2=\"\">\n\t\t\t\t\t\t\t<empty_data _v-df1568a2=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n       </div>\n\n";
+	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-070688ce=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-070688ce=\"\">\n                <div class=\"mui-slider-group\" _v-070688ce=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(this.gridData.length>0)\" _v-070688ce=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-070688ce=\"\">\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-070688ce=\"\">\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-070688ce=\"\">\n\t\t\t\t\t\t\t\t<div _v-070688ce=\"\">\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-070688ce=\"\">待服务</button>\t\t\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-070688ce=\"\">查看进程</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-070688ce=\"\">\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(371) + "\" _v-070688ce=\"\">\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-070688ce=\"\">\n\t\t\t\t\t\t\t\t\t\t<p _v-070688ce=\"\">订单号:<span _v-070688ce=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-070688ce=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t<p _v-070688ce=\"\">订单时间:<span _v-070688ce=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n                   </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-070688ce=\"\">\n\t\t\t\t\t\t\t<empty_data _v-070688ce=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n       </div>\n\n";
 
 /***/ },
-/* 384 */
+/* 382 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(385)
-	__vue_script__ = __webpack_require__(387)
-	__vue_template__ = __webpack_require__(388)
+	__webpack_require__(383)
+	__vue_script__ = __webpack_require__(385)
+	__vue_template__ = __webpack_require__(386)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -23899,7 +23868,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\unconfirm_order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\unconfirm_order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23908,13 +23877,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 385 */
+/* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(386);
+	var content = __webpack_require__(384);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -23923,8 +23892,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2a63cc0c&file=unconfirm_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unconfirm_order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2a63cc0c&file=unconfirm_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unconfirm_order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-56d589e4&file=unconfirm_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unconfirm_order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-56d589e4&file=unconfirm_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unconfirm_order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23934,7 +23903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 386 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -23942,13 +23911,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-2a63cc0c]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-2a63cc0c]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-2a63cc0c]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-2a63cc0c] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-2a63cc0c] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-2a63cc0c]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-2a63cc0c]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-2a63cc0c]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/unconfirm_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"unconfirm_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\" >\r\n                <div class=\"mui-slider-group\">\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待确认</button>\t\t\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>确认订单</button>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n                    </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n     </div>\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\tstate:\"2\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"3\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-56d589e4]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-56d589e4]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-56d589e4]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-56d589e4] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-56d589e4] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-56d589e4]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-56d589e4]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-56d589e4]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/unconfirm_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"unconfirm_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\" >\r\n                <div class=\"mui-slider-group\">\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\">\r\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待确认</button>\t\t\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>确认订单</button>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n                    </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n     </div>\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\tstate:\"2\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"3\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 387 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23957,7 +23926,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _nothing = __webpack_require__(367);
+	var _nothing = __webpack_require__(365);
 	
 	var _nothing2 = _interopRequireDefault(_nothing);
 	
@@ -24051,19 +24020,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 388 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-2a63cc0c=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-2a63cc0c=\"\">\n                <div class=\"mui-slider-group\" _v-2a63cc0c=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t\t<div _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-2a63cc0c=\"\">待确认</button>\t\t\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-2a63cc0c=\"\">确认订单</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(373) + "\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t\t\t\t<p _v-2a63cc0c=\"\">订单号:<span _v-2a63cc0c=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-2a63cc0c=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t<p _v-2a63cc0c=\"\">订单时间:<span _v-2a63cc0c=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n                    </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-2a63cc0c=\"\">\n\t\t\t\t\t\t\t<empty_data _v-2a63cc0c=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n     </div>\n";
+	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-56d589e4=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-56d589e4=\"\">\n                <div class=\"mui-slider-group\" _v-56d589e4=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-56d589e4=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-56d589e4=\"\">\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-56d589e4=\"\">\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-56d589e4=\"\">\n\t\t\t\t\t\t\t\t<div _v-56d589e4=\"\">\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-56d589e4=\"\">待确认</button>\t\t\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-56d589e4=\"\">确认订单</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-56d589e4=\"\">\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(371) + "\" _v-56d589e4=\"\">\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-56d589e4=\"\">\n\t\t\t\t\t\t\t\t\t\t<p _v-56d589e4=\"\">订单号:<span _v-56d589e4=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-56d589e4=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t<p _v-56d589e4=\"\">订单时间:<span _v-56d589e4=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n                    </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-56d589e4=\"\">\n\t\t\t\t\t\t\t<empty_data _v-56d589e4=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n     </div>\n";
 
 /***/ },
-/* 389 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(390)
-	__vue_script__ = __webpack_require__(392)
-	__vue_template__ = __webpack_require__(393)
+	__webpack_require__(388)
+	__vue_script__ = __webpack_require__(390)
+	__vue_template__ = __webpack_require__(391)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -24071,7 +24040,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\unevaluate_order.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\unevaluate_order.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24080,13 +24049,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 390 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(391);
+	var content = __webpack_require__(389);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -24095,8 +24064,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a84f5966&file=unevaluate_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unevaluate_order.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a84f5966&file=unevaluate_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unevaluate_order.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7e823eba&file=unevaluate_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unevaluate_order.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7e823eba&file=unevaluate_order.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./unevaluate_order.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24106,7 +24075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 391 */
+/* 389 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -24114,13 +24083,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-a84f5966]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-a84f5966]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-a84f5966]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-a84f5966] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-a84f5966] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-a84f5966]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-a84f5966]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-a84f5966]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/unevaluate_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"unevaluate_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\" >\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" >\r\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待评价</button>\t\t\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>评价订单</button>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n                    </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\tstate:\"4\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\t  #sliderSegmentedControl>a[_v-7e823eba]\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active[_v-7e823eba]\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar[_v-7e823eba]\r\n\t{background:#ff7b18;  width:20%;  -webkit-transition:0.3s;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item[_v-7e823eba] {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object[_v-7e823eba] {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending[_v-7e823eba]{border:0;color:orangered}\r\n\t.mui-btn-outlined[_v-7e823eba]{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p[_v-7e823eba]{font-size:12px;}\r\n", "", {"version":3,"sources":["/./yous/view/user/order/unevaluate_order.vue.style"],"names":[],"mappings":";GACA;EACA,qBAAA,EAAA,iBAAA,EAAA,cAAA,CAAA,4BAAA,CAAA;CACA;EACA,cAAA,GAAA;EACA;EACA,mBAAA,EAAA,UAAA,EAAA,wBAAA,EAAA,gBAAA,CAAA;CACA;KACA,8BAAA;KACA,iCAAA;EACA;CACA;KACA,kBAAA;KACA,gBAAA;KACA,YAAA;EACA;CACA,qBAAA,SAAA,eAAA,CAAA;CACA,+BAAA,YAAA,eAAA,CAAA;CACA,+BAAA,eAAA,CAAA","file":"unevaluate_order.vue","sourcesContent":["<style scoped>\r\n\t  #sliderSegmentedControl>a\r\n\t{text-decoration:none;  line-height:40px;  color:#2C3637; border-right:1px solid #ccc;}\r\n\t#sliderSegmentedControl>a.mui-active\r\n\t{color:#ff7b18;  }\r\n\t #sliderProgressBar\r\n\t{background:#ff7b18;  width:20%;  transition:0.3s;}\r\n\t.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {\r\n\t    border-top: 1px solid #c8c7cc;\r\n\t    border-bottom: 0px solid #c8c7cc;\r\n\t}\r\n\t.mui-table-view .mui-media-object {\r\n\t    line-height: 70px;\r\n\t    max-width: 70px;\r\n\t    height:70px;\r\n\t}\r\n\t.ending{border:0;color:orangered}\r\n\t.mui-btn-outlined{padding:5px;font-size:12px;}\t\r\n\t.mui-media-body p{font-size:12px;}\r\n</style>\r\n<template>\r\n    <div id=\"body\" class='mui-content'>\r\n            <div id=\"slider\" class=\"mui-slider\">\r\n                <div class=\"mui-slider-group\" >\r\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\">\r\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" >\r\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id='jumpxiangqing'>\r\n\t\t\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\">待评价</button>\t\t\r\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style='float:right;'>评价订单</button>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div style='padding:20px 0px;'>\r\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src='../../../../dist/btn_qq@3x.png'>\r\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\">\r\n\t\t\t\t\t\t\t\t\t\t<p>订单号:<span>{{entry.fdserviceid}}</span></p>\r\n\t\t\t\t\t\t\t\t\t\t<p class='mui-ellipsis'>{{entry.fdcontent}}</p>\r\n\t\t\t\t\t\t\t\t\t\t<p>订单时间:<span>{{entry.fdcreatetime}}</span></p>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n                    </div>\r\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else>\r\n\t\t\t\t\t\t<empty_data></empty_data>\r\n\t\t\t\t\t</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n</template>\r\n<script>\r\n\timport empty_data from '../order/nothing.vue'\r\n\texport default {\r\n\t\tdata() {\r\n\t\treturn {\r\n\t\t\tgridData: []\r\n\t\t}\r\n\t},\r\n\tready: function() {\r\n\t\tthis.getCustomers()\r\n\t},\r\n\tcomponents : {\r\n\t\tempty_data\r\n\t},\r\n\tmethods: {\r\n\t\tgetCustomers: function (){\r\n\t\t\tvar vm = this\r\n\t\t\tvm.$http.post(\r\n\t\t\t\t\t'http://106.14.27.89:8001/api/GetServiceApiResult',\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tParameters:{\r\n\t\t\t\t\t\t\t\"phone\":\"13426242626\",\r\n\t\t\t\t\t\t\t\"servicetype\":\"\",\r\n\t\t\t\t\t\t\tstate:\"4\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\tForeEndType:\"2\",\r\n\t\t\t\t\t\tCode:\"20000007\"\r\n\t\t\t\t\t}\r\n\t\t\t).then((response)=>{\r\n\t\t\t\tvar response=JSON.parse(response.data);\r\n\t\t\tvm.$set('gridData', response.data);\r\n\t\t\tconsole.log(response.data);\r\n\t\t})\r\n\t}\r\n\t}\r\n\t}\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 392 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24129,7 +24098,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _nothing = __webpack_require__(367);
+	var _nothing = __webpack_require__(365);
 	
 	var _nothing2 = _interopRequireDefault(_nothing);
 	
@@ -24224,17 +24193,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 393 */
+/* 391 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-a84f5966=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-a84f5966=\"\">\n                <div class=\"mui-slider-group\" _v-a84f5966=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-a84f5966=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-a84f5966=\"\">\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-a84f5966=\"\">\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-a84f5966=\"\">\n\t\t\t\t\t\t\t\t<div _v-a84f5966=\"\">\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-a84f5966=\"\">待评价</button>\t\t\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-a84f5966=\"\">评价订单</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-a84f5966=\"\">\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(373) + "\" _v-a84f5966=\"\">\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-a84f5966=\"\">\n\t\t\t\t\t\t\t\t\t\t<p _v-a84f5966=\"\">订单号:<span _v-a84f5966=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-a84f5966=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t<p _v-a84f5966=\"\">订单时间:<span _v-a84f5966=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n                    </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-a84f5966=\"\">\n\t\t\t\t\t\t<empty_data _v-a84f5966=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n        </div>\n\n";
+	module.exports = "\n    <div id=\"body\" class=\"mui-content\" _v-7e823eba=\"\">\n            <div id=\"slider\" class=\"mui-slider\" _v-7e823eba=\"\">\n                <div class=\"mui-slider-group\" _v-7e823eba=\"\">\n                    <div class=\"mui-slider-item mui-control-content\" v-if=\"(gridData.length>0)\" _v-7e823eba=\"\">\n\t\t\t\t\t\t<ul class=\"mui-table-view\" v-for=\"(index,entry) in gridData\" _v-7e823eba=\"\">\n\t\t\t\t\t\t<li class=\"mui-table-view-cell mui-media\" _v-7e823eba=\"\">\n\t\t\t\t\t\t\t<a href=\"javascript:;\" id=\"jumpxiangqing\" _v-7e823eba=\"\">\n\t\t\t\t\t\t\t\t<div _v-7e823eba=\"\">\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined ending\" _v-7e823eba=\"\">待评价</button>\t\t\n\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" style=\"float:right;\" _v-7e823eba=\"\">评价订单</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div style=\"padding:20px 0px;\" _v-7e823eba=\"\">\n\t\t\t\t\t\t\t\t\t<img class=\"mui-media-object mui-pull-left\" src=\"" + __webpack_require__(371) + "\" _v-7e823eba=\"\">\n\t\t\t\t\t\t\t\t\t<div class=\"mui-media-body\" _v-7e823eba=\"\">\n\t\t\t\t\t\t\t\t\t\t<p _v-7e823eba=\"\">订单号:<span _v-7e823eba=\"\">{{entry.fdserviceid}}</span></p>\n\t\t\t\t\t\t\t\t\t\t<p class=\"mui-ellipsis\" _v-7e823eba=\"\">{{entry.fdcontent}}</p>\n\t\t\t\t\t\t\t\t\t\t<p _v-7e823eba=\"\">订单时间:<span _v-7e823eba=\"\">{{entry.fdcreatetime}}</span></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n                    </div>\n\t\t\t\t\t<div class=\"mui-slider-item mui-control-content\" v-else=\"\" _v-7e823eba=\"\">\n\t\t\t\t\t\t<empty_data _v-7e823eba=\"\"></empty_data>\n\t\t\t\t\t</div>\n                </div>\n            </div>\n        </div>\n\n";
 
 /***/ },
-/* 394 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(395)
+	__vue_script__ = __webpack_require__(393)
+	__vue_template__ = __webpack_require__(399)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -24242,7 +24212,70 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\loginout.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\home\\map.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 393 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _BMapComponent = __webpack_require__(394);
+	
+	var _BMapComponent2 = _interopRequireDefault(_BMapComponent);
+	
+	var _header = __webpack_require__(118);
+	
+	var _header2 = _interopRequireDefault(_header);
+	
+	var _nav = __webpack_require__(125);
+	
+	var _nav2 = _interopRequireDefault(_nav);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    components: {
+	        header1: _header2.default,
+	        bmap: _BMapComponent2.default,
+	        nav1: _nav2.default
+	    }
+	};
+	// </script>
+	/* generated by vue-loader */
+	// <template>
+	//     <header1></header1>
+	//     <bmap></bmap>
+	//      <nav1></nav1>
+	// </template>
+	// <script>
+
+/***/ },
+/* 394 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(395)
+	__vue_script__ = __webpack_require__(397)
+	__vue_template__ = __webpack_require__(398)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\src\\components\\BMapComponent.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24252,6 +24285,157 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 395 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(396);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(7)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f8a9453&file=BMapComponent.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BMapComponent.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f8a9453&file=BMapComponent.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BMapComponent.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 396 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(6)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\r\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"BMapComponent.vue","sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 397 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//     <!--<div id="allmap" style="width: 100%; height: {{mapHeight}}px"></div>-->
+	//     <!--<div id="allmap":style="{width: '100%', height: mapHeight + 'px'}"></div>-->
+	//     <div id="allmap" v-bind:style="mapStyle"></div>
+	// </template>
+	// <script>
+	exports.default = {
+	    data: function data() {
+	        return {
+	            mapStyle: {
+	                width: '100%',
+	                height: '500px'
+	            }
+	        };
+	    },
+	    props: {
+	        // 地图在该视图上的高度
+	        mapHeight: {
+	            type: Number,
+	            default: 500
+	        },
+	        // 经度
+	        longitude: {
+	            type: Number,
+	            default: 116.404
+	        },
+	        // 纬度
+	        latitude: {
+	            type: Number,
+	            default: 39.915
+	        },
+	        description: {
+	            type: String,
+	            default: '天安门'
+	        }
+	    },
+	    ready: function ready() {
+	
+	        var script = document.createElement('script');
+	        script.type = 'text/javascript';
+	        script.src = 'http://api.map.baidu.com/api?v=2.0&ak=FbzOyQ4YujPrZsxiQKoB07aB';
+	
+	        document.head.appendChild(script);
+	        var map = new BMap.Map("allmap");
+	        var point = new BMap.Point(this.longitude, this.latitude);
+	        var marker = new BMap.Marker(point);
+	        map.enableScrollWheelZoom(); //缩放
+	        map.addOverlay(marker);
+	        map.centerAndZoom(point, 15);
+	        // 信息窗的配置信息
+	        var opts = {
+	            width: 250,
+	            height: 75,
+	            title: "地址：1233"
+	        };
+	        var infoWindow = BMap.InfoWindow(this.description, opts); // 创建信息窗口对象
+	        marker.addEventListener("click", function () {
+	            map.openInfoWindow(infoWindow, point);
+	        });
+	        map.enableScrollWheelZoom(true);
+	        map.openInfoWindow(infoWindow, point); //开启信息窗口
+	    }
+	};
+	// </script>
+	// <!--Add"scoped" attribute to limit CSS to this component only -->
+	// <style scoped>
+	// </style>
+	/* generated by vue-loader */
+
+/***/ },
+/* 398 */
+/***/ function(module, exports) {
+
+	module.exports = "\n    <!--<div id=\"allmap\" style=\"width: 100%; height: {{mapHeight}}px\"></div>-->\n    <!--<div id=\"allmap\":style=\"{width: '100%', height: mapHeight + 'px'}\"></div>-->\n    <div id=\"allmap\" v-bind:style=\"mapStyle\" _v-0f8a9453=\"\"></div>\n";
+
+/***/ },
+/* 399 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n    <header1></header1>\r\n    <bmap></bmap>\r\n     <nav1></nav1>\r\n";
+
+/***/ },
+/* 400 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(401)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "d:\\Yous-H5\\yous\\view\\loginout.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 401 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24271,12 +24455,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* generated by vue-loader */
 
 /***/ },
-/* 396 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(397)
-	__vue_template__ = __webpack_require__(399)
+	__webpack_require__(403)
+	__vue_template__ = __webpack_require__(405)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -24284,7 +24468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "d:\\Yous-H5\\Yous-H5\\yous\\view\\user\\order\\detail.vue"
+	  var id = "d:\\Yous-H5\\yous\\view\\user\\order\\detail.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24293,13 +24477,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 397 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(398);
+	var content = __webpack_require__(404);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(7)(content, {});
@@ -24308,8 +24492,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1925a59d&file=detail.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./detail.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1925a59d&file=detail.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./detail.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9472731a&file=detail.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./detail.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js?sourceMap!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9472731a&file=detail.vue&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./detail.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24319,7 +24503,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 398 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
@@ -24327,19 +24511,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\r\n\r\n/*这里是详情页面*/\r\n\r\n\r\n\r\n\t.zhuangtai[_v-1925a59d]{float:right;color:orangered;;margin-right:10%;}\r\n\tp[_v-1925a59d]:last-child{margin-top:10px;font-size:13px;}\r\n\t.mui-icon[_v-1925a59d]{font-size:16px;}\r\n\t.address p[_v-1925a59d]{font-size:14px;}\r\n\t.address p .mui-icon[_v-1925a59d]{margin-right:10px;}\r\n\t.address p .tel[_v-1925a59d]{margin-left:10px;}\r\n\t.mui-table-view[_v-1925a59d]{margin-top:5px;}\r\n\tp[_v-1925a59d]{clear:both;}\r\n\t.weixiu[_v-1925a59d]{margin-top:10px;background:#fff;padding:10px;overflow: hidden;}\r\n\t.weixiu h4[_v-1925a59d]{font-size:15px;font-weight: normal;color:#666;}\r\n\t.weixiutitle[_v-1925a59d]{font-size:14px;font-weight: normal;color:#aaa;height:20px;line-height:20px;margin-top:10px;}\r\n\t.weixiubtn[_v-1925a59d]{height:20px;line-height:8px;font-size:10px;margin-left:10px;}\r\n\t.weixiupic img[_v-1925a59d]{width:80px;height:80px;}\r\n\t.peijian[_v-1925a59d]{border-bottom:1px solid #eee;padding-bottom:10px;}\r\n\t.moneyspan[_v-1925a59d]{float:right;color:#f00;font-size:13px;}\r\n\t.shiji[_v-1925a59d]{font-size:15px;float:right;color:#2C3637;}\r\n\t.xiadan[_v-1925a59d]{float:right;margin-top:1px;}\r\n\t\r\n\t.shijispan[_v-1925a59d]{font-size:19px;color:#f00;}\r\n\t.footer button[_v-1925a59d]{width:23%;font-size:13px;}\r\n\t.footer[_v-1925a59d]{text-align:center;padding-bottom:10px;}\r\n\t.footer[_v-1925a59d],button[_v-1925a59d]{background:#fff}\r\n\t.kefutel[_v-1925a59d]{background:#fff;border-color:#ddd}\t\r\n", "", {"version":3,"sources":["/./yous/view/user/order/detail.vue.style"],"names":[],"mappings":";;AAEA,WAAA;;;;CAIA,wBAAA,YAAA,gBAAA,CAAA,iBAAA,CAAA;CACA,0BAAA,gBAAA,eAAA,CAAA;CACA,uBAAA,eAAA,CAAA;CACA,wBAAA,eAAA,CAAA;CACA,kCAAA,kBAAA,CAAA;CACA,6BAAA,iBAAA,CAAA;CACA,6BAAA,eAAA,CAAA;CACA,eAAA,WAAA,CAAA;CACA,qBAAA,gBAAA,gBAAA,aAAA,iBAAA,CAAA;CACA,wBAAA,eAAA,oBAAA,WAAA,CAAA;CACA,0BAAA,eAAA,oBAAA,WAAA,YAAA,iBAAA,gBAAA,CAAA;CACA,wBAAA,YAAA,gBAAA,eAAA,iBAAA,CAAA;CACA,4BAAA,WAAA,YAAA,CAAA;CACA,sBAAA,6BAAA,oBAAA,CAAA;CACA,wBAAA,YAAA,WAAA,eAAA,CAAA;CACA,oBAAA,eAAA,YAAA,cAAA,CAAA;CACA,qBAAA,YAAA,eAAA,CAAA;;CAEA,wBAAA,eAAA,WAAA,CAAA;CACA,4BAAA,UAAA,eAAA,CAAA;CACA,qBAAA,kBAAA,oBAAA,CAAA;CACA,yCAAA,eAAA,CAAA;CACA,sBAAA,gBAAA,iBAAA,CAAA","file":"detail.vue","sourcesContent":["<style scoped>\r\n\r\n/*这里是详情页面*/\r\n\r\n\r\n\r\n\t.zhuangtai{float:right;color:orangered;;margin-right:10%;}\r\n\tp:last-child{margin-top:10px;font-size:13px;}\r\n\t.mui-icon{font-size:16px;}\r\n\t.address p{font-size:14px;}\r\n\t.address p .mui-icon{margin-right:10px;}\r\n\t.address p .tel{margin-left:10px;}\r\n\t.mui-table-view{margin-top:5px;}\r\n\tp{clear:both;}\r\n\t.weixiu{margin-top:10px;background:#fff;padding:10px;overflow: hidden;}\r\n\t.weixiu h4{font-size:15px;font-weight: normal;color:#666;}\r\n\t.weixiutitle{font-size:14px;font-weight: normal;color:#aaa;height:20px;line-height:20px;margin-top:10px;}\r\n\t.weixiubtn{height:20px;line-height:8px;font-size:10px;margin-left:10px;}\r\n\t.weixiupic img{width:80px;height:80px;}\r\n\t.peijian{border-bottom:1px solid #eee;padding-bottom:10px;}\r\n\t.moneyspan{float:right;color:#f00;font-size:13px;}\r\n\t.shiji{font-size:15px;float:right;color:#2C3637;}\r\n\t.xiadan{float:right;margin-top:1px;}\r\n\t\r\n\t.shijispan{font-size:19px;color:#f00;}\r\n\t.footer button{width:23%;font-size:13px;}\r\n\t.footer{text-align:center;padding-bottom:10px;}\r\n\t.footer,button{background:#fff}\r\n\t.kefutel{background:#fff;border-color:#ddd}\t\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\n\t    <h1 class=\"mui-title\">订单详情</h1>\n\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<!--头部的-->\r\n\t\t    <ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell\">\t\t\t\t\t\r\n\t\t\t\t\t<a class=\"mui-navigate-right\" id='process'>\r\n\t\t\t\t\t\t<p>订单编号:1213245<span class='zhuangtai'>已完结</span></p>\r\n\t\t\t\t\t\t<p><span class=\"mui-icon mui-icon-home\"></span>感谢使用幼狮服务</p>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t<!--地址的-->\r\n\t\t\t<ul class=\"mui-table-view\">\r\n\t\t\t\t <li class=\"mui-table-view-cell address\">\r\n\t\t\t\t \t<p><span class=\"mui-icon mui-icon-location-filled\"></span>张三<span class='tel'>1232356465</span></p>\r\n\t\t\t\t \t<p>北京市朝阳区共三环建外SOHOA座1503</p>\r\n\t\t\t\t </li>\r\n\t\t\t</ul>\r\n\t\t\t<div class='weixiu'>\r\n\t\t\t\t<h4>设备维修</h4>\r\n\t\t\t\t<p class='weixiutitle'>空调制冷维修<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-outlined weixiubtn\">管件维修</button></p>\r\n\t\t\t\t<p class='weixiupic'><img src=\"../../../../dist/img/iconfont-tianjia.png\"><img src='../../../../dist/img/iconfont-tianjia.png'></p>\r\n\t\t\t\t<p class='money'>服务金额<span class='moneyspan'>￥100.00</span></p>\r\n\t\t\t\t<p class='peijian'>+配件费<span class='moneyspan'>￥0.00</span></p>\r\n\t\t\t\t<p class='shiji'>实际付款:<span class='shijispan'>123.00</span></p>\r\n\t\t\t\t<p class='xiadan'>下单时间:<span>1206-12-15 12:12:23</span></p>\r\n\t\t\t</div>\r\n\t\t\t<div class='footer'>\r\n\t\t\t\t<a class=\"mui-btn mui-btn-block mui-btn-outlined kefutel\" href='tel:312312'><span class=\"mui-icon mui-icon-phone\" style='color:orangered'></span>13216546</a>\t\t\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">取消订单</button>\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">删除订单</button>\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">评价订单</button>\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">投诉建议</button>\r\n\t\t\t</div>\r\n\t\t</div>\t\r\n</template>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\r\n\r\n/*这里是详情页面*/\r\n\r\n\r\n\r\n\t.zhuangtai[_v-9472731a]{float:right;color:orangered;;margin-right:10%;}\r\n\tp[_v-9472731a]:last-child{margin-top:10px;font-size:13px;}\r\n\t.mui-icon[_v-9472731a]{font-size:16px;}\r\n\t.address p[_v-9472731a]{font-size:14px;}\r\n\t.address p .mui-icon[_v-9472731a]{margin-right:10px;}\r\n\t.address p .tel[_v-9472731a]{margin-left:10px;}\r\n\t.mui-table-view[_v-9472731a]{margin-top:5px;}\r\n\tp[_v-9472731a]{clear:both;}\r\n\t.weixiu[_v-9472731a]{margin-top:10px;background:#fff;padding:10px;overflow: hidden;}\r\n\t.weixiu h4[_v-9472731a]{font-size:15px;font-weight: normal;color:#666;}\r\n\t.weixiutitle[_v-9472731a]{font-size:14px;font-weight: normal;color:#aaa;height:20px;line-height:20px;margin-top:10px;}\r\n\t.weixiubtn[_v-9472731a]{height:20px;line-height:8px;font-size:10px;margin-left:10px;}\r\n\t.weixiupic img[_v-9472731a]{width:80px;height:80px;}\r\n\t.peijian[_v-9472731a]{border-bottom:1px solid #eee;padding-bottom:10px;}\r\n\t.moneyspan[_v-9472731a]{float:right;color:#f00;font-size:13px;}\r\n\t.shiji[_v-9472731a]{font-size:15px;float:right;color:#2C3637;}\r\n\t.xiadan[_v-9472731a]{float:right;margin-top:1px;}\r\n\t\r\n\t.shijispan[_v-9472731a]{font-size:19px;color:#f00;}\r\n\t.footer button[_v-9472731a]{width:23%;font-size:13px;}\r\n\t.footer[_v-9472731a]{text-align:center;padding-bottom:10px;}\r\n\t.footer[_v-9472731a],button[_v-9472731a]{background:#fff}\r\n\t.kefutel[_v-9472731a]{background:#fff;border-color:#ddd}\t\r\n", "", {"version":3,"sources":["/./yous/view/user/order/detail.vue.style"],"names":[],"mappings":";;AAEA,WAAA;;;;CAIA,wBAAA,YAAA,gBAAA,CAAA,iBAAA,CAAA;CACA,0BAAA,gBAAA,eAAA,CAAA;CACA,uBAAA,eAAA,CAAA;CACA,wBAAA,eAAA,CAAA;CACA,kCAAA,kBAAA,CAAA;CACA,6BAAA,iBAAA,CAAA;CACA,6BAAA,eAAA,CAAA;CACA,eAAA,WAAA,CAAA;CACA,qBAAA,gBAAA,gBAAA,aAAA,iBAAA,CAAA;CACA,wBAAA,eAAA,oBAAA,WAAA,CAAA;CACA,0BAAA,eAAA,oBAAA,WAAA,YAAA,iBAAA,gBAAA,CAAA;CACA,wBAAA,YAAA,gBAAA,eAAA,iBAAA,CAAA;CACA,4BAAA,WAAA,YAAA,CAAA;CACA,sBAAA,6BAAA,oBAAA,CAAA;CACA,wBAAA,YAAA,WAAA,eAAA,CAAA;CACA,oBAAA,eAAA,YAAA,cAAA,CAAA;CACA,qBAAA,YAAA,eAAA,CAAA;;CAEA,wBAAA,eAAA,WAAA,CAAA;CACA,4BAAA,UAAA,eAAA,CAAA;CACA,qBAAA,kBAAA,oBAAA,CAAA;CACA,yCAAA,eAAA,CAAA;CACA,sBAAA,gBAAA,iBAAA,CAAA","file":"detail.vue","sourcesContent":["<style scoped>\r\n\r\n/*这里是详情页面*/\r\n\r\n\r\n\r\n\t.zhuangtai{float:right;color:orangered;;margin-right:10%;}\r\n\tp:last-child{margin-top:10px;font-size:13px;}\r\n\t.mui-icon{font-size:16px;}\r\n\t.address p{font-size:14px;}\r\n\t.address p .mui-icon{margin-right:10px;}\r\n\t.address p .tel{margin-left:10px;}\r\n\t.mui-table-view{margin-top:5px;}\r\n\tp{clear:both;}\r\n\t.weixiu{margin-top:10px;background:#fff;padding:10px;overflow: hidden;}\r\n\t.weixiu h4{font-size:15px;font-weight: normal;color:#666;}\r\n\t.weixiutitle{font-size:14px;font-weight: normal;color:#aaa;height:20px;line-height:20px;margin-top:10px;}\r\n\t.weixiubtn{height:20px;line-height:8px;font-size:10px;margin-left:10px;}\r\n\t.weixiupic img{width:80px;height:80px;}\r\n\t.peijian{border-bottom:1px solid #eee;padding-bottom:10px;}\r\n\t.moneyspan{float:right;color:#f00;font-size:13px;}\r\n\t.shiji{font-size:15px;float:right;color:#2C3637;}\r\n\t.xiadan{float:right;margin-top:1px;}\r\n\t\r\n\t.shijispan{font-size:19px;color:#f00;}\r\n\t.footer button{width:23%;font-size:13px;}\r\n\t.footer{text-align:center;padding-bottom:10px;}\r\n\t.footer,button{background:#fff}\r\n\t.kefutel{background:#fff;border-color:#ddd}\t\r\n</style>\r\n<template>\r\n\t<header class=\"mui-bar mui-bar-nav\">\r\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\"></a>\r\n\t    <h1 class=\"mui-title\">订单详情</h1>\r\n\t</header>\r\n\t\t<div class=\"mui-content\">\r\n\t\t\t<!--头部的-->\r\n\t\t    <ul class=\"mui-table-view\">\r\n\t\t\t\t<li class=\"mui-table-view-cell\">\t\t\t\t\t\r\n\t\t\t\t\t<a class=\"mui-navigate-right\" id='process'>\r\n\t\t\t\t\t\t<p>订单编号:1213245<span class='zhuangtai'>已完结</span></p>\r\n\t\t\t\t\t\t<p><span class=\"mui-icon mui-icon-home\"></span>感谢使用幼狮服务</p>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t<!--地址的-->\r\n\t\t\t<ul class=\"mui-table-view\">\r\n\t\t\t\t <li class=\"mui-table-view-cell address\">\r\n\t\t\t\t \t<p><span class=\"mui-icon mui-icon-location-filled\"></span>张三<span class='tel'>1232356465</span></p>\r\n\t\t\t\t \t<p>北京市朝阳区共三环建外SOHOA座1503</p>\r\n\t\t\t\t </li>\r\n\t\t\t</ul>\r\n\t\t\t<div class='weixiu'>\r\n\t\t\t\t<h4>设备维修</h4>\r\n\t\t\t\t<p class='weixiutitle'>空调制冷维修<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-outlined weixiubtn\">管件维修</button></p>\r\n\t\t\t\t<p class='weixiupic'><img src=\"../../../../dist/img/iconfont-tianjia.png\"><img src='../../../../dist/img/iconfont-tianjia.png'></p>\r\n\t\t\t\t<p class='money'>服务金额<span class='moneyspan'>￥100.00</span></p>\r\n\t\t\t\t<p class='peijian'>+配件费<span class='moneyspan'>￥0.00</span></p>\r\n\t\t\t\t<p class='shiji'>实际付款:<span class='shijispan'>123.00</span></p>\r\n\t\t\t\t<p class='xiadan'>下单时间:<span>1206-12-15 12:12:23</span></p>\r\n\t\t\t</div>\r\n\t\t\t<div class='footer'>\r\n\t\t\t\t<a class=\"mui-btn mui-btn-block mui-btn-outlined kefutel\" href='tel:312312'><span class=\"mui-icon mui-icon-phone\" style='color:orangered'></span>13216546</a>\t\t\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">取消订单</button>\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">删除订单</button>\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">评价订单</button>\r\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\">投诉建议</button>\r\n\t\t\t</div>\r\n\t\t</div>\t\r\n</template>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 399 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-1925a59d=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-1925a59d=\"\"></a>\n\t    <h1 class=\"mui-title\" _v-1925a59d=\"\">订单详情</h1>\n\t</header>\n\t\t<div class=\"mui-content\" _v-1925a59d=\"\">\n\t\t\t<!--头部的-->\n\t\t    <ul class=\"mui-table-view\" _v-1925a59d=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell\" _v-1925a59d=\"\">\t\t\t\t\t\n\t\t\t\t\t<a class=\"mui-navigate-right\" id=\"process\" _v-1925a59d=\"\">\n\t\t\t\t\t\t<p _v-1925a59d=\"\">订单编号:1213245<span class=\"zhuangtai\" _v-1925a59d=\"\">已完结</span></p>\n\t\t\t\t\t\t<p _v-1925a59d=\"\"><span class=\"mui-icon mui-icon-home\" _v-1925a59d=\"\"></span>感谢使用幼狮服务</p>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<!--地址的-->\n\t\t\t<ul class=\"mui-table-view\" _v-1925a59d=\"\">\n\t\t\t\t <li class=\"mui-table-view-cell address\" _v-1925a59d=\"\">\n\t\t\t\t \t<p _v-1925a59d=\"\"><span class=\"mui-icon mui-icon-location-filled\" _v-1925a59d=\"\"></span>张三<span class=\"tel\" _v-1925a59d=\"\">1232356465</span></p>\n\t\t\t\t \t<p _v-1925a59d=\"\">北京市朝阳区共三环建外SOHOA座1503</p>\n\t\t\t\t </li>\n\t\t\t</ul>\n\t\t\t<div class=\"weixiu\" _v-1925a59d=\"\">\n\t\t\t\t<h4 _v-1925a59d=\"\">设备维修</h4>\n\t\t\t\t<p class=\"weixiutitle\" _v-1925a59d=\"\">空调制冷维修<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-outlined weixiubtn\" _v-1925a59d=\"\">管件维修</button></p>\n\t\t\t\t<p class=\"weixiupic\" _v-1925a59d=\"\"><img src=\"" + __webpack_require__(400) + "\" _v-1925a59d=\"\"><img src=\"" + __webpack_require__(400) + "\" _v-1925a59d=\"\"></p>\n\t\t\t\t<p class=\"money\" _v-1925a59d=\"\">服务金额<span class=\"moneyspan\" _v-1925a59d=\"\">￥100.00</span></p>\n\t\t\t\t<p class=\"peijian\" _v-1925a59d=\"\">+配件费<span class=\"moneyspan\" _v-1925a59d=\"\">￥0.00</span></p>\n\t\t\t\t<p class=\"shiji\" _v-1925a59d=\"\">实际付款:<span class=\"shijispan\" _v-1925a59d=\"\">123.00</span></p>\n\t\t\t\t<p class=\"xiadan\" _v-1925a59d=\"\">下单时间:<span _v-1925a59d=\"\">1206-12-15 12:12:23</span></p>\n\t\t\t</div>\n\t\t\t<div class=\"footer\" _v-1925a59d=\"\">\n\t\t\t\t<a class=\"mui-btn mui-btn-block mui-btn-outlined kefutel\" href=\"tel:312312\" _v-1925a59d=\"\"><span class=\"mui-icon mui-icon-phone\" style=\"color:orangered\" _v-1925a59d=\"\"></span>13216546</a>\t\t\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-1925a59d=\"\">取消订单</button>\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-1925a59d=\"\">删除订单</button>\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-1925a59d=\"\">评价订单</button>\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-1925a59d=\"\">投诉建议</button>\n\t\t\t</div>\n\t\t</div>\t\n";
+	module.exports = "\n\t<header class=\"mui-bar mui-bar-nav\" _v-9472731a=\"\">\n\t    <a class=\"mui-action-back mui-icon mui-icon-left-nav mui-pull-left\" onclick=\"window.history.go(-1)\" _v-9472731a=\"\"></a>\n\t    <h1 class=\"mui-title\" _v-9472731a=\"\">订单详情</h1>\n\t</header>\n\t\t<div class=\"mui-content\" _v-9472731a=\"\">\n\t\t\t<!--头部的-->\n\t\t    <ul class=\"mui-table-view\" _v-9472731a=\"\">\n\t\t\t\t<li class=\"mui-table-view-cell\" _v-9472731a=\"\">\t\t\t\t\t\n\t\t\t\t\t<a class=\"mui-navigate-right\" id=\"process\" _v-9472731a=\"\">\n\t\t\t\t\t\t<p _v-9472731a=\"\">订单编号:1213245<span class=\"zhuangtai\" _v-9472731a=\"\">已完结</span></p>\n\t\t\t\t\t\t<p _v-9472731a=\"\"><span class=\"mui-icon mui-icon-home\" _v-9472731a=\"\"></span>感谢使用幼狮服务</p>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<!--地址的-->\n\t\t\t<ul class=\"mui-table-view\" _v-9472731a=\"\">\n\t\t\t\t <li class=\"mui-table-view-cell address\" _v-9472731a=\"\">\n\t\t\t\t \t<p _v-9472731a=\"\"><span class=\"mui-icon mui-icon-location-filled\" _v-9472731a=\"\"></span>张三<span class=\"tel\" _v-9472731a=\"\">1232356465</span></p>\n\t\t\t\t \t<p _v-9472731a=\"\">北京市朝阳区共三环建外SOHOA座1503</p>\n\t\t\t\t </li>\n\t\t\t</ul>\n\t\t\t<div class=\"weixiu\" _v-9472731a=\"\">\n\t\t\t\t<h4 _v-9472731a=\"\">设备维修</h4>\n\t\t\t\t<p class=\"weixiutitle\" _v-9472731a=\"\">空调制冷维修<button type=\"button\" class=\"mui-btn mui-btn-blue mui-btn-outlined weixiubtn\" _v-9472731a=\"\">管件维修</button></p>\n\t\t\t\t<p class=\"weixiupic\" _v-9472731a=\"\"><img src=\"" + __webpack_require__(406) + "\" _v-9472731a=\"\"><img src=\"" + __webpack_require__(406) + "\" _v-9472731a=\"\"></p>\n\t\t\t\t<p class=\"money\" _v-9472731a=\"\">服务金额<span class=\"moneyspan\" _v-9472731a=\"\">￥100.00</span></p>\n\t\t\t\t<p class=\"peijian\" _v-9472731a=\"\">+配件费<span class=\"moneyspan\" _v-9472731a=\"\">￥0.00</span></p>\n\t\t\t\t<p class=\"shiji\" _v-9472731a=\"\">实际付款:<span class=\"shijispan\" _v-9472731a=\"\">123.00</span></p>\n\t\t\t\t<p class=\"xiadan\" _v-9472731a=\"\">下单时间:<span _v-9472731a=\"\">1206-12-15 12:12:23</span></p>\n\t\t\t</div>\n\t\t\t<div class=\"footer\" _v-9472731a=\"\">\n\t\t\t\t<a class=\"mui-btn mui-btn-block mui-btn-outlined kefutel\" href=\"tel:312312\" _v-9472731a=\"\"><span class=\"mui-icon mui-icon-phone\" style=\"color:orangered\" _v-9472731a=\"\"></span>13216546</a>\t\t\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-9472731a=\"\">取消订单</button>\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-9472731a=\"\">删除订单</button>\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-9472731a=\"\">评价订单</button>\n\t\t\t\t<button type=\"button\" class=\"mui-btn mui-btn-outlined\" _v-9472731a=\"\">投诉建议</button>\n\t\t\t</div>\n\t\t</div>\t\n";
 
 /***/ },
-/* 400 */
+/* 406 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "iconfont-tianjia.png?a4373e1b50302fc1515a6ba10229fafc";
