@@ -11,7 +11,6 @@ Vue.use(Vuerify)
 // 引入组件！直接使用es6的语法
 var header=require('./view/componets/header.vue');
 var nav=require('./view/componets/nav.vue');
-var map = require('./view/map/map.vue');
 var index = require('./view/index.vue');
 var login = require('./view/login.vue');
 var register=require('./view/register.vue');
