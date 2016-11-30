@@ -29,6 +29,10 @@
 	.kefutel{background:#fff;border-color:#ddd}	
 </style>
 <template>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
+	    <h1 class="mui-title">订单详情</h1>
+	</header>
 		<div class="mui-content">
 			<!--头部的-->
 		    <ul class="mui-table-view">

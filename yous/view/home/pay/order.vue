@@ -15,6 +15,7 @@
         margin-bottom: 10px;
         border: solid 1px #e8e8e8;
     }
+    .money{margin-top:0.1rem;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">
@@ -29,28 +30,9 @@
                 <p class='address'>{{address}}</p>
             </div>
         </panel>
-        <panel :show="false" title="问题和意见 快捷输入" class='question'>
-            <div>
-                <textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..." v-model="content"></textarea>
-            </div>
-        </panel>
-        <panel :show="false" title="图片(选填,提供问题截图,总大小10M以下)" class='questionpic'>
-            <div class="demo image-item">
-                <upload
-                        :server="upload.server"
-                        :api="upload.api"
-                        :params="upload.params"
-                        :success="upload.success"
-                        :file.sync="upload.file"
-                        :crop="upload.crop"
-                        :width="upload.width"
-                        :height="upload.height"
-                        :ok="upload.ok"
-                        :cancel="upload.cancel">
-                    <imgdd>
-                </upload>
-            </div>
-        </panel>
+        <div class='money'>
+        	<input type='text' placeholder="请输入缴费金额">
+        </div>
         <div id='image-list' class="row image-list"></div>
         <button id="submit" class="mui-btn mui-btn-blue mui-btn-block" v-on:click="asy_send_order">发送</button>
     </div>

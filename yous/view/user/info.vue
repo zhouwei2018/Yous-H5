@@ -1,8 +1,8 @@
 <style scoped>
-	.mui-table-view{margin-top:10px;}
-	.mui-table-view:first-child{height:8rem;line-height:6rem;}
-	.mui-table-view li a{color:#3c3b40!important;font-size:14px;}
-	.mui-table-view span{float:right;margin-right:20px;font-size:12px;color:#aaa;}
+	.mui-table-view{margin-top:0.2rem;}
+	.mui-table-view:first-child{height:1rem;}
+	.mui-table-view li a{color:#353b3e!important;font-size:0.28rem;}
+	.mui-table-view span{float:right;margin-right:20px;font-size:0.24rem;color:#aaa;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">

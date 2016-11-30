@@ -1,7 +1,7 @@
 <style scoped>
-	label,input{color:#444;font-size:14px;}
-	.mui-button-row{margin-top:20px;}
-	.mui-input-group{padding-top:10px;}
+	label,input{color:#444;font-size:0.28rem;}
+	.mui-button-row{margin-top:0.2px;}
+	.mui-input-group{padding-top:0.1rem;}
 </style>
 
 
@@ -16,7 +16,7 @@
 				<label>公司名称</label>
 				<input type="text" class="mui-input-clear" placeholder="请输入公司名称">
 			</div>
-			<div class="mui-input-row">
+			<div class="mui-input-row logo">
 				<label>公司LOGO</label>
 				<input type="text" class="mui-input-clear" placeholder="请上传公司LOGO">
 			</div>

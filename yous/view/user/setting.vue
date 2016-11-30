@@ -1,8 +1,8 @@
 <style scoped>
-	html{font-size:10px;}
-	.mui-table-view{margin-top:1rem;}
-	.mui-table-view li a{color:#3c3b40!important;FONT-SIZE:14px;}
-	.mui-table-view span{float:right;margin-right:15px;font-size:12px;color:#aaa;}
+	.mui-table-view{margin-top:0.25rem;}
+	.mui-table-view li a{color:#353b3e;FONT-SIZE:0.28rem;}
+	.mui-table-view span{float:right;margin-right:15px;font-size:0.24px;color:#9b9b9b;}
+	.quit{color:#ffa14d!important;font-size:0.28rem;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">
@@ -59,8 +59,8 @@
             </li>
         </ul>
         <ul class="mui-table-view">
-            <li class="mui-table-view-cell" style="text-align: center;">
-                <a v-link="{ path: '/loginout'}">退出登录</a>
+            <li class="mui-table-view-cell" style="text-align: center;color:#ffa14d">
+                <a v-link="{ path: '/loginout'}" class='quit'>退出当前账号</a>
             </li>
         </ul>
     </div>

@@ -22,6 +22,7 @@ var main=require('./view/user/main.vue');//用户中心主页面
 var setting=require('./view/user/setting.vue'); //设置
 var myservice=require('./view/user/myservice.vue'); //我的服务
 var wallte=require('./view/user/wallte.vue'); //我的钱包
+var complaint=require('./view/user/complaint.vue'); //售后投诉
 var info=require('./view/user/info.vue'); //我的信息
 var address=require('./view/user/address.vue'); //我的地址
 var apply=require('./view/user/apply.vue'); //修改密码
@@ -41,12 +42,19 @@ var profile= require('./view/user/profile.vue'); //个人信息
 var suggestion= require('./view/user/suggestion.vue'); //投诉建议
 var user_order=require('./view/user/order/order.vue'); //订单
 var user_order_all=require('./view/user/order/all_order.vue'); //全部订单
+
+
 var user_order_untaking=require('./view/user/order/untaking_order.vue'); //待接单订单
 var user_order_unservice=require('./view/user/order/unservice_order.vue'); //待服务
 var user_order_unconfirm=require('./view/user/order/unconfirm_order.vue'); //待确认
-var user_order_unevaluate=require('./view/user/order/unevaluate_order.vue');
+var user_order_unevaluate=require('./view/user/order/unevaluate_order.vue');//待评价
 
-var loginout = require('./view/loginout.vue')
+
+
+var user_order_nothing=require('./view/user/order/nothing.vue');//待评价
+var loginout = require('./view/loginout.vue')//退出登录
+
+var user_order_detail = require('./view/user/order/detail.vue')//订单详情
 //开启debug模式
 //Vue.config.debug = true;
 
@@ -147,6 +155,10 @@ router.map(
         name:'wallte',
         component:wallte
     },//我的钱包
+    '/user/complaint':{
+        name:'complaint',
+        component:complaint
+    },//我投诉售后
     '/maintenance/lists':{
         name:'maintenance_lists',
         component:maintenance_lists
@@ -214,9 +226,16 @@ router.map(
             },
              'unevaluate': {
                 component: user_order_unevaluate
+            },
+            'nothing': {
+                component: user_order_nothing
             }
         }
     },
+    '/user/order/detail':{
+        name:'user_order_detail',
+        component:user_order_detail
+    }
 });
 router.redirect({//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
     '*':"/index"//重定向任意未匹配路径到/index

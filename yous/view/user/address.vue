@@ -1,12 +1,12 @@
 <style scoped>
-	.mui-ellipsis{clear:both}
-	.mui-pull-left{color:#444;font-size:16px;}
-	.mui-pull-right{color:#aaa;font-size:12px;}
-	.mui-table-view{margin-top:20px;}
+	.mui-ellipsis{clear:both;color:#353b3e;}
+	.mui-content .mui-pull-left{color:#444;font-size:0.28rem;color:#353b3e;}
+	.mui-pull-right{color:#aaa;font-size:0.24rem;color:#353b3e;}
+	.mui-table-view{margin-bottom:0.2rem;}
 </style>
 <template>
 		<header class="mui-bar mui-bar-nav">
-		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
+			 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
 		    <h1 class="mui-title">我的地址</h1>
 		</header>
 		<div class="mui-content">

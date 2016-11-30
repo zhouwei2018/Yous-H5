@@ -1,8 +1,13 @@
+<style scoped>
+	.spliter{color:#aaa;font-size:0.24rem;}
+	.link-area a{color:#333;font-size:0.28rem;}
+	.mui-content{padding-top:0.1rem;}
+</style>
 <template>
     <header1></header1>
     <nav1></nav1>
 
-    <div class="mui-content" style='margin-top:10px;'>
+    <div class="mui-content">
         <header class="mui-bar mui-bar-nav">
             <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.go(-1)"></a>
             <h1 class="mui-title">登录</h1>
@@ -17,10 +22,8 @@
         </form>
         <div class="mui-content-padded" style='text-align:center;'>
             <button  class="mui-btn mui-btn-block" style='background:#ff8112;color:#fff;' v-on:click="asyLogin" >登录</button>
-
             <div class="link-area"><a v-link="{ path: '/register'}">注册账号</a> <span class="spliter">|</span> <a v-link="{ path: '/forgetpwd'}">忘记密码</a>
             </div>
-
         </div>
     </div>
 

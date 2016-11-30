@@ -1,16 +1,12 @@
-<style>
+<style scoped>
     header{position:relative;}
     header a{margin-right:4%;}
-    .logo {
-        display: inline-block;
-        line-height: 55px;;
-    }
-
-    .logo img{
-        height: 20px;
-        width: 80px;
-   }
   	.citybtn{border:0;background-color: transparent;}/*这里需要书写背景图片下拉按按钮*/
+  	.mui-bar-nav{height:0.9rem;}
+  	.logo img{height:0.32rem;}
+  	.mui-pull-right img{height:0.42rem!important;}
+  	.logo,.mui-pull-right{height:0.9rem;line-height:1rem;padding:0;margin:0;}
+  	.citybtn{font-size:0.28rem;color:#101010;line-height:.0.9rem;height:0.7rem;padding:0;}
 </style>
 <template>
     <header class="mui-bar mui-bar-nav" >
@@ -21,8 +17,8 @@
             <li @click="selectCity(3)">广州</li>
             <li>取消</li>
         </actions>
-        <h1 class="mui-title logo"><img src="../../../dist/img/logoworld.png"></h1>
-        <a class="mui-pull-right"><span class="mui-icon mui-icon-map"></span></a>
+        <h1 class="mui-title logo"><img src="../../../dist/img/logoworld1.png"></h1>
+        <a class="mui-pull-right"><img src="../../../dist/img/mapnew.png"></a>
     </header>
 </template>
 <script>

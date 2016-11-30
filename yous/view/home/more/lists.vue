@@ -4,13 +4,16 @@
 	}
 	.flex-container>a {
 		position: relative;
-		width: 25%;
+		width: 33%;
 		float: left;
 		padding: 10px 0;
 	}
 	.flex-container img {
 		width: 50%;
 	}
+	.mui-content{padding-bottom:3rem;overflow: auto;}
+	.title{font-size:0.28rem;color:#353b3e}
+	
 </style>
 <template>
     <header class="mui-bar mui-bar-nav">
@@ -24,16 +27,21 @@
 
     </nav>
     <div class="mui-content mui-scroll-wrapper shareRoom" style="position: absolute; bottom: 0; width: 100%; padding: 50px 0 51px 0;">
-       <div class="mui-scroll">
-
-			<div class="flex-container" v-for="(index,entry) in gridData">
+    				
+    	
+    	
+		<div class="flex-container" v-for="(index,entry) in gridData">
 				<a v-link="{name:'more_order',params:{ serviceId:entry.fdid,serviceName: entry.fdname }}">
 					<img src='{{ entry.fdsmallimagepath}}'>
 					<h6>{{ entry.fdname}}</h6>
 				</a>
 			</div>
+    	
+    	
+    	
+    	
+    	
 
-		</div>
     </div>
 </template>
 <script>
