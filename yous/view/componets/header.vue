@@ -18,7 +18,7 @@
             <li>取消</li>
         </actions>
         <h1 class="mui-title logo"><img src="../../../dist/img/logoworld1.png"></h1>
-        <a class="mui-pull-right"><img src="../../../dist/img/mapnew.png"></a>
+        <a class="mui-pull-right"><img src="../../../dist/img/mapnew.png" v-link="{path:'/map'}"></a>
     </header>
 </template>
 <script>

@@ -1,0 +1,185 @@
+<template>
+    <div id="allmap"></div>
+</template>
+<script>
+    export default{
+        ready(){
+
+        var script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = 'http://api.map.baidu.com/api?v=2.0&ak=FbzOyQ4YujPrZsxiQKoB07aB'
+
+        document.head.appendChild(script)
+
+        var script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = 'http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay_min.js'
+
+        document.head.appendChild(script)
+
+
+        var script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = 'http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer_min.js'
+
+        document.head.appendChild(script)
+
+
+
+        var map = new BMap.Map("allmap");
+        map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
+        map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+        map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+        map.enableScrollWheelZoom();                            //启用滚轮放大缩小
+        map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 15);//中心点
+        map.enableScrollWheelZoom();//缩放
+
+        var markers_1 = [];
+        var markers_2 = [];
+        var markers_3 = [];
+        var markers_4 = [];
+        var markers_5 = [];
+        var markers_6 = [];
+        var markers_7 = [];
+        var markers_8 = [];
+        var markers_9 = [];
+        var markers_10 = [];
+
+
+        addpoint(markers_1, 116.501386, 39.920799, '住邦2000', '朝阳区八里庄西里100号');
+        addpoint(markers_1, 116.497928, 39.920802, '远洋国际中心', '朝阳区东四环中路60号楼');
+        addpoint(markers_1, 116.497647, 39.918360, '远洋商务中心', '朝阳区八里庄西里61号楼');
+        addpoint(markers_1, 116.508058, 39.921447, '都会国际', '朝阳区十里堡甲3号');
+        addpoint(markers_1, 116.493970, 39.924959, '华业国际', '朝阳区东四环中路39号');
+        addpoint(markers_2, 116.487188, 39.915042, '华贸中心', '朝阳区建国路89号院');
+        addpoint(markers_2, 116.483555, 39.912674, 'SOHO现代城', '朝阳区建国路88号');
+        addpoint(markers_2, 116.498170, 39.905511, '大成国际', '朝阳区东四环中路78号楼');
+        addpoint(markers_2, 116.483418, 39.892571, '阳光财富大厦', '朝阳区西大望路63号院');
+        addpoint(markers_2, 116.501444, 39.901012, '金海商富中心', '朝阳区百子湾西里402号楼');
+        addpoint(markers_2, 116.482536, 39.899547, '外企大厦', '朝阳区西大望路15号3号楼');
+        addpoint(markers_2, 116.478772, 39.915814, '万达广场', '朝阳区建国路93号院');
+        addpoint(markers_2, 116.484062, 39.917603, '蓝堡国际中心', '朝阳区西大望路三号院');
+        addpoint(markers_2, 116.479867, 39.918482, '东方梅地亚', '朝阳区光华路4号院1号楼');
+        addpoint(markers_2, 116.476719, 39.919775, '泰达时代', '朝阳区光华路15号院');
+        addpoint(markers_3, 116.466206, 39.911326, '建外SOHO', '朝阳区东三环中路39号院1号楼5层0605');
+        addpoint(markers_3, 116.457410, 39.911110, '通用国际', '朝阳区永安东里甲3号院1号楼1606号');
+        addpoint(markers_3, 116.473948, 39.890563, '华腾北塘', '朝阳区南磨房路37号');
+        addpoint(markers_3, 116.468792, 39.890857, '富顿中心', '朝阳区东三环南路58号1号楼12层1502/1503/1505');
+        addpoint(markers_3, 116.488660, 39.906056, '苹果商务', '朝阳区百子湾路32号院3号楼A座809');
+        addpoint(markers_3, 116.424725, 39.900240, '新成文化大厦', '东城区崇文门外大街11号7层715');
+        addpoint(markers_3, 116.465740, 39.898716, '优士阁', '朝阳区广渠门外大街8号11层东座1209');
+        addpoint(markers_3, 116.475927, 39.898634, '首城国际', '朝阳区广渠路36号院5号楼3层356');
+        addpoint(markers_3, 116.466513, 39.902222, '富力双子座', '朝阳区东三环中路55号楼301');
+        addpoint(markers_4, 116.423924, 39.902645, '新世界', '崇文区崇文门外大街3号9层南办905');
+        addpoint(markers_4, 116.435350, 39.898753, '通正国际大厦', '崇文区广渠门内大街80号8层816');
+        addpoint(markers_4, 116.427816, 39.898844, '新裕商务大厦', '东城区广渠门内大街90号楼6层办公605');
+        addpoint(markers_5, 116.440206, 39.927367, '银河SOHO', '东城区南竹杆胡同2号1幢7层10810');
+        addpoint(markers_5, 116.438150, 39.928080, '北京INN', '东城区南竹竿胡同6号楼4层11');
+        addpoint(markers_5, 116.445080, 39.929535, '丰联广场', '朝阳区朝阳门外大街18号12层B1217');
+        addpoint(markers_5, 116.444067, 39.927389, '悠唐国际大厦', '朝阳区三丰北里7号楼9层（悠唐国际中心B座9层）');
+        addpoint(markers_5, 116.446166, 39.932962, '蓝筹铭座', '朝阳区吉庆里9、10号楼7层E座2区801');
+        addpoint(markers_5, 116.448512, 39.928143, '朝外MEN', '朝阳区外大街26号A0607');
+        addpoint(markers_5, 116.447799, 39.928981, '昆泰国际大厦', '朝阳区朝外大街乙12号办公楼23层0-2602');
+        addpoint(markers_5, 116.447124, 39.933990, '佳汇中心', '朝阳区吉庆里14号楼3层309房间');
+        addpoint(markers_5, 116.446880, 39.928650, '泛利大厦', '朝阳区朝外大街22号泛利大厦1501单元');
+        addpoint(markers_6, 116.437421, 39.938392, '南新仓大厦', '东城区东四十条甲22号1幢A702');
+        addpoint(markers_6, 116.439497, 39.928142, '朝阳门SOHO', '东城区南竹杆胡同1号5层601');
+        addpoint(markers_6, 116.441709, 39.946165, '东方银座', '东城区东直门外大街48号1幢10层A10B');
+        addpoint(markers_6, 116.430976, 39.954854, '歌华大厦', '东城区青龙胡同1号4层422');
+        addpoint(markers_6, 116.443255, 39.946175, '天恒大厦', '东城区东直门外大街46号1号楼');
+        addpoint(markers_6, 116.441874, 39.936547, '富华大厦', '东城区朝阳门北大街8号2号楼');
+        addpoint(markers_6, 116.439152, 39.962112, '林达大厦', '朝阳区东城路8号A座A6C');
+        addpoint(markers_6, 116.444009, 39.946135, '宇飞大厦', '东城区东直门外大街42号8层804');
+        addpoint(markers_6, 116.427310, 39.954777, '雍和大厦', '东城区安定门东大街28号1号楼10层B单元1101');
+        addpoint(markers_6, 116.439139, 39.941986, '华普花园', '东城区东直门南大街9号7号楼2层20303');
+        addpoint(markers_6, 116.442298, 39.934086, '天辰大厦', '朝阳区朝阳门北大街乙12号1号楼20层20公寓H');
+        addpoint(markers_7, 116.459630, 39.938649, '三里屯SOHO', '朝阳区工人体育场北路8号院1号楼5层01-608');
+        addpoint(markers_7, 116.455950, 39.941788, '世茂工三', '朝阳区工人体育场北路13号院1号楼10层1001');
+        addpoint(markers_7, 116.473134, 39.939815, '瑞辰国际', '朝阳区农展馆南路13号3层315');
+        addpoint(markers_7, 116.467176, 39.934859, '嘉盛中心', '朝阳区东三环北路甲19号楼20层2305');
+        addpoint(markers_7, 116.457309, 39.937965, '中国红街', '朝阳区工人体育场东路丙2号12层1201');
+        addpoint(markers_8, 116.456451, 39.968541, '时间国际', '朝阳区曙光里甲6号院1号楼1107');
+        addpoint(markers_8, 116.457798, 39.966498, '第三置业大厦', '朝阳区曙光里甲I号A-1103号');
+        addpoint(markers_8, 116.471027, 39.965810, '霄云中心', '朝阳区霞光里15号楼6层2单元705');
+        addpoint(markers_8, 116.457084, 39.954100, '琨莎中心', '朝阳区新源里16号4层2座3A16');
+        addpoint(markers_8, 116.467063, 39.963458, '远洋新干线', '朝阳区霞光里66号院1号楼605号');
+        addpoint(markers_8, 116.466196, 39.961509, '天元港', '朝阳区东三环北路丙2号7层08A05');
+        addpoint(markers_9, 116.462871, 39.925642, '万通中心', '朝阳区朝阳门外大街甲6号8层3座805');
+        addpoint(markers_9, 116.461376, 39.925965, '朝外SOHO', '朝阳区朝外大街乙6号1层0116');
+        addpoint(markers_9, 116.467317, 39.921448, '财富中心', '朝阳区东三环中路7号3号楼7层0811');
+        addpoint(markers_9, 116.465026, 39.920467, '旺座中心', '朝阳区景华南街1号楼10层1002');
+        addpoint(markers_9, 116.470310, 39.926891, '安联大厦', '朝阳区东三环北路38号院3号楼6层706');
+        addpoint(markers_9, 116.466936, 39.920596, '富尔大厦', '北京市朝阳区东三环中路9号');
+        addpoint(markers_9, 116.458003, 39.924639, 'SOHO尚都', '朝阳区东大桥路8号院4号楼5层0503');
+        addpoint(markers_9, 116.458062, 39.925470, '尚都国际中心', '朝阳区东大桥路8号1楼');
+        addpoint(markers_9, 116.457749, 39.929722, '百富国际', '朝阳区工体东路20号12层1单元1207');
+        addpoint(markers_9, 116.459002, 39.918742, '光华路SOHO', '朝阳区光华路22号5层2单元609');
+        addpoint(markers_10, 116.442770, 39.919901, '华声国际', '朝阳区朝外雅宝路12号207');
+        addpoint(markers_10, 116.434672, 39.913121, '恒基中心', '东城区建国门内大街18号4层办公楼二座402');
+        addpoint(markers_10, 116.440291, 39.919577, '金成建国', '东城区建国门北大街5号');
+
+
+        var markers_1 = new BMapLib.MarkerClusterer(map, { markers: markers_1,});
+        var markers_2 = new BMapLib.MarkerClusterer(map, { markers: markers_2, });
+        var markers_3 = new BMapLib.MarkerClusterer(map, { markers: markers_3, });
+        var markers_4 = new BMapLib.MarkerClusterer(map, { markers: markers_4, });
+        var markers_5 = new BMapLib.MarkerClusterer(map, { markers: markers_5, });
+        var markers_6 = new BMapLib.MarkerClusterer(map, { markers: markers_6, });
+        var markers_7 = new BMapLib.MarkerClusterer(map, { markers: markers_7, });
+        var markers_8 = new BMapLib.MarkerClusterer(map, { markers: markers_8, });
+        var markers_9 = new BMapLib.MarkerClusterer(map, { markers: markers_9, });
+        var markers_10 = new BMapLib.MarkerClusterer(map, { markers: markers_10, });
+
+
+        markers_1.setGridSize(300);
+        markers_2.setGridSize(300);
+        markers_3.setGridSize(300);
+        markers_4.setGridSize(300);
+        markers_5.setGridSize(300);
+        markers_6.setGridSize(300);
+        markers_7.setGridSize(300);
+        markers_8.setGridSize(300);
+        markers_9.setGridSize(300);
+        markers_10.setGridSize(200);
+
+
+
+
+        function addpoint(markers, lat, lng,title,content) {
+            var point = new BMap.Point(lat, lng)
+            var marker = new BMap.Marker(point);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            var str = "lat:" + lat.toString() + "  lng:" + lng.toString();
+            //alert(str);
+            var opts = {
+                width: 200,     // 信息窗口宽度
+                height: 100,     // 信息窗口高度
+                title: title, // 信息窗口标题
+                enableMessage: true,//设置允许信息窗发送短息
+                message: content + str
+            }
+            var infoWindow = new BMap.InfoWindow(content+str, opts);  // 创建信息窗口对象
+            marker.addEventListener("click", function () {
+                map.openInfoWindow(infoWindow, point); //开启信息窗口
+            });
+            markers.push(marker);
+        }
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function (r) {
+            if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                var mk = new BMap.Marker(r.point);
+                map.addOverlay(mk);
+                map.panTo(r.point);
+                alert('您的位置：' + r.point.lng + ',' + r.point.lat);
+            }
+            else {
+                alert('failed' + this.getStatus());
+            }
+        }, { enableHighAccuracy: true })
+
+
+       }
+
+    }
+</script>

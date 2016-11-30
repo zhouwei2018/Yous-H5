@@ -69,29 +69,29 @@
             address:userinfo!=null?userinfo.address:"",
             content:'',
             poptitle:"",//title标题
-                upload:{
-                    server:"",
-                    api:"",
-                    params:{
-                        token:"test"
-                    },
-                    file:"",
-                    preview:true,
-                    crop:true,
-                    width:400,
-                    height:400,
-                    cancel:"取消",
-                    ok:"裁剪",
-                    success:(data)=>{
-                    alert(data.length)
-                }
+            upload:{
+                server:"",
+                api:"",
+                params:{
+                    token:"test"
+                },
+                file:"",
+                preview:true,
+                crop:false,
+
+                width:400,
+                height:400,
+                cancel:"取消",
+                ok:"裁剪",
+                success:(data)=>{
+                alert(data.length)
             }
+        }
         }},
         components : {
             panel,
             aoth,
             upload,
-
         },
         methods:{
            asy_send_order:function(){

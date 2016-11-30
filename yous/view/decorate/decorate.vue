@@ -22,7 +22,7 @@
     		<div class='left'>  bnnn
     			<p class='title'>免费报价</p>
     			<p class='content'>1分钟了解装修花多少钱</p>
-    			<p class='pic'><img src="../../../dist/img/mathjisuan.jpg"></p>    			
+    			<p class='pic'><img src="../../../dist/img/mathjisuan.jpg"></p>
     		</div>
     		<div class='right'>
     			<div class='righttop'>
