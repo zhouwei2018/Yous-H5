@@ -367,4 +367,4 @@ export default {
 		}
 	}
 }
-</script>
+</script>s

@@ -31,7 +31,12 @@
             </div>
         </panel>
         <div class='money'>
-        	<input type='text' placeholder="请输入缴费金额">
+	        <form class="mui-input-group">	
+	        	<div class="mui-input-row">
+					<label style='float:right;'>&yen;(元)</label>6
+					<input type='number' placeholder="请输入缴费金额(小写)">
+				</div>     
+			</form>
         </div>
         <div id='image-list' class="row image-list"></div>
         <button id="submit" class="mui-btn mui-btn-blue mui-btn-block" v-on:click="asy_send_order">发送</button>
