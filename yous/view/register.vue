@@ -71,7 +71,7 @@
             this.timer=30;
             if(this.stop == false) {
                 this.$http.post(
-                        'http://106.14.27.89:8001/api/GetServiceApiResult',
+                    this.$api,
                     {
                         parameters:{
                              "CultureName":"",
@@ -97,7 +97,7 @@
         asyRegister(){
             if (this.$vuerify.check()) {
                 this.$http.post(
-                        'http://106.14.27.89:8001/api/GetServiceApiResult',
+                        this.$api,
                         {
                             parameters: {
                                 "CultureName": "",

@@ -1,10 +1,9 @@
 <style scoped>
     .spliter{color:#aaa;font-size:0.24rem;}
     .link-area a{color:#333;font-size:0.28rem;}
-    .mui-content{padding-top:0.1rem;}
+    .mui-content{padding-top:1rem;}
 </style>
 <template>
-    <header1></header1>
     <nav1></nav1>
 
     <div class="mui-content">
@@ -66,7 +65,7 @@
     methods:{
         asyLogin:function(){
             this.$http.post(
-                    'http://106.14.27.89:8001/api/GetServiceApiResult',
+                    this.$api,
                     {
                         parameters:{
                             "phone":this.phone,

@@ -43,7 +43,7 @@ export default {
     methods:{
         asySubmit:function(){
             this.$http.post(
-                    'http://106.14.27.89:8001/api/GetServiceApiResult',
+                    this.$api,
                     {
                         parameters:{
                         	"CultureName":'',

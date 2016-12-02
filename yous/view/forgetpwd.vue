@@ -48,7 +48,7 @@ export default {
 	    methods:{
 	        asygetSmsCode:function(){
 	            this.$http.post(
-	                    'http://106.14.27.89:8001/api/GetServiceApiResult',
+                        this.$api,
 	                    { 
 	                        parameters:{
 	                        	"CultureName":'',
@@ -76,7 +76,7 @@ export default {
         
          asyModify:function(){
             this.$http.post(
-                    'http://106.14.27.89:8001/api/GetServiceApiResult',
+                    this.$api,
                     { 
                         parameters:{
                         	"CultureName":'',

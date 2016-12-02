@@ -6,6 +6,7 @@ var Vuerify=require("vuerify");
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(Vuerify)
+Vue.prototype.$api="http://106.14.27.89:8001/api/GetServiceApiResult"
 
 
 // 引入组件！直接使用es6的语法

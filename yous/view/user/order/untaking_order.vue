@@ -68,7 +68,7 @@
 		getCustomers: function (){
 			var vm = this
 			vm.$http.post(
-					'http://106.14.27.89:8001/api/GetServiceApiResult',
+					this.$api,
 					{
 						Parameters:{
 							"phone":"13426242626",
