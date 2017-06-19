@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼狮列表页</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/list.css">
+</head>
+<body>
+
+<div class="header">
+    <img src="resources/images/ys_logo.png" alt="youshi" class="ys_logo">
+    <span class="f26 ml10">望京SOHO - 全部房源</span>
+    <label class="side-nav"><img src="resources/images/ys_more.png" alt=""></label>
+</div>
+
+<div class="all_elements" id="section">
+    <div class="content list-container mb60" >
+
+        <!--筛选section start-->
+        <div class="filtate-outter" style="z-index: 5">
+            <div class="mask none" id="maskEl"></div>
+            <div class="list-filtrate" style="z-index:8;">
+                <section class="filtrate-nav">
+                    <ul>
+                        <li data-role="filterItem" data-id="filter-price">
+                            <a href="javascript:void(0);">
+                                <h2 class="ellipsis">价格</h2>
+                                <i class="filt-arrow"></i>
+                            </a>
+                        </li>
+                        <li data-role="filterItem" data-id="filter-area">
+                            <a href="javascript:void(0);">
+                                <h2 class="ellipsis">面积</h2>
+                                <i class="filt-arrow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="filt-container">
+                    <div class="filt-open js-sigle" id="filter-price" style="display:none">
+                        <div class="warpper box-flex1 bg-white" style="height: 330px;">
+                            <ul style="overflow:hidden;height: 340px;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms; background-color: #F4F4F4;">
+                                <li class="active" onclick="showPrice(1);" style="border:none">
+                                    <a href="javascript:void(0);" style="color: #302F35;">单价</a>
+                                </li>
+                                <li onclick="showPrice(2);" style="border:none">
+                                    <a href="javascript:void(0);" style="color: #302F35;">总价</a>
+                                </li>
+
+                                <div id="price_filter" class="warpper2 box-flex1 bg-white" data-key="district" style="display:none;height:365px;">
+                                    <ul style="overflow:auto;height: 100%;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms;"></ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filt-open js-sigle" id="filter-area">
+                        <div class="warpper box-flex1  bg-white" data-key="huxing_shi" style="height:370px;">
+                            <ul>
+                                <li class="active" onclick="submitArea('0');">
+                                    <a href="javascript:void(0);">不限</a>
+                                </li>
+                                <li onclick="submitArea('1');">
+                                    <a href="javascript:void(0);">0-100㎡</a>
+                                </li>
+                                <li onclick="submitArea('2');">
+                                    <a href="javascript:void(0);">100-200㎡</a>
+                                </li>
+                                <li onclick="submitArea('3');">
+                                    <a href="javascript:void(0);">200-300㎡</a>
+                                </li>
+                                <li onclick="submitArea('4');">
+                                    <a href="javascript:void(0);">300-500㎡</a>
+                                </li>
+                                <li onclick="submitArea('5');">
+                                    <a href="javascript:void(0);">500-1000㎡</a>
+                                </li>
+                                <li onclick="submitArea('6');">
+                                    <a href="javascript:void(0);">1000-2000㎡</a>
+                                </li>
+                                <li onclick="submitArea('7');">
+                                    <a href="javascript:void(0);">2000-3000㎡</a>
+                                </li>
+                                <li onclick="submitArea('8');">
+                                    <a href="javascript:void(0);">&gt;3000㎡</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--筛选section end-->
+
+
+        <!--筛选结果start-->
+        <div class="bg-white border-bottom">
+            <a href="/bj/fangyuan-108418.html" class="dz-list clearfix" onclick="_hmt.push(['_trackEvent', '大楼详情-房源列表', 'clickWap', '大楼详情页']);">
+                <img src="http://img1.static.uban.com/b0f12c7c709a4f70866cfb5cb9121b5e.JPEG-n320x210" alt="房源图片" width="60" height="40" class="fl">
+                <span><em class="f15 fb text-pink fl">3.7</em>万元/月</span>
+                <span>173㎡</span>
+                <span>22-43个工位</span>
+            </a>
+            <a href="/bj/fangyuan-122080.html" class="dz-list clearfix" onclick="_hmt.push(['_trackEvent', '大楼详情-房源列表', 'clickWap', '大楼详情页']);">
+                <img src="http://img1.static.uban.com/341b231551bf4f9cb3b0accace31bad8.jpg-n320x210" alt="房源图片" width="60" height="40" class="fl">
+                <span><em class="f15 fb text-pink fl">5.2</em>万元/月</span>
+                <span>220㎡</span>
+                <span>28-55个工位</span>
+            </a>
+            <a href="/bj/fangyuan-122086.html" class="dz-list clearfix" onclick="_hmt.push(['_trackEvent', '大楼详情-房源列表', 'clickWap', '大楼详情页']);">
+                <img src="http://img2.static.uban.com/m/images/none.jpg" alt="暂无房源图片" width="60" height="40" class="fl">
+                <span><em class="f15 fb text-pink fl">10.3</em>万元/月</span>
+                <span>440㎡</span>
+                <span>55-110个工位</span>
+            </a>
+        </div>
+
+        <!--筛选结果end-->
+
+    </div>
+</div>
+
+<div class="tel-order">
+    <a id="pk" href="javascript:;" class="order--pk"><i class="detail-icon"></i><p>对比</p></a>
+    <a id="favoriteA" href="javascript:" class="order--attention"><i id="favorite" class=" detail-icon"></i><p>关注</p></a>
+    <a href="javascript:;" class="order--tel-order"><i class="detail-icon"></i><p>约看</p></a>
+    <a id="semwaploupanxiangqingdibu400" href="javascript:;" class="phone--tel-order">
+        <img src="resources/images/icons/phone-icon.png" class="mr05 mt-3">一键咨询</a>
+</div>
+
+</body>
+</html>

@@ -162,6 +162,16 @@ em {
 a {
   text-decoration: none;
 }
+header,
+footer,
+article,
+section,
+nav,
+menu,
+hgroup {
+  display: block;
+  clear: all;
+}
 /*======================================loading start==========================================*/
 #preloader {
   position: fixed;
@@ -184,13 +194,6 @@ a {
   font-size: .28rem;
   color: #333;
   -webkit-overflow-scrolling: touch;
-  /*
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-*/
 }
 .header {
   height: .88rem;
@@ -238,6 +241,9 @@ a {
 /*=================针对特殊网站common start=========================*/
 a {
   color: #302f35;
+}
+.bg-white {
+  background-color: #FFF !important;
 }
 .none {
   display: none;

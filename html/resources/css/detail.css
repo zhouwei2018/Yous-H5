@@ -316,8 +316,8 @@
 }
 .tel-order .detail-icon {
   float: none;
-  width: .4rem;
-  height: .4rem;
+  width: .42rem;
+  height: .42rem;
   margin: 0 auto;
   margin-bottom: 4px;
 }
@@ -325,7 +325,7 @@
   background-position: -1.46rem -0.2rem;
 }
 .tel-order .order--attention .detail-icon {
-  background-position: -2.02rem -0.2rem;
+  background-position: -2.03rem -0.2rem;
 }
 .tel-order .order--tel-order .detail-icon {
   background-position: -2.6rem -0.2rem;
