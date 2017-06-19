@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼狮详情页</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/detail.css">
+</head>
+<body>
+
+<div class="header">
+    <img src="resources/images/ys_logo.png" alt="youshi" class="ys_logo">
+    <span class="font26 ml10">写字楼</span>
+    <label class="side-nav"><img src="resources/images/ys_more.png" alt=""></label>
+</div>
+
+<div class="all_elements" id="section">
+    <div class="content detail-container mb60" >
+        <!--banner-->
+        <div class="mBan2 overhidden">
+            <div id="slideBox" class="slideBox">
+                <div class="bd" id="office-pic-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide" >
+                            <img src="resources/images/banner/banner01.jpg" alt="">
+                        </li>
+                    </ul>
+                    <div class="banner-text">
+                        <p class="ellipsis">
+                            <span class="detail-icon"></span>[朝阳-望京]望京街与阜安西路交叉路口</p>
+                        <span class="pageState"><span id="picIndex">6</span>/11</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--office info-->
+        <div class="office-info border-tb mb08">
+            <div class="fb pl15 f34 pb10">望京SOHO</div>
+            <hr>
+            <p class="f24 pr">
+                <span><b class="text-pink f36">6.5</b>元/㎡·天</span>
+                <span class="ml15"><b class="text-pink f36">0-4576</b>㎡</span>
+            </p>
+            <div class="panorama tc" id="quanjingbtn">
+                <i class="detail-icon"></i>
+                <span class="f24 ml05">全景图</span>
+            </div>
+            <dl class="supply-tag clearfix">
+                <dd>互联网</dd>
+                <dd>地标建筑</dd>
+                <dd>名企开发商</dd>
+                <dd class="mr0">知名物业</dd>
+            </dl>
+        </div>
+
+        <!--house info-->
+        <div class="border-tb pt20 mb08 houseInfo">
+            <div id="houseScroll">
+                <h2 class="sort-title tc fb">全部待租（2379）</h2>
+                <div class="swiper-container pv15 swiper-container-horizontal" id="swiper-container-menu">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide active-nav swiper-slide-visible swiper-slide-active">不限</div>
+                        <div class="swiper-slide swiper-slide-visible swiper-slide-next">0-100㎡</div>
+                        <div class="swiper-slide swiper-slide-visible">100-200㎡</div>
+                        <div class="swiper-slide">200-300㎡</div>
+                        <div class="swiper-slide">300-500㎡</div>
+                        <div class="swiper-slide">500-1000㎡</div>
+                        <div class="swiper-slide">1000-2000㎡</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-container swiper-container-horizontal" id="swiper-container-conts">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active" id="houseDiv0" style="width: 320px;">
+                        <a href="javascript:;" class="dz-list clearfix" >
+                            <img src="resources/images/house/house01.jpg" alt="房源图片" class="fl">
+                            <span><em class="f15 fb text-pink fl">3.7</em>万元/月</span>
+                            <span>173㎡</span>
+                            <span>22-43个工位</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:;" id="houseListMore" class="btn-more">查看更多</a>
+        </div>
+
+        <!--echart-->
+        <div class="pt20 mb08 border-tb pv15">
+            <h2 class="sort-title tc fb mb10">公司信息</h2>
+            <div class="companyeChart-box mb10">
+                <div id="companyTypeRatios"></div>
+                <div class="companyeChart-text">
+                    <img src="resources/images/icons/conpany-nature.png" width="20">
+                    <p class="mt05">公司性质</p>
+                </div>
+            </div>
+            <div class="companyeChart-box mb10 pt10" style="border-top: 1px solid #E5E5E6;">
+                <div id="tradeRatios"></div>
+                <div class="companyeChart-text">
+                    <img src="resources/images/icons/industrial-distribution.png" height="24">
+                    <p class="mt05">行业分布</p>
+                </div>
+            </div>
+            <ul class="company-list">
+                <li>
+                    <a href="javascript:void(0);"><em>1.</em>北京云火影业有限公司</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><em>2.</em>北京精联申铭广告有限公司</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><em>3.</em>青萍科技（北京）有限公司</a>
+                </li>
+            </ul>
+            <a href="/bj/detail-184/company.html" class="btn-more">查看此楼全部公司</a>
+        </div>
+
+        <!--detail-list-->
+        <div class="detail-list pt20 mb08 border-tb">
+            <h2 class="sort-title tc fb mb10">楼盘参数</h2>
+            <ul class="clearfix pv15">
+                <li><span>得房率</span>65％</li>
+                <li><span>业主类型</span>
+
+                    大业主+小业主
+                </li>
+                <li><span>层数</span>47层</li>
+                <li><span>物业等级</span>甲级</li>
+                <li><span>净层高</span>
+                    2.7米
+                </li>
+                <li><span>物业费</span>
+                    24元/㎡·月
+                </li>
+                <li><span>物业类型</span>办公楼</li>
+                <li><span>开发商</span>SOHO中国</li>
+                <li><span>均价</span>6.5元/m²·天</li>
+                <li><span>停车位数量</span>1800</li>
+
+                <li><span>停车费</span>1500元/月</li>
+                <li><span>竣工时间</span>2013-12-01</li>
+                <li><span>占地面积</span>暂无数据</li>
+                <li><span>标准层面积</span>2500m²</li>
+                <li><span>地上层数</span>47</li>
+                <li><span>地下层数</span>暂无数据</li>
+
+                <li><span>容积率</span>8.1</li>
+                <li><span>绿化率</span>30%</li>
+            </ul>
+            <a href="/introduce/184" class="btn-more">查看楼盘简介</a>
+        </div>
+
+        <!--map-->
+        <div class="pt20 mb08 border-tb" id="kuan">
+            <h2 class="sort-title tc fb mb20">周边配套</h2>
+            <div class="map-box">
+                <img id="map-pic" src="resources/images/v2.png" class="mt0">
+            </div>
+            <ul class="text-gray6 clearfix ph15">
+                <li class="supporting-item">
+                    <i class="supporting-icon sup-ct"></i>
+                    <span class="db">餐厅 <b class="text-black">33</b></span>
+                </li>
+                <li class="supporting-item">
+                    <i class="supporting-icon sup-jd"></i>
+                    <span class="db">酒店 <b class="text-black">25</b></span>
+                </li>
+                <li class="supporting-item">
+                    <i class="supporting-icon sup-js"></i>
+                    <span class="db">健身 <b class="text-black">4</b></span>
+                </li>
+                <li class="supporting-item">
+                    <i class="supporting-icon sup-yh"></i>
+                    <span class="db">银行 <b class="text-black">22</b></span>
+                </li>
+            </ul>
+        </div>
+
+        <!--surroundings-->
+        <div class="border-tb pt20">
+            <a href="/nearOffice/184"><h2 class="sort-title tc fb mb20">附近楼盘</h2></a>
+            <ul class="other-ly pv15 clearfix pb10">
+                <li>
+                    <a href="/bj/detail-178.html" class="db other-ly-list">
+                        <img src="resources/images/det_list/det_list01.jpg" alt="" >
+                        <h4 class="ellipsis fb">合生麒麟社</h4>
+                        <p class="clearfix">
+                            <span class="fl ellipsis"><em class="text-pink f32 fb">4</em>元/㎡·天</span>
+                            <span class="fl ellipsis f24 text-gray9 tr">250米</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/bj/detail-147.html" class="db other-ly-list">
+                        <img src="resources/images/det_list/det_list01.jpg" alt="" >
+                        <h4 class="ellipsis fb">融科望京中心</h4>
+                        <p class="clearfix">
+                            <span class="fl ellipsis"><em class="text-pink f32 fb">7</em>元/㎡·天</span>
+                            <span class="fl ellipsis f24 text-gray9 tr">400米</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="tel-order">
+    <a id="pk" href="javascript:;" class="order--pk"><i class="detail-icon"></i><p>对比</p></a>
+    <a id="favoriteA" href="javascript:" class="order--attention"><i id="favorite" class=" detail-icon"></i><p>关注</p></a>
+    <a href="javascript:;" class="order--tel-order"><i class="detail-icon"></i><p>约看</p></a>
+    <a id="semwaploupanxiangqingdibu400" href="javascript:;" class="phone--tel-order">
+        <img src="resources/images/icons/phone-icon.png" class="mr05 mt-3">一键咨询</a>
+</div>
+
+</body>
+</html>

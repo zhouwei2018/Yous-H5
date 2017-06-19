@@ -1,0 +1,414 @@
+@import "color";
+
+.detail-icon {
+  float: left;
+  display: block !important;
+  background: url("../images/icons/detail-icon-bg.png") no-repeat;
+  background-size: 3.3rem 2.2rem;
+}
+
+//banner start
+
+.mBan2 {
+  .slideBox {
+    position: relative;
+    width: 100%;
+    max-height: 9.6rem;
+    .bd {
+      position: relative;
+      height: 100%;
+      z-index: 0;
+      ul {
+        width: 100% !important;
+        li {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.1rem;
+  padding: .62rem 0 0 .3rem;
+  background: url(http://img2.static.uban.com/m/images/detail-banner-bg.png) no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+  z-index: 11;
+  p {
+    width: 70%;
+    font-size: .24rem;
+    color: @cl_white;
+    line-height: .32rem;
+    .detail-icon {
+      width: .32rem;
+      height: .36rem;
+      margin-right: .12rem;
+      background-position: -1rem -.24rem;
+    }
+  }
+}
+
+.pageState {
+  position: absolute;
+  right: .3rem;
+  bottom: .08rem;
+  padding: 2px 8px;
+  line-height: .4rem;
+  font-size: @font24;
+  color: @cl_white;
+  z-index: 3;
+  &.pageState:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: -1px;
+    margin-right: 4px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid @cl_white;
+  }
+  &.pageState:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: -1px;
+    margin-left: 4px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid @cl_white
+  }
+}
+
+//banner end
+
+//office info start
+.border-tb {
+  border-color: @bdc_line;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  background-color: @cl_white;
+  overflow: hidden;
+}
+
+.office-info {
+  position: relative;
+  padding-top: .26rem;
+  hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid @bdc_line;
+  }
+  p {
+    padding: .28rem .3rem .2rem;
+  }
+  .panorama {
+    position: absolute;
+    right: .3rem;
+    top: .22rem;
+    line-height: .6rem;
+    .detail-icon {
+      width: .7rem;
+      height: .6rem;
+      background-position: -.14rem -.08rem;
+    }
+  }
+}
+
+.supply-tag {
+  margin-bottom: .24rem;
+  overflow: hidden;
+  padding: 0 .3rem;
+  dd {
+    float: left;
+    padding: 0 .1rem;
+    margin-right: .1rem;
+    color: @cl_999;
+    font-size: @font24;
+    background-color: @bg_lightgreen;
+  }
+}
+
+//office info end
+
+//house info start
+.sort-title {
+  font-size: .3rem;
+  line-height: .42rem;
+}
+
+#swiper-container-menu {
+  border-bottom: 1px solid @bdc_line;
+
+  .swiper-slide {
+    height: .8rem;
+    line-height: .8rem;
+    color: @cl_999;
+    text-align: center;
+    &.active-nav {
+      color: @cl_blue;
+      border-bottom: 1px solid @cl_blue;
+    }
+  }
+}
+
+#swiper-container-conts {
+  .swiper-slide-active {
+    height: auto;
+  }
+}
+
+.dz-list {
+  display: block;
+  padding: .26rem 0;
+  margin: 0 .3rem;
+  border-bottom: 1px solid @bdc_line;
+  img {
+    width: 1.2rem;
+    height: .8rem;
+  }
+  span {
+    float: left;
+    line-height: .8rem;
+    font-size: @font24;
+    color: @cl_black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:nth-of-type(1) {
+      width: 28%;
+      margin-left: 3%;
+    }
+    &:nth-of-type(2) {
+      width: 17%;
+      text-align: center;
+    }
+    &:nth-of-type(3) {
+      float: right;
+    }
+  }
+}
+
+.btn-more {
+  display: block;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: @font24;
+  color: @cl_999;
+  text-align: center;
+}
+
+//house info end
+
+//echarts start
+.border-tb {
+  border-color: @bdc_line;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  background-color: @cl_white;
+  overflow: hidden;
+}
+
+.sort-title {
+  font-size: .3rem;
+  line-height: .42rem;
+}
+
+.companyeChart-box {
+  position: relative;
+}
+
+.companyeChart-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50%;
+  margin-top: -.5rem;
+  font-size: .3rem;
+  text-align: center;
+  img {
+    width: .4rem;
+  }
+}
+
+.company-list {
+  background-color: @cl_white;
+  border-top: 1px solid @bdc_line;
+  border-bottom: 1px solid @bdc_line;
+  li {
+    padding: .3rem 0;
+    border-bottom: 1px solid @bdc_line;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+//echarts end
+
+//detail-list start
+.detail-list {
+  ul {
+    li {
+      float: left;
+      width: 50%;
+      height: .8rem;
+      line-height: .8rem;
+      font-size: @font26;
+      color: @cl_black;
+      border-bottom: 1px solid @bdc_line;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      span {
+        float: left;
+        width: 40%;
+        line-height: .8rem;
+        margin-right: .3rem;
+        font-size: @font26;
+        color: @cl_999;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+//map start
+.supporting-item {
+  float: left;
+  display: block;
+  position: relative;
+  width: 25%;
+  font-size: @font24;
+  text-align: center;
+}
+
+.supporting-icon {
+  display: inline-block;
+  width: .76rem;
+  height: .48rem;
+  background: url(http://img2.static.uban.com/www/images/detail-icon-bg.png) no-repeat;
+}
+
+.sup-ct {
+  background-position: -4.46rem -3rem;
+}
+
+.sup-jd {
+  background-position: -3.64rem -3rem;
+}
+
+.sup-js {
+  background-position: -2.06rem -3rem;
+}
+
+.sup-yh {
+  background-position: -2.86rem -3rem;
+}
+
+//surroundings start
+.other-ly {
+  li {
+    float: left;
+    width: 48%;
+    height: auto;
+    overflow: hidden;
+    &:nth-child(2n) {
+      margin-left: 4%;
+    }
+  }
+  h4 {
+    line-height: .42rem;
+    margin-top: .14rem;
+    color: #302F35;
+    font-size: @font30;
+  }
+  p {
+    span {
+      display: block;
+      width: 50%;
+      line-height: .44rem;
+      &:nth-of-type(1) {
+        font-size: @font24;
+        color: @cl_000;
+      }
+    }
+  }
+}
+
+
+//footer
+.tel-order {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  color: @cl_white;
+  z-index: 1;
+  background-color: @cl_white;
+  box-shadow: 0 -.04rem .16rem 0 rgba(0,0,0,0.10);
+  .detail-icon {
+    float: none;
+    width: .4rem;
+    height: .4rem;
+    margin: 0 auto;
+    margin-bottom: 4px;
+  }
+  .order--pk{
+    .detail-icon {
+      background-position: -1.46rem -.2rem;
+    }
+  }
+
+  .order--attention{
+    .detail-icon {
+      background-position: -2.02rem -.2rem;
+    }
+  }
+
+  .order--tel-order{
+    .detail-icon {
+      background-position: -2.6rem -.2rem;
+    }
+  }
+
+  a {
+    float: left;
+    line-height: .24rem;
+    padding: .14rem .3rem;
+    font-size: @font24;
+    color: @cl_lightgray;
+    text-align: center;
+    &.phone--tel-order {
+      float: right;
+      display: block;
+      width: 36%;
+      padding: .34rem 0;
+      color: @cl_white;
+      text-align: center;
+      font-size: .32rem;
+      line-height: .32rem;
+      background-color: @cl_black;
+      img{
+        width:15px;
+      }
+    }
+  }
+
+
+}
+
+
+

@@ -1,0 +1,425 @@
+/*
+ *===============================================
+ *@desc  default style reset
+ *@author  Qzz
+ *@time 2016-06-18
+ *===============================================
+ */
+@import "color";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "microsoft yahei", arial, verdana, helvetica, sans-serif;
+  background: #F7F7F7;
+  font-size: 0.28rem;
+}
+
+::scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+* {
+  appearance: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  vertical-align: baseline;
+  outline: 0;
+  font-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+:focus {
+  outline: 0
+}
+
+/*
+ *==============================================
+ *@desc  responsive media query: iphones6+ 414*736 iphone6 375*667 iphone5s 320*568 iphone5 320*568
+ *@author  Jason
+ *@time 2016-05-03
+ *==============================================
+ */
+
+@media only screen and (min-width: 240px) {
+  html {
+    font-size: 266.66666666%;
+  }
+}
+
+/* 42.6666666px */
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 266.66666666%;
+  }
+}
+
+/* 42.6666666px */
+
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 300%;
+  }
+}
+
+/* 4.16rem */
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 312.5%;
+  }
+}
+
+/* 50px */
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 345%;
+  }
+}
+
+/* 55.2px */
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 400%;
+  }
+}
+
+/* 64px */
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 533.3333333333%;
+  }
+}
+
+/* 85.33333px */
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 625%;
+  }
+}
+
+/* 1rem = 100px */
+
+/*
+ *==============================================
+ *@desc global css
+ ×@author Jason
+ *@time
+ *==============================================
+ */
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  overflow: hidden;
+  _height: 1%;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*======================================loading start==========================================*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+  z-index: 99999999;
+}
+
+/*======================================loading end==========================================*/
+
+/*===============================all elements, header, site right starts===============================*/
+
+.all_elements {
+  position: absolute;
+  overflow-x: hidden !important;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  font-size: .28rem;
+  color: #333;
+  -webkit-overflow-scrolling: touch;
+  /*
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+*/
+}
+
+.header {
+  height: .88rem;
+  line-height: .88rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: all;
+  z-index: 99;
+  color: @cl_white;
+  background-color: @cl_black;
+  .ys_logo {
+    float: left;
+    width: .94rem;
+    height: .36rem;
+    margin-left: .3rem;
+    margin-top: .22rem
+  }
+  .side-nav {
+    position: absolute;
+    right: .3rem;
+    top: .26rem;
+    display: block;
+    height: .4rem;
+    cursor: pointer;
+    width: .4rem;
+    img {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+.content {
+  /*overflow-y: scroll;*/
+  padding-top: .88rem;
+  width: 100%;
+  height: auto;
+  /*-webkit-overflow-scrolling: touch;*/
+}
+
+.content.no_header {
+  padding-top: 0;
+}
+
+/*===============================all elements, header, site right end===============================*/
+
+/*=================针对特殊网站common start=========================*/
+
+a {
+  color: @cl_black;
+}
+
+.none {
+  display: none;
+}
+
+.tc {
+  text-align: center !important;
+}
+
+.pr {
+  position: relative;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.pb {
+  position: absolute;
+}
+
+.db {
+  display: block;
+}
+
+.cur_pointer {
+  cursor: pointer;
+}
+
+.overhidden {
+  overflow: hidden;
+}
+
+.vermid {
+  vertical-align: middle;
+}
+
+.mar_auto {
+  margin: 0 auto;
+}
+
+.vertop {
+  vertical-align: top;
+}
+
+.mt05, .mh05, .ma05 {
+  margin-top: .1rem !important;
+}
+
+.mr05, .mv05, .ma05 {
+  margin-right: .1rem !important;
+}
+
+.mt-3 {
+  margin-top: -.06rem !important;
+}
+
+.mb08, .mh08, .ma08 {
+  margin-bottom: .16rem !important;
+}
+
+.mb10, .mh10, .ma10 {
+  margin-bottom: .2rem !important;
+}
+
+.ml10, .mv10, .ma10 {
+  margin-left: .2rem !important;
+}
+
+.pb10, .ph10, .pa10 {
+  padding-bottom: .2rem !important;
+}
+
+.pb15, .ph15, .pa15 {
+  padding-bottom: .3rem !important;
+}
+
+.pt15, .ph15, .pa15 {
+  padding-top: .3rem !important;
+}
+
+.mb20, .mh20, .ma20 {
+  margin-bottom: .4rem !important;
+}
+
+.pt20, .ph20, .pa20 {
+  padding-top: .4rem !important;
+}
+
+.pr15, .pv15, .pa15 {
+  padding-right: .3rem !important;
+}
+
+.pl15, .pv15, .pa15 {
+  padding-left: .3rem !important;
+}
+
+.ml15, .mv15, .ma15 {
+  margin-left: .3rem !important;
+}
+
+.mb60, .mh60, .ma60 {
+  margin-bottom: 1.2rem !important;
+}
+
+.text-pink {
+  color: @cl_pink !important;
+}
+
+.text-gray6 {
+  color: @cl_666 !important;
+}
+
+.text-black {
+  color: @cl_black !important;
+}
+
+.text-gray9 {
+  color: @cl_999 !important;
+}
+
+.fb {
+  font-weight: 700 !important;
+}
+
+.f36 {
+  font-size: @font36 !important;
+}
+
+.f34 {
+  font-size: @font34 !important;
+}
+
+.f24 {
+  font-size: @font24 !important;
+}
+
+.f26 {
+  font-size: @font26 !important;
+}
+
+.f28 {
+  font-size: @font28 !important;
+}
+
+.f32 {
+  font-size: @font32 !important;
+}
+
