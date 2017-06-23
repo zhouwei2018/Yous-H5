@@ -26,7 +26,7 @@ body {
   height: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "microsoft yahei", arial, verdana, helvetica, sans-serif;
-  background: #F7F7F7;
+  background: #fff;
   font-size: 0.28rem;
 }
 ::scrollbar {
@@ -34,9 +34,6 @@ body {
 }
 ::-webkit-scrollbar {
   display: none;
-}
-img {
-  width: 100%;
 }
 h1,
 h2,
@@ -48,6 +45,15 @@ p,
 dl,
 dd {
   margin: 0;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
   font-weight: normal;
 }
 ul {
@@ -147,20 +153,25 @@ em {
 .fr {
   float: right;
 }
-.clearfix {
-  overflow: hidden;
-  _height: 1%;
-}
 .clearfix:after {
   content: " ";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
+}
+.clearfix {
   zoom: 1;
+  _height: 1%;
 }
 a {
   text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 header,
 footer,
@@ -172,72 +183,34 @@ hgroup {
   display: block;
   clear: all;
 }
-/*======================================loading start==========================================*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #FFF;
-  z-index: 99999999;
-}
-/*======================================loading end==========================================*/
-/*===============================all elements, header, site right starts===============================*/
-.all_elements {
-  position: absolute;
-  overflow-x: hidden !important;
+header {
+  position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  font-size: .28rem;
-  color: #333;
-  -webkit-overflow-scrolling: touch;
-}
-.header {
-  height: .88rem;
-  line-height: .88rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  pointer-events: all;
-  z-index: 99;
+  max-width: 640px;
+  height: 44px;
+  line-height: 44px;
   color: #fff;
+  font-size: 0.36rem;
   background-color: #302f35;
 }
-.header .ys_logo {
+header .noText-logo {
   float: left;
-  width: .94rem;
-  height: .36rem;
-  margin-left: .3rem;
-  margin-top: 0.22rem;
+  margin-left: 15px;
+  margin-top: 11px;
 }
-.header .side-nav {
+.side-nav {
   position: absolute;
-  right: .3rem;
-  top: .26rem;
+  left: 15px;
+  top: 13px;
   display: block;
-  height: .4rem;
+  height: 20px;
   cursor: pointer;
-  width: .4rem;
+  width: 20px;
 }
-.header .side-nav img {
-  display: inline-block;
+.side-nav img {
   vertical-align: top;
-}
-.content {
-  /*overflow-y: scroll;*/
-  padding-top: .88rem;
   width: 100%;
-  height: auto;
-  /*-webkit-overflow-scrolling: touch;*/
 }
-.content.no_header {
-  padding-top: 0;
-}
-/*===============================all elements, header, site right end===============================*/
 /*=================针对特殊网站common start=========================*/
 a {
   color: #302f35;

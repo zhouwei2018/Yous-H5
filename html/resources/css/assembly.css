@@ -1,0 +1,22 @@
+/*文字色*/
+/*黑色*/
+/*白色*/
+/*粉红色*/
+/*蓝色*/
+/*bg色*/
+/*背景默认色*/
+/*浅绿色*/
+/*边线颜色*/
+/*输入框描边*/
+/*hr*/
+/*字号*/
+.main-nav-wrapper {
+  position: fixed;
+  left: -100%;
+  width: 50%;
+  max-width: 480px;
+  height: 100%;
+  top: 0;
+  display: none;
+  background-color: #fff;
+}

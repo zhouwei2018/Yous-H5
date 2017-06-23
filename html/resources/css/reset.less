@@ -16,7 +16,7 @@ body {
   height: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "microsoft yahei", arial, verdana, helvetica, sans-serif;
-  background: #F7F7F7;
+  background: @cl_white;
   font-size: 0.28rem;
 }
 
@@ -26,10 +26,6 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-img {
-  width: 100%;
 }
 
 h1,
@@ -42,6 +38,11 @@ p,
 dl,
 dd {
   margin: 0;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
   font-weight: normal;
 }
 
@@ -167,22 +168,28 @@ em {
   float: right;
 }
 
-.clearfix {
-  overflow: hidden;
-  _height: 1%;
-}
-
 .clearfix:after {
   content: " ";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
+}
+
+.clearfix {
   zoom: 1;
+  _height: 1%;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 header, footer, article, section, nav, menu, hgroup {
@@ -190,80 +197,36 @@ header, footer, article, section, nav, menu, hgroup {
   clear: all;
 }
 
-/*======================================loading start==========================================*/
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #FFF;
-  z-index: 99999999;
-}
-
-/*======================================loading end==========================================*/
-
-/*===============================all elements, header, site right starts===============================*/
-
-.all_elements {
-  position: absolute;
-  overflow-x: hidden !important;
+header {
+  position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  font-size: .28rem;
-  color: #333;
-  -webkit-overflow-scrolling: touch;
-}
-
-.header {
-  height: .88rem;
-  line-height: .88rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  pointer-events: all;
-  z-index: 99;
+  max-width: 640px;
+  height: 44px;
+  line-height: 44px;
   color: @cl_white;
+  font-size: @font36;
   background-color: @cl_black;
-  .ys_logo {
+  .noText-logo {
     float: left;
-    width: .94rem;
-    height: .36rem;
-    margin-left: .3rem;
-    margin-top: .22rem
-  }
-  .side-nav {
-    position: absolute;
-    right: .3rem;
-    top: .26rem;
-    display: block;
-    height: .4rem;
-    cursor: pointer;
-    width: .4rem;
-    img {
-      display: inline-block;
-      vertical-align: top;
-    }
+    margin-left: 15px;
+    margin-top: 11px;
   }
 }
 
-.content {
-  /*overflow-y: scroll;*/
-  padding-top: .88rem;
-  width: 100%;
-  height: auto;
-  /*-webkit-overflow-scrolling: touch;*/
+.side-nav {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  display: block;
+  height: 20px;
+  cursor: pointer;
+  width: 20px;
+  img{
+    vertical-align: top;
+    width:100%;
+  }
 }
 
-.content.no_header {
-  padding-top: 0;
-}
-
-/*===============================all elements, header, site right end===============================*/
 
 /*=================针对特殊网站common start=========================*/
 
