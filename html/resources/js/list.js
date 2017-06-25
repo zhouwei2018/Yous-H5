@@ -632,3 +632,7 @@ function toDecimal(x) {
 function fomateNumber(n){
     return Number(n).toFixed(0);
 }
+
+
+
+

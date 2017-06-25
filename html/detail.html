@@ -302,6 +302,18 @@
     }
 
 
+    //高德地图
+    var gaodeGPS ='116.459094777856,39.905484821076';
+
+    $("#map-pic").click(function(){
+        var lnglat = gaodeGPS;
+        if(gaodeGPS == '' || gaodeGPS == null){
+            lnglat = '116.465709'+'39.911134';
+        }
+        location.href = "http://m.amap.com/around/?locations="+lnglat+"&keywords=餐厅,酒店,健身,银行&defaultIndex=3&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
+    })
+
+
 </script>
 
 </body>
