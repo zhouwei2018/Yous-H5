@@ -1,0 +1,141 @@
+/*文字色*/
+/*黑色*/
+/*白色*/
+/*粉红色*/
+/*蓝色*/
+/*bg色*/
+/*背景默认色*/
+/*浅绿色*/
+/*边线颜色*/
+/*输入框描边*/
+/*hr*/
+/*字号*/
+.detail-icon {
+  float: left;
+  display: block !important;
+  background: url("../images/icons/detail-icon-bg.png") no-repeat;
+  background-size: 3.3rem 2.2rem;
+}
+.slideBox {
+  position: relative;
+}
+.slideBox img {
+  width: 100%;
+  height: 4.8rem;
+}
+.build_price_wrap {
+  height: .7rem;
+  line-height: .7rem;
+  background-color: #fff;
+  margin-bottom: .1rem;
+}
+.build_price_wrap span {
+  float: left;
+  margin-left: .4rem;
+}
+.build_price_wrap span i {
+  color: #476CBA;
+}
+.build_common_msg_wrap {
+  height: 1rem;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: .1rem;
+}
+.build_common_msg_wrap a {
+  float: left;
+  padding-top: .1rem;
+  text-align: center;
+  height: 100%;
+  width: 33.3333%;
+}
+.build_common_msg_wrap a span {
+  display: block;
+  color: #999;
+}
+.build_common_msg_wrap a i {
+  color: #666;
+}
+.build_common_msg_wrap .common_ver_line {
+  position: absolute;
+  left: 33.3333%;
+  width: 1px;
+  height: .42rem;
+  background-color: #ccc;
+  top: .32rem;
+}
+.build_common_msg_wrap .common_ver_line.second {
+  left: 66.6666%;
+}
+.weixin_wrap {
+  padding: .4rem;
+  background-color: #fff;
+}
+.weixin_head span {
+  float: left;
+  width: 2.6rem;
+  margin-right: 0.8rem;
+  line-height: .56rem;
+}
+.weixin_bot {
+  padding-top: .2rem;
+}
+.weixin_bot .weixin_img {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0 .4rem .2rem 0;
+}
+.weixin_bot .weixin_bot_box span {
+  display: block;
+  margin-bottom: .1rem;
+}
+.weixin_bot .weixin_bot_box span .con_telephone {
+  color: #476CBA;
+}
+.weixin_bot .weixin_bot_box span.weixin_tips {
+  margin-top: .4rem;
+  width: 3.8rem;
+  color: #999;
+}
+.tel-order {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  color: #fff;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 -0.04rem 0.16rem 0 rgba(0, 0, 0, 0.1);
+}
+.tel-order .detail-icon {
+  width: .42rem;
+  height: .42rem;
+}
+.tel-order .order--attention .detail-icon {
+  margin: .18rem .2rem 0 0;
+  background-position: -2.03rem -0.2rem;
+}
+.tel-order .order--attention p {
+  margin-top: .27rem;
+}
+.tel-order a {
+  float: left;
+  line-height: .24rem;
+  padding: .14rem .3rem;
+  color: #848587;
+  text-align: center;
+}
+.tel-order a.phone--tel-order {
+  float: right;
+  display: block;
+  width: 75%;
+  padding: .34rem 0;
+  color: #fff;
+  text-align: center;
+  line-height: .32rem;
+  background-color: #302f35;
+}
+.tel-order a.phone--tel-order img {
+  width: .3rem;
+}

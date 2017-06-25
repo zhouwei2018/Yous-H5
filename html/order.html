@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>幼狮详情页</title>
+    <title>幼狮下单页</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/assembly.css">
     <link rel="stylesheet" href="resources/plugin/swiper/css/swiper.css">
 
-    <link rel="stylesheet" href="resources/css/detail.css">
+    <link rel="stylesheet" href="resources/css/order.css">
 </head>
 <body>
 
@@ -32,121 +32,34 @@
                 <img src="resources/images/banner/banner01.jpg" alt="">
             </div>
 
-            <!--office info-->
-            <div class="office-info border-tb">
-                <div class="banner-text">
-                    <p class="ellipsis">
-                        <span class="detail-icon"></span>[朝阳-望京]望京街与阜安西路交叉路口</p>
-                </div>
-                <div class="house_msg_tit clearfix">
-                    <div><i></i><span>7.0元/㎡/天</span></div>
-                    <div><i></i><span>100套房源可租</span></div>
-                    <span class="hou_line"></span>
-                </div>
-                <div class="house_msg_content clearfix">
-                    <span>建筑面积：<i>100㎡</i></span>
-                    <span>总户数：<i>100</i></span>
-                    <span>楼盘级别：<i>豪华住宅</i></span>
-                    <span>空置比例：<i>1:100</i></span>
-                    <span>物业公司：<i>CBD</i></span>
-                    <span>物业费：<i></i>1.8</span>
-                </div>
+            <div class="build_price_wrap clearfix">
+                <span><i>24950</i>元/月</span>
+                <span>7.0元/㎡/天</span>
             </div>
 
-            <!--house info-->
-            <div class="mb08 houseInfo">
-                <div id="houseScroll">
-                    <div class="size_wrap">
-                        <div class="size_box clearfix">
-                            <div>全部</div>
-                            <div>0-100㎡</div>
-                            <div>100-200㎡</div>
-                            <div>200-300㎡</div>
-                            <div>300-500㎡</div>
-                            <div>500-1000㎡</div>
-                            <div>1000-2000㎡</div>
-                        </div>
-                        <div class="size_content">
-                            <div class="size_con_sub">
-                                <a href="javascript:;" class="dz-list clearfix">
-                                    <div class="dz_img_wrap">
-                                        <img src="resources/images/house/house01.jpg" alt="">
-                                        <div class="img_number">12图</div>
-                                    </div>
-                                    <div class="dz_msg fl">
-                                        <span>24049元/月</span>
-                                        <span><i>105㎡</i><i>毛坯</i><i>12层</i></span>
-                                        <span>13-20个工位</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+            <div class="build_common_msg_wrap">
+                <a href="javascript:;"><span>面积</span><i>165㎡</i></a>
+                <a href="javascript:;"><span>工位</span><i>13-20</i></a>
+                <a href="javascript:;"><span>装修</span><i>毛坯</i></a>
+                <span class="common_ver_line"></span>
+                <span class="common_ver_line second"></span>
+            </div>
+
+            <div class="weixin_wrap">
+                <div class="weixin_head clearfix">
+                    <span class="fl">楼层：<i>12/29</i></span>
+                    <span class="fl">车位：<i>无</i></span>
+                    <span class="fl">租赁权限：<i>航远房源</i></span>
+                    <span class="fl">有无租户：<i>有</i></span>
+                </div>
+                <div class="weixin_bot clearfix">
+                    <img class="fl weixin_img" src="resources/images/ys_weixin.jpg" alt="">
+                    <div class="fl weixin_bot_box">
+                        <span>销售顾问：<i>张三</i></span>
+                        <span>联系方式：<i class="con_telephone">010-6726526</i></span>
+                        <span class="weixin_tips">扫描或者长按识别二维码添加销售顾问为好友</span>
                     </div>
                 </div>
-
-
-                <a href="javascript:;" id="houseListMore" class="btn-more">查看更多</a>
-            </div>
-
-            <!--detail-list-->
-            <div class="detail-list pt20 mb08 border-tb bg-white">
-                <h2 class="sort-title tc fb mb10">楼盘参数</h2>
-                <ul class="clearfix pv15">
-                    <li><span>得房率</span>65％</li>
-                    <li><span>业主类型</span>
-
-                        大业主+小业主
-                    </li>
-                    <li><span>层数</span>47层</li>
-                    <li><span>物业等级</span>甲级</li>
-                    <li><span>净层高</span>
-                        2.7米
-                    </li>
-                    <li><span>物业费</span>
-                        24元/㎡·月
-                    </li>
-                    <li><span>物业类型</span>办公楼</li>
-                    <li><span>开发商</span>SOHO中国</li>
-                    <li><span>均价</span>6.5元/m²·天</li>
-                    <li><span>停车位数量</span>1800</li>
-
-                    <li><span>停车费</span>1500元/月</li>
-                    <li><span>竣工时间</span>2013-12-01</li>
-                    <li><span>占地面积</span>暂无数据</li>
-                    <li><span>标准层面积</span>2500m²</li>
-                    <li><span>地上层数</span>47</li>
-                    <li><span>地下层数</span>暂无数据</li>
-
-                    <li><span>容积率</span>8.1</li>
-                    <li><span>绿化率</span>30%</li>
-                </ul>
-                <a href="/introduce/184" class="btn-more">查看楼盘简介</a>
-            </div>
-
-            <!--map-->
-            <div class="pt20 mb08 border-tb bg-white" id="kuan">
-                <h2 class="sort-title tc fb mb20">周边配套</h2>
-                <div class="map-box">
-                    <img id="map-pic" src="resources/images/v2.png" class="mt0">
-                </div>
-                <ul class="text-gray6 clearfix ph15">
-                    <li class="supporting-item">
-                        <i class="supporting-icon sup-ct"></i>
-                        <span class="db">餐厅 <b class="text-black">33</b></span>
-                    </li>
-                    <li class="supporting-item">
-                        <i class="supporting-icon sup-jd"></i>
-                        <span class="db">酒店 <b class="text-black">25</b></span>
-                    </li>
-                    <li class="supporting-item">
-                        <i class="supporting-icon sup-js"></i>
-                        <span class="db">健身 <b class="text-black">4</b></span>
-                    </li>
-                    <li class="supporting-item">
-                        <i class="supporting-icon sup-yh"></i>
-                        <span class="db">银行 <b class="text-black">22</b></span>
-                    </li>
-                </ul>
             </div>
 
         </div>
@@ -164,10 +77,20 @@
             </div>
             <a href="javascript:;" class="log_out_btn">退出登录</a>
         </div>
+
     </section>
+
 
 </div>
 
+<div class="tel-order clearfix">
+
+    <a id="favoriteA" href="javascript:" class="order--attention clearfix">
+        <i id="favorite" class="detail-icon" fl></i>
+        <p class="fl">关注</p></a>
+    <a id="semwaploupanxiangqingdibu400" href="javascript:;" class="phone--tel-order">
+        <img src="resources/images/icons/phone-icon.png" class="mr05 mt-3">一键拨号</a>
+</div>
 
 <script src="resources/js/jquery-1.10.2.min.js"></script>
 <script src="resources/plugin/swiper/js/swiper.jquery.min.js"></script>

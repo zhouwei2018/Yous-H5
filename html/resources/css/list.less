@@ -11,8 +11,7 @@ section {
   height: .62rem;
   line-height: .62rem;
   padding-left: .7rem;
-  margin-top: .12rem;
-  margin-left: 1.12rem;
+  margin: .12rem 0 0 1.7rem;
   background: @cl_white url(../images/icons/detail-icon.png) .16rem .06rem no-repeat;
   background-size: .48rem auto;
   border-radius: .1rem;
@@ -100,6 +99,10 @@ section {
 
 //筛选结果start
 
+.ys_listcon {
+  background-color: @cl_white;
+}
+
 .supply_box {
   display: block;
   position: relative;
@@ -107,6 +110,10 @@ section {
   padding: .3rem 0;
   border-bottom: 1px solid @bdc_line;
   z-index: 1;
+  overflow: hidden;
+  &:last-of-type{
+    border-bottom: none;
+  }
 }
 
 .supply_price {
@@ -125,13 +132,17 @@ section {
 
 .supply {
   width: auto;
-  height: 74px;
+  height: 1.48rem;
   dt {
     float: left;
     position: relative;
-    width: 111px;
-    height: 74px;
+    width: 2.22rem;
+    height: 1.48rem;
     margin-right: .2rem;
+    > img {
+      width: 2.22rem;
+      height: 1.48rem;
+    }
     .icon720 {
       position: absolute;
       display: block;
@@ -145,7 +156,7 @@ section {
       img {
         width: .52rem;
         height: .3rem;
-        margin-top: 3px;
+        margin-top: .06rem;
       }
     }
   }
@@ -156,7 +167,7 @@ section {
   color: @cl_999;
   dd {
     font-size: @font24;
-    color: #302F35;
+    color: @cl_black;
     &.supply_house {
       width: 57%;
       font-size: @font30;
@@ -177,7 +188,7 @@ section {
 }
 
 .supply_tag {
-  height: 19px;
+  height: .38rem;
   dd {
     float: left;
     padding: 0 .1rem;
@@ -189,42 +200,7 @@ section {
 
 //内容结束
 
-//左侧侧边栏
-.portrait {
-  width: 80px;
-  height: 80px;
-  margin: 20px auto;
-  background-color: @cl_blue;
-  border-radius: 50%;
-}
 
-.ys_function {
-  a {
-    display: block;
-    padding: 10px 0;
-    margin: 0 20px;
-    border-bottom: 1px solid @bdc_input;
-  }
-}
-
-.log_out_btn {
-  width: 2rem;
-  height: .8rem;
-  line-height: .8rem;
-  display: block;
-  border-radius: .08rem;
-  text-align: center;
-  border: 1px solid @cl_black;
-  position: absolute;
-  left: 50%;
-  bottom: 3rem;
-  margin-left: -1rem;
-  &:hover{
-    background-color: @cl_black;
-    color: @cl_white;
-  }
-
-}
 
 
 

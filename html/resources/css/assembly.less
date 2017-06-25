@@ -3,11 +3,48 @@
 .main-nav-wrapper {
   position: fixed;
   left: -100%;
-  width: 50%;
-  max-width: 480px;
+  width: 75%;
   height: 100%;
   top: 0;
   display: none;
   background-color: #fff;
+}
+
+//左侧侧边栏
+.portrait {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  background-color: @cl_black;
+}
+
+.ys_function {
+  a {
+    display: block;
+    padding: .3rem 0;
+    margin: 0 .4rem;
+    border-bottom: 1px solid @bdc_input;
+  }
+}
+
+.log_out_btn {
+  width: 2rem;
+  height: .8rem;
+  line-height: .8rem;
+  display: block;
+  border-radius: .08rem;
+  text-align: center;
+  border: 1px solid @cl_black;
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  margin-left: -1rem;
+  &:hover {
+    background-color: @cl_black;
+    color: @cl_white;
+  }
+
 }
 
