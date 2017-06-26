@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="resources/plugin/swiper/css/swiper.css">
 
     <link rel="stylesheet" href="resources/css/detail.css">
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=MhuuVxziXcOqWUAZ5vVEd4GBUdnZj0yO"></script>
+
 </head>
 <body>
 
@@ -126,10 +128,8 @@
             <!--map-->
             <div class="pt20 mb08 border-tb bg-white" id="kuan">
                 <h2 class="sort-title tc fb mb20">周边配套</h2>
-                <div class="map-box">
-                    <img id="map-pic" src="resources/images/v2.png" class="mt0">
-                </div>
-                <ul class="text-gray6 clearfix ph15">
+                <div class="map-box" id="allmap"></div>
+                <ul class="text-gray6 clearfix ph15" id="map_item_ul">
                     <li class="supporting-item">
                         <i class="supporting-icon sup-ct"></i>
                         <span class="db">餐厅 <b class="text-black">33</b></span>
@@ -301,17 +301,31 @@
         $('body').css({'height': 'auto', 'overflow': 'auto'});
     }
 
+    //百度地图
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    var point = new BMap.Point(116.465709, 39.911134);
+    map.centerAndZoom(new BMap.Point(116.465709, 39.911134), 15);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);
 
-    //高德地图
-    var gaodeGPS ='116.459094777856,39.905484821076';
-
-    $("#map-pic").click(function(){
-        var lnglat = gaodeGPS;
-        if(gaodeGPS == '' || gaodeGPS == null){
-            lnglat = '116.465709'+'39.911134';
+    var gaodeGPS = '116.459094777856,39.905484821076';
+    map.addEventListener("click", function (e) {   //点击事件
+        if (gaodeGPS == '' || gaodeGPS == null) {
+            lnglat = '116.465709' + '39.911134';
         }
-        location.href = "http://m.amap.com/around/?locations="+lnglat+"&keywords=餐厅,酒店,健身,银行&defaultIndex=3&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
-    })
+        location.href = "http://m.amap.com/around/?locations=" + gaodeGPS + "&keywords=餐厅,酒店,健身,银行&defaultIndex=1&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
+
+    });
+
+    //标签点击
+    $('#map_item_ul li').click(function () {
+    var index=$(this).index()+1;
+        location.href = "http://m.amap.com/around/?locations=" + gaodeGPS + "&keywords=餐厅,酒店,健身,银行&defaultIndex="+index+"&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
+
+    });
 
 
 </script>
