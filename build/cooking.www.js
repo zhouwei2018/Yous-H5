@@ -3,11 +3,11 @@ var webpack = require('webpack');
 var config = require('./config');
 
 cooking.set({
-  entry: './www/entry.js',
+  entry: './www/main.js',
   dist: './www/dist',
-  template: './www/index.tpl',
+  template: './www/index.html',
   devServer: {
-    port: 8082,
+    port: 9090,
     host: require('my-local-ip')(),
     publicPath: '/',
     log: false
@@ -19,7 +19,7 @@ cooking.set({
   urlLoaderLimit: 10000,
   extractCSS: true,
   sourceMap: true,
-  extends: ['vue2', 'lint', 'saladcss', 'buble'],
+  extends: ['vue2', 'saladcss', 'buble'],
   alias: config.alias,
   externals: process.env.NODE_ENV === 'production' ? {
     vue: 'Vue',
