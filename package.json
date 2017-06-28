@@ -37,6 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "array-find-index": "^1.0.2",
+    "jquery": "^3.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "raf.js": "0.0.4",

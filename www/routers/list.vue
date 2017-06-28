@@ -1,4 +1,4 @@
-<style lang="less">
+<style scoped lang="less">
   @import "../resources/css/website/list.less";
 </style>
 <template>
@@ -192,9 +192,9 @@
                       </div>
                       <dl class="supply">
                           <dt>
-                              <img src="resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片" >
+                              <img src="../resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片" >
                               <span class="icon720">
-                                  <img src="resources/images/icons/y720-icon.png">
+                                  <img src="../resources/images/icons/y720-icon.png">
                               </span>
                           </dt>
                           <dd class="supply_msg_box">
@@ -220,9 +220,9 @@
                       </div>
                       <dl class="supply">
                           <dt>
-                              <img src="resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片" >
+                              <img src="../resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片" >
                               <span class="icon720">
-                                  <img src="resources/images/icons/y720-icon.png">
+                                  <img src="../resources/images/icons/y720-icon.png">
                               </span>
                           </dt>
                           <dd class="supply_msg_box">
@@ -248,9 +248,9 @@
                       </div>
                       <dl class="supply">
                           <dt>
-                              <img src="resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片" >
+                              <img src="../resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片" >
                               <span class="icon720">
-                                  <img src="resources/images/icons/y720-icon.png">
+                                  <img src="../resources/images/icons/y720-icon.png">
                               </span>
                           </dt>
                           <dd class="supply_msg_box">
@@ -279,7 +279,7 @@
       <!--左侧登录div-->
       <div class="main-nav-wrapper sidenav">
           <div class="user-box clearfix">
-              <img class="portrait" src="resources/images/lion_logo2.png" alt="">
+              <img class="portrait" src="../resources/images/lion_logo2.png" alt="">
               <div class="user_name tc mb20">用户名</div>
               <div class="ys_function tc">
                   <a href="javascript:;">房源列表</a>
@@ -295,4 +295,11 @@
 <script>
 import header1 from '../components/header.vue';
 import footer1 from '../components/footer.vue';
+import '../resources/js/list.js';
+export default {
+    components: {header1, footer1},
+    data () {
+        return {}
+      }
+    }
 </script>
