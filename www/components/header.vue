@@ -1,7 +1,7 @@
 <style lang="less">
     @import "../resources/css/reset.less";
     @import "../resources/css/color.less";
-    @import "../resources/css/assembly.less";
+    @import "../resources/css/base.less";
 </style>
 <template>
   <div header>
@@ -88,8 +88,7 @@
                   $(".section").animate({
                       left: '0'
                   }, 150);
-                  side = false;
-                  removeEvent();
+                  this.popupVisible = false;
                   $("#zhezhao").remove();
                   $('html').css({'height': 'auto', 'overflow': 'auto'});
                   $('body').css({'height': 'auto', 'overflow': 'auto'});

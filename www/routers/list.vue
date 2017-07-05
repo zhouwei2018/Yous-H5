@@ -2,11 +2,14 @@
   @import "../resources/css/website/list.less";
 </style>
 <template>
-  <div class="contentDiv">
+  <div>
+      <!--header-->
+      <section  id="header">
+          <header1></header1>
+      </section>
+      <!--header end-->
+      <!--context-->
       <section id="section" class="pr">
-          <!--header-->
-            <header1></header1>
-          <!--header end-->
           <div class="option">
               <div class="filtate-outter">
                   <div class="list-filtrate">
@@ -270,10 +273,9 @@
               </div>
 
           </div>
-
           <div class="mask" id="maskEl" style="display:none;"></div>
-
       </section>
+        <!--context end-->
   </div>
 </template>
 

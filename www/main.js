@@ -21,12 +21,16 @@ var router = new VueRouter({
     hashbang: false,
     routes: [
         {
-            path: '/index',
+            path: '/list',
             component: require('./routers/list.vue')
         },
         {
+            path: '/detail',
+            component: require('./routers/detail.vue')
+        },
+        {
             path: '*',
-            redirect: '/index'
+            component: require('./routers/list.vue')
         }
 
     ]
