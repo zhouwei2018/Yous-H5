@@ -41,6 +41,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "raf.js": "0.0.4",
+    "swiper": "^3.4.2",
     "vue-lazyload": "^1.0.1",
     "vue-resource": "^1.3.4"
   },

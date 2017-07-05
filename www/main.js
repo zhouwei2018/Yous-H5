@@ -29,6 +29,10 @@ var router = new VueRouter({
             component: require('./routers/detail.vue')
         },
         {
+            path: '/order',
+            component: require('./routers/order.vue')
+        },
+        {
             path: '*',
             component: require('./routers/list.vue')
         }
