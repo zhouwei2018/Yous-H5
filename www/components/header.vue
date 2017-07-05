@@ -43,6 +43,7 @@
       };
     },
     methods: {
+
       showMenu:function () {
         this.popupVisible=true;
         var wwd = $("#section").width();
@@ -76,7 +77,22 @@
             $('body').css({'height': '100%', 'overflow': 'hidden'});
             $("#zhezhao").on("click",
                 function () {
-                    removeAll();
+                  $('.sidenav').animate({
+                      left: '-100%'
+                  }, 150, function () {
+                      $('.sidenav').hide();
+                  });
+                  $("#section").animate({
+                      left: '0'
+                  }, 150);
+                  $(".section").animate({
+                      left: '0'
+                  }, 150);
+                  side = false;
+                  removeEvent();
+                  $("#zhezhao").remove();
+                  $('html').css({'height': 'auto', 'overflow': 'auto'});
+                  $('body').css({'height': 'auto', 'overflow': 'auto'});
                 }
             )
         });
@@ -87,10 +103,17 @@
             left: "75%"
         }, 150);
 
-
-
       }
 
-    }
+    },
+      mounted: function () {
+
+        $(function () {
+            /*侧滑页显示*/
+            $(".side-nav").click(function () {
+                this.sideclick();
+            });
+        });
+      }
   };
 </script>

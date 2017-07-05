@@ -62,9 +62,9 @@ cooking.set({
         ]
     },
     plugins: [
-  		new webpack.ProvidePlugin({
-  		jQuery: "jquery",
-  		$: "jquery"
+		new webpack.ProvidePlugin({
+		jQuery: "jquery",
+		$: "jquery"
 		})
 	],
   clean: true,

@@ -2,11 +2,11 @@
  * Created by aresn on 16/6/20.
  */
 import Vue from 'vue';
+import App from './app.vue';
 import $ from 'jquery';
+import Mint from 'mint-ui';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import App from './app.vue';
-import Mint from 'mint-ui';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
