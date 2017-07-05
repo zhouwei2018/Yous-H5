@@ -4,11 +4,9 @@
 <template>
   <div class="contentDiv">
       <section id="section" class="pr">
-
           <!--header-->
             <header1></header1>
           <!--header end-->
-
           <div class="option">
               <div class="filtate-outter">
                   <div class="list-filtrate">
@@ -276,26 +274,12 @@
           <div class="mask" id="maskEl" style="display:none;"></div>
 
       </section>
-      <!--左侧登录div-->
-      <div class="main-nav-wrapper sidenav">
-          <div class="user-box clearfix">
-              <img class="portrait" src="../resources/images/lion_logo2.png" alt="">
-              <div class="user_name tc mb20">用户名</div>
-              <div class="ys_function tc">
-                  <a href="javascript:;">房源列表</a>
-                  <a href="javascript:;">房源信息采集</a>
-                  <a href="javascript:;">待办任务</a>
-              </div>
-          </div>
-          <a href="javascript:;" class="log_out_btn">退出登录</a>
-      </div>
   </div>
 </template>
 
 <script>
 import header1 from '../components/header.vue';
 import footer1 from '../components/footer.vue';
-import '../resources/js/list.js';
 export default {
     components: {header1, footer1},
     data () {

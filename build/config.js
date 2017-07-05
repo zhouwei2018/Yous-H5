@@ -25,10 +25,10 @@ exports.pkg = Object.assign({
 
 exports.alias = {
   'mint-ui': path.join(__dirname, '..'),
-  'src': path.join(__dirname, '../src')
+  'src': path.join(__dirname, '../src'),
+  'jquery': path.join(__dirname, '../node_modules/jquery/dist/jquery.js')
 };
 
 exports.jsexclude = /node_modules|lib/;
 
 exports.extends = ['vue2', 'saladcss', 'buble'];
-

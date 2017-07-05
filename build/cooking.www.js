@@ -61,6 +61,12 @@ cooking.set({
             { test: /\.(html|tpl)$/, loader: 'html-loader' }
         ]
     },
+    plugins: [
+  		new webpack.ProvidePlugin({
+  		jQuery: "jquery",
+  		$: "jquery"
+		})
+	],
   clean: true,
   hash: true,
   publicPath: '/mint-ui/',
@@ -72,6 +78,8 @@ cooking.set({
   alias: config.alias,
   externals: process.env.NODE_ENV === 'production' ? {
     vue: 'Vue',
+    jQuery: "jquery",
+		$: "jquery",
     'vue-router': 'VueRouter',
     'fastclick': 'FastClick'
   } : {}

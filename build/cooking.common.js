@@ -12,7 +12,13 @@ cooking.set({
   extractCSS: 'style.css',
   extends: ['vue2', 'saladcss', 'buble'],
   alias: config.alias,
-  externals: config.pkg
+  externals: config.pkg，
+  plugins: [
+		new webpack.ProvidePlugin({
+		jQuery: "jquery",
+		$: "jquery"
+		})
+	]
 });
 
 cooking.remove('output.publicPath');
