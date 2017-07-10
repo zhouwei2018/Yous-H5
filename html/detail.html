@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼狮详情页</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/assembly.css">
+    <link rel="stylesheet" href="resources/plugin/swiper/css/swiper.css">
+
+    <link rel="stylesheet" href="resources/css/detail.css">
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=MhuuVxziXcOqWUAZ5vVEd4GBUdnZj0yO"></script>
+
+</head>
+<body>
+
+<div class="contentDiv">
+
+    <section id="section" class="pr">
+
+        <!--header start-->
+        <header id="header">
+            <label class="side_nav side-nav">
+                <img src="resources/images/ys_more.png" width="20" alt="">
+            </label>
+            <i class="location_icon"></i>
+        </header>
+        <!--header end-->
+
+        <div class="detail-container mb60">
+            <!--banner-->
+            <div id="slideBox" class="slideBox">
+                <img src="resources/images/banner/banner01.jpg" alt="">
+            </div>
+
+            <!--office info-->
+            <div class="office-info border-tb">
+                <div class="banner-text">
+                    <p class="ellipsis">
+                        <span class="detail-icon"></span>[朝阳-望京]望京街与阜安西路交叉路口</p>
+                </div>
+                <div class="house_msg_tit clearfix">
+                    <div><i></i><span>7.0元/㎡/天</span></div>
+                    <div><i></i><span>100套房源可租</span></div>
+                    <span class="hou_line"></span>
+                </div>
+                <div class="house_msg_content clearfix">
+                    <span>建筑面积：<i>100㎡</i></span>
+                    <span>总户数：<i>100</i></span>
+                    <span>楼盘级别：<i>豪华住宅</i></span>
+                    <span>空置比例：<i>1:100</i></span>
+                    <span>物业公司：<i>CBD</i></span>
+                    <span>物业费：<i></i>1.8</span>
+                </div>
+            </div>
+
+            <!--house info-->
+            <div class="mb08 houseInfo">
+                <div id="houseScroll">
+                    <div class="size_wrap">
+                        <div class="size_box clearfix">
+                            <div>全部</div>
+                            <div>0-100㎡</div>
+                            <div>100-200㎡</div>
+                            <div>200-300㎡</div>
+                            <div>300-500㎡</div>
+                            <div>500-1000㎡</div>
+                            <div>1000-2000㎡</div>
+                        </div>
+                        <div class="size_content">
+                            <div class="size_con_sub">
+                                <a href="order.html" class="dz-list clearfix">
+                                    <div class="dz_img_wrap">
+                                        <img src="resources/images/house/house01.jpg" alt="">
+                                        <div class="img_number">12图</div>
+                                    </div>
+                                    <div class="dz_msg fl">
+                                        <span>24049元/月</span>
+                                        <span><i>105㎡</i><i>毛坯</i><i>12层</i></span>
+                                        <span>13-20个工位</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <a href="javascript:;" id="houseListMore" class="btn-more">查看更多</a>
+            </div>
+
+            <!--detail-list-->
+            <div class="detail-list pt20 mb08 border-tb bg-white">
+                <h2 class="sort-title tc fb mb10">楼盘参数</h2>
+                <ul class="clearfix pv15">
+                    <li><span>得房率</span>65％</li>
+                    <li><span>业主类型</span>
+
+                        大业主+小业主
+                    </li>
+                    <li><span>层数</span>47层</li>
+                    <li><span>物业等级</span>甲级</li>
+                    <li><span>净层高</span>
+                        2.7米
+                    </li>
+                    <li><span>物业费</span>
+                        24元/㎡·月
+                    </li>
+                    <li><span>物业类型</span>办公楼</li>
+                    <li><span>开发商</span>SOHO中国</li>
+                    <li><span>均价</span>6.5元/m²·天</li>
+                    <li><span>停车位数量</span>1800</li>
+
+                    <li><span>停车费</span>1500元/月</li>
+                    <li><span>竣工时间</span>2013-12-01</li>
+                    <li><span>占地面积</span>暂无数据</li>
+                    <li><span>标准层面积</span>2500m²</li>
+                    <li><span>地上层数</span>47</li>
+                    <li><span>地下层数</span>暂无数据</li>
+
+                    <li><span>容积率</span>8.1</li>
+                    <li><span>绿化率</span>30%</li>
+                </ul>
+                <a href="/introduce/184" class="btn-more">查看楼盘简介</a>
+            </div>
+
+            <!--map-->
+            <div class="pt20 mb08 border-tb bg-white" id="kuan">
+                <h2 class="sort-title tc fb mb20">周边配套</h2>
+                <div class="map-box" id="allmap"></div>
+                <ul class="text-gray6 clearfix ph15" id="map_item_ul">
+                    <li class="supporting-item">
+                        <i class="supporting-icon sup-ct"></i>
+                        <span class="db">餐厅 <b class="text-black">33</b></span>
+                    </li>
+                    <li class="supporting-item">
+                        <i class="supporting-icon sup-jd"></i>
+                        <span class="db">酒店 <b class="text-black">25</b></span>
+                    </li>
+                    <li class="supporting-item">
+                        <i class="supporting-icon sup-js"></i>
+                        <span class="db">健身 <b class="text-black">4</b></span>
+                    </li>
+                    <li class="supporting-item">
+                        <i class="supporting-icon sup-yh"></i>
+                        <span class="db">银行 <b class="text-black">22</b></span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--左侧登录div-->
+        <div class="main-nav-wrapper sidenav">
+            <div class="user-box clearfix">
+                <img class="portrait" src="resources/images/lion_logo2.png" alt="">
+                <div class="user_name tc mb20">用户名</div>
+                <div class="ys_function tc">
+                    <a href="javascript:;">房源列表</a>
+                    <a href="javascript:;">房源信息采集</a>
+                    <a href="javascript:;">待办任务</a>
+                </div>
+            </div>
+            <a href="javascript:;" class="log_out_btn">退出登录</a>
+        </div>
+    </section>
+
+</div>
+
+
+<script src="resources/js/jquery-1.10.2.min.js"></script>
+<script src="resources/plugin/swiper/js/swiper.jquery.min.js"></script>
+<script>
+    var side = false;
+
+    var startX = 0;
+    var startY = 0;
+
+
+    $(function () {
+
+        /*侧滑页显示*/
+        $(".side-nav").click(function () {
+            sideclick();
+        });
+    });
+
+    //touchstart事件
+    function touchSatrtFunc(evt) {
+        try {
+            //evt.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等
+
+            var touch = evt.touches[0]; //获取第一个触点
+            var x = Number(touch.pageX); //页面触点X坐标
+            var y = Number(touch.pageY); //页面触点Y坐标
+            //记录触点初始位置
+            startX = x;
+            startY = y;
+            //var text = 'TouchStart事件触发：（' + x + ', ' + y + '）';
+            //document.getElementById("result").innerHTML = text;
+        }
+        catch (e) {
+            alert('touchSatrtFunc：' + e.message);
+        }
+    }
+    //touchmove事件，这个事件无法获取坐标
+    function touchMoveFunc(evt) {
+        try {
+            //evt.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等
+            var touch = evt.touches[0]; //获取第一个触点
+            var x = Number(touch.pageX); //页面触点X坐标
+            var y = Number(touch.pageY); //页面触点Y坐标
+
+            //var text = 'TouchMove事件触发：（' + x + ', ' + y + '）';
+            //判断滑动方向
+            if (x - startX < 100) {
+                removeAll();
+
+            }
+            //document.getElementById("result").innerHTML = text;
+        }
+        catch (e) {
+            alert('touchMoveFunc：' + e.message);
+        }
+    }
+    function bindEvent() {
+        document.addEventListener('touchstart', touchSatrtFunc, false);
+        document.addEventListener('touchmove', touchMoveFunc, false);
+    }
+    function removeEvent() {
+        document.removeEventListener("touchstart", touchSatrtFunc, false);
+        document.removeEventListener("touchmove", touchMoveFunc, false);
+    }
+    function sideclick() {
+        if (0 == side) {
+            var wwd = $("#section").width();
+            if (!wwd) {
+                wwd = $(".section").width();
+            }
+            var wgd = $(window).height() + 50;
+            $("body").prepend('<div id="zhezhao"></div>');
+            $("#zhezhao").css({
+                width: "" + wwd + "px",
+                height: "" + wgd + "px",
+                "background-color": "#000",
+                "z-index": "12",
+                opacity: "0.5",
+                position: "absolute",
+                top: "0px",
+                left: "0px"
+            });
+            $(".sidenav").css("left", "-100%");
+            $(".sidenav").show();
+            $("#zhezhao").animate({
+                left: "75%"
+            }, 150);
+            $("#zhezhao").animate({
+                backgroundColor: "#000000"
+            }, 150);
+            $(".sidenav").animate({
+                left: "0"
+            }, 150, function () {
+                $('html').css({'height': '100%', 'overflow': 'hidden'});
+                $('body').css({'height': '100%', 'overflow': 'hidden'});
+                $("#zhezhao").on("click",
+                    function () {
+                        removeAll();
+                    }
+                )
+            });
+            $("#section").animate({
+                left: "75%"
+            }, 150);
+            $(".section").animate({
+                left: "75%"
+            }, 150);
+            side = true;
+            bindEvent();
+        } else {
+            removeAll();
+        }
+    }
+
+    function removeAll() {
+        $('.sidenav').animate({
+            left: '-100%'
+        }, 150, function () {
+            $('.sidenav').hide();
+        });
+        $("#section").animate({
+            left: '0'
+        }, 150);
+        $(".section").animate({
+            left: '0'
+        }, 150);
+        side = false;
+        removeEvent();
+        $("#zhezhao").remove();
+        $('html').css({'height': 'auto', 'overflow': 'auto'});
+        $('body').css({'height': 'auto', 'overflow': 'auto'});
+    }
+
+    //百度地图
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    var point = new BMap.Point(116.465709, 39.911134);
+    map.centerAndZoom(new BMap.Point(116.465709, 39.911134), 15);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);
+
+    var gaodeGPS = '116.459094777856,39.905484821076';
+    map.addEventListener("click", function (e) {   //点击事件
+        if (gaodeGPS == '' || gaodeGPS == null) {
+            lnglat = '116.465709' + '39.911134';
+        }
+        location.href = "http://m.amap.com/around/?locations=" + gaodeGPS + "&keywords=餐厅,酒店,健身,银行&defaultIndex=1&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
+
+    });
+
+    //标签点击
+    $('#map_item_ul li').click(function () {
+    var index=$(this).index()+1;
+        location.href = "http://m.amap.com/around/?locations=" + gaodeGPS + "&keywords=餐厅,酒店,健身,银行&defaultIndex="+index+"&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
+
+    });
+
+
+</script>
+
+</body>
+</html>

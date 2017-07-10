@@ -1,0 +1,284 @@
+@import "color";
+
+.detail-icon {
+  float: left;
+  display: block !important;
+  background: url("../images/icons/detail-icon-bg.png") no-repeat;
+  background-size: 3.3rem 2.2rem;
+}
+
+//banner start
+
+.slideBox {
+  position: relative;
+  img {
+    width: 100%;
+    height: 4.8rem;
+  }
+}
+
+//banner end
+
+.banner-text {
+  width: 100%;
+  padding: .26rem;
+  font-size: @font26;
+  color: @cl_666;
+  background-color: @cl_white;
+  p {
+    width: 70%;
+    .detail-icon {
+      width: .32rem;
+      height: .36rem;
+      margin-right: .12rem;
+      background: url("../images/icons/gps_icon.png") no-repeat;
+    }
+  }
+}
+
+.house_msg_tit {
+  position: relative;
+  padding-bottom: .2rem;
+  background-color: @cl_white;
+  margin-bottom: .1rem;
+  > div {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+  .hou_line {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: .4rem;
+    background-color: @bdc_ccc;
+  }
+}
+
+.house_msg_content {
+  padding: .16rem .24rem 0;
+  width: 100%;
+  margin-bottom: .1rem;
+  background-color: @cl_white;
+  > span {
+    float: left;
+    width: 50%;
+    font-size: @font24;
+    color: @cl_666;
+    margin-bottom: .15rem;
+    i {
+      margin-left: .2rem;
+    }
+  }
+
+}
+
+//office info start
+.border-tb {
+  overflow: hidden;
+}
+
+.office-info {
+  position: relative;
+}
+
+//office info end
+
+//house info start
+
+.houseInfo{
+  background-color: @cl_white;
+}
+
+.size_wrap {
+  overflow-x: scroll;
+}
+
+.size_con_sub{
+  border-top:1px solid @bdc_input;
+}
+.size_box {
+  width: 16.1rem;
+  border-bottom: 1px solid @bdc_input;
+  > div {
+    width: 2.3rem;
+    text-align: center;
+    height: .64rem;
+    line-height: .64rem;
+    float: left;
+  }
+}
+
+.dz-list {
+  padding: .2rem;
+  border-bottom: 1px dashed @bdc_input;
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: @font24;
+  .dz_img_wrap {
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    img {
+      width: 2.1rem;
+      height: 1.4rem;
+    }
+    .img_number{
+      position: absolute;
+      right:0;
+      bottom: 0;
+      width:.66rem;
+      height:.36rem;
+      color: @cl_white;
+      text-align: center;
+      line-height: .32rem;
+      background-color: @cl_black;
+    }
+  }
+  .dz_msg {
+    height: 1.4rem;
+    padding-left: 2.5rem;
+    span {
+      line-height: .48rem;
+      display: block;
+      i{
+        margin-right: .2rem;
+      }
+    }
+  }
+}
+
+.btn-more {
+  display: block;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: @font24;
+  color: @cl_999;
+  text-align: center;
+}
+
+//house info end
+
+.sort-title {
+  font-size: .3rem;
+  line-height: .42rem;
+}
+
+//detail-list start
+.detail-list {
+  ul {
+    li {
+      float: left;
+      width: 50%;
+      height: .8rem;
+      line-height: .8rem;
+      font-size: @font26;
+      color: @cl_black;
+      border-bottom: 1px solid @bdc_line;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      span {
+        float: left;
+        width: 40%;
+        line-height: .8rem;
+        margin-right: .3rem;
+        font-size: @font26;
+        color: @cl_999;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+//map start
+.map-box{
+  height:6rem;
+}
+
+.supporting-item {
+  float: left;
+  display: block;
+  position: relative;
+  width: 25%;
+  font-size: @font24;
+  text-align: center;
+}
+
+.supporting-icon {
+  display: inline-block;
+  width: .76rem;
+  height: .48rem;
+  background: url(http://img2.static.uban.com/www/images/detail-icon-bg.png) no-repeat;
+}
+
+.sup-ct {
+  background-position: -4.46rem -3rem;
+}
+
+.sup-jd {
+  background-position: -3.64rem -3rem;
+}
+
+.sup-js {
+  background-position: -2.06rem -3rem;
+}
+
+.sup-yh {
+  background-position: -2.86rem -3rem;
+}
+
+//footer
+.tel-order {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  color: @cl_white;
+  z-index: 1;
+  background-color: @cl_white;
+  box-shadow: 0 -.04rem .16rem 0 rgba(0, 0, 0, 0.10);
+  .detail-icon {
+    width: .42rem;
+    height: .42rem;
+  }
+  .order--attention {
+    .detail-icon {
+      margin: .18rem .2rem 0 0;
+      background-position: -2.03rem -.2rem;
+    }
+    p{
+      margin-top: .27rem;
+    }
+  }
+
+  a {
+    float: left;
+    line-height: .24rem;
+    padding: .14rem .3rem;
+    color: @cl_lightgray;
+    text-align: center;
+    &.phone--tel-order {
+      float: right;
+      display: block;
+      width: 75%;
+      padding: .34rem 0;
+      color: @cl_white;
+      text-align: center;
+      line-height: .32rem;
+      background-color: @cl_black;
+      img {
+        width: .3rem;
+      }
+    }
+  }
+
+}
+
+
+
