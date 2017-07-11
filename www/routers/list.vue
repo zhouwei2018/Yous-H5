@@ -246,6 +246,6 @@
     components: {header1, footer1},
     data () {
       return {}
-    }
+    },
   }
 </script>

@@ -106,13 +106,8 @@
 
     },
     mounted: function () {
+      var _this = this;
 
-      $(function () {
-        /*侧滑页显示*/
-        $(".side-nav").click(function () {
-          this.sideclick();
-        });
-      });
     }
   };
 </script>
