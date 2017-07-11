@@ -8,6 +8,10 @@
       <header1></header1>
     </section>
     <!--header end-->
+
+    <a href="javascript:;" class="detail-search" style="position: fixed;left: 0; top: 0">
+      <input type="text" id="keyword" placeholder="请输入关键字搜索" value="" maxlength="50">
+    </a>
     <!--context-->
     <section id="section" class="pr">
       <div class="option">
@@ -198,7 +202,7 @@
 
         <!--筛选结果start-->
         <div class="ys_listcon pv15">
-          <a class="supply_box" href="detail.html">
+          <router-link :to="{path:'/detail'}" class="supply_box">
             <div class="supply_price">
               <span>6.5</span> 元/㎡·天
               <i style="display: block">116-888㎡</i>
@@ -225,63 +229,7 @@
                 </dl>
               </dd>
             </dl>
-          </a>
-          <a class="supply_box" href="detail.html">
-            <div class="supply_price">
-              <span>6.5</span> 元/㎡·天
-              <i style="display: block">116-888㎡</i>
-            </div>
-            <dl class="supply">
-              <dt>
-                <img src="../resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片">
-                <span class="icon720">
-                                  <img src="../resources/images/icons/y720-icon.png">
-                              </span>
-              </dt>
-              <dd class="supply_msg_box">
-                <dl>
-                  <dd class="supply_house">望京SOHO</dd>
-                  <dd class="supply_color ellipsis">朝阳-CBD</dd>
-                  <dd class="supply_color ellipsis">180套房源可租</dd>
-                  <dd>
-                    <dl class="supply_tag clearfix">
-                      <dd class="tagClass">互联网</dd>
-                      <dd class="tagClass">LEED认证</dd>
-                      <dd class="tagClass">地标建筑</dd>
-                    </dl>
-                  </dd>
-                </dl>
-              </dd>
-            </dl>
-          </a>
-          <a class="supply_box" href="detail.html">
-            <div class="supply_price">
-              <span>6.5</span> 元/㎡·天
-              <i style="display: block">116-888㎡</i>
-            </div>
-            <dl class="supply">
-              <dt>
-                <img src="../resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片">
-                <span class="icon720">
-                                  <img src="../resources/images/icons/y720-icon.png">
-                              </span>
-              </dt>
-              <dd class="supply_msg_box">
-                <dl>
-                  <dd class="supply_house">望京SOHO</dd>
-                  <dd class="supply_color ellipsis">朝阳-CBD</dd>
-                  <dd class="supply_color ellipsis">180套房源可租</dd>
-                  <dd>
-                    <dl class="supply_tag clearfix">
-                      <dd class="tagClass">互联网</dd>
-                      <dd class="tagClass">LEED认证</dd>
-                      <dd class="tagClass">地标建筑</dd>
-                    </dl>
-                  </dd>
-                </dl>
-              </dd>
-            </dl>
-          </a>
+          </router-link>
         </div>
 
       </div>
