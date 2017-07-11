@@ -1,5 +1,15 @@
-@import "color";
-
+/*文字色*/
+/*黑色*/
+/*白色*/
+/*粉红色*/
+/*蓝色*/
+/*bg色*/
+/*背景默认色*/
+/*浅绿色*/
+/*边线颜色*/
+/*输入框描边*/
+/*hr*/
+/*字号*/
 .main-nav-wrapper {
   position: fixed;
   left: -100%;
@@ -9,27 +19,20 @@
   display: none;
   background-color: #fff;
 }
-
-//左侧侧边栏
 .portrait {
   width: 80px;
   height: 80px;
   display: block;
   margin: 20px auto;
   border-radius: 50%;
-  background-color: @cl_black;
+  background-color: #302f35;
 }
-
-.ys_function {
-  a {
-    display: block;
-    padding: .3rem 0;
-    margin: 0 .4rem;
-    border-bottom: 1px solid @bdc_input;
-  }
-
+.ys_function a {
+  display: block;
+  padding: .3rem 0;
+  margin: 0 .4rem;
+  border-bottom: 1px solid #e4e4e4;
 }
-
 .log_out_btn {
   width: 2rem;
   height: .8rem;
@@ -37,15 +40,13 @@
   display: block;
   border-radius: .08rem;
   text-align: center;
-  border: 1px solid @cl_black;
+  border: 1px solid #302f35;
   position: absolute;
   left: 50%;
   bottom: 3rem;
   margin-left: -1rem;
-  &:hover {
-    background-color: @cl_black;
-    color: @cl_white;
-  }
-
 }
-
+.log_out_btn:hover {
+  background-color: #302f35;
+  color: #fff;
+}
