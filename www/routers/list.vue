@@ -199,39 +199,39 @@
 
           </div>
         </div>
-
         <!--筛选结果start-->
-        <div class="ys_listcon pv15">
-          <router-link :to="{path:'/detail'}" class="supply_box">
-            <div class="supply_price">
-              <span>6.5</span> 元/㎡·天
-              <i style="display: block">116-888㎡</i>
-            </div>
-            <dl class="supply">
-              <dt>
-                <img src="../resources/images/det_list/det_list01.jpg" alt="望京SOHO大楼图片">
-                <span class="icon720">
-                                  <img src="../resources/images/icons/y720-icon.png">
-                              </span>
-              </dt>
-              <dd class="supply_msg_box">
-                <dl>
-                  <dd class="supply_house">望京SOHO</dd>
-                  <dd class="supply_color ellipsis">朝阳-CBD</dd>
-                  <dd class="supply_color ellipsis">180套房源可租</dd>
-                  <dd>
-                    <dl class="supply_tag clearfix">
-                      <dd class="tagClass">互联网</dd>
-                      <dd class="tagClass">LEED认证</dd>
-                      <dd class="tagClass">地标建筑</dd>
-                    </dl>
-                  </dd>
-                </dl>
-              </dd>
-            </dl>
-          </router-link>
-        </div>
-
+        <ul
+          v-infinite-scroll="loadMore"
+          infinite-scroll-disabled="loading"
+          infinite-scroll-distance="10">
+          <li class="ys_listcon pv15" v-for="item in resultData">
+            <router-link :to="{path:'/detail'}" class="supply_box">
+              <div class="supply_price">
+                <span>{{item.price}}</span> 元/㎡·天
+                <i style="display: block">{{item.max_areas}}㎡</i>
+              </div>
+              <dl class="supply">
+                <dt>
+                  <img :src="item.img_path" alt="大楼图片">
+                  <span class="icon720"><img src="../resources/images/icons/y720-icon.png"></span>
+                </dt>
+                <dd class="supply_msg_box">
+                  <dl>
+                    <dd class="supply_house">{{item.building_name}}</dd>
+                    <dd class="supply_color ellipsis">{{item.address}}</dd>
+                    <dd class="supply_color ellipsis">{{item.lease_nums}}套房源可租</dd>
+                    <dd>
+                      <dl class="supply_tag clearfix">
+                        <dd class="tagClass">互联网+</dd>
+                        <dd class="tagClass">LEED</dd>
+                      </dl>
+                    </dd>
+                  </dl>
+                </dd>
+              </dl>
+            </router-link>
+          </li>
+        </ul>
       </div>
       <div class="mask" id="maskEl" style="display:none;"></div>
     </section>
@@ -242,10 +242,110 @@
 <script>
   import header1 from '../components/header.vue';
   import footer1 from '../components/footer.vue';
+  import { Indicator } from 'mint-ui';
+  import { InfiniteScroll } from 'mint-ui';
+  import axios from 'axios';
+  import qs from 'qs';
   export default {
-    components: {header1, footer1},
-    data () {
-      return {}
+    components: {
+        header1,
+        footer1,
+        InfiniteScroll
     },
+    data () {
+      return {
+        loading:false,
+        getMore:true,
+        para: {
+          "search_keywork": "",
+          "district": "",
+          "business": "",
+          "line_id": "",
+          "station_id": "",
+          "area": "",
+          "price_dj": "",
+          "price_zj": "",
+          "label": "",
+          "orderby": "D",
+          "curr_page": 1,
+          "items_perpage": 10
+        },
+        resultData: []
+      }
+    },
+    mounted(){
+        Indicator.open({
+          text: '',
+          spinnerType: 'fading-circle'
+        });
+        this.init()
+    },
+    methods:{
+        init(){
+            this.getData();
+        },
+       getData(){
+            console.log("個體more")
+         var paraObj ={
+           "parameters": {
+             "search_keywork": "",
+             "district": "",
+             "business": "",
+             "line_id": "",
+             "station_id": "",
+             "area": "",
+             "price_dj": "",
+             "price_zj": "",
+             "label": "",
+             "orderby": "D",
+             "curr_page": this.para.curr_page,
+             "items_perpage": 10
+           },
+           "foreEndType": 2,
+           "code": "30000001"
+         }, this_ = this;
+         let successCb = function(result){
+              Indicator.close();
+              if(result.data.data.buildings.length>0){
+                if(result.data.data.buildings<this_.para.items_perpage){
+                    this_.getMore = false;
+                }
+                this_.resultData=this_.resultData.concat(result.data.data.buildings)
+                console.log(this_.resultData)
+              }
+         };
+         let errorCb = function(result){
+            Indicator.close({
+              text: '',
+              spinnerType: 'fading-circle'
+            });
+         };
+         this.gRemoteData(paraObj, successCb ,errorCb);
+       },
+       gRemoteData(paraobj, successcb, errorcb){
+        let instance = axios.create({
+          baseURL: 'http://116.62.71.76:8001/'
+        });
+        instance.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
+        instance.post('api/GetServiceApiResult',paraobj)
+          .then(function (response) {
+            if(typeof successcb==="function"){
+              successcb(response)
+            }
+          }).catch(function (error) {
+          if(typeof errorcb==="function"){
+            errorcb(error)
+          }
+        });
+      },
+      loadMore(){
+           if(this.getMore){
+             this.para.curr_page+=1;
+             this.loading = true;
+             this.getData();
+           }
+
+      }
+    }
   }
 </script>
