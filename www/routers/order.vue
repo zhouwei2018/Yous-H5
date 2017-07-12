@@ -52,7 +52,7 @@
         <a id="favoriteA" href="javascript:" class="order--attention clearfix">
           <i id="favorite" class="detail-icon" fl></i>
           <p class="fl">关注</p></a>
-        <a id="semwaploupanxiangqingdibu400" href="javascript:;" class="phone--tel-order">
+        <a id="semwaploupanxiangqingdibu400" href="tel:010-6726526" class="phone--tel-order">
           <img src="../resources/images/icons/phone-icon.png" class="mr05 mt-3">一键拨号</a>
       </div>
 
