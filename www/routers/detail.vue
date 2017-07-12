@@ -141,12 +141,15 @@
 <script>
   import header1 from '../components/header.vue';
   import footer1 from '../components/footer.vue';
+  import { Indicator } from 'mint-ui';
+  import { InfiniteScroll } from 'mint-ui';
   import swiper from 'swiper';
 
   export default {
     components: {
       header1,
-      footer1
+      footer1,
+
     },
     data () {
       return {
@@ -231,7 +234,9 @@
             "code": "30000002"
           }
         ).then(function (res) {
+
           var result = JSON.parse(res.bodyText);
+          Indicator.close();
           if (result.success) {
             if (result.data) {
 
@@ -268,7 +273,10 @@
         var _this = this;
 
         this.buildList = [];
-
+        Indicator.open({
+          text: '',
+          spinnerType: 'fading-circle'
+        });
         this.$http.post(
           this.$api,
           {
@@ -286,7 +294,7 @@
           }
         ).then(function (res) {
           var result = JSON.parse(res.bodyText);
-
+          Indicator.close();
           if (result.success) {
             _this.buildList = result.data.houses;
             if(_this.buildList.length){
@@ -339,7 +347,10 @@
     },
 
     mounted(){
-
+      Indicator.open({
+        text: '',
+        spinnerType: 'fading-circle'
+      });
       this.getSortList(); //获取筛选条件
       this.getDetail(); //获取楼盘详情
       this.getDetList(); //获取楼盘详情页楼盘列表
