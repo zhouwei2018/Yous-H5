@@ -159,7 +159,7 @@
     },
     data () {
       return {
-        building_id: '3013',
+        building_id: '',
         address: '',  //楼盘地址
         price: '',  //单价
         buildList: [], //结果列表
@@ -183,6 +183,8 @@
         building_level: '',//楼盘级别
         property_rights: '',//产权性质
         building_area: '',//建筑面积
+
+        gaodeGPS: '',
 
       }
     },
@@ -223,7 +225,6 @@
       //获取楼盘详情
       getDetail(){
         var _this = this;
-        //this.building_id = this.$route.query.building_id;
         this.$http.post(
           this.$api,
           {
@@ -256,6 +257,9 @@
               _this.address = '[' + _this.district + '-' + _this.business + '] ' + result.data.address;
               _this.price = result.data.price == null ? '--' : result.data.price;
               _this.positionData = result.data.longitude + ',' + result.data.latitude;
+
+              _this.bMap(_this.positionData);
+
               _this.building_level = result.data.building_level == null ? '--' : result.data.building_level;
 
 
@@ -350,10 +354,36 @@
 
       },
 
+      //百度地图
+      bMap(pos_data){
+        var _this = this;
+        var posArr = pos_data.split(',');
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        var point = new BMap.Point(posArr[0], posArr[1]);
+        map.centerAndZoom(new BMap.Point(posArr[0], posArr[1]), 15);  // 初始化地图,设置中心点坐标和地图级别
+        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+        //map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);
+
+        //标签点击
+
+        $('#map_item_ul li').click(function () {
+          var index = $(this).index() + 1;
+          location.href = "http://m.amap.com/around/?locations=" + pos_data + "&keywords=餐厅,酒店,健身,银行&defaultIndex=" + index + "&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
+
+        });
+
+
+      }
+
     },
 
-    mounted()
-    {
+    mounted(){
+      var _this = this;
+
+      this.building_id = this.$route.query.building_id;
 
       Indicator.open({
         text: '',
@@ -384,6 +414,7 @@
         autoplayDisableOnInteraction: true  //鼠标操作时关闭autopaly
 
       });
+
 
     }
   }

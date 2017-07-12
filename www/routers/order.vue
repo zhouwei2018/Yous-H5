@@ -17,7 +17,7 @@
         </div>
 
         <div class="build_price_wrap clearfix">
-          <span><i v-text="monthly_price"></i>元/月</span>
+          <span><i v-text="monthly_price"></i>万元/月</span>
           <span v-text="daily_price+'元/㎡/天'"></span>
         </div>
 

@@ -314,7 +314,7 @@
     var gaodeGPS = '116.459094777856,39.905484821076';
     map.addEventListener("click", function (e) {   //点击事件
         if (gaodeGPS == '' || gaodeGPS == null) {
-            lnglat = '116.465709' + '39.911134';
+          gaodeGPS = '116.465709' + '39.911134';
         }
         location.href = "http://m.amap.com/around/?locations=" + gaodeGPS + "&keywords=餐厅,酒店,健身,银行&defaultIndex=1&defaultView=&searchRadius=1000&key=cc238157d6183b1d54404a704bb86171&defaultView=map";
 

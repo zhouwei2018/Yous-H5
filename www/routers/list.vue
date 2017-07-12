@@ -205,7 +205,7 @@
           infinite-scroll-disabled="loading"
           infinite-scroll-distance="10">
           <li class="ys_listcon pv15" v-for="item in resultData">
-            <router-link :to="{path:'/detail'}" class="supply_box">
+            <router-link :to="{path:'/detail',query:{building_id:item.id}}" class="supply_box">
               <div class="supply_price">
                 <span>{{item.price}}</span> 元/㎡·天
                 <i style="display: block">{{item.max_areas}}㎡</i>
