@@ -30,10 +30,10 @@
           <div class="house_msg_content clearfix">
             <span>建筑面积：<i v-text="building_area+'㎡'"></i></span>
             <span>总户数：<i v-text="total_households"></i></span>
-            <span>楼盘级别：<i v-text=""></i></span>
-            <span>空置率：<i v-text=""></i></span>
-            <span>物业公司：<i>CBD</i></span>
-            <span>物业费：<i></i>1.8</span>
+            <span>楼盘级别：<i v-text="building_level"></i></span>
+            <span>空置率：<i v-text="vacancy_rate"></i></span>
+            <span>物业公司：<i v-text="property_company"></i></span>
+            <span>物业费：<i v-text="property_fee+'元/㎡·月'"></i></span>
           </div>
         </div>
 
@@ -42,53 +42,59 @@
           <div id="houseScroll">
             <div class="size_wrap">
               <div class="size_box clearfix">
-                <div>全部</div>
-                <div>0-100㎡</div>
-                <div>100-200㎡</div>
-                <div>200-300㎡</div>
-                <div>300-500㎡</div>
-                <div>500-1000㎡</div>
-                <div>1000-2000㎡</div>
-              </div>
-              <div class="size_content">
-                <div class="size_con_sub">
-                  <a href="order.html" class="dz-list clearfix">
-                    <div class="dz_img_wrap">
-                      <img src="../resources/images/house/house01.jpg" alt="">
-                      <div class="img_number">12图</div>
-                    </div>
-                    <div class="dz_msg fl">
-                      <span>24049元/月</span>
-                      <span><i>105㎡</i><i>毛坯</i><i>12层</i></span>
-                      <span>13-20个工位</span>
-                    </div>
-                  </a>
+
+                <div v-for="(item,index) in area_arr" v-if="index == 0"
+                     :id="item.code"
+                     :class="{active:areaActive == index}"
+                     @click="sel_area_list($event)"
+                     v-text="item.name">
                 </div>
+
+                <template v-else>
+                  <div v-if="index == area_arr.length-1"
+                       :class="{active:areaActive == index}"
+                       class="last"
+                       @click="sel_area_list($event)"
+                  >>{{item.minnum}}m²
+                  </div>
+                  <div v-else :class="{active:areaActive == index}"
+                       @click="sel_area_list($event)">{{item.minnum}}-{{item.maxnum}}m²
+                  </div>
+                </template>
+                <a></a>
               </div>
+            </div>
+            <!--搜索结果-->
+            <div class="size_content">
+              <div class="size_con_sub" v-for="item1 in buildList">
+                <router-link :to="{path:'order'}" class="dz-list clearfix">
+                  <div class="dz_img_wrap">
+                    <img :src="item1.housing_icon" alt="">
+                    <div class="img_number">12图</div>
+                  </div>
+                  <div class="dz_msg fl">
+                    <span v-text="item1.monthly_price+'万元/月'"></span>
+                    <span><i v-text="item1.housing_area+'㎡'"></i><i v-text="item1.decoration_level"></i></span>
+                    <span v-text="item1.workstation+'个工位'"></span>
+                  </div>
+                </router-link>
+              </div>
+
+              <div class="no_result" style="display: none" v-show="res_showFlag">暂无房源信息</div>
+
             </div>
           </div>
 
 
-          <a href="javascript:;" id="houseListMore" class="btn-more">查看更多</a>
+          <router-link :to="{path:'/list'}" id="houseListMore" v-show="more_flag" class="btn-more">查看更多</router-link>
         </div>
 
         <!--detail-list-->
         <div class="detail-list pt20 mb08 border-tb bg-white">
           <h2 class="sort-title tc fb mb10">楼盘参数</h2>
           <ul class="clearfix pv15">
-            <li><span>得房率</span>65％</li>
-            <li><span>业主类型</span>
-
-              大业主+小业主
-            </li>
-            <li><span>层数</span>47层</li>
             <li><span>物业等级</span>甲级</li>
-            <li><span>净层高</span>
-              2.7米
-            </li>
-            <li><span>物业费</span>
-              24元/㎡·月
-            </li>
+            <li><span>物业费</span>24元/㎡·月</li>
             <li><span>物业类型</span>办公楼</li>
             <li><span>开发商</span>SOHO中国</li>
             <li><span>均价</span>6.5元/m²·天</li>
@@ -96,10 +102,6 @@
 
             <li><span>停车费</span>1500元/月</li>
             <li><span>竣工时间</span>2013-12-01</li>
-            <li><span>占地面积</span>暂无数据</li>
-            <li><span>标准层面积</span>2500m²</li>
-            <li><span>地上层数</span>47</li>
-            <li><span>地下层数</span>暂无数据</li>
 
             <li><span>容积率</span>8.1</li>
             <li><span>绿化率</span>30%</li>
@@ -151,19 +153,63 @@
         building_id: '3013',
         address: '',  //楼盘地址
         price: '',  //单价
-        buildList:[], //结果列表
+        buildList: [], //结果列表
         total_items: '',  //可租房源总数
+        areaActive: 0,
+        area_arr: [], //面积条件数组
+
+        res_showFlag:false, //查询无结果showhide
+        more_flag:false, //查看更多
 
         area: "", //区域
         price_dj: "", // 单价
         price_zj: "", //总价
 
-        building_area:'', //建筑面积
-        total_households:'', //总户数
+        total_households: '', //总户数
+
+        vacancy_rate: '',//空置率
+        property_company: '',//物业公司
+        property_fee: '',//物业费
+        opening_date: '',//建成年代
+        building_level: '',//楼盘级别
+        property_rights: '',//产权性质
+        building_area: '',//建筑面积
 
       }
     },
     methods: {
+
+      //获取筛选条件
+      getSortList(){
+        var _this = this;
+        //调用区域查询接口，更新数据
+        this.$http.post(
+          this.$api,
+          {
+            "parameters": {},
+            "foreEndType": 2,
+            "code": "90000301"
+          }
+        ).then(function (res) {
+          var result = JSON.parse(res.bodyText);
+          if (result.success) {
+            _this.area_arr = result.data.range_areas; //面积arr
+
+            var all_area = {
+              code: "area_all",
+              name: "全部"
+            };
+            _this.area_arr.unshift(all_area);
+            $('.size_box').width(_this.area_arr.length*2.3+'rem');
+
+
+          } else {
+            this.$Message.error(result.message);
+          }
+        }, function (res) {
+          this.$Message.error('获取区域失败');
+        });
+      },
 
       //获取楼盘详情
       getDetail(){
@@ -193,13 +239,13 @@
 
 
               _this.total_households = result.data.total_households == "" ? '--' : result.data.total_households; //总户数
-
               _this.district = result.data.district == null ? '区域' : result.data.district; //区域
               _this.business = result.data.business == null ? '商圈' : result.data.business; //商圈
 
               _this.address = '[' + _this.district + '-' + _this.business + '] ' + result.data.address;
               _this.price = result.data.price == null ? '--' : result.data.price;
               _this.positionData = result.data.longitude + ',' + result.data.latitude;
+              _this.building_level = result.data.building_level == null ? '--' : result.data.building_level;
 
 
               //物业信息
@@ -243,19 +289,60 @@
 
           if (result.success) {
             _this.buildList = result.data.houses;
-            _this.total_items=result.data.total_items  == null ? '--' : result.data.total_items;
+            if(_this.buildList.length){
+              _this.res_showFlag=false; //不展示
+              _this.total_items = result.data.total_items == null ? '--' : result.data.total_items;
 
+              if(_this.buildList.length>3){
+                  _this.more_flag=true;
+              }
+
+            }else{
+                _this.res_showFlag=true;
+            }
           }
 
         }, function (res) {
           this.$Message.error('获取楼盘列表失败');
         });
       },
+
+      //选择面积筛选
+      sel_area_list(e){
+          $(e.target).addClass('active').siblings().removeClass('active');
+
+          this.area=[];
+
+        var min = 0, max = 0, sort_two_single = 1;
+        if ($(e.target).html() == '全部') {
+          this.area = "";
+
+        } else if ($(e.target).hasClass('last')) {
+          this.area = [];
+          min = Math.floor($(e.target).html().match(/\d+/g)[0]);
+          max = "";
+          this.area.push(min);
+          this.area.push(max);
+        } else {
+          this.area = [];
+          var area_fw=$(e.target).html().split('-');
+          min = Math.floor(area_fw[0]);
+          max = Math.floor(area_fw[1].match(/\d+/g)[0]);
+          this.area.push(min);
+          this.area.push(max);
+        }
+
+        this.getDetList();
+
+      },
+
     },
 
     mounted(){
-      this.getDetail();
-      this.getDetList();
+
+      this.getSortList(); //获取筛选条件
+      this.getDetail(); //获取楼盘详情
+      this.getDetList(); //获取楼盘详情页楼盘列表
     }
   }
 </script>
