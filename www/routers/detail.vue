@@ -1,5 +1,7 @@
 <style scoped lang="less">
   @import "../resources/css/website/detail.less";
+  @import "../resources/plugin/swiper/css/swiper.css"; /*swiper 轮播*/
+
 </style>
 <template>
   <div>
@@ -10,108 +12,130 @@
     <!--header end-->
     <!--context-->
     <section id="section" class="pr">
-      <div class="detail-container mb60">
+      <div class="detail-container">
         <!--banner-->
         <div id="slideBox" class="slideBox">
-          <img src="../resources/images/banner/banner01.jpg" alt="">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="../resources/images/banner/banner01.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="../resources/images/banner/banner02.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="../resources/images/banner/banner03.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="banner-page">
+              <span class="pageState"><span id="picIndex">1</span>/3</span>
+            </div>
+          </div>
+
         </div>
+      </div>
 
-        <!--office info-->
-        <div class="office-info border-tb">
-          <div class="banner-text">
-            <p class="ellipsis">
-              <span class="detail-icon"></span>{{address}}</p>
-          </div>
-          <div class="house_msg_tit clearfix">
-            <div><i></i><span v-text="price+'元/㎡/天'"></span></div>
-            <div><i></i><span v-text="total_items+'套房源可租'"></span></div>
-            <span class="hou_line"></span>
-          </div>
-          <div class="house_msg_content clearfix">
-            <span>建筑面积：<i v-text="building_area+'㎡'"></i></span>
-            <span>总户数：<i v-text="total_households"></i></span>
-            <span>楼盘级别：<i v-text="building_level"></i></span>
-            <span>空置率：<i v-text="vacancy_rate"></i></span>
-            <span>物业公司：<i v-text="property_company"></i></span>
-            <span>物业费：<i v-text="property_fee+'元/㎡·月'"></i></span>
-          </div>
+      <!--office info-->
+      <div class="office-info border-tb">
+        <div class="banner-text">
+          <p class="ellipsis">
+            <span class="detail-icon"></span>{{address}}</p>
         </div>
+        <div class="house_msg_tit clearfix">
+          <div><i></i><span v-text="price+'元/㎡/天'"></span></div>
+          <div><i></i><span v-text="total_items+'套房源可租'"></span></div>
+          <span class="hou_line"></span>
+        </div>
+        <div class="house_msg_content clearfix">
+          <span>建筑面积：<i v-text="building_area+'㎡'"></i></span>
+          <span>总户数：<i v-text="total_households"></i></span>
+          <span>楼盘级别：<i v-text="building_level"></i></span>
+          <span>空置率：<i v-text="vacancy_rate"></i></span>
+          <span>物业公司：<i v-text="property_company"></i></span>
+          <span>物业费：<i v-text="property_fee+'元/㎡·月'"></i></span>
+        </div>
+      </div>
 
-        <!--house info-->
-        <div class="mb08 houseInfo">
-          <div id="houseScroll">
-            <div class="size_wrap">
-              <div class="size_box clearfix">
+      <!--house info-->
+      <div class="mb08 houseInfo">
+        <div id="houseScroll">
+          <div class="size_wrap">
+            <div class="size_box clearfix">
 
-                <div v-for="(item,index) in area_arr" v-if="index == 0"
-                     :id="item.code"
+              <div v-for="(item,index) in area_arr" v-if="index == 0"
+                   :id="item.code"
+                   :class="{active:areaActive == index}"
+                   @click="sel_area_list($event)"
+                   v-text="item.name">
+              </div>
+
+              <template v-else>
+                <div v-if="index == area_arr.length-1"
                      :class="{active:areaActive == index}"
+                     class="last"
                      @click="sel_area_list($event)"
-                     v-text="item.name">
+                >>{{item.minnum}}m²
                 </div>
-
-                <template v-else>
-                  <div v-if="index == area_arr.length-1"
-                       :class="{active:areaActive == index}"
-                       class="last"
-                       @click="sel_area_list($event)"
-                  >>{{item.minnum}}m²
-                  </div>
-                  <div v-else :class="{active:areaActive == index}"
-                       @click="sel_area_list($event)">{{item.minnum}}-{{item.maxnum}}m²
-                  </div>
-                </template>
-                <a></a>
-              </div>
-            </div>
-            <!--搜索结果-->
-            <div class="size_content">
-              <div class="size_con_sub" v-for="item1 in buildList">
-                <router-link :to="{path:'order',query:{house_id:item1.id}}" class="dz-list clearfix">
-                  <div class="dz_img_wrap">
-                    <img :src="item1.housing_icon" alt="">
-                    <div class="img_number">12图</div>
-                  </div>
-                  <div class="dz_msg fl">
-                    <span v-text="item1.monthly_price+'万元/月'"></span>
-                    <span><i v-text="item1.housing_area+'㎡'"></i><i v-text="item1.decoration_level"></i></span>
-                    <span v-text="item1.workstation+'个工位'"></span>
-                  </div>
-                </router-link>
-              </div>
-
-              <div class="no_result" style="display: none" v-show="res_showFlag">暂无房源信息</div>
-
+                <div v-else :class="{active:areaActive == index}"
+                     @click="sel_area_list($event)">{{item.minnum}}-{{item.maxnum}}m²
+                </div>
+              </template>
+              <a></a>
             </div>
           </div>
+          <!--搜索结果-->
+          <div class="size_content">
+            <div class="size_con_sub" v-for="item1 in buildList">
+              <router-link :to="{path:'order',query:{house_id:item1.id}}" class="dz-list clearfix">
+                <div class="dz_img_wrap">
+                  <img :src="item1.housing_icon" alt="">
+                  <div class="img_number">12图</div>
+                </div>
+                <div class="dz_msg fl">
+                  <span v-text="item1.monthly_price+'万元/月'"></span>
+                  <span><i v-text="item1.housing_area+'㎡'"></i><i v-text="item1.decoration_level"></i></span>
+                  <span v-text="item1.workstation+'个工位'"></span>
+                </div>
+              </router-link>
+            </div>
 
+            <div class="no_result" style="display: none" v-show="res_showFlag">暂无房源信息</div>
 
-          <router-link :to="{path:'/list'}" id="houseListMore" v-show="more_flag" class="btn-more">查看更多</router-link>
+          </div>
         </div>
 
-        <!--map-->
-        <div class="pt20 mb08 border-tb bg-white" id="kuan">
-          <h2 class="sort-title tc fb mb20">周边配套</h2>
-          <div class="map-box" id="allmap"></div>
-          <ul class="text-gray6 clearfix ph15" id="map_item_ul">
-            <li class="supporting-item">
-              <i class="supporting-icon sup-ct"></i>
-              <span class="db">餐厅 <b class="text-black">33</b></span>
-            </li>
-            <li class="supporting-item">
-              <i class="supporting-icon sup-jd"></i>
-              <span class="db">酒店 <b class="text-black">25</b></span>
-            </li>
-            <li class="supporting-item">
-              <i class="supporting-icon sup-js"></i>
-              <span class="db">健身 <b class="text-black">4</b></span>
-            </li>
-            <li class="supporting-item">
-              <i class="supporting-icon sup-yh"></i>
-              <span class="db">银行 <b class="text-black">22</b></span>
-            </li>
-          </ul>
-        </div>
+
+        <router-link :to="{path:'/list'}" id="houseListMore" v-show="more_flag" class="btn-more">查看更多</router-link>
+      </div>
+
+      <!--map-->
+      <div class="pt20 mb08 border-tb bg-white" id="kuan">
+        <h2 class="sort-title tc fb mb20">周边配套</h2>
+        <div class="map-box" id="allmap"></div>
+        <ul class="text-gray6 clearfix ph15" id="map_item_ul">
+          <li class="supporting-item">
+            <i class="supporting-icon sup-ct"></i>
+            <span class="db">餐厅 <b class="text-black">33</b></span>
+          </li>
+          <li class="supporting-item">
+            <i class="supporting-icon sup-jd"></i>
+            <span class="db">酒店 <b class="text-black">25</b></span>
+          </li>
+          <li class="supporting-item">
+            <i class="supporting-icon sup-js"></i>
+            <span class="db">健身 <b class="text-black">4</b></span>
+          </li>
+          <li class="supporting-item">
+            <i class="supporting-icon sup-yh"></i>
+            <span class="db">银行 <b class="text-black">22</b></span>
+          </li>
+        </ul>
       </div>
     </section>
     <!--context end-->
@@ -121,9 +145,11 @@
 <script>
   import header1 from '../components/header.vue';
   import footer1 from '../components/footer.vue';
-  import { Indicator } from 'mint-ui';
-  import { InfiniteScroll } from 'mint-ui';
-  import swiper from 'swiper';
+  import {Indicator} from 'mint-ui';
+  import {InfiniteScroll} from 'mint-ui';
+
+
+  import '../resources/plugin/swiper/js/swiper.min.js';
 
   export default {
     components: {
@@ -141,8 +167,8 @@
         areaActive: 0,
         area_arr: [], //面积条件数组
 
-        res_showFlag:false, //查询无结果showhide
-        more_flag:false, //查看更多
+        res_showFlag: false, //查询无结果showhide
+        more_flag: false, //查看更多
 
         area: "", //区域
         price_dj: "", // 单价
@@ -183,7 +209,7 @@
               name: "全部"
             };
             _this.area_arr.unshift(all_area);
-            $('.size_box').width(_this.area_arr.length*2.3+'rem');
+            $('.size_box').width(_this.area_arr.length * 2.3 + 'rem');
 
 
           } else {
@@ -277,16 +303,16 @@
           Indicator.close();
           if (result.success) {
             _this.buildList = result.data.houses;
-            if(_this.buildList.length){
-              _this.res_showFlag=false; //不展示
+            if (_this.buildList.length) {
+              _this.res_showFlag = false; //不展示
               _this.total_items = result.data.total_items == null ? '--' : result.data.total_items;
 
-              if(_this.buildList.length>3){
-                  _this.more_flag=true;
+              if (_this.buildList.length > 3) {
+                _this.more_flag = true;
               }
 
-            }else{
-                _this.res_showFlag=true;
+            } else {
+              _this.res_showFlag = true;
             }
           }
 
@@ -297,9 +323,9 @@
 
       //选择面积筛选
       sel_area_list(e){
-          $(e.target).addClass('active').siblings().removeClass('active');
+        $(e.target).addClass('active').siblings().removeClass('active');
 
-          this.area=[];
+        this.area = [];
 
         var min = 0, max = 0, sort_two_single = 1;
         if ($(e.target).html() == '全部') {
@@ -313,7 +339,7 @@
           this.area.push(max);
         } else {
           this.area = [];
-          var area_fw=$(e.target).html().split('-');
+          var area_fw = $(e.target).html().split('-');
           min = Math.floor(area_fw[0]);
           max = Math.floor(area_fw[1].match(/\d+/g)[0]);
           this.area.push(min);
@@ -326,14 +352,39 @@
 
     },
 
-    mounted(){
+    mounted()
+    {
+
       Indicator.open({
         text: '',
         spinnerType: 'fading-circle'
       });
+
       this.getSortList(); //获取筛选条件
+
       this.getDetail(); //获取楼盘详情
+
       this.getDetList(); //获取楼盘详情页楼盘列表
+
+      //banner swiper
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+//        pagination: '.swiper-pagination', //分页器
+        paginationClickable: true,  //分页可点
+        centeredSlides: true,
+        autoplay: 3500,
+        //effect : 'fade', //切换效果(淡入淡出)
+        //fade: {
+        //    crossFade: false,
+        //},
+        onSlideChangeStart: function (swiper) {
+          $("#picIndex").text(swiper.realIndex + 1);
+        },
+
+        autoplayDisableOnInteraction: true  //鼠标操作时关闭autopaly
+
+      });
+
     }
   }
 </script>

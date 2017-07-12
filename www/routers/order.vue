@@ -13,7 +13,7 @@
       <div class="detail-container mb60">
         <!--banner-->
         <div id="slideBox" class="slideBox">
-          <img src="../resources/images/banner/banner01.jpg" alt="">
+          <img src="../resources/images/banner/banner01.png" alt="">
         </div>
 
         <div class="build_price_wrap clearfix">
