@@ -67,7 +67,7 @@
             <!--搜索结果-->
             <div class="size_content">
               <div class="size_con_sub" v-for="item1 in buildList">
-                <router-link :to="{path:'order'}" class="dz-list clearfix">
+                <router-link :to="{path:'order',query:{house_id:item1.id}}" class="dz-list clearfix">
                   <div class="dz_img_wrap">
                     <img :src="item1.housing_icon" alt="">
                     <div class="img_number">12图</div>
@@ -87,26 +87,6 @@
 
 
           <router-link :to="{path:'/list'}" id="houseListMore" v-show="more_flag" class="btn-more">查看更多</router-link>
-        </div>
-
-        <!--detail-list-->
-        <div class="detail-list pt20 mb08 border-tb bg-white">
-          <h2 class="sort-title tc fb mb10">楼盘参数</h2>
-          <ul class="clearfix pv15">
-            <li><span>物业等级</span>甲级</li>
-            <li><span>物业费</span>24元/㎡·月</li>
-            <li><span>物业类型</span>办公楼</li>
-            <li><span>开发商</span>SOHO中国</li>
-            <li><span>均价</span>6.5元/m²·天</li>
-            <li><span>停车位数量</span>1800</li>
-
-            <li><span>停车费</span>1500元/月</li>
-            <li><span>竣工时间</span>2013-12-01</li>
-
-            <li><span>容积率</span>8.1</li>
-            <li><span>绿化率</span>30%</li>
-          </ul>
-          <a href="/introduce/184" class="btn-more">查看楼盘简介</a>
         </div>
 
         <!--map-->
