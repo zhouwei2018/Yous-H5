@@ -43,5 +43,7 @@ var router = new VueRouter({
 new Vue({
     el: '#app',
     router: router,
-    render: h => h(App)
+    render: function (h) {
+        return h(App)
+    }
 });
