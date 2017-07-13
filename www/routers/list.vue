@@ -13,35 +13,35 @@
       <input type="text" id="keyword" placeholder="请输入关键字搜索" value="" maxlength="50">
     </a>
     <!--context-->
-    <section id="section" class="pr">
+    <section class="section" :class="{'in-filter':this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       <div class="option">
         <div class="filtate-outter">
           <div class="list-filtrate">
+
             <!--筛选条件标题开始-->
             <section class="filtrate-nav">
-              <ul>
-                <li data-role="filterItem" data-id="filter-dclz">
+              <ul @click="chooseFilter($event)">
+                <li data-role="filterItem" data-type="district" :class="{'active-filter':this.currentFilterTab=='district'}">
                   <a href="javascript:void(0);">
-                    <h2 class="ellipsis">
-                      位置</h2>
+                    <h2 class="ellipsis district-h">区域</h2>
                     <i class="filt-arrow"></i>
                   </a>
                 </li>
-                <li data-role="filterItem" data-id="filter-price">
+                <li data-role="filterItem" data-type="price" :class="{'active-filter':this.currentFilterTab=='price'}">
                   <a href="javascript:void(0);">
-                    <h2 class="ellipsis">价格</h2>
+                    <h2 class="ellipsis price-h">价格</h2>
                     <i class="filt-arrow"></i>
                   </a>
                 </li>
-                <li data-role="filterItem" data-id="filter-area">
+                <li data-role="filterItem" data-type="area" :class="{'active-filter':this.currentFilterTab=='area'}">
                   <a href="javascript:void(0);">
-                    <h2 class="ellipsis">面积</h2>
+                    <h2 class="ellipsis area-h">面积</h2>
                     <i class="filt-arrow"></i>
                   </a>
                 </li>
-                <li data-role="filterItem" data-id="filter-char">
+                <li data-role="filterItem" data-type="features" :class="{'active-filter':this.currentFilterTab=='features'}">
                   <a href="javascript:void(0);">
-                    <h2 class="ellipsis">特色</h2>
+                    <h2 class="ellipsis feature-h">特色</h2>
                     <i class="filt-arrow"></i>
                   </a>
                 </li>
@@ -51,90 +51,45 @@
 
             <!--筛选条件内容start-->
             <div class="filt-container">
-              <div class="filt-open js-sigle nbrt" id="filter-dclz" style="display:none">
-                <div class="warpper box-flex1 bg-white" data-key="district" style="height:365px;">
-                  <ul
-                    style="overflow:auto;height: 100%;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms; background-color: #F4F4F4;">
-                    <li onclick="showfujin();" style="border:none">
-                      <a href="javascript:void(0);" style="color: #302F35;">附近</a>
-                    </li>
-                    <li class="active" onclick="showDistrict();" style="border:none">
-                      <a href="javascript:void(0);" style="color: #302F35;">区域</a>
-                    </li>
-                    <li onclick="showSubway();" style="border:none">
-                      <a href="javascript:void(0);" style="color: #302F35;">地铁</a>
-                    </li>
+              <div class="filt-open" id="filter-district" :class="{show:this.currentFilterTab=='district'}">
+                <div class="warpper box-flex1">
+                  <ul class="box-flex1 bg-white cut-height">
+                    <li v-for="item in districtArray" data-type="district" @click="searchChoose(item.id, '', item.name, $event)"><a href="javascript:;">{{item.name}}</a></li>
                   </ul>
                 </div>
-                <div id="warpper_1" class="warpper2 box-flex1 bg-white" data-key="district"
-                     style="display:none;height:365px;">
-                  <ul
-                    style="overflow:auto;height: 100%;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms;"></ul>
-                </div>
-                <div id="warpper_2" class="warpper2 box-flex1 bg-white"
-                     style="display:none;width: 33.333%;height:365px;">
-                  <ul id="ul" style="overflow: auto;height: 100%;"></ul>
-                </div>
               </div>
-              <div class="filt-open js-sigle" id="filter-price" style="display:none">
+              <div class="filt-open" id="filter-price" :class="{show:this.currentFilterTab=='price'}">
                 <div class="warpper box-flex1 bg-white" style="height: 390px;">
-                  <ul
-                    style="overflow:hidden;height: 340px;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms; background-color: #F4F4F4;">
-                    <li class="active" onclick="showPrice(1);" style="border:none">
+                  <ul>
+                    <li class="price-sub"  :class="{act:this.priceFilterTab=='p'}" @click="priceFilterTab='p'">
                       <a href="javascript:void(0);" style="color: #302F35;">单价</a>
                     </li>
-                    <li onclick="showPrice(2);" style="border:none">
+                    <li class="price-sub" :class="{act:this.priceFilterTab=='t'}" @click="priceFilterTab='t'">
                       <a href="javascript:void(0);" style="color: #302F35;">总价</a>
                     </li>
 
-                    <div id="price_filter" class="warpper2 box-flex1 bg-white" data-key="district"
-                         style="display:none;height:365px;">
-                      <ul
-                        style="overflow:auto;height: 100%;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms;"></ul>
+                    <div id="price_filter" class="warpper2 box-flex1 bg-white">
+                      <ul class="price-ul cut-height" :class="{show:this.priceFilterTab=='p'}">
+                        <li v-for="item in pricePArray" data-type="priceP" @click="searchChoose(item.code,item.minnum+'-'+item.maxnum, item.minnum+'-'+item.maxnum+'元', $event)"><a href="javascript:;">{{item.minnum}}-{{item.maxnum}}元</a></li>
+                      </ul>
+                      <ul class="price-ul cut-height" :class="{show:this.priceFilterTab=='t'}">
+                        <li v-for="item in priceTArray" data-type="priceT" @click="searchChoose(item.code,item.minnum+'-'+item.maxnum, item.minnum+'-'+item.maxnum+'万元', $event)"><a href="javascript:;">{{item.minnum}}-{{item.maxnum}}万元</a></li>
+                      </ul>
                     </div>
                   </ul>
                   <div class="price-bottom">
                     <div class="price-bot price-div">自定义区间
-                      <input id="startprice" type="tel" placeholder="元/㎡.天"
-                             oninput="if(value.length>2)value=value.slice(0,2)"><i>----</i>
-                      <input id="endprice" type="tel" placeholder="元/㎡.天"
-                             oninput="if(value.length>2)value=value.slice(0,2)">
-                      <button onclick="submitPage('price');">确定</button>
+                      <input id="startprice" type="tel" oninput="if(value.length>2)value=value.slice(0,2)" placeholder="万元/月"><i>----</i>
+                      <input id="endprice" type="tel" oninput="if(value.length>2)value=value.slice(0,2)" placeholder="万元/月">
+                      <button>确定</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="filt-open js-sigle" id="filter-area">
-                <div class="warpper box-flex1  bg-white" data-key="huxing_shi" style="height:419px;">
-                  <ul>
-                    <li class="active" onclick="submitArea('0');">
-                      <a href="javascript:void(0);">不限</a>
-                    </li>
-
-                    <li onclick="submitArea('1');">
-                      <a href="javascript:void(0);">0-100㎡</a>
-                    </li>
-                    <li onclick="submitArea('2');">
-                      <a href="javascript:void(0);">100-200㎡</a>
-                    </li>
-                    <li onclick="submitArea('3');">
-                      <a href="javascript:void(0);">200-300㎡</a>
-                    </li>
-                    <li onclick="submitArea('4');">
-                      <a href="javascript:void(0);">300-500㎡</a>
-                    </li>
-                    <li onclick="submitArea('5');">
-                      <a href="javascript:void(0);">500-1000㎡</a>
-                    </li>
-                    <li onclick="submitArea('6');">
-                      <a href="javascript:void(0);">1000-2000㎡</a>
-                    </li>
-                    <li onclick="submitArea('7');">
-                      <a href="javascript:void(0);">2000-3000㎡</a>
-                    </li>
-                    <li onclick="submitArea('8');">
-                      <a href="javascript:void(0);">&gt;3000㎡</a>
-                    </li>
+              <div class="filt-open" id="filter-area" :class="{show:this.currentFilterTab=='area'}">
+                <div class="warpper box-flex1  bg-white" data-key="huxing_shi">
+                  <ul class="">
+                    <li v-for="item in sizeArray" data-type="size" @click="searchChoose(item.code, item.minnum+'-'+item.maxnum,  item.minnum+'-'+item.maxnum+'m²', $event)"><a href="javascript:;">{{item.minnum}}-{{item.maxnum}}m²</a></li>
                   </ul>
                   <div class="price-bottom">
                     <div class="price-bot">自定义区间
@@ -142,55 +97,15 @@
                              oninput="if(value.length>5)value=value.slice(0,5)"><i>----</i>
                       <input type="tel" id="endArea" value="" maxlength="5" placeholder="平米"
                              oninput="if(value.length>5)value=value.slice(0,5)">
-                      <button onclick="submitPage('area');">确定</button>
+                      <button>确定</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="filt-open js-sigle" id="filter-char" style="display:none">
-                <div class="warpper box-flex1" style="height: 312px;">
-                  <ul class="box-flex1 bg-white"
-                      style="overflow:auto;height: 100%;transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1); transition-duration: 0ms;">
-                    <li class="active" onclick="submitTag('0');">
-                      <a href="javascript:void(0);">不限</a>
-                    </li>
-
-                    <li onclick="submitTag('7');">
-                      <a href="javascript:void(0);">地铁周边</a>
-                    </li>
-                    <li onclick="submitTag('3');">
-                      <a href="javascript:void(0);">互联网</a>
-                    </li>
-                    <li onclick="submitTag('6');">
-                      <a href="javascript:void(0);">金融精英</a>
-                    </li>
-                    <li onclick="submitTag('15');">
-                      <a href="javascript:void(0);">健康空气</a>
-                    </li>
-                    <li onclick="submitTag('16');">
-                      <a href="javascript:void(0);">LEED</a>
-                    </li>
-                    <li onclick="window.location.href='/bj/zt/xinlou.html'">
-                      <a href="javascript:void(0);">新楼</a>
-                    </li>
-                    <li onclick="submitTag('5');">
-                      <a href="javascript:void(0);">地标建筑</a>
-                    </li>
-                    <li onclick="submitTag('8');">
-                      <a href="javascript:void(0);">创意园区</a>
-                    </li>
-                    <li onclick="submitTag('9');">
-                      <a href="javascript:void(0);">名企开发商</a>
-                    </li>
-                    <li onclick="submitTag('13');">
-                      <a href="javascript:void(0);">知名物业</a>
-                    </li>
-                    <li onclick="submitTag('14');">
-                      <a href="javascript:void(0);">5A写字楼</a>
-                    </li>
-                    <li onclick="submitTag('11');">
-                      <a href="javascript:void(0);">纳什空间</a>
-                    </li>
+              <div class="filt-open" id="filter-features" :class="{show:this.currentFilterTab=='features'}">
+                <div class="warpper box-flex1">
+                  <ul class="box-flex1 bg-white cut-height">
+                    <li v-for="item in featureArray" data-type="feature" @click="searchChoose(item.code,'',item.name, $event)"><a href="javascript:;">{{item.name}}</a></li>
                   </ul>
                 </div>
               </div>
@@ -203,7 +118,8 @@
         <ul
           v-infinite-scroll="loadMore"
           infinite-scroll-disabled="loading"
-          infinite-scroll-distance="10">
+          infinite-scroll-distance="20"
+          infinite-scroll-immediate-check="checked">
           <li class="ys_listcon pv15" v-for="item in resultData">
             <router-link :to="{path:'/detail',query:{building_id:item.id}}" class="supply_box">
               <div class="supply_price">
@@ -233,7 +149,9 @@
           </li>
         </ul>
       </div>
-      <div class="mask" id="maskEl" style="display:none;"></div>
+      <div class="mask" id="maskEl" :class="{show:this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
+
+      </div>
     </section>
     <!--context end-->
   </div>
@@ -244,18 +162,31 @@
   import footer1 from '../components/footer.vue';
   import { Indicator } from 'mint-ui';
   import { InfiniteScroll } from 'mint-ui';
+  import { Toast } from 'mint-ui';
+  import { Actionsheet } from 'mint-ui';
   import axios from 'axios';
   import qs from 'qs';
   export default {
     components: {
         header1,
         footer1,
-        InfiniteScroll
+        InfiniteScroll,
+        Toast,
+        Actionsheet
     },
     data () {
       return {
+        districtArray:[],
+        pricePArray:[],
+        priceTArray:[],
+        sizeArray:[],
+        featureArray:[],
+
+        currentFilterTab:'nth',
+        priceFilterTab:'p',
         loading:false,
-        getMore:true,
+        noMore:false,
+        checked:false,
         para: {
           "search_keywork": "",
           "district": "",
@@ -274,18 +205,61 @@
       }
     },
     mounted(){
-        Indicator.open({
-          text: '',
-          spinnerType: 'fading-circle'
-        });
         this.init()
     },
     methods:{
-        init(){
-            this.getData();
+       init(){
+         axios.defaults.baseURL = 'http://116.62.71.76:8001';
+         axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
+         this.resetGetData();
+         this.getFilters();
         },
-       getData(){
-            console.log("個體more")
+       searchChoose:function(code, val, value, e){
+         switch ($(e.target).closest('li').attr('data-type')){
+           case 'district':
+             $('h2.district-h').html(value);
+             this.district_id = code;
+             break;
+           case 'size':
+             $('h2.area-h').html(value);
+             this.area = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
+             break;
+           case 'priceP':
+           case 'priceT':
+             $('h2.price-h').html(value);
+             this.price_dj = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
+             break;
+           case 'feature':
+             $('h2.feature-h').html(value);
+             this.label=code;
+             break;
+           default:
+         }
+         this.currentFilterTab='nth';
+         this.resetGetData();
+       },
+       getFilters:function(){
+         var paraObj = {
+           "parameters":{},
+           "foreEndType":2,
+           "code":"90000301"
+         }, this_=this;
+         axios.post('/api/GetServiceApiResult', paraObj)
+           .then(function (response) {
+             this_.districtArray = response.data.data.districts;
+             this_.pricePArray = response.data.data.range_unit_prices;
+             this_.priceTArray = response.data.data.range_total_prices;
+             this_.sizeArray = response.data.data.range_areas;
+             this_.featureArray = response.data.data.labels;
+           }).catch(function (error) {
+
+         });
+       },
+       chooseFilter:function(e){
+             var e= e || window.event;
+             this.currentFilterTab = $(e.target).closest('li').attr('data-type')
+      },
+       resetGetData:function () {
          var paraObj ={
            "parameters": {
              "search_keywork": "",
@@ -305,29 +279,81 @@
            "code": "30000001"
          }, this_ = this;
          let successCb = function(result){
-              Indicator.close();
+           Indicator.close();
+           if(result.data.data.buildings.length>0){
+             if(result.data.data.buildings.length<this_.para.items_perpage){
+               this_.noMore = true;
+              }
+               this_.resultData=this_.resultData.concat(result.data.data.buildings)
+           }else{
+             Toast({
+               message: '抱歉,暂无符合条件的房源!',
+               position: 'middle',
+               duration: 3000
+             });
+           }
+         };
+         let errorCb = function(result){
+           Indicator.close();
+           Toast({
+             message: '抱歉,暂无符合条件的房源!',
+             position: 'middle',
+             duration: 3000
+           });
+         };
+         Indicator.open({
+           text: '',
+           spinnerType: 'fading-circle'
+         });
+         this.resultData = [];
+         this.gRemoteData(paraObj, successCb ,errorCb);
+       },
+
+       getData(){
+         var paraObj ={
+           "parameters": {
+             "search_keywork": "",
+             "district": "",
+             "business": "",
+             "line_id": "",
+             "station_id": "",
+             "area": "",
+             "price_dj": "",
+             "price_zj": "",
+             "label": "",
+             "orderby": "D",
+             "curr_page": this.para.curr_page,
+             "items_perpage": 10
+           },
+           "foreEndType": 2,
+           "code": "30000001"
+         }, this_ = this;
+         let successCb = function(result){
+              this_.loading = false;
               if(result.data.data.buildings.length>0){
                 if(result.data.data.buildings<this_.para.items_perpage){
-                    this_.getMore = false;
+                    this_.noMore = false;
                 }
                 this_.resultData=this_.resultData.concat(result.data.data.buildings)
-                console.log(this_.resultData)
+                }else{
+                Toast({
+                  message: '已经获得当前条件的所有房源!',
+                  position: 'middle',
+                  duration: 3000
+                });
               }
          };
          let errorCb = function(result){
-            Indicator.close({
-              text: '',
-              spinnerType: 'fading-circle'
-            });
+           Toast({
+             message: '已经获得当前条件的所有房源!',
+             position: 'middle',
+             duration: 3000
+           });
          };
          this.gRemoteData(paraObj, successCb ,errorCb);
        },
        gRemoteData(paraobj, successcb, errorcb){
-        let instance = axios.create({
-          baseURL: 'http://116.62.71.76:8001/'
-        });
-        instance.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
-        instance.post('api/GetServiceApiResult',paraobj)
+         axios.post('api/GetServiceApiResult',paraobj)
           .then(function (response) {
             if(typeof successcb==="function"){
               successcb(response)
@@ -339,12 +365,11 @@
         });
       },
       loadMore(){
-           if(this.getMore){
-             this.para.curr_page+=1;
-             this.loading = true;
-             this.getData();
+           if(!this.loading&&!this.noMore){
+                this.loading = true;
+                this.para.curr_page+=1;
+                this.getData();
            }
-
       }
     }
   }
