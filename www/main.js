@@ -7,7 +7,7 @@ import $ from 'jquery';
 import MintUI from 'mint-ui';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-
+import search from './routers/search.vue';
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(MintUI);
@@ -22,7 +22,10 @@ var router = new VueRouter({
     routes: [
         {
             path: '/list',
-            component: require('./routers/list.vue')
+            component: require('./routers/list.vue'),
+            children: [
+            { path: "/list/search", component: search }
+          ]
         },
         {
             path: '/detail',

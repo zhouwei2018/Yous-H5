@@ -2,6 +2,7 @@
   @import "../resources/css/website/list.less";
  .page-infinite-loading {
     text-align: center;
+    background-color:#FFF;
    &>span{
      display: inline-block;
    }
@@ -15,15 +16,14 @@
       <header1></header1>
     </section>
     <!--header end-->
+<!--    <router-link to="/list/search">
+      <button>显示</button>
+    </router-link>-->
+     <a href="javascript:;" class="detail-search" style="position: fixed;left: 0; top: 0">
 
-    <a href="javascript:;" class="detail-search" style="position: fixed;left: 0; top: 0">
-      <input type="text" id="keyword" placeholder="请输入关键字搜索" value="" maxlength="50">
+       <input type="text" id="keyword" placeholder="请输入关键字搜索" value="" maxlength="50" @focus="changeRou">
     </a>
-<!--    <mt-search
-      v-model="value"
-      placeholder="搜索">
-    </mt-search>-->
-    <!--context-->
+    <router-view></router-view>
     <section class="section" :class="{'in-filter':this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       <div class="option">
         <div class="filtate-outter">
@@ -146,9 +146,8 @@
                     <dd class="supply_color ellipsis">{{item.address}}</dd>
                     <dd class="supply_color ellipsis">{{item.lease_nums}}套房源可租</dd>
                     <dd>
-                      <dl class="supply_tag clearfix">
-                        <dd class="tagClass">互联网+</dd>
-                        <dd class="tagClass">LEED</dd>
+                      <dl class="supply_tag clearfix" v-if="item.label !=null">
+                         <dd v-for="item in item.label.split(',')" class="tagClass">{{item}}</dd>
                       </dl>
                     </dd>
                   </dl>
@@ -157,17 +156,16 @@
             </router-link>
           </li>
         </ul>
-        <p v-show="loading" class="page-infinite-loading">
+        <p v-if="loading" class="page-infinite-loading">
           <mt-spinner type="fading-circle"></mt-spinner>
         </p>
       </div>
-      <div class="mask" id="maskEl" @lick="currentFilterTab='nth'" :class="{show:this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
+      <div class="mask" id="maskEl" @click="closeFilter" :class="{show:this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       </div>
     </section>
     <!--context end-->
   </div>
 </template>
-
 <script>
   import header1 from '../components/header.vue';
   import footer1 from '../components/footer.vue';
@@ -187,6 +185,7 @@
         Actionsheet,
         Search
     },
+
     data () {
       return {
         districtArray:[],
@@ -241,6 +240,12 @@
          this.resetGetData();
          this.getFilters();
         },
+      closeFilter:function(){
+        this.currentFilterTab='nth';
+      },
+      changeRou:function(){
+        //VueRouter.go({name: 'list/search', params: {}});
+      },
        searchChoose:function(code, val, value, e){
          switch ($(e.target).closest('li').attr('data-type')){
            case 'district':
@@ -266,6 +271,11 @@
            default:
          }
          this.currentFilterTab='nth';
+         Indicator.open({
+           text: '',
+           spinnerType: 'fading-circle'
+         });
+         this.resultData = [];
          this.getData();
        },
        getFilters:function(){
@@ -292,15 +302,15 @@
        resetGetData:function () {
          var paraObj ={
            "parameters": {
-             "search_keywork": "",
-             "district": "",
-             "business": "",
-             "line_id": "",
-             "station_id": "",
-             "area": "",
-             "price_dj": "",
-             "price_zj": "",
-             "label": "",
+             "search_keywork": this.para.keyword,
+             "district": this.para.district,
+             "business": this.para.business,
+             "line_id": this.para.line_id,
+             "station_id":this.para.station_id,
+             "area":this.para.area,
+             "price_dj": this.para.price_dj,
+             "price_zj": this.para.price_zj,
+             "label": this.para.label,
              "orderby": "D",
              "curr_page": this.para.curr_page,
              "items_perpage": 10
@@ -310,12 +320,11 @@
          }, this_ = this;
          let successCb = function(result){
            Indicator.close();
-           if(result.data.data.buildings.length>0){
-             if(result.data.data.buildings.length<this_.para.items_perpage){
-               this_.noMore = true;
-              }
-               this_.resultData=this_.resultData.concat(result.data.data.buildings)
-           }else{
+           if(result.data.data.buildings.length<this_.para.items_perpage){
+             this_.noMore = true;
+           }
+           this_.resultData=this_.resultData.concat(result.data.data.buildings)
+           if(this_.resultData.length==0){
              Toast({
                message: '抱歉,暂无符合条件的房源!',
                position: 'middle',
@@ -387,27 +396,28 @@
          }, this_ = this;
          this.currentFilterTab='nth';
          let successCb = function(result){
-              this_.loading = false;
-              if(result.data.data.buildings.length>0){
-                if(result.data.data.buildings<this_.para.items_perpage){
-                    this_.noMore = false;
-                }
-                this_.resultData=this_.resultData.concat(result.data.data.buildings)
-                }else if(result.data.data.buildings.length==0){
-                Toast({
-                  message: '抱歉,暂无符合条件的房源!',
-                  position: 'middle',
-                  duration: 3000
-                });
-              }else{
-                Toast({
-                  message: '已经获得当前条件的所有房源!',
-                  position: 'middle',
-                  duration: 3000
-                });
-              }
+           Indicator.close();
+           this_.loading = false;
+           this_.resultData=this_.resultData.concat(result.data.data.buildings);
+           if(result.data.data.buildings<this_.para.items_perpage){
+             this_.noMore = true;
+           }
+           if(this_.resultData.length==0){
+             Toast({
+               message: '抱歉,暂无符合条件的房源!',
+               position: 'middle',
+               duration: 3000
+             });
+           }else if(this_.resultData.length>0&&result.data.data.buildings.length==0){
+             Toast({
+               message: '已经获得当前条件的所有房源!',
+               position: 'middle',
+               duration: 3000
+             });
+           }
          };
          let errorCb = function(result){
+           Indicator.close();
            Toast({
              message: '抱歉,暂无符合条件的房源!',
              position: 'middle',
