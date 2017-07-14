@@ -1,5 +1,12 @@
 <style scoped lang="less">
   @import "../resources/css/website/list.less";
+ .page-infinite-loading {
+    text-align: center;
+   &>span{
+     display: inline-block;
+   }
+  }
+
 </style>
 <template>
   <div>
@@ -12,6 +19,10 @@
     <a href="javascript:;" class="detail-search" style="position: fixed;left: 0; top: 0">
       <input type="text" id="keyword" placeholder="请输入关键字搜索" value="" maxlength="50">
     </a>
+<!--    <mt-search
+      v-model="value"
+      placeholder="搜索">
+    </mt-search>-->
     <!--context-->
     <section class="section" :class="{'in-filter':this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       <div class="option">
@@ -59,7 +70,7 @@
                 </div>
               </div>
               <div class="filt-open" id="filter-price" :class="{show:this.currentFilterTab=='price'}">
-                <div class="warpper box-flex1 bg-white" style="height: 390px;">
+                <div class="warpper box-flex1 grey-bg price-height">
                   <ul>
                     <li class="price-sub"  :class="{act:this.priceFilterTab=='p'}" @click="priceFilterTab='p'">
                       <a href="javascript:void(0);" style="color: #302F35;">单价</a>
@@ -79,9 +90,9 @@
                   </ul>
                   <div class="price-bottom">
                     <div class="price-bot price-div">自定义区间
-                      <input id="startprice" type="tel" oninput="if(value.length>2)value=value.slice(0,2)" placeholder="万元/月"><i>----</i>
-                      <input id="endprice" type="tel" oninput="if(value.length>2)value=value.slice(0,2)" placeholder="万元/月">
-                      <button>确定</button>
+                      <input id="startprice" type="tel"  :placeholder="unitword"  v-model="price1"><i>----</i>
+                      <input id="endprice" type="tel"  :placeholder="unitword"  v-model="price2">
+                      <button @click="selfInputPrice">确定</button>
                     </div>
                   </div>
                 </div>
@@ -93,11 +104,9 @@
                   </ul>
                   <div class="price-bottom">
                     <div class="price-bot">自定义区间
-                      <input type="tel" id="beginArea" value="" maxlength="5" placeholder="平米"
-                             oninput="if(value.length>5)value=value.slice(0,5)"><i>----</i>
-                      <input type="tel" id="endArea" value="" maxlength="5" placeholder="平米"
-                             oninput="if(value.length>5)value=value.slice(0,5)">
-                      <button>确定</button>
+                      <input type="tel" id="beginArea" value="" maxlength="5"  placeholder="平米" v-model="size1"><i>----</i>
+                      <input type="tel" id="endArea" value="" maxlength="5" placeholder="平米"  v-model="size2">
+                      <button  @click="selfInputSize">确定</button>
                     </div>
                   </div>
                 </div>
@@ -148,9 +157,11 @@
             </router-link>
           </li>
         </ul>
+        <p v-show="loading" class="page-infinite-loading">
+          <mt-spinner type="fading-circle"></mt-spinner>
+        </p>
       </div>
-      <div class="mask" id="maskEl" :class="{show:this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
-
+      <div class="mask" id="maskEl" @lick="currentFilterTab='nth'" :class="{show:this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       </div>
     </section>
     <!--context end-->
@@ -164,6 +175,7 @@
   import { InfiniteScroll } from 'mint-ui';
   import { Toast } from 'mint-ui';
   import { Actionsheet } from 'mint-ui';
+  import { Search } from 'mint-ui';
   import axios from 'axios';
   import qs from 'qs';
   export default {
@@ -172,7 +184,8 @@
         footer1,
         InfiniteScroll,
         Toast,
-        Actionsheet
+        Actionsheet,
+        Search
     },
     data () {
       return {
@@ -187,6 +200,10 @@
         loading:false,
         noMore:false,
         checked:false,
+        price1:'',
+        price2:'',
+        size1:'',
+        size2:'',
         para: {
           "search_keywork": "",
           "district": "",
@@ -199,13 +216,23 @@
           "label": "",
           "orderby": "D",
           "curr_page": 1,
-          "items_perpage": 10
+          "items_perpage": 10,
+          "keyword":""
         },
         resultData: []
       }
     },
     mounted(){
         this.init()
+    },
+    computed:{
+      unitword(){
+          if(this.priceFilterTab==='p'){
+               return "元/天" ;
+          }else{
+            return "万元/月" ;
+          }
+      }
     },
     methods:{
        init(){
@@ -218,25 +245,28 @@
          switch ($(e.target).closest('li').attr('data-type')){
            case 'district':
              $('h2.district-h').html(value);
-             this.district_id = code;
+             this.para.district_id = code;
              break;
            case 'size':
              $('h2.area-h').html(value);
-             this.area = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
+             this.para.area = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
              break;
            case 'priceP':
+             $('h2.price-h').html(value);
+             this.para.price_dj = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
+             break;
            case 'priceT':
              $('h2.price-h').html(value);
-             this.price_dj = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
+             this.para.price_zj = [parseInt(val.split('-')[0]),parseInt(val.split('-')[1])];
              break;
            case 'feature':
              $('h2.feature-h').html(value);
-             this.label=code;
+             this.para.label=code;
              break;
            default:
          }
          this.currentFilterTab='nth';
-         this.resetGetData();
+         this.getData();
        },
        getFilters:function(){
          var paraObj = {
@@ -308,19 +338,46 @@
          this.resultData = [];
          this.gRemoteData(paraObj, successCb ,errorCb);
        },
-
+       selfInputPrice:function(){
+           if(parseInt(this.price1)<parseInt(this.price2)){
+              if(this.priceFilterTab==='P'){
+                  this.para.price_dj =[parseInt(this.price1),parseInt(this.price2)]
+              }else{
+                  this.para.price_zj =[parseInt(this.price1),parseInt(this.price2)]
+              }
+               this.getData();
+           }else{
+             Toast({
+               message: '请输入合理价格',
+               position: 'middle',
+               duration: 2000
+             });
+           }
+      },
+       selfInputSize:function() {
+         if (parseInt(this.size1) < parseInt(this.size2)) {
+           this.para.area = [parseInt(this.size1), parseInt(this.size2)];
+           this.getData();
+         } else {
+           Toast({
+             message: '请输入合理面积数字',
+             position: 'middle',
+             duration: 2000
+           });
+         }
+       },
        getData(){
          var paraObj ={
            "parameters": {
-             "search_keywork": "",
-             "district": "",
-             "business": "",
-             "line_id": "",
-             "station_id": "",
-             "area": "",
-             "price_dj": "",
-             "price_zj": "",
-             "label": "",
+             "search_keywork": this.para.keyword,
+             "district": this.para.district,
+             "business": this.para.business,
+             "line_id": this.para.line_id,
+             "station_id":this.para.station_id,
+             "area":this.para.area,
+             "price_dj": this.para.price_dj,
+             "price_zj": this.para.price_zj,
+             "label": this.para.label,
              "orderby": "D",
              "curr_page": this.para.curr_page,
              "items_perpage": 10
@@ -328,6 +385,7 @@
            "foreEndType": 2,
            "code": "30000001"
          }, this_ = this;
+         this.currentFilterTab='nth';
          let successCb = function(result){
               this_.loading = false;
               if(result.data.data.buildings.length>0){
@@ -335,7 +393,13 @@
                     this_.noMore = false;
                 }
                 this_.resultData=this_.resultData.concat(result.data.data.buildings)
-                }else{
+                }else if(result.data.data.buildings.length==0){
+                Toast({
+                  message: '抱歉,暂无符合条件的房源!',
+                  position: 'middle',
+                  duration: 3000
+                });
+              }else{
                 Toast({
                   message: '已经获得当前条件的所有房源!',
                   position: 'middle',
@@ -345,7 +409,7 @@
          };
          let errorCb = function(result){
            Toast({
-             message: '已经获得当前条件的所有房源!',
+             message: '抱歉,暂无符合条件的房源!',
              position: 'middle',
              duration: 3000
            });
