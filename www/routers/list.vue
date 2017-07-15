@@ -249,8 +249,7 @@
         this.currentFilterTab='nth';
       },
       changeRou:function(){
-        //VueRouter.go({name: 'list/search', params: {}});
-        location.href=location.origin+'/list/search'
+        this.$router.push({path:'/list/search'})
       },
        searchChoose:function(code, val, value, e){
          switch ($(e.target).closest('li').attr('data-type')){

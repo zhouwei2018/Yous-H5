@@ -287,7 +287,7 @@
         if(this.search_keyword){
              this.changeHistory(this.search_keyword);
         }
-        location.href=encodeURI(location.origin + "/list?keyword=" + this.search_keyword);
+        this.$router.push({path: '/list', query: {keyword: this.search_keyword}});
       },
       toListw:function(k){
         location.href=encodeURI(location.origin + "/list?keyword=" + k);
