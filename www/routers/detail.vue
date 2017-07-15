@@ -11,7 +11,7 @@
     </section>
     <!--header end-->
     <!--context-->
-    <section id="section" class="pr">
+    <section id="section" class="pr section">
       <div class="detail-container">
         <!--banner-->
         <div id="slideBox" class="slideBox">
