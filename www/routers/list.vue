@@ -305,7 +305,6 @@
              this.currentFilterTab = $(e.target).closest('li').attr('data-type')
       },
        resetGetData:function () {
-           console.log(this.para.keyword)
          var paraObj ={
            "parameters": {
              "search_keywork": this.para.search_keywork,
@@ -451,6 +450,12 @@
                 this.getData();
            }
       }
+    },
+    watch: {
+      '$route' (to, from) {
+        console.log(to);
+        console.log(from);
+      },
     }
   }
 </script>

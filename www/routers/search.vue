@@ -281,13 +281,14 @@
            localStorage.setItem("historyData",JSON.stringify(this.hotArray));
       },
       toList:function(){
-          location.href=location.origin+'/list'
+        this.$router.push({path: '/list'});
       },
       toList2:function(){
         if(this.search_keyword){
              this.changeHistory(this.search_keyword);
         }
-        this.$router.push({path: '/list', query: {keyword: this.search_keyword}});
+        console.log(this.$router)
+        this.$router.push({path: '/list', query: {keyword: this.search_keyword,}});
       },
       toListw:function(k){
         location.href=encodeURI(location.origin + "/list?keyword=" + k);
