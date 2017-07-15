@@ -15,13 +15,8 @@
     <section id="header">
       <header1></header1>
     </section>
-    <!--header end-->
-<!--    <router-link to="/list/search">
-      <button>显示</button>
-    </router-link>-->
      <a href="javascript:;" class="detail-search" style="position: fixed;left: 0; top: 0">
-
-       <input type="text" id="keyword" placeholder="请输入关键字搜索" value="" maxlength="50" @focus="changeRou">
+       <input type="text" id="keyword" placeholder="请输入关键字搜索"  v-model="para.search_keywork" maxlength="50" @focus="changeRou">
     </a>
     <router-view></router-view>
     <section class="section" :class="{'in-filter':this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
@@ -216,13 +211,18 @@
           "orderby": "D",
           "curr_page": 1,
           "items_perpage": 10,
-          "keyword":""
         },
         resultData: []
       }
     },
     mounted(){
         this.init()
+    },
+    created:function () {
+        var kw = this.getQueryString('keyword');
+        if(kw){
+            this.para.search_keywork=kw;
+        }
     },
     computed:{
       unitword(){
@@ -240,11 +240,17 @@
          this.resetGetData();
          this.getFilters();
         },
+      getQueryString: function (key) {
+        var t = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i"),
+          n = window.location.search.substr(1).match(t);
+        return null != n ? decodeURI(n[2]) : "";
+      },
       closeFilter:function(){
         this.currentFilterTab='nth';
       },
       changeRou:function(){
         //VueRouter.go({name: 'list/search', params: {}});
+        location.href=location.origin+'/list/search'
       },
        searchChoose:function(code, val, value, e){
          switch ($(e.target).closest('li').attr('data-type')){
@@ -300,9 +306,10 @@
              this.currentFilterTab = $(e.target).closest('li').attr('data-type')
       },
        resetGetData:function () {
+           console.log(this.para.keyword)
          var paraObj ={
            "parameters": {
-             "search_keywork": this.para.keyword,
+             "search_keywork": this.para.search_keywork,
              "district": this.para.district,
              "business": this.para.business,
              "line_id": this.para.line_id,
@@ -378,7 +385,7 @@
        getData(){
          var paraObj ={
            "parameters": {
-             "search_keywork": this.para.keyword,
+             "search_keywork": this.para.search_keywork,
              "district": this.para.district,
              "business": this.para.business,
              "line_id": this.para.line_id,

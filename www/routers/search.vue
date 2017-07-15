@@ -7,46 +7,55 @@
      right: 0;
      bottom: 0;
      z-index: 9;
-     background-color: #c9d12c;
+     background-color: #fff;
      .pt07 {
-       padding-top: 7px;
+       padding-top:.14rem;
      }
      #s-header{
        position: relative;
        width: 100%;
-       max-width: 640px;
-       height: 44px;
-       line-height: 44px;
+       height: .88rem;
+       line-height:.88rem;
        color: #FFF;
-       font-size: 18px;
+       font-size: .36rem;
        background-color: #302F35;
        .close-icon {
          display: block;
          position: absolute;
-         right: 15px;
+         right: .30rem;
          top: 0;
-         width: 20px;
-         height: 44px;
+         width: .40rem;
+         height: .88rem;
          img {
            width: 100%;
-           margin-top: -3px;
+           margin-top: -.06rem;
          }
        }
        .search-text {
+         position: relative;
          display: block;
          width: 75%;
-         height: 31px;
-         line-height: 25px;
-         margin-left: 20px;
-         padding-left: 35px;
+         height: .62rem;
+         line-height: .50rem;
+         margin-left:.40rem;
+         padding-left: .70rem;
          text-align: left;
-         /*background: rgba(255, 255, 255, 0.2) url(../../images/m-icon-2.png) 10px 6px no-repeat;*/
-         background-size: 20px auto;
+         background: rgba(255, 255, 255, 0.2);
+         background-size:.40rem auto;
          box-sizing: border-box;
-         border-radius: 30px;
+         border-radius: .60rem;
+         .sbtn{
+           position: absolute;
+           width: .36rem;
+           height:.36rem;
+           left: .28rem;
+           top: .1378rem;
+            background:url(../resources/images/list/ss_01.png) center center no-repeat;
+            background-size: contain;
+         }
          input {
            width: 95%;
-           margin-top: 2px;
+           margin-top:.04rem;
            color: #FFF;
            background: none;
          }
@@ -57,12 +66,13 @@
     position: relative;
     .hot-out{
       border:1px solid transparent;
-      display: none;
+      display: block;
     }
     .history-out{
-      display: none;
+      display: block;
     }
     .result-search{
+      display: none;
       background-color: #fff;
       position: fixed;
       width: 100%;
@@ -127,10 +137,11 @@
       <div id="s-header">
         <div class="pt07">
           <a href="javascript:void(0);" class="search-text">
-            <input type="text" id="keyword" placeholder="请输入写字楼、区域、商圈" maxlength="50" autofocus="autofocus" onchange="window.location.href='/bj/searchlist?keyword='+encodeURI(encodeURI($(this).val()));">
+            <i class="sbtn" @click="toList2"></i>
+            <input type="text" id="keyword" placeholder="请输入写字楼、区域、商圈" maxlength="50" v-model="search_keyword" autofocus="autofocus">
           </a>
         </div>
-        <a href="javascript:void(0);" class="close-icon">
+        <a href="javascript:void(0);" class="close-icon" @click="toList">
             <img src="http://img2.static.uban.com/www/images/xuan-close_1.png" alt="">
         </a>
       </div>
@@ -138,50 +149,16 @@
         <div class="hot-out">
           <h3 class="more-house-title mt15 mb15">热门搜索</h3>
           <ul class="search-list clearfix">
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E6%259C%259B%25E4%25BA%25ACsoho">望京soho</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E4%25B8%2587%25E8%25BE%25BE%25E5%25B9%25BF%25E5%259C%25BA">万达广场</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E7%259B%2588%25E7%25A7%2591%25E4%25B8%25AD%25E5%25BF%2583">盈科中心</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E9%2593%25B6%25E6%25B2%25B3soho">银河soho</a>
-            </li>
-
+            <li v-for="item in hotArray" @click="toListw(item.name)">{{item.name}}</li>
           </ul>
         </div>
         <div class="pr history-out">
           <h3 class="more-house-title mt10 mb15">历史搜索</h3>
-          <a href="javascript:;" class="del-btn"><img src="../resources/images/list/del-icon.png" alt="清除"></a>
-          <ul class="search-list clearfix history">
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E6%259C%259B%25E4%25BA%25ACsoho">望京soho</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E7%259B%2588%25E7%25A7%2591%25E4%25B8%25AD%25E5%25BF%2583">盈科中心</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E4%25B8%2587%25E8%25BE%25BE%25E5%25B9%25BF%25E5%259C%25BA">万达广场</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E7%259B%2588%25E7%25A7%2591%25E4%25B8%25AD%25E5%25BF%2583">盈科中心</a>
-            </li>
-
-            <li>
-              <a href="/bj/searchlist?keyword=%25E9%2593%25B6%25E6%25B2%25B3soho">银河soho</a>
-            </li>
-
+          <a href="javascript:;" class="del-btn" @click="clearHistoty">
+            <img src="../resources/images/list/del-icon.png" alt="清除">
+          </a>
+          <ul class="search-list clearfix historyArray">
+            <li v-for="item in historyArray" @click="toListw(item.name)">{{item.name}}</li>
           </ul>
         </div>
         <ul class="result-search">
@@ -250,5 +227,74 @@
     </div>
 </template>
 <script>
+  import { Indicator } from 'mint-ui';
+  import { InfiniteScroll } from 'mint-ui';
+  import { Toast } from 'mint-ui';
+  import { Actionsheet } from 'mint-ui';
+  import { Search } from 'mint-ui';
+  import axios from 'axios';
+  import qs from 'qs';
+  export default {
+    components: {
+      InfiniteScroll,
+      Toast,
+      Actionsheet,
+      Search
+    },
 
+    data () {
+      return {
+        search_keyword:'',
+        historyArray:[
+          {name:"望京soho"},
+          {name:"盈科中心"},
+          {name:"万达广场"},
+          {name:"银河soho"},
+        ],
+        hotArray:[
+          {name:"望京soho"},
+          {name:"盈科中心"}
+        ],
+        resultData: []
+      }
+    },
+    created:function(){
+        var history = localStorage.getItem("historyData");
+        if(history){
+          this.historyArray = JSON.parse(history);
+        }
+    },
+    mounted(){
+      this.init()
+    },
+    methods:{
+      init(){
+        axios.defaults.baseURL = 'http://116.62.71.76:8001';
+        axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
+      },
+      clearHistoty:function(){
+           this.historyArray = [];
+           localStorage.removeItem("historyData");
+      },
+      changeHistory:function(arg){
+           this.historyArray.unshift({name:arg});
+           localStorage.setItem("historyData",JSON.stringify(this.hotArray));
+      },
+      toList:function(){
+          location.href=location.origin+'/list'
+      },
+      toList2:function(){
+        if(this.search_keyword){
+             this.changeHistory(this.search_keyword);
+        }
+        location.href=encodeURI(location.origin + "/list?keyword=" + this.search_keyword);
+      },
+      toListw:function(k){
+        location.href=encodeURI(location.origin + "/list?keyword=" + k);
+      },
+      closeFilter:function(){
+        this.currentFilterTab='nth';
+      }
+    }
+  }
 </script>
