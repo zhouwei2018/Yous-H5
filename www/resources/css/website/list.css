@@ -12,6 +12,8 @@
 /*字号*/
 .detail-search {
   float: left;
+  position: relative;
+  z-index: 1000;
   width: 54%;
   height: .62rem;
   line-height: .62rem;
@@ -106,6 +108,10 @@
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
+}
+.filt-open .warpper {
+  /*   max-height: 6.3rem;
+    overflow-y: scroll;*/
 }
 .filt-open .warpper a {
   position: absolute;
@@ -366,6 +372,61 @@
   float: left;
   padding: 0 .1rem;
   margin-right: .06rem;
+  margin-bottom: .06rem;
   color: #999;
+  background-color: #F1F5FC;
   border: 1px solid #f2f2f2;
+}
+.mask {
+  display: none;
+  background-color: rgba(75, 75, 75, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  pointer-events: auto;
+}
+.show {
+  display: block!important;
+}
+.active-filter a {
+  color: #476CBA;
+}
+.active-filter .filt-arrow {
+  background-position: -9px -52px;
+}
+.act {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e6;
+  color: #476CBA;
+}
+.price-ul {
+  display: none;
+  overflow: auto;
+  height: 100%;
+  transform: translate3d(0px, 0px, 0px);
+  transition-timing-function: cubic-bezier(0.1, 0.3, 0.5, 1);
+  transition-duration: 0ms;
+}
+.section {
+  position: relative;
+  width: 100%;
+  padding-top: .88rem;
+}
+.in-filter {
+  position: fixed;
+  top: 0;
+}
+.cut-height {
+  max-height: 6.56rem!important;
+  overflow-x: hidden!important;
+  overflow-y: scroll!important;
+}
+.grey-bg {
+  background-color: #F4F4F4!important;
+}
+.price-height {
+  height: 6.72rem;
 }
