@@ -219,10 +219,7 @@
         this.init()
     },
     created:function () {
-        var kw = this.getQueryString('keyword');
-        if(kw){
-            this.para.search_keywork=kw;
-        }
+
     },
     computed:{
       unitword(){
@@ -251,7 +248,7 @@
       changeRou:function(){
         this.$router.push({path:'/list/search'})
       },
-       searchChoose:function(code, val, value, e){
+      searchChoose:function(code, val, value, e){
          switch ($(e.target).closest('li').attr('data-type')){
            case 'district':
              $('h2.district-h').html(value);
@@ -283,7 +280,7 @@
          this.resultData = [];
          this.getData();
        },
-       getFilters:function(){
+      getFilters:function(){
          var paraObj = {
            "parameters":{},
            "foreEndType":2,
@@ -300,7 +297,7 @@
 
          });
        },
-       chooseFilter:function(e){
+      chooseFilter:function(e){
              var e= e || window.event;
              this.currentFilterTab = $(e.target).closest('li').attr('data-type')
       },
@@ -453,8 +450,10 @@
     },
     watch: {
       '$route' (to, from) {
-        console.log(to);
-        console.log(from);
+          if(to['query']['keyword']){
+            this.para.search_keywork = to['query']['keyword'];
+            this.resetGetData();
+          }
       },
     }
   }
