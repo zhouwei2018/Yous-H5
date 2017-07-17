@@ -1,25 +1,28 @@
 @import "../color";
 
 .detail-search {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   float: left;
   position: relative;
   z-index: 1000;
-  width: 54%;
+  width: 60%;
   height: .62rem;
   line-height: .62rem;
   padding-left: .7rem;
-  margin: .12rem 0 0 1.7rem;
-  background: @cl_white url(../../images/icons/detail-icon.png) .16rem .06rem no-repeat;
-  background-size: .48rem auto;
-  border-radius: .1rem;
-  box-sizing: border-box;
-
+  margin-top: .13rem;
+  margin-left: 20%;
+  background: @cl_white url(../../images/icons/detail-icon.png) .16rem .06rem no-repeat;  background-size: .48rem auto;
+  border-radius: .31rem;
 }
 
 #keyword {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   width: 94%;
-  height: 100%;
+  height: .62rem;
+  line-height: .62rem;
   color: #666;
   background: none;
   border: none;
@@ -190,9 +193,6 @@
   color: @cl_blue;
 }
 
-.filtrate-nav li.active .filt-arrow {
-  background-position: -.18rem -1.04rem;
-}
 
 .warpper {
   overflow: hidden;
@@ -445,7 +445,7 @@
     color: #476CBA;
   }
   .filt-arrow {
-    background-position: -9px -52px;
+    background-position: -.18rem -1.04rem;
   }
 }
 

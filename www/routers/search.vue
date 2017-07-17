@@ -1,6 +1,8 @@
 <style scoped lang="less">
   @import "../resources/css/website/list.less";
    .search{
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
      position: fixed;
      top:0;
      left: 0;
@@ -8,17 +10,17 @@
      bottom: 0;
      z-index: 9;
      background-color: #fff;
-     .pt07 {
-       padding-top:.14rem;
-     }
      #s-header{
        position: relative;
+       padding-top: .13rem;
        width: 100%;
        height: .88rem;
        line-height:.88rem;
        color: #FFF;
        font-size: .36rem;
        background-color: #302F35;
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
        .close-icon {
          display: block;
          position: absolute;
@@ -33,17 +35,17 @@
        }
        .search-text {
          position: relative;
-         display: block;
-         width: 75%;
-         height: .62rem;
-         line-height: .50rem;
-         margin-left:.40rem;
+         margin-left: 6%;
          padding-left: .70rem;
+         display: block;
+         width: 78%;
+         height: .62rem;
+         line-height: .62rem;
          text-align: left;
          background: rgba(255, 255, 255, 0.2);
-         background-size:.40rem auto;
+         background-size: .40rem auto;
          box-sizing: border-box;
-         border-radius: .60rem;
+         border-radius: .31rem;
          .sbtn{
            position: absolute;
            width: .36rem;
@@ -55,14 +57,13 @@
          }
          input {
            width: 95%;
-           margin-top:.04rem;
            color: #FFF;
            background: none;
          }
        }
      }
    }
-  .more-house{
+   .more-house{
     position: relative;
     .hot-out{
       border:1px solid transparent;
@@ -135,12 +136,10 @@
 <template>
     <div class="search">
       <div id="s-header">
-        <div class="pt07">
           <a href="javascript:void(0);" class="search-text">
             <i class="sbtn" @click="toList2"></i>
             <input type="text" id="keyword" placeholder="请输入写字楼、区域、商圈" maxlength="50" v-model="search_keyword" autofocus="autofocus">
           </a>
-        </div>
         <a href="javascript:void(0);" class="close-icon" @click="toList">
             <img src="http://img2.static.uban.com/www/images/xuan-close_1.png" alt="">
         </a>

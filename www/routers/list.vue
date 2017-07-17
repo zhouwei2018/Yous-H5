@@ -1,6 +1,5 @@
 <style scoped lang="less">
   @import "../resources/css/website/list.less";
-
   .page-infinite-loading {
     text-align: center;
     background-color: #FFF;
@@ -17,23 +16,21 @@
       <header1></header1>
     </section>
     <a href="javascript:;" class="detail-search" style="position: fixed;left: 0; top: 0">
-      <input type="text" id="keyword" placeholder="请输入关键字搜索" v-model="para.search_keywork" maxlength="50"
+      <input type="text" id="keyword" placeholder="请输入写字楼、区域、商圈" v-model="para.search_keywork" maxlength="50"
              @focus="changeRou">
     </a>
-    <router-view></router-view>
     <section class="section"
              :class="{'in-filter':this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       <div class="option">
         <div class="filtate-outter">
           <div class="list-filtrate">
-
             <!--筛选条件标题开始-->
             <section class="filtrate-nav">
               <ul @click="chooseFilter($event)">
                 <li data-role="filterItem" data-type="district"
                     :class="{'active-filter':this.currentFilterTab=='district'}">
                   <a href="javascript:void(0);">
-                    <h2 class="ellipsis district-h">区域</h2>
+                    <h2 class="ellipsis district-h">位置</h2>
                     <i class="filt-arrow"></i>
                   </a>
                 </li>
@@ -63,14 +60,31 @@
             <!--筛选条件内容start-->
             <div class="filt-container">
               <div class="filt-open" id="filter-district" :class="{show:this.currentFilterTab=='district'}">
-                <div class="warpper box-flex1">
-                  <ul class="box-flex1 bg-white cut-height">
-                    <li v-for="item in districtArray" data-type="district"
-                        @click="searchChoose(item.id, '', item.name, $event)"><a href="javascript:;">{{item.name}}</a>
+                <div class="warpper box-flex1 grey-bg price-height">
+                  <ul>
+                    <li class="price-sub" :class="{act:this.positionType=='a'}" @click="positionType='a'">
+                      <a href="javascript:void(0);" style="color: #302F35;">区域</a>
                     </li>
+                    <li class="price-sub" :class="{act:this.positionType=='l'}" @click="positionType='l'">
+                      <a href="javascript:void(0);" style="color: #302F35;">地铁</a>
+                    </li>
+
+                    <div id="position_filter" class="warpper2 box-flex1 bg-white">
+                      <ul class="price-ul cut-height" :class="{show:this.positionType=='a'}">
+                        <li v-for="item in areaArray" data-type="positionA"
+                            @click="searchChoose(item.code,'',item.name, $event)">
+                          <a href="javascript:;">{{item.name}}</a></li>
+                      </ul>
+                      <ul class="price-ul cut-height" :class="{show:this.positionType=='l'}">
+                        <li v-for="item in lineArray" data-type="positionL"
+                            @click="searchChoose(item.code,'',item.name, $event)">
+                          <a href="javascript:;">{{item.name}}</a></li>
+                      </ul>
+                    </div>
                   </ul>
                 </div>
               </div>
+
               <div class="filt-open" id="filter-price" :class="{show:this.currentFilterTab=='price'}">
                 <div class="warpper box-flex1 grey-bg price-height">
                   <ul>
@@ -131,7 +145,6 @@
               </div>
             </div>
             <!--筛选条件内容end-->
-
           </div>
         </div>
 
@@ -179,7 +192,6 @@
            :class="{show:this.currentFilterTab=='district'||this.currentFilterTab=='price'||this.currentFilterTab=='area'||this.currentFilterTab=='features'}">
       </div>
     </section>
-    <!--context end-->
   </div>
 </template>
 <script>
@@ -201,7 +213,6 @@
       Actionsheet,
       Search
     },
-
     data () {
       return {
         districtArray: [],
@@ -209,9 +220,11 @@
         priceTArray: [],
         sizeArray: [],
         featureArray: [],
-
+        areaArray:[],
+        lineArray:[],
         currentFilterTab: 'nth',
         priceFilterTab: 'p',
+        positionType:'a',
         loading: false,
         noMore: false,
         checked: false,
@@ -276,6 +289,9 @@
       init(){
         axios.defaults.baseURL = 'http://116.62.71.76:8001';
         axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
+        if(this.$route['query']['keyword']){
+          this.para.search_keywork = this.$route['query']['keyword'];
+        }
         this.resetGetData();
         this.getFilters();
       },
@@ -288,13 +304,19 @@
         this.currentFilterTab = 'nth';
       },
       changeRou: function () {
-        this.$router.push({path: '/list/search'})
+        this.$router.push({path: '/filter'})
       },
       searchChoose: function (code, val, value, e) {
         switch ($(e.target).closest('li').attr('data-type')) {
-          case 'district':
+          case 'positionA':
             $('h2.district-h').html(value);
-            this.para.district_id = code;
+            this.para.line_id = '';
+            this.para.district = code;
+            break;
+          case 'positionL':
+            $('h2.district-h').html(value);
+            this.para.district = '';
+            this.para.line_id = code;
             break;
           case 'size':
             $('h2.area-h').html(value);
@@ -330,7 +352,8 @@
         }, this_ = this;
         axios.post('/api/GetServiceApiResult', paraObj)
           .then(function (response) {
-            this_.districtArray = response.data.data.districts;
+            this_.areaArray = response.data.data.districts;
+            this_.lineArray = response.data.data.lines;
             this_.pricePArray = response.data.data.range_unit_prices;
             this_.priceTArray = response.data.data.range_total_prices;
             this_.sizeArray = response.data.data.range_areas;
@@ -493,13 +516,5 @@
         }
       }
     },
-    watch: {
-      '$route' (to, from) {
-        if (to['query']['keyword']) {
-          this.para.search_keywork = to['query']['keyword'];
-          this.resetGetData();
-        }
-      },
-    }
   }
 </script>
