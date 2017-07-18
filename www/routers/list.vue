@@ -62,25 +62,42 @@
               <div class="filt-open" id="filter-district" :class="{show:this.currentFilterTab=='district'}">
                 <div class="warpper box-flex1 grey-bg price-height">
                   <ul>
-                    <li class="price-sub" :class="{act:this.positionType=='a'}" @click="positionType='a'">
+                    <li class="price-sub" :class="{act:this.positionType=='a'}" @click="positionType='a';curTab=''">
                       <a href="javascript:void(0);" style="color: #302F35;">区域</a>
                     </li>
-                    <li class="price-sub" :class="{act:this.positionType=='l'}" @click="positionType='l'">
+                    <li class="price-sub" :class="{act:this.positionType=='l'}" @click="positionType='l';curTab=''">
                       <a href="javascript:void(0);" style="color: #302F35;">地铁</a>
                     </li>
-
-                    <div id="position_filter" class="warpper2 box-flex1 bg-white">
+                    <div id="position_filter" class="warpper2 box-flex1 bg-white" :class="{choose:this.curTab=='a'||this.curTab=='l'}">
                       <ul class="price-ul cut-height" :class="{show:this.positionType=='a'}">
+                        <li data-type="positionA" @click="searchChoose('','','不限', $event)"><a href="javascript:;">不限</a></li>
                         <li v-for="item in areaArray" data-type="positionA"
-                            @click="searchChoose(item.code,'',item.name, $event)">
+                            @click="searchSubArea(item.code, $event)">
                           <a href="javascript:;">{{item.name}}</a></li>
                       </ul>
                       <ul class="price-ul cut-height" :class="{show:this.positionType=='l'}">
+                        <li data-type="positionL" @click="searchChoose('','','不限', $event)"><a href="javascript:;">不限</a></li>
                         <li v-for="item in lineArray" data-type="positionL"
+                            @click="searchStation(item.code, $event)">
+                          <a href="javascript:;">{{item.name}}</a></li>
+                      </ul>
+                    </div>
+
+                    <div id="third-tab" class="warpper2 box-flex1 bg-white" :class="{show:this.curTab!=''&&this.thirdpart!=''&&(this.subBuesiness.length>0||this.stationArray.length>0)}">
+                      <ul class="price-ul cut-height" :class="{show:this.positionType=='a'}">
+                        <li data-type="positionA" @click="searchChoose('','','不限', $event)"><a href="javascript:;">不限</a></li>
+                        <li v-for="item in subBuesiness" data-type="positionA"
+                            @click="searchChoose(item.code,'',item.name, $event)">
+                          <a href="javascript:;">{{item.name}}</a></li>
+                      </ul>
+                      <ul class="price-ul cut-height" :class="{show:this.curTab!=''&&this.thirdpart=='dt'}">
+                        <li data-type="positionL" @click="searchChoose('','','不限', $event)"><a href="javascript:;">不限</a></li>
+                        <li v-for="item in stationArray" data-type="positionL"
                             @click="searchChoose(item.code,'',item.name, $event)">
                           <a href="javascript:;">{{item.name}}</a></li>
                       </ul>
                     </div>
+
                   </ul>
                 </div>
               </div>
@@ -97,11 +114,13 @@
 
                     <div id="price_filter" class="warpper2 box-flex1 bg-white">
                       <ul class="price-ul cut-height" :class="{show:this.priceFilterTab=='p'}">
+                        <li data-type="priceP" @click="searchChoose('','', '不限', $event)"><a href="javascript:;">不限</a></li>
                         <li v-for="item in pricePArray" data-type="priceP"
                             @click="searchChoose(item.code,item.minnum+'-'+item.maxnum, item.minnum+'-'+item.maxnum+'元', $event)">
                           <a href="javascript:;">{{item.minnum}}-{{item.maxnum}}元</a></li>
                       </ul>
                       <ul class="price-ul cut-height" :class="{show:this.priceFilterTab=='t'}">
+                        <li data-type="priceT" @click="searchChoose('','', '不限', $event)"><a href="javascript:;">不限</a></li>
                         <li v-for="item in priceTArray" data-type="priceT"
                             @click="searchChoose(item.code,item.minnum+'-'+item.maxnum, item.minnum+'-'+item.maxnum+'万元', $event)">
                           <a href="javascript:;">{{item.minnum}}-{{item.maxnum}}万元</a></li>
@@ -120,6 +139,7 @@
               <div class="filt-open" id="filter-area" :class="{show:this.currentFilterTab=='area'}">
                 <div class="warpper box-flex1  bg-white" data-key="huxing_shi">
                   <ul class="">
+                    <li data-type="size" @click="searchChoose('', '',  '不限', $event)"><a href="javascript:;">不限</a></li>
                     <li v-for="item in sizeArray" data-type="size"
                         @click="searchChoose(item.code, item.minnum+'-'+item.maxnum,  item.minnum+'-'+item.maxnum+'m²', $event)">
                       <a href="javascript:;">{{item.minnum}}-{{item.maxnum}}m²</a></li>
@@ -137,6 +157,7 @@
               <div class="filt-open" id="filter-features" :class="{show:this.currentFilterTab=='features'}">
                 <div class="warpper box-flex1">
                   <ul class="box-flex1 bg-white cut-height">
+                    <li data-type="feature" @click="searchChoose('','','不限', $event)"><a href="javascript:;">不限</a></li>
                     <li v-for="item in featureArray" data-type="feature"
                         @click="searchChoose(item.code,'',item.name, $event)"><a href="javascript:;">{{item.name}}</a>
                     </li>
@@ -222,6 +243,10 @@
         featureArray: [],
         areaArray:[],
         lineArray:[],
+        subBuesiness:[],
+        stationArray:[],
+        curTab:'',
+        thirdpart:'',
         currentFilterTab: 'nth',
         priceFilterTab: 'p',
         positionType:'a',
@@ -295,6 +320,36 @@
         this.resetGetData();
         this.getFilters();
       },
+      searchSubArea:function(code,e){
+        this.curTab = "a";
+        this.thirdpart = "sq";
+        this.para.district = code;
+        var paraObj = {
+            "parameters":{"city_code":code},
+            "foreEndType":2,
+             "code":"90000302"}, this_ = this;
+        axios.post('/api/GetServiceApiResult', paraObj)
+          .then(function (response) {
+            this_.subBuesiness = response.data.data;
+          }).catch(function (error) {
+
+        });
+      },
+      searchStation:function(line,e){
+        this.curTab = "l";
+        this.thirdpart = "dt";
+        this.para.line_id = line;
+        var paraObj = {
+            "parameters":{"line":line},
+          "foreEndType":2,
+          "code":"90000303"}, this_ = this;
+        axios.post('/api/GetServiceApiResult', paraObj)
+          .then(function (response) {
+            this_.stationArray = response.data.data;
+          }).catch(function (error) {
+
+        });
+      },
       getQueryString: function (key) {
         var t = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i"),
           n = window.location.search.substr(1).match(t);
@@ -310,25 +365,47 @@
         switch ($(e.target).closest('li').attr('data-type')) {
           case 'positionA':
             $('h2.district-h').html(value);
+            if(code==''){
+              this.para.business = '';
+            }else{
+              this.para.business = code;
+            }
             this.para.line_id = '';
-            this.para.district = code;
+            this.para.station_id = '';
             break;
           case 'positionL':
             $('h2.district-h').html(value);
+            if(code==''){
+              this.para.station_id = '';
+            }else{
+              this.para.station_id = code;
+            }
+            this.para.business = '';
             this.para.district = '';
-            this.para.line_id = code;
             break;
           case 'size':
             $('h2.area-h').html(value);
-            this.para.area = [parseInt(val.split('-')[0]), parseInt(val.split('-')[1])];
+            if(code==''){
+              this.para.area = '';
+            }else{
+              this.para.area = [parseInt(val.split('-')[0]), parseInt(val.split('-')[1])];
+            }
             break;
           case 'priceP':
             $('h2.price-h').html(value);
-            this.para.price_dj = [parseInt(val.split('-')[0]), parseInt(val.split('-')[1])];
+            if(code==''){
+              this.para.price_dj = '';
+            }else{
+              this.para.price_dj = [parseInt(val.split('-')[0]), parseInt(val.split('-')[1])];
+            }
             break;
           case 'priceT':
             $('h2.price-h').html(value);
-            this.para.price_zj = [parseInt(val.split('-')[0]), parseInt(val.split('-')[1])];
+            if(code==''){
+              this.para.price_zj ='';
+            }else{
+              this.para.price_zj = [parseInt(val.split('-')[0]), parseInt(val.split('-')[1])];
+            }
             break;
           case 'feature':
             $('h2.feature-h').html(value);
