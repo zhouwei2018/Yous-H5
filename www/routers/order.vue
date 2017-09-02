@@ -129,7 +129,7 @@
               }else{
                 _this.houses_images=['http://116.62.71.76:81/default-youshi.png'];
                 $('.banner-page').hide();
-              };
+              };6
 
               //banner swiper
               setTimeout(function () {
