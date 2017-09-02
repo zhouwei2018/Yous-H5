@@ -1,5 +1,6 @@
 <style scoped lang="less">
   @import "../resources/css/website/order.less";
+  @import "../resources/plugin/swiper/css/swiper.css"; /*swiper 轮播*/
 </style>
 <template>
   <div>
@@ -13,8 +14,20 @@
       <div class="detail-container mb60">
         <!--banner-->
         <div id="slideBox" class="slideBox">
-          <img src="../resources/images/banner/banner01.png" alt="">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" v-for="item in houses_images">
+                <a href="javascript:;">
+                  <img :src="item" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="banner-page">
+              <span class="pageState"><span id="picIndex">1</span>/{{totImgNumber}}</span>
+            </div>
+          </div>
         </div>
+
 
         <div class="build_price_wrap clearfix">
           <span><i v-text="monthly_price"></i>万元/月</span>
@@ -67,6 +80,8 @@
   import {Indicator} from 'mint-ui';
   import {InfiniteScroll} from 'mint-ui';
 
+  import '../resources/plugin/swiper/js/swiper.min.js';
+
 
   export default {
     components: {header1, footer1},
@@ -82,6 +97,9 @@
 
         parking:'--', //车位
         rentor:'--', //租户
+
+        houses_images: [], //轮播图
+        totImgNumber: '--', //轮播图个数
 
       }
     },
@@ -104,6 +122,28 @@
           Indicator.close();
           if (result.success) {
             if (result.data) {
+
+              if(result.data.houses_images.length){
+                _this.houses_images = result.data.houses_images;  //轮播图
+                $('.banner-page').show();
+              }else{
+                _this.houses_images=['http://116.62.71.76:81/default-youshi.png'];
+                $('.banner-page').hide();
+              };
+
+              //banner swiper
+              setTimeout(function () {
+                var mySwiper = new Swiper('.swiper-container', {
+                  loop: true,
+                  paginationClickable: true,  //分页可点
+                  centeredSlides: true,
+                  autoplay: 3500,
+                  onSlideChangeStart: function (swiper) {
+                    $("#picIndex").text(swiper.realIndex + 1);
+                  }
+                });
+              }, 500)
+
               _this.daily_price = result.data.daily_price == null ? '--' : result.data.daily_price;
               _this.monthly_price = result.data.monthly_price == null ? '--' : result.data.monthly_price;
               _this.room_area = result.data.room_area == null ? '--' : result.data.room_area;

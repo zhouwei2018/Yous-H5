@@ -17,28 +17,18 @@
         <div id="slideBox" class="slideBox">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide" v-for="item in building_images">
                 <a href="javascript:;">
-                  <img src="../resources/images/banner/banner01.png" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascript:;">
-                  <img src="../resources/images/banner/banner02.png" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascript:;">
-                  <img src="../resources/images/banner/banner03.png" alt="">
+                  <img :src="item" alt="">
                 </a>
               </div>
             </div>
             <div class="banner-page">
-              <span class="pageState"><span id="picIndex">1</span>/3</span>
+              <span class="pageState"><span id="picIndex">1</span>/{{totImgNumber}}</span>
             </div>
           </div>
-
         </div>
+
       </div>
 
       <!--office info-->
@@ -95,7 +85,7 @@
               <router-link :to="{path:'order',query:{house_id:item1.id}}" class="dz-list clearfix">
                 <div class="dz_img_wrap">
                   <img :src="item1.housing_icon" alt="">
-                  <div class="img_number">12图</div>
+                  <!--<div class="img_number">12图</div>-->
                 </div>
                 <div class="dz_msg fl">
                   <span v-text="item1.monthly_price+'万元/月'"></span>
@@ -118,24 +108,24 @@
       <div class="pt20 mb08 border-tb bg-white" id="kuan">
         <h2 class="sort-title tc fb mb20">周边配套</h2>
         <div class="map-box" id="allmap"></div>
-        <ul class="text-gray6 clearfix ph15" id="map_item_ul">
-          <li class="supporting-item">
-            <i class="supporting-icon sup-ct"></i>
-            <span class="db">餐厅 <b class="text-black">33</b></span>
-          </li>
-          <li class="supporting-item">
-            <i class="supporting-icon sup-jd"></i>
-            <span class="db">酒店 <b class="text-black">25</b></span>
-          </li>
-          <li class="supporting-item">
-            <i class="supporting-icon sup-js"></i>
-            <span class="db">健身 <b class="text-black">4</b></span>
-          </li>
-          <li class="supporting-item">
-            <i class="supporting-icon sup-yh"></i>
-            <span class="db">银行 <b class="text-black">22</b></span>
-          </li>
-        </ul>
+        <!--<ul class="text-gray6 clearfix ph15" id="map_item_ul">-->
+        <!--<li class="supporting-item">-->
+        <!--<i class="supporting-icon sup-ct"></i>-->
+        <!--<span class="db">餐厅 <b class="text-black">33</b></span>-->
+        <!--</li>-->
+        <!--<li class="supporting-item">-->
+        <!--<i class="supporting-icon sup-jd"></i>-->
+        <!--<span class="db">酒店 <b class="text-black">25</b></span>-->
+        <!--</li>-->
+        <!--<li class="supporting-item">-->
+        <!--<i class="supporting-icon sup-js"></i>-->
+        <!--<span class="db">健身 <b class="text-black">4</b></span>-->
+        <!--</li>-->
+        <!--<li class="supporting-item">-->
+        <!--<i class="supporting-icon sup-yh"></i>-->
+        <!--<span class="db">银行 <b class="text-black">22</b></span>-->
+        <!--</li>-->
+        <!--</ul>-->
       </div>
     </section>
     <!--context end-->
@@ -166,6 +156,8 @@
         total_items: '',  //可租房源总数
         areaActive: 0,
         area_arr: [], //面积条件数组
+        building_images: [], //轮播图
+        totImgNumber: '--', //图个数
 
         res_showFlag: false, //查询无结果showhide
         more_flag: false, //查看更多
@@ -249,6 +241,20 @@
 
               $('title').html(result.data.building_name);
 
+              _this.building_images = result.data.building_images;  //轮播图
+              _this.totImgNumber = result.data.building_images.length;
+              //banner swiper
+              setTimeout(function () {
+                var mySwiper = new Swiper('.swiper-container', {
+                  loop: true,
+                  paginationClickable: true,  //分页可点
+                  centeredSlides: true,
+                  autoplay: 3500,
+                  onSlideChangeStart: function (swiper) {
+                    $("#picIndex").text(swiper.realIndex + 1);
+                  }
+                });
+              }, 500);
 
               _this.total_households = result.data.total_households == "" ? '--' : result.data.total_households; //总户数
               _this.district = result.data.district == null ? '区域' : result.data.district; //区域
@@ -308,6 +314,9 @@
           if (result.success) {
             _this.buildList = result.data.houses;
             if (_this.buildList.length) {
+              for (var i = 0; i < _this.buildList.length; i++) {
+                _this.buildList[i].housing_icon = _this.buildList[i].housing_icon == '' ? 'http://116.62.71.76:81/default-youshi.png' : _this.buildList[i].housing_icon;
+              }
               _this.res_showFlag = false; //不展示
               _this.total_items = result.data.total_items == null ? '--' : result.data.total_items;
 
@@ -395,26 +404,6 @@
       this.getDetail(); //获取楼盘详情
 
       this.getDetList(); //获取楼盘详情页楼盘列表
-
-      //banner swiper
-      var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-//        pagination: '.swiper-pagination', //分页器
-        paginationClickable: true,  //分页可点
-        centeredSlides: true,
-        autoplay: 3500,
-        //effect : 'fade', //切换效果(淡入淡出)
-        //fade: {
-        //    crossFade: false,
-        //},
-        onSlideChangeStart: function (swiper) {
-          $("#picIndex").text(swiper.realIndex + 1);
-        },
-
-        autoplayDisableOnInteraction: true  //鼠标操作时关闭autopaly
-
-      });
-
 
     }
   }
